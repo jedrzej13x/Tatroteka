@@ -1,0 +1,65 @@
+name: Tatry Flow — Daily Segment Collection
+
+on:
+  schedule:
+    - cron: '0 5 * * *'   # codziennie o 5:00 UTC (7:00 czasu polskiego)
+  workflow_dispatch:        # możliwość ręcznego uruchomienia z GitHub UI
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write       # potrzebne do commitu z powrotem do repo
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests python-dotenv
+
+      - name: Download existing database
+        uses: actions/download-artifact@v4
+        with:
+          name: tatry-database
+          path: .
+        continue-on-error: true   # pierwsze uruchomienie — baza nie istnieje
+
+      - name: Run collector
+        env:
+          STRAVA_CLIENT_ID:     ${{ secrets.STRAVA_CLIENT_ID }}
+          STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
+          STRAVA_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+          DB_PATH:              tatry_segments.db
+        run: python "Strava API fetcher.py"
+
+      - name: Show report
+        env:
+          DB_PATH: tatry_segments.db
+        run: python "Strava API fetcher.py" --report
+
+      - name: Export traffic JSON
+        env:
+          DB_PATH: tatry_segments.db
+        run: python "Strava API fetcher.py" --export
+
+      - name: Save database artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: tatry-database
+          path: tatry_segments.db
+          retention-days: 90
+
+      - name: Commit traffic_data.json to repo
+        run: |
+          git config user.name  "Tatry Flow Bot"
+          git config user.email "bot@tatroteka.pl"
+          git add traffic_data.json
+          git diff --cached --quiet || git commit -m "data: snapshot $(date +'%Y-%m-%d')"
+          git push
