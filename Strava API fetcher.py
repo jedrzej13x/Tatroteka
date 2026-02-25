@@ -5,12 +5,12 @@ Codziennie odpytuje Strava API o segmenty w bbox TPN/TANAP,
 zapisuje snapshoty do SQLite i buduje szereg czasowy natężenia ruchu.
 
 Uruchomienie:
-    python Strava API fetcher.py               # jednorazowy snapshot
-    python Strava API fetcher.py --init        # pierwsze uruchomienie (tworzy bazę)
-    python Strava API fetcher.py --report      # podsumowanie zebranych danych
+    python collector.py               # jednorazowy snapshot
+    python collector.py --init        # pierwsze uruchomienie (tworzy bazę)
+    python collector.py --report      # podsumowanie zebranych danych
 
 Automatyzacja (cron):
-    0 6 * * * /usr/bin/python3 /path/to/Strava API fetcher.py >> /var/log/tatry.log 2>&1
+    0 6 * * * /usr/bin/python3 /path/to/collector.py >> /var/log/tatry.log 2>&1
 """
 
 import os
@@ -33,9 +33,9 @@ except ImportError:
 
 # ── Konfiguracja ───────────────────────────────────────────────────────────────
 
-CLIENT_ID     = os.getenv("STRAVA_CLIENT_ID",     "205089")
-CLIENT_SECRET = os.getenv("STRAVA_CLIENT_SECRET", "b823c373740a0a9f3adc79b2dd930f59f2eaceed")
-REFRESH_TOKEN = os.getenv("STRAVA_REFRESH_TOKEN", "3365994a6cf10a20649667aecf47b7ef7e47a933")
+CLIENT_ID     = os.getenv("STRAVA_CLIENT_ID",     "TWÓJ_CLIENT_ID")
+CLIENT_SECRET = os.getenv("STRAVA_CLIENT_SECRET", "TWÓJ_CLIENT_SECRET")
+REFRESH_TOKEN = os.getenv("STRAVA_REFRESH_TOKEN", "TWÓJ_REFRESH_TOKEN")
 
 DB_PATH       = os.getenv("DB_PATH", "tatry_segments.db")
 LOG_LEVEL     = os.getenv("LOG_LEVEL", "INFO")
@@ -61,7 +61,7 @@ TOKEN_URL    = "https://www.strava.com/oauth/token"
 SEGMENTS_URL = "https://www.strava.com/api/v3/segments/explore"
 
 # Rate limiting — bezpieczny odstęp między requestami
-REQUEST_DELAY = 2.0  # sekundy
+REQUEST_DELAY = 12.0  # sekundy
 
 # ── Logging ────────────────────────────────────────────────────────────────────
 
@@ -273,6 +273,38 @@ def upsert_segment(conn, seg, activity_type, today):
         log.debug(f"Nowy segment: [{seg['id']}] {seg.get('name', '?')}")
 
 
+def fetch_segment_detail(segment_id, token):
+    """
+    Pobiera szczegóły pojedynczego segmentu przez GET /segments/{id}.
+    To jedyny endpoint który zwraca prawdziwy effort_count i athlete_count.
+    """
+    url     = f"https://www.strava.com/api/v3/segments/{segment_id}"
+    headers = {"Authorization": f"Bearer {token}"}
+
+    try:
+        resp = requests.get(url, headers=headers, timeout=30)
+
+        if resp.status_code == 429:
+            log.warning("Rate limit! Czekam 15 minut...")
+            time.sleep(900)
+            return None
+
+        if resp.status_code == 401:
+            log.error("Token wygasł!")
+            return None
+
+        if resp.status_code == 404:
+            log.debug(f"Segment {segment_id} nie istnieje")
+            return None
+
+        resp.raise_for_status()
+        return resp.json()
+
+    except requests.RequestException as e:
+        log.error(f"Błąd pobierania segmentu {segment_id}: {e}")
+        return None
+
+
 def save_snapshot(conn, segment_id, effort_count, athlete_count, captured_at):
     """
     Zapisuje snapshot. UNIQUE constraint zapobiega duplikatom.
@@ -292,10 +324,9 @@ def save_snapshot(conn, segment_id, effort_count, athlete_count, captured_at):
 
 def collect(token):
     """
-    Główna funkcja kolekcji:
-    1. Buduje siatkę kafelków
-    2. Dla każdego kafelka × typ aktywności → pobiera segmenty
-    3. Zapisuje segmenty i snapshoty do bazy
+    Główna funkcja kolekcji — dwa etapy:
+    1. segments/explore → zbiera ID segmentów z siatki kafelków
+    2. /segments/{id}   → pobiera prawdziwy effort_count dla każdego ID
     """
     today      = date.today().isoformat()
     started_at = datetime.now().isoformat()
@@ -308,36 +339,44 @@ def collect(token):
 
     conn = get_db()
 
-    log.info(f"=== Kolekcja {today} — start ===")
-
+    # ── Etap 1: zbierz wszystkie ID segmentów z siatki ──────────────────────
+    log.info("Etap 1: zbieranie ID segmentów z siatki kafelków...")
     for tile_idx, tile in enumerate(tiles, 1):
         for activity_type in ACTIVITY_TYPES:
             log.debug(f"Kafelek {tile_idx}/{len(tiles)} | {activity_type}")
-
             segments = fetch_segments_for_tile(tile, activity_type, token)
-
-            if not segments:
-                total_errors += 1
-
             for seg in segments:
-                seg_id = seg["id"]
-
-                # Zapisz/aktualizuj metadane segmentu
-                upsert_segment(conn, seg, activity_type, today)
-
-                # Snapshot — effort_count z tego requestu
-                effort_count  = seg.get("effort_count",  0)
-                athlete_count = seg.get("athlete_count", 0)
-
-                if seg_id not in seen_ids:
-                    saved = save_snapshot(conn, seg_id, effort_count, athlete_count, today)
-                    if saved:
-                        total_snapshots += 1
-                    seen_ids.add(seg_id)
-                    total_segments += 1
-
+                if seg["id"] not in seen_ids:
+                    upsert_segment(conn, seg, activity_type, today)
+                    seen_ids.add(seg["id"])
             conn.commit()
             time.sleep(REQUEST_DELAY)
+
+    log.info(f"Znaleziono {len(seen_ids)} unikalnych segmentów")
+
+    # ── Etap 2: pobierz effort_count dla każdego segmentu ───────────────────
+    log.info("Etap 2: pobieranie effort_count per segment...")
+    all_ids = [row[0] for row in conn.execute("SELECT id FROM segments").fetchall()]
+
+    for i, seg_id in enumerate(all_ids, 1):
+        if i % 50 == 0:
+            log.info(f"  Postęp: {i}/{len(all_ids)} segmentów...")
+
+        detail = fetch_segment_detail(seg_id, token)
+        if detail is None:
+            total_errors += 1
+            continue
+
+        effort_count  = detail.get("effort_count",  0)
+        athlete_count = detail.get("athlete_count", 0)
+
+        saved = save_snapshot(conn, seg_id, effort_count, athlete_count, today)
+        if saved:
+            total_snapshots += 1
+        total_segments += 1
+
+        conn.commit()
+        time.sleep(REQUEST_DELAY)
 
     # Zapisz log kolekcji
     finished_at = datetime.now().isoformat()
