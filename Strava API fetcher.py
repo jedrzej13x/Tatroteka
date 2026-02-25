@@ -61,7 +61,7 @@ TOKEN_URL    = "https://www.strava.com/oauth/token"
 SEGMENTS_URL = "https://www.strava.com/api/v3/segments/explore"
 
 # Rate limiting — bezpieczny odstęp między requestami
-REQUEST_DELAY = 12.0  # sekundy
+REQUEST_DELAY = 2.0  # sekundy
 
 # ── Logging ────────────────────────────────────────────────────────────────────
 
@@ -448,35 +448,52 @@ def report():
 def export_traffic_json(output_path="traffic_data.json"):
     """
     Eksportuje szereg czasowy natężenia do JSON dla frontendu.
-    Format: { segment_id: { date: daily_efforts, ... }, ... }
     """
     conn = get_db()
+
+    segments_meta = {}
+    for row in conn.execute("""
+        SELECT s.id, s.name, s.activity_type, s.start_lat, s.start_lng,
+               s.distance, s.avg_grade, s.elev_difference,
+               sn.effort_count, sn.athlete_count, sn.captured_at
+        FROM segments s
+        JOIN snapshots sn ON s.id = sn.segment_id
+        WHERE sn.captured_at = (
+            SELECT MAX(captured_at) FROM snapshots WHERE segment_id = s.id
+        )
+    """):
+        segments_meta[row["id"]] = {
+            "name":                   row["name"],
+            "activity_type":          row["activity_type"],
+            "lat":                    row["start_lat"],
+            "lng":                    row["start_lng"],
+            "distance":               row["distance"],
+            "avg_grade":              row["avg_grade"],
+            "elev_difference":        row["elev_difference"],
+            "effort_count_cumulative": row["effort_count"],
+            "athlete_count":          row["athlete_count"],
+            "last_snapshot":          row["captured_at"],
+        }
+
+    # Szereg czasowy delty
     rows = conn.execute("""
-        SELECT segment_id, date, daily_efforts, effort_count_cumulative
+        SELECT segment_id, date, daily_efforts
         FROM traffic
         WHERE daily_efforts >= 0
         ORDER BY segment_id, date
     """).fetchall()
 
-    # Wzbogać o geometrię segmentu
-    segments_meta = {}
-    for row in conn.execute("SELECT id, name, start_lat, start_lng, polyline FROM segments"):
-        segments_meta[row["id"]] = {
-            "name":      row["name"],
-            "lat":       row["start_lat"],
-            "lng":       row["start_lng"],
-            "polyline":  row["polyline"],
+    result = {}
+    for seg_id, meta in segments_meta.items():
+        result[seg_id] = {
+            "meta":   meta,
+            "series": {}
         }
 
-    result = {}
     for row in rows:
         sid = row["segment_id"]
-        if sid not in result:
-            result[sid] = {
-                "meta":   segments_meta.get(sid, {}),
-                "series": {}
-            }
-        result[sid]["series"][row["date"]] = row["daily_efforts"]
+        if sid in result:
+            result[sid]["series"][row["date"]] = row["daily_efforts"]
 
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
