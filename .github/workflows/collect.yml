@@ -60,6 +60,6 @@ jobs:
         run: |
           git config user.name  "Tatry Flow Bot"
           git config user.email "bot@tatroteka.pl"
-          git add traffic_data.json
+          git add -f traffic_data.json
           git diff --cached --quiet || git commit -m "data: snapshot $(date +'%Y-%m-%d')"
           git push
