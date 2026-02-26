@@ -415,19 +415,23 @@ if strava_dostepna:
 if strava_dostepna:
     print("Przebieg 1c: flood fill po połączeniach topologicznych...")
 
-    # Buduj słownik: zaokrąglony punkt → lista way_id (siatka ~50m)
+    # Siatka ~100m (round * 100) z przeszukiwaniem 3x3 = pokrycie ~300m
     grid_pts = {}
     for wid, meta in way_meta.items():
         for pt in [meta["start"], meta["end"]]:
-            gk = (round(pt[0] * 200), round(pt[1] * 200))
+            gk = (round(pt[0] * 100), round(pt[1] * 100))
             grid_pts.setdefault(gk, []).append(wid)
 
     def sasiedzi_przez_endpoint(way_id):
         meta = way_meta[way_id]
         wynik = set()
         for pt in [meta["start"], meta["end"]]:
-            gk = (round(pt[0] * 200), round(pt[1] * 200))
-            for dk in [(-1,-1),(-1,0),(-1,1),(0,-1),(0,0),(0,1),(1,-1),(1,0),(1,1)]:
+            gk = (round(pt[0] * 100), round(pt[1] * 100))
+            for dk in [(-2,-2),(-2,-1),(-2,0),(-2,1),(-2,2),
+                       (-1,-2),(-1,-1),(-1,0),(-1,1),(-1,2),
+                       (0,-2),(0,-1),(0,0),(0,1),(0,2),
+                       (1,-2),(1,-1),(1,0),(1,1),(1,2),
+                       (2,-2),(2,-1),(2,0),(2,1),(2,2)]:
                 for cand in grid_pts.get((gk[0]+dk[0], gk[1]+dk[1]), []):
                     if cand != way_id:
                         wynik.add(cand)
