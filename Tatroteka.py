@@ -318,7 +318,8 @@ print(f"Max effort_count: {max_effort}")
 
 # ── Długości i nazwy relacji ───────────────────────────────────────────────────
 
-relacje_dla_way = {}
+relacje_dla_way  = {}  # way_id → (nazwa, dlugosc, relacja_id)
+relacja_do_wayow = {}  # relacja_id → [way_id, ...]
 
 for element in dane2["elements"]:
     if element['type'] == 'relation':
@@ -335,6 +336,7 @@ for element in dane2["elements"]:
                     pts = [(p['lat'], p['lon']) for p in member['geometry']]
                     total += oblicz_dlugosc(pts)
         dlugosc_rel = round(total, 2)
+        relacja_do_wayow[relacja_id] = way_ids
         for wid in way_ids:
             relacje_dla_way[wid] = (nazwa_rel, dlugosc_rel, relacja_id)
 
@@ -363,8 +365,7 @@ odfiltrowane    = 0
 dopasowane      = 0
 kolory_wayow    = {}
 kolory_relacji  = {}
-# way_id → środek odcinka i endpoints
-way_meta = {}  # way_id → {"mid": (lat,lon), "pts": [(lat,lon),...]}
+way_meta        = {}
 
 STALA_GRUBOSC = 3
 
@@ -381,11 +382,9 @@ for element in wszystkie:
     if (obszar_tpn_buf is not None or obszar_tanap_buf is not None) and not w_parku(punkty):
         continue
 
-    # Zapamiętaj kilka reprezentatywnych punktów waya (start, ćwiartki, koniec)
     n  = len(punkty_raw)
     pp = [punkty_raw[i] for i in sorted(set([0, n//4, n//2, 3*n//4, n-1]))]
-    mid = punkty_raw[n // 2]
-    way_meta[way_id] = {"mid": mid, "pts": pp}
+    way_meta[way_id] = {"pts": pp, "start": punkty_raw[0], "end": punkty_raw[-1]}
 
     if strava_dostepna:
         seg = znajdz_segment_dla_way(punkty, strava_segmenty)
@@ -400,48 +399,55 @@ for element in wszystkie:
 
 print(f"Dopasowano bezpośrednio: {dopasowane} wayów | Relacji z danymi: {len(kolory_relacji)}")
 
-# ── Przebieg 1b: propaguj kolor z kolorowych wayów na szare w pobliżu ─────────
-
-def punkt_blisko_waya(lat, lon, pts, prog_km=0.25):
-    """Czy punkt (lat,lon) leży blisko któregokolwiek punktu z listy pts?"""
-    for p_lat, p_lon in pts:
-        dlat = (p_lat - lat) * 111
-        dlon = (p_lon - lon) * 111 * math.cos(math.radians(lat))
-        if math.sqrt(dlat**2 + dlon**2) < prog_km:
-            return True
-    return False
+# ── Przebieg 1b: propaguj kolor na WSZYSTKIE waye tej samej relacji ───────────
 
 if strava_dostepna:
-    print("Przebieg 1b: propagacja przestrzenna...")
+    propagowane = 0
+    for relacja_id, seg in kolory_relacji.items():
+        for way_id in relacja_do_wayow.get(relacja_id, []):
+            if way_id not in kolory_wayow:
+                kolory_wayow[way_id] = seg
+                propagowane += 1
+    print(f"Propagacja relacji: +{propagowane} wayów | Łącznie: {len(kolory_wayow)}")
 
-    # Zbuduj listę kolorowych wayów z ich punktami — do przeszukiwania
+# ── Przebieg 1c: flood fill po endpoints (tylko wzdłuż połączonych wayów) ─────
+
+if strava_dostepna:
+    print("Przebieg 1c: flood fill po połączeniach topologicznych...")
+
+    # Buduj słownik: zaokrąglony punkt → lista way_id (siatka ~50m)
+    grid_pts = {}
+    for wid, meta in way_meta.items():
+        for pt in [meta["start"], meta["end"]]:
+            gk = (round(pt[0] * 200), round(pt[1] * 200))
+            grid_pts.setdefault(gk, []).append(wid)
+
+    def sasiedzi_przez_endpoint(way_id):
+        meta = way_meta[way_id]
+        wynik = set()
+        for pt in [meta["start"], meta["end"]]:
+            gk = (round(pt[0] * 200), round(pt[1] * 200))
+            for dk in [(-1,-1),(-1,0),(-1,1),(0,-1),(0,0),(0,1),(1,-1),(1,0),(1,1)]:
+                for cand in grid_pts.get((gk[0]+dk[0], gk[1]+dk[1]), []):
+                    if cand != way_id:
+                        wynik.add(cand)
+        return wynik
+
     zmieniono = True
     iteracje  = 0
-    while zmieniono and iteracje < 15:
+    while zmieniono and iteracje < 30:
         zmieniono = False
         iteracje += 1
-        # Zbierz aktualne kolorowe waye i ich punkty
-        kolorowe = {
-            wid: way_meta[wid]["pts"]
-            for wid in kolory_wayow
-            if wid in way_meta
-        }
-        for way_id, meta in way_meta.items():
+        for way_id in list(way_meta.keys()):
             if way_id in kolory_wayow:
                 continue
-            # Szukaj kolorowego waya którego punkt leży blisko któregoś punktu tego waya
-            najlepszy = None
-            for pt in meta["pts"]:
-                for col_id, col_pts in kolorowe.items():
-                    if punkt_blisko_waya(pt[0], pt[1], col_pts):
-                        seg = kolory_wayow[col_id]
-                        if najlepszy is None or seg["effort_count"] > najlepszy["effort_count"]:
-                            najlepszy = seg
-            if najlepszy:
-                kolory_wayow[way_id] = najlepszy
-                zmieniono = True
+            for sasiad_id in sasiedzi_przez_endpoint(way_id):
+                if sasiad_id in kolory_wayow:
+                    kolory_wayow[way_id] = kolory_wayow[sasiad_id]
+                    zmieniono = True
+                    break
 
-    print(f"Po {iteracje} iteracjach: {len(kolory_wayow)} wayów z kolorem")
+    print(f"Po {iteracje} iteracjach flood fill: {len(kolory_wayow)} wayów z kolorem")
 
 # ── Przebieg 2: rysuj wszystkie waye ──────────────────────────────────────────
 
