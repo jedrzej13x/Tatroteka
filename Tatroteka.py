@@ -358,12 +358,44 @@ grupy = {
 if strava_dostepna:
     grupy["Natężenie ruchu"] = folium.FeatureGroup(name="Natężenie ruchu (Strava)", show=True)
 
-popupy_relacji = {}
-odfiltrowane   = 0
-dopasowane     = 0
-kolory_relacji = {}  # klasa_css → najlepszy kolor Strava dla całej relacji
-way_do_relacji = {}  # way_id → klasa_css (żeby drugi przebieg wiedział co pokolorować)
+popupy_relacji  = {}
+odfiltrowane    = 0
+dopasowane      = 0
+# way_id → najlepszy segment Strava (bezpośrednie dopasowanie)
+kolory_wayow    = {}
+# relacja_id → najlepszy segment Strava (max effort spośród wszystkich wayów relacji)
+kolory_relacji  = {}
 
+# ── Przebieg 1: zbierz bezpośrednie dopasowania way → segment Strava ──────────
+
+print("Przebieg 1: spatial join way → Strava...")
+for element in wszystkie:
+    if element['type'] != 'way' or 'geometry' not in element:
+        continue
+    punkty = [(p['lat'], p['lon']) for p in element['geometry']]
+    punkty = uprość_geometrie(punkty)
+    way_id = element.get('id')
+
+    if (obszar_tpn_buf is not None or obszar_tanap_buf is not None) and not w_parku(punkty):
+        continue
+
+    if strava_dostepna:
+        seg = znajdz_segment_dla_way(punkty, strava_segmenty)
+        if seg:
+            kolory_wayow[way_id] = seg
+            dopasowane += 1
+            # Zaktualizuj kolor relacji jeśli ten segment jest lepszy
+            if way_id in relacje_dla_way:
+                _, _, relacja_id = relacje_dla_way[way_id]
+                prev = kolory_relacji.get(relacja_id)
+                if prev is None or seg["effort_count"] > prev["effort_count"]:
+                    kolory_relacji[relacja_id] = seg
+
+print(f"Dopasowano bezpośrednio: {dopasowane} wayów | Relacji z danymi: {len(kolory_relacji)}")
+
+# ── Przebieg 2: rysuj wszystkie waye ──────────────────────────────────────────
+
+print("Przebieg 2: rysowanie...")
 for element in wszystkie:
     if element['type'] == 'way' and 'geometry' in element:
         highway   = element.get('tags', {}).get('highway', '')
@@ -376,7 +408,6 @@ for element in wszystkie:
             odfiltrowane += 1
             continue
 
-        # Oryginalny kolor z osmc lub highway
         kolor_oryginalny = kolor_szlaku(element)
         typ_nazwa        = nazwa_koloru(element)
 
@@ -388,45 +419,32 @@ for element in wszystkie:
             nazwa        = element.get('tags', {}).get('name', 'Brak nazwy')
             info_dlugosc = f"Długość odcinka: {oblicz_dlugosc(punkty)} km"
             klasa_css    = f"trasa-way-{way_id}"
+            relacja_id   = None
 
-        # ── Spatial join ze Strava ─────────────────────────────────────────────
-        strava_info = ""
+        # ── Dobierz kolor ──────────────────────────────────────────────────────
+        # Priorytet: 1) bezpośrednie dopasowanie, 2) kolor relacji, 3) oryginalny
+        seg = kolory_wayow.get(way_id)
+        if seg is None and relacja_id is not None:
+            seg = kolory_relacji.get(relacja_id)  # propagacja z relacji
+
+        strava_info    = ""
         kolor_finalny  = kolor_oryginalny
         weight_finalny = styl["weight"]
 
-        if strava_dostepna and len(punkty) > 0:
-            seg = znajdz_segment_dla_way(punkty, strava_segmenty)
-
-            if seg:
-                dopasowane    += 1
-                kolor_heat     = effort_do_koloru(seg["effort_count"], max_effort)
-                weight_heat    = effort_do_grubosci(seg["effort_count"], max_effort)
-
-                if kolor_heat:
-                    kolor_finalny  = kolor_heat
-                    weight_finalny = weight_heat
-
-                    # Zapamiętaj kolor dla całej relacji
-                    if klasa_css.startswith("trasa-") and not klasa_css.startswith("trasa-way-"):
-                        prev = kolory_relacji.get(klasa_css)
-                        if prev is None or seg["effort_count"] > prev["effort_count"]:
-                            kolory_relacji[klasa_css] = {
-                                "kolor":         kolor_heat,
-                                "weight":        weight_heat,
-                                "effort_count":  seg["effort_count"],
-                                "athlete_count": seg["athlete_count"],
-                                "seg_name":      seg["name"],
-                                "last_snapshot": seg["last_snapshot"],
-                            }
-
-                strava_info = f"""
-                    <hr style="margin:6px 0">
-                    <b>&#x1F4CA; Natężenie ruchu (Strava)</b><br>
-                    Przejść łącznie: <b>{seg['effort_count']:,}</b><br>
-                    Atletów: {seg['athlete_count']:,}<br>
-                    Segment: {seg['name']}<br>
-                    Snapshot: {seg['last_snapshot']}
-                """
+        if seg:
+            kolor_heat  = effort_do_koloru(seg["effort_count"], max_effort)
+            weight_heat = effort_do_grubosci(seg["effort_count"], max_effort)
+            if kolor_heat:
+                kolor_finalny  = kolor_heat
+                weight_finalny = weight_heat
+            strava_info = f"""
+                <hr style="margin:6px 0">
+                <b>&#x1F4CA; Natężenie ruchu (Strava)</b><br>
+                Przejść łącznie: <b>{seg['effort_count']:,}</b><br>
+                Atletów: {seg['athlete_count']:,}<br>
+                Segment: {seg['name']}<br>
+                Snapshot: {seg['last_snapshot']}
+            """
 
         popup_tekst = (
             f"<b>{nazwa}</b><br>"
@@ -444,60 +462,12 @@ for element in wszystkie:
         )
         linia.options['className'] = klasa_css
 
-        # Zapamiętaj mapowanie way → relacja dla drugiego przebiegu
-        if klasa_css.startswith("trasa-") and not klasa_css.startswith("trasa-way-"):
-            way_do_relacji[way_id] = klasa_css
-
         if klasa_css not in popupy_relacji:
             popupy_relacji[klasa_css] = popup_tekst
 
         grupy[styl["grupa"]].add_child(linia)
 
-print(f"Odfiltrowano: {odfiltrowane} | Dopasowano do Strava: {dopasowane}")
-
-# ── Drugi przebieg: propaguj kolory relacji na niezdopasowane odcinki ─────────
-
-if strava_dostepna and kolory_relacji:
-    print(f"Propagacja kolorów dla {len(kolory_relacji)} relacji...")
-    propagowane = 0
-
-    for element in wszystkie:
-        if element['type'] != 'way' or 'geometry' not in element:
-            continue
-        way_id = element.get('id')
-        if way_id not in way_do_relacji:
-            continue
-        klasa_css = way_do_relacji[way_id]
-        if klasa_css not in kolory_relacji:
-            continue
-
-        punkty = [(p['lat'], p['lon']) for p in element['geometry']]
-        punkty = uprość_geometrie(punkty)
-        if not w_parku(punkty):
-            continue
-
-        # Sprawdź czy ten odcinek już ma kolor (był dopasowany bezpośrednio)
-        seg_bezposredni = znajdz_segment_dla_way(punkty, strava_segmenty)
-        if seg_bezposredni:
-            continue  # już ma własny kolor
-
-        # Pokoloruj kolorem relacji
-        info = kolory_relacji[klasa_css]
-        highway = element.get('tags', {}).get('highway', '')
-        styl    = STYL.get(highway, {"color": "gray", "weight": 1, "grupa": "Pozostałe"})
-
-        linia = folium.PolyLine(
-            punkty,
-            color=info["kolor"],
-            weight=info["weight"],
-            opacity=0.6,
-            tooltip=element.get('tags', {}).get('name', 'Segment relacji'),
-        )
-        linia.options['className'] = klasa_css
-        grupy[styl["grupa"]].add_child(linia)
-        propagowane += 1
-
-    print(f"Propagowano kolor na {propagowane} dodatkowych odcinków")
+print(f"Odfiltrowano: {odfiltrowane} | Narysowano mapę")
 
 for grupa in grupy.values():
     grupa.add_to(mapa)
