@@ -365,6 +365,12 @@ dopasowane      = 0
 kolory_wayow    = {}
 # relacja_id → najlepszy segment Strava (max effort spośród wszystkich wayów relacji)
 kolory_relacji  = {}
+# punkt końcowy (zaokrąglony) → lista way_id które go dotykają
+punkty_do_wayow = {}
+# way_id → (punkt_start, punkt_end) zaokrąglone
+way_endpoints   = {}
+
+STALA_GRUBOSC = 3  # stała grubość dla wszystkich linii z danymi Strava
 
 # ── Przebieg 1: zbierz bezpośrednie dopasowania way → segment Strava ──────────
 
@@ -379,12 +385,19 @@ for element in wszystkie:
     if (obszar_tpn_buf is not None or obszar_tanap_buf is not None) and not w_parku(punkty):
         continue
 
+    # Zapamiętaj endpoints dla propagacji geograficznej
+    if len(punkty) >= 2:
+        p_start = (round(punkty[0][0], 4),  round(punkty[0][1], 4))
+        p_end   = (round(punkty[-1][0], 4), round(punkty[-1][1], 4))
+        way_endpoints[way_id] = (p_start, p_end)
+        for pt in [p_start, p_end]:
+            punkty_do_wayow.setdefault(pt, []).append(way_id)
+
     if strava_dostepna:
         seg = znajdz_segment_dla_way(punkty, strava_segmenty)
         if seg:
             kolory_wayow[way_id] = seg
             dopasowane += 1
-            # Zaktualizuj kolor relacji jeśli ten segment jest lepszy
             if way_id in relacje_dla_way:
                 _, _, relacja_id = relacje_dla_way[way_id]
                 prev = kolory_relacji.get(relacja_id)
@@ -392,6 +405,30 @@ for element in wszystkie:
                     kolory_relacji[relacja_id] = seg
 
 print(f"Dopasowano bezpośrednio: {dopasowane} wayów | Relacji z danymi: {len(kolory_relacji)}")
+
+# ── Przebieg 1b: propaguj kolory geograficznie (flood fill po połączonych wayach) ──
+
+if strava_dostepna:
+    print("Przebieg 1b: propagacja geograficzna...")
+    zmieniono = True
+    iteracje  = 0
+    while zmieniono and iteracje < 10:
+        zmieniono = False
+        iteracje += 1
+        for way_id, (p_start, p_end) in way_endpoints.items():
+            if way_id in kolory_wayow:
+                continue  # już ma kolor
+            # Sprawdź sąsiednie waye przez oba końce
+            sasiedzi = []
+            for pt in [p_start, p_end]:
+                for sasiad_id in punkty_do_wayow.get(pt, []):
+                    if sasiad_id != way_id and sasiad_id in kolory_wayow:
+                        sasiedzi.append(kolory_wayow[sasiad_id])
+            if sasiedzi:
+                # Weź sąsiada z najwyższym effort_count
+                kolory_wayow[way_id] = max(sasiedzi, key=lambda s: s["effort_count"])
+                zmieniono = True
+    print(f"Po {iteracje} iteracjach flood fill: {len(kolory_wayow)} wayów z kolorem")
 
 # ── Przebieg 2: rysuj wszystkie waye ──────────────────────────────────────────
 
@@ -421,22 +458,20 @@ for element in wszystkie:
             klasa_css    = f"trasa-way-{way_id}"
             relacja_id   = None
 
-        # ── Dobierz kolor ──────────────────────────────────────────────────────
-        # Priorytet: 1) bezpośrednie dopasowanie, 2) kolor relacji, 3) oryginalny
+        # Priorytet: 1) flood fill / bezpośrednie, 2) kolor relacji, 3) oryginalny
         seg = kolory_wayow.get(way_id)
         if seg is None and relacja_id is not None:
-            seg = kolory_relacji.get(relacja_id)  # propagacja z relacji
+            seg = kolory_relacji.get(relacja_id)
 
         strava_info    = ""
         kolor_finalny  = kolor_oryginalny
         weight_finalny = styl["weight"]
 
         if seg:
-            kolor_heat  = effort_do_koloru(seg["effort_count"], max_effort)
-            weight_heat = effort_do_grubosci(seg["effort_count"], max_effort)
+            kolor_heat = effort_do_koloru(seg["effort_count"], max_effort)
             if kolor_heat:
                 kolor_finalny  = kolor_heat
-                weight_finalny = weight_heat
+                weight_finalny = STALA_GRUBOSC  # stała grubość
             strava_info = f"""
                 <hr style="margin:6px 0">
                 <b>&#x1F4CA; Natężenie ruchu (Strava)</b><br>
