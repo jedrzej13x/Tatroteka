@@ -1,0 +1,8043 @@
+{
+  "1385488": {
+    "meta": {
+      "name": "Pod Slivkou 9 Climb",
+      "activity_type": "hiking",
+      "lat": 49.16193833333333,
+      "lng": 19.71291,
+      "distance": 2573.1,
+      "avg_grade": 7.3,
+      "elev_difference": 187.0,
+      "effort_count_cumulative": 9889,
+      "athlete_count": 3492,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 9889
+    }
+  },
+  "1725045": {
+    "meta": {
+      "name": "Pod Slivkou 9 Climb",
+      "activity_type": "running",
+      "lat": 49.1714347,
+      "lng": 19.7136549,
+      "distance": 933.1,
+      "avg_grade": 8.6,
+      "elev_difference": 80.4,
+      "effort_count_cumulative": 1829,
+      "athlete_count": 976,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1829
+    }
+  },
+  "1769775": {
+    "meta": {
+      "name": "Štrbské Pleso 2/49 Climb",
+      "activity_type": "hiking",
+      "lat": 49.22048218,
+      "lng": 20.09294593,
+      "distance": 2582.8,
+      "avg_grade": 7.1,
+      "elev_difference": 182.5,
+      "effort_count_cumulative": 773,
+      "athlete_count": 771,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 773
+    }
+  },
+  "1803458": {
+    "meta": {
+      "name": "Rákoň Oravaman",
+      "activity_type": "running",
+      "lat": 49.213923333,
+      "lng": 19.747701667,
+      "distance": 1681.1,
+      "avg_grade": 28.3,
+      "elev_difference": 476.1,
+      "effort_count_cumulative": 745,
+      "athlete_count": 545,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 745
+    }
+  },
+  "1851039": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.237868337861684,
+      "lng": 19.797883106713098,
+      "distance": 3656.4,
+      "avg_grade": 14.6,
+      "elev_difference": 533.8,
+      "effort_count_cumulative": 266,
+      "athlete_count": 241,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 266
+    }
+  },
+  "1851041": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.23027147073299,
+      "lng": 19.76899112574756,
+      "distance": 1808.4,
+      "avg_grade": 13.8,
+      "elev_difference": 249.6,
+      "effort_count_cumulative": 233,
+      "athlete_count": 252,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 233
+    }
+  },
+  "1870897": {
+    "meta": {
+      "name": "Brzeziny 1 Climb",
+      "activity_type": "running",
+      "lat": 49.26557148392693,
+      "lng": 20.033265371604493,
+      "distance": 1828.5,
+      "avg_grade": 5.4,
+      "elev_difference": 99.1,
+      "effort_count_cumulative": 2941,
+      "athlete_count": 1689,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2941
+    }
+  },
+  "1870909": {
+    "meta": {
+      "name": "Droga Brata Alberta Climb",
+      "activity_type": "running",
+      "lat": 49.23724750020826,
+      "lng": 19.996510988693807,
+      "distance": 735.8,
+      "avg_grade": 10.8,
+      "elev_difference": 82.7,
+      "effort_count_cumulative": 3121,
+      "athlete_count": 2108,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3121
+    }
+  },
+  "1890349": {
+    "meta": {
+      "name": "Droga Brata Alberta Climb",
+      "activity_type": "running",
+      "lat": 49.2336819,
+      "lng": 19.915464,
+      "distance": 385.0,
+      "avg_grade": 13.8,
+      "elev_difference": 53.2,
+      "effort_count_cumulative": 3564,
+      "athlete_count": 2347,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3564
+    }
+  },
+  "1929905": {
+    "meta": {
+      "name": "Štrbské Pleso 2/49 Climb",
+      "activity_type": "running",
+      "lat": 49.17371,
+      "lng": 20.083013,
+      "distance": 2063.1,
+      "avg_grade": 18.6,
+      "elev_difference": 383.1,
+      "effort_count_cumulative": 1514,
+      "athlete_count": 1409,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1514
+    }
+  },
+  "1934599": {
+    "meta": {
+      "name": "Štrbské Pleso 2/49 Climb",
+      "activity_type": "hiking",
+      "lat": 49.155448,
+      "lng": 20.045012,
+      "distance": 3495.2,
+      "avg_grade": 13.6,
+      "elev_difference": 476.0,
+      "effort_count_cumulative": 75,
+      "athlete_count": 81,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 75
+    }
+  },
+  "1976371": {
+    "meta": {
+      "name": "Štrbské Pleso 2/49 Climb",
+      "activity_type": "hiking",
+      "lat": 49.15968683548272,
+      "lng": 20.07342486642301,
+      "distance": 4603.7,
+      "avg_grade": 20.2,
+      "elev_difference": 927.8,
+      "effort_count_cumulative": 39,
+      "athlete_count": 29,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 39
+    }
+  },
+  "2095723": {
+    "meta": {
+      "name": "Štrbské Pleso 2/49 Climb",
+      "activity_type": "hiking",
+      "lat": 49.19443476945162,
+      "lng": 20.071977227926254,
+      "distance": 752.9,
+      "avg_grade": 24.8,
+      "elev_difference": 193.4,
+      "effort_count_cumulative": 224,
+      "athlete_count": 242,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 224
+    }
+  },
+  "2186160": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.13137008436024,
+      "lng": 19.944256553426385,
+      "distance": 1657.4,
+      "avg_grade": 5.8,
+      "elev_difference": 96.6,
+      "effort_count_cumulative": 591,
+      "athlete_count": 236,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 591
+    }
+  },
+  "2212190": {
+    "meta": {
+      "name": "Štrbské Pleso 2/4 Climb",
+      "activity_type": "hiking",
+      "lat": 49.1902034,
+      "lng": 20.1913005,
+      "distance": 973.3,
+      "avg_grade": 26.4,
+      "elev_difference": 257.1,
+      "effort_count_cumulative": 16,
+      "athlete_count": 23,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 16
+    }
+  },
+  "2212195": {
+    "meta": {
+      "name": "Tatranská Lesná 2 Climb",
+      "activity_type": "running",
+      "lat": 49.1645281,
+      "lng": 20.219824,
+      "distance": 321.2,
+      "avg_grade": 17.5,
+      "elev_difference": 56.3,
+      "effort_count_cumulative": 7177,
+      "athlete_count": 3621,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 7177
+    }
+  },
+  "2212216": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.2644668,
+      "lng": 20.1414153,
+      "distance": 1760.0,
+      "avg_grade": 5.4,
+      "elev_difference": 95.6,
+      "effort_count_cumulative": 379,
+      "athlete_count": 275,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 379
+    }
+  },
+  "2212217": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.2436314,
+      "lng": 20.1567695,
+      "distance": 1335.4,
+      "avg_grade": 6.3,
+      "elev_difference": 84.3,
+      "effort_count_cumulative": 44,
+      "athlete_count": 42,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 44
+    }
+  },
+  "2212218": {
+    "meta": {
+      "name": "Štrbské Pleso 2/4 Climb",
+      "activity_type": "hiking",
+      "lat": 49.2260537,
+      "lng": 20.1626334,
+      "distance": 1433.9,
+      "avg_grade": 10.4,
+      "elev_difference": 148.7,
+      "effort_count_cumulative": 28,
+      "athlete_count": 15,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 28
+    }
+  },
+  "2212230": {
+    "meta": {
+      "name": "Štrbské Pleso 2/4 Climb",
+      "activity_type": "hiking",
+      "lat": 49.2275745,
+      "lng": 20.1616491,
+      "distance": 2147.1,
+      "avg_grade": 9.6,
+      "elev_difference": 206.0,
+      "effort_count_cumulative": 32,
+      "athlete_count": 14,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 32
+    }
+  },
+  "2212241": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.2437774,
+      "lng": 20.1569272,
+      "distance": 1370.1,
+      "avg_grade": 6.2,
+      "elev_difference": 85.1,
+      "effort_count_cumulative": 443,
+      "athlete_count": 340,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 443
+    }
+  },
+  "2212243": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.231029,
+      "lng": 20.159807,
+      "distance": 458.4,
+      "avg_grade": 9.2,
+      "elev_difference": 42.0,
+      "effort_count_cumulative": 436,
+      "athlete_count": 337,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 436
+    }
+  },
+  "2323765": {
+    "meta": {
+      "name": "Štrbské Pleso 2/4 Climb",
+      "activity_type": "running",
+      "lat": 49.20147864117967,
+      "lng": 20.237230052558125,
+      "distance": 1074.8,
+      "avg_grade": 11.0,
+      "elev_difference": 118.1,
+      "effort_count_cumulative": 287,
+      "athlete_count": 245,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 287
+    }
+  },
+  "2330481": {
+    "meta": {
+      "name": "Štrbské Pleso 2/36 Climb",
+      "activity_type": "running",
+      "lat": 49.15296588479603,
+      "lng": 20.07535109337164,
+      "distance": 471.9,
+      "avg_grade": 13.3,
+      "elev_difference": 63.0,
+      "effort_count_cumulative": 2777,
+      "athlete_count": 2151,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2777
+    }
+  },
+  "2339215": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.27022570569379,
+      "lng": 19.768739091490897,
+      "distance": 524.1,
+      "avg_grade": 12.9,
+      "elev_difference": 67.8,
+      "effort_count_cumulative": 227,
+      "athlete_count": 185,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 227
+    }
+  },
+  "2347542": {
+    "meta": {
+      "name": "Ticha Dolina",
+      "activity_type": "hiking",
+      "lat": 49.20972768,
+      "lng": 19.93409586,
+      "distance": 2624.1,
+      "avg_grade": 5.2,
+      "elev_difference": 136.5,
+      "effort_count_cumulative": 5076,
+      "athlete_count": 3888,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 5076
+    }
+  },
+  "2348177": {
+    "meta": {
+      "name": "Potok Grocholów 45 Climb",
+      "activity_type": "hiking",
+      "lat": 49.329432193235796,
+      "lng": 20.226756362263323,
+      "distance": 1407.9,
+      "avg_grade": 9.9,
+      "elev_difference": 140.0,
+      "effort_count_cumulative": 7787,
+      "athlete_count": 3891,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 7787
+    }
+  },
+  "2461700": {
+    "meta": {
+      "name": "Štrbské Pleso 2/49 Climb",
+      "activity_type": "hiking",
+      "lat": 49.174122,
+      "lng": 20.082954,
+      "distance": 605.1,
+      "avg_grade": 26.9,
+      "elev_difference": 167.9,
+      "effort_count_cumulative": 252,
+      "athlete_count": 309,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 252
+    }
+  },
+  "2484474": {
+    "meta": {
+      "name": "Štrbské Pleso 2/49 Climb",
+      "activity_type": "hiking",
+      "lat": 49.15302933,
+      "lng": 20.07549155,
+      "distance": 3313.4,
+      "avg_grade": 13.6,
+      "elev_difference": 450.2,
+      "effort_count_cumulative": 45,
+      "athlete_count": 48,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 45
+    }
+  },
+  "2585824": {
+    "meta": {
+      "name": "Droga Brata Alberta Climb",
+      "activity_type": "hiking",
+      "lat": 49.230922,
+      "lng": 19.979169,
+      "distance": 307.0,
+      "avg_grade": 27.1,
+      "elev_difference": 83.3,
+      "effort_count_cumulative": 146,
+      "athlete_count": 157,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 146
+    }
+  },
+  "2595820": {
+    "meta": {
+      "name": "Štrbské Pleso 2/4 Climb",
+      "activity_type": "running",
+      "lat": 49.20994397252798,
+      "lng": 20.221223132684827,
+      "distance": 1650.0,
+      "avg_grade": 29.1,
+      "elev_difference": 480.8,
+      "effort_count_cumulative": 543,
+      "athlete_count": 558,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 543
+    }
+  },
+  "2600546": {
+    "meta": {
+      "name": "Skorusina Final Climb",
+      "activity_type": "hiking",
+      "lat": 49.2895660400391,
+      "lng": 19.6654491424561,
+      "distance": 2213.5,
+      "avg_grade": 6.0,
+      "elev_difference": 132.4,
+      "effort_count_cumulative": 249,
+      "athlete_count": 102,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 249
+    }
+  },
+  "2619218": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.2141236923635,
+      "lng": 19.74773906171322,
+      "distance": 2188.2,
+      "avg_grade": 22.4,
+      "elev_difference": 490.2,
+      "effort_count_cumulative": 114,
+      "athlete_count": 92,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 114
+    }
+  },
+  "2632129": {
+    "meta": {
+      "name": "Štrbské Pleso 2/49 Climb",
+      "activity_type": "hiking",
+      "lat": 49.2208432,
+      "lng": 20.003814,
+      "distance": 761.9,
+      "avg_grade": 22.4,
+      "elev_difference": 170.6,
+      "effort_count_cumulative": 57,
+      "athlete_count": 61,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 57
+    }
+  },
+  "2694981": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.280274510383606,
+      "lng": 19.838958978652954,
+      "distance": 833.8,
+      "avg_grade": 5.3,
+      "elev_difference": 43.8,
+      "effort_count_cumulative": 6577,
+      "athlete_count": 4096,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 6577
+    }
+  },
+  "2699691": {
+    "meta": {
+      "name": "Štrbské Pleso 2/4 Climb",
+      "activity_type": "running",
+      "lat": 49.15288649582368,
+      "lng": 20.165006024462166,
+      "distance": 746.5,
+      "avg_grade": 11.6,
+      "elev_difference": 86.9,
+      "effort_count_cumulative": 1728,
+      "athlete_count": 1188,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1728
+    }
+  },
+  "2757253": {
+    "meta": {
+      "name": "Štrbské Pleso 2/4 Climb",
+      "activity_type": "hiking",
+      "lat": 49.160656,
+      "lng": 20.138236,
+      "distance": 883.4,
+      "avg_grade": 15.4,
+      "elev_difference": 137.1,
+      "effort_count_cumulative": 8,
+      "athlete_count": 21,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 8
+    }
+  },
+  "2824871": {
+    "meta": {
+      "name": "Krzeptówki Climb",
+      "activity_type": "hiking",
+      "lat": 49.22865,
+      "lng": 19.85869,
+      "distance": 2267.4,
+      "avg_grade": 16.3,
+      "elev_difference": 369.6,
+      "effort_count_cumulative": 130,
+      "athlete_count": 145,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 130
+    }
+  },
+  "2824925": {
+    "meta": {
+      "name": "Droga Brata Alberta Climb",
+      "activity_type": "running",
+      "lat": 49.230813,
+      "lng": 19.983038,
+      "distance": 399.0,
+      "avg_grade": 15.0,
+      "elev_difference": 59.7,
+      "effort_count_cumulative": 3806,
+      "athlete_count": 2653,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3806
+    }
+  },
+  "3019231": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.216316223,
+      "lng": 20.230695724,
+      "distance": 443.7,
+      "avg_grade": 17.3,
+      "elev_difference": 77.1,
+      "effort_count_cumulative": 2042,
+      "athlete_count": 1413,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2042
+    }
+  },
+  "3091685": {
+    "meta": {
+      "name": "Štrbské Pleso Climb",
+      "activity_type": "hiking",
+      "lat": 49.196880341,
+      "lng": 20.063154221,
+      "distance": 3245.8,
+      "avg_grade": 16.2,
+      "elev_difference": 526.7,
+      "effort_count_cumulative": 48,
+      "athlete_count": 55,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 48
+    }
+  },
+  "3432178": {
+    "meta": {
+      "name": "Strbske pleso circuit",
+      "activity_type": "running",
+      "lat": 49.1199919,
+      "lng": 20.0608392,
+      "distance": 2227.7,
+      "avg_grade": 0.0,
+      "elev_difference": 26.6,
+      "effort_count_cumulative": 17863,
+      "athlete_count": 2832,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 17863
+    }
+  },
+  "3591546": {
+    "meta": {
+      "name": "Szlak Pieszy Niebieski Climb",
+      "activity_type": "hiking",
+      "lat": 49.222044,
+      "lng": 20.063172,
+      "distance": 1896.9,
+      "avg_grade": 19.7,
+      "elev_difference": 372.9,
+      "effort_count_cumulative": 43,
+      "athlete_count": 53,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 43
+    }
+  },
+  "3620794": {
+    "meta": {
+      "name": "Szlak Pieszy Czarny Climb",
+      "activity_type": "hiking",
+      "lat": 49.254979183897376,
+      "lng": 19.849773393943906,
+      "distance": 1375.9,
+      "avg_grade": 15.7,
+      "elev_difference": 215.4,
+      "effort_count_cumulative": 24,
+      "athlete_count": 34,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 24
+    }
+  },
+  "3921281": {
+    "meta": {
+      "name": "Szlak pieszy niebieski Climb",
+      "activity_type": "hiking",
+      "lat": 49.197382,
+      "lng": 19.734632,
+      "distance": 560.9,
+      "avg_grade": 16.9,
+      "elev_difference": 94.6,
+      "effort_count_cumulative": 29,
+      "athlete_count": 40,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 29
+    }
+  },
+  "3921288": {
+    "meta": {
+      "name": "Szlak pieszy czerwony Climb",
+      "activity_type": "hiking",
+      "lat": 49.19927,
+      "lng": 19.784948,
+      "distance": 1376.0,
+      "avg_grade": 22.5,
+      "elev_difference": 309.6,
+      "effort_count_cumulative": 52,
+      "athlete_count": 53,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 52
+    }
+  },
+  "4004790": {
+    "meta": {
+      "name": "Łysa Polana climb",
+      "activity_type": "hiking",
+      "lat": 49.265317,
+      "lng": 20.116371,
+      "distance": 3200.6,
+      "avg_grade": 4.3,
+      "elev_difference": 138.8,
+      "effort_count_cumulative": 13172,
+      "athlete_count": 6750,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 13172
+    }
+  },
+  "4028642": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.318168,
+      "lng": 19.827028,
+      "distance": 1242.2,
+      "avg_grade": 8.0,
+      "elev_difference": 99.2,
+      "effort_count_cumulative": 96,
+      "athlete_count": 38,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 96
+    }
+  },
+  "4247979": {
+    "meta": {
+      "name": "Szlak pieszy niebieski Climb",
+      "activity_type": "hiking",
+      "lat": 49.214161,
+      "lng": 20.053738,
+      "distance": 960.0,
+      "avg_grade": 17.4,
+      "elev_difference": 167.5,
+      "effort_count_cumulative": 204,
+      "athlete_count": 233,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 204
+    }
+  },
+  "4270753": {
+    "meta": {
+      "name": "Nowe Bystre - Ząb",
+      "activity_type": "hiking",
+      "lat": 49.334245,
+      "lng": 19.924637,
+      "distance": 2056.1,
+      "avg_grade": 6.9,
+      "elev_difference": 142.0,
+      "effort_count_cumulative": 6754,
+      "athlete_count": 3456,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 6754
+    }
+  },
+  "4398025": {
+    "meta": {
+      "name": "Szlak pieszy żółty Climb",
+      "activity_type": "running",
+      "lat": 49.235237,
+      "lng": 19.927961,
+      "distance": 471.7,
+      "avg_grade": 16.2,
+      "elev_difference": 76.4,
+      "effort_count_cumulative": 3697,
+      "athlete_count": 2358,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3697
+    }
+  },
+  "4418495": {
+    "meta": {
+      "name": "Szlak pieszy żółty Climb",
+      "activity_type": "hiking",
+      "lat": 49.234173,
+      "lng": 19.939032,
+      "distance": 697.7,
+      "avg_grade": 18.6,
+      "elev_difference": 129.7,
+      "effort_count_cumulative": 211,
+      "athlete_count": 227,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 211
+    }
+  },
+  "4487446": {
+    "meta": {
+      "name": "Szlak pieszy żółty Climb",
+      "activity_type": "running",
+      "lat": 49.23845,
+      "lng": 19.782392,
+      "distance": 1278.7,
+      "avg_grade": 13.6,
+      "elev_difference": 173.7,
+      "effort_count_cumulative": 2700,
+      "athlete_count": 1853,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2700
+    }
+  },
+  "4520689": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.259434,
+      "lng": 19.641366,
+      "distance": 1399.4,
+      "avg_grade": 3.7,
+      "elev_difference": 51.8,
+      "effort_count_cumulative": 543,
+      "athlete_count": 300,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 543
+    }
+  },
+  "4523511": {
+    "meta": {
+      "name": "Potok Wojtyczków Climb",
+      "activity_type": "hiking",
+      "lat": 49.34671,
+      "lng": 20.158819,
+      "distance": 1113.8,
+      "avg_grade": 7.8,
+      "elev_difference": 87.3,
+      "effort_count_cumulative": 13989,
+      "athlete_count": 6762,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 13989
+    }
+  },
+  "4551718": {
+    "meta": {
+      "name": "Szlak pieszy zielony Climb",
+      "activity_type": "hiking",
+      "lat": 49.235273,
+      "lng": 20.08925,
+      "distance": 3385.6,
+      "avg_grade": 7.7,
+      "elev_difference": 262.0,
+      "effort_count_cumulative": 508,
+      "athlete_count": 545,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 508
+    }
+  },
+  "4551720": {
+    "meta": {
+      "name": "Szlak pieszy żółty Climb",
+      "activity_type": "hiking",
+      "lat": 49.243366,
+      "lng": 20.01476,
+      "distance": 1580.5,
+      "avg_grade": 14.6,
+      "elev_difference": 230.9,
+      "effort_count_cumulative": 48,
+      "athlete_count": 59,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 48
+    }
+  },
+  "4579155": {
+    "meta": {
+      "name": "Podbieg z Murowańca",
+      "activity_type": "running",
+      "lat": 49.246397,
+      "lng": 20.006778,
+      "distance": 335.7,
+      "avg_grade": 14.6,
+      "elev_difference": 49.6,
+      "effort_count_cumulative": 9837,
+      "athlete_count": 5310,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 9837
+    }
+  },
+  "4682642": {
+    "meta": {
+      "name": "Szlak pieszy czerwony Climb",
+      "activity_type": "hiking",
+      "lat": 49.228862,
+      "lng": 20.022213,
+      "distance": 1089.2,
+      "avg_grade": 17.9,
+      "elev_difference": 195.1,
+      "effort_count_cumulative": 145,
+      "athlete_count": 196,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 145
+    }
+  },
+  "4683783": {
+    "meta": {
+      "name": "Rysy z Czarnego Stawu",
+      "activity_type": "running",
+      "lat": 49.186402,
+      "lng": 20.079067,
+      "distance": 3121.7,
+      "avg_grade": 27.1,
+      "elev_difference": 846.5,
+      "effort_count_cumulative": 811,
+      "athlete_count": 712,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 811
+    }
+  },
+  "4746914": {
+    "meta": {
+      "name": "Szlak pieszy czarny Climb",
+      "activity_type": "hiking",
+      "lat": 49.26132,
+      "lng": 19.847624,
+      "distance": 1906.3,
+      "avg_grade": 5.2,
+      "elev_difference": 98.4,
+      "effort_count_cumulative": 30,
+      "athlete_count": 28,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 30
+    }
+  },
+  "4755498": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.216073,
+      "lng": 20.206818,
+      "distance": 1130.3,
+      "avg_grade": 15.1,
+      "elev_difference": 171.6,
+      "effort_count_cumulative": 523,
+      "athlete_count": 524,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 523
+    }
+  },
+  "4790545": {
+    "meta": {
+      "name": "Szlak pieszy czerwony Climb",
+      "activity_type": "hiking",
+      "lat": 49.195431,
+      "lng": 20.050263,
+      "distance": 742.6,
+      "avg_grade": 29.7,
+      "elev_difference": 220.9,
+      "effort_count_cumulative": 19,
+      "athlete_count": 20,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 19
+    }
+  },
+  "4855088": {
+    "meta": {
+      "name": "Szlak pieszy zielony Climb",
+      "activity_type": "hiking",
+      "lat": 49.262883,
+      "lng": 20.089998,
+      "distance": 1516.3,
+      "avg_grade": 16.8,
+      "elev_difference": 255.1,
+      "effort_count_cumulative": 203,
+      "athlete_count": 202,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 203
+    }
+  },
+  "4880686": {
+    "meta": {
+      "name": "Červená značka Climb",
+      "activity_type": "running",
+      "lat": 49.169624,
+      "lng": 19.775876,
+      "distance": 618.7,
+      "avg_grade": 7.8,
+      "elev_difference": 48.3,
+      "effort_count_cumulative": 212,
+      "athlete_count": 167,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 212
+    }
+  },
+  "4880689": {
+    "meta": {
+      "name": "Szlak pieszy zielony Climb",
+      "activity_type": "running",
+      "lat": 49.196276,
+      "lng": 19.854242,
+      "distance": 1671.4,
+      "avg_grade": 23.7,
+      "elev_difference": 395.9,
+      "effort_count_cumulative": 86,
+      "athlete_count": 84,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 86
+    }
+  },
+  "4914013": {
+    "meta": {
+      "name": "Tatranská Polianka Climb",
+      "activity_type": "running",
+      "lat": 49.118682,
+      "lng": 20.123302,
+      "distance": 4807.0,
+      "avg_grade": 17.1,
+      "elev_difference": 824.4,
+      "effort_count_cumulative": 190,
+      "athlete_count": 151,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 190
+    }
+  },
+  "4917041": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.210085,
+      "lng": 20.221193,
+      "distance": 3105.5,
+      "avg_grade": 20.0,
+      "elev_difference": 620.8,
+      "effort_count_cumulative": 56,
+      "athlete_count": 61,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 56
+    }
+  },
+  "4943710": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.117316,
+      "lng": 20.165744,
+      "distance": 1506.5,
+      "avg_grade": 6.7,
+      "elev_difference": 101.2,
+      "effort_count_cumulative": 41222,
+      "athlete_count": 13584,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 41222
+    }
+  },
+  "4947432": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.256428,
+      "lng": 20.148073,
+      "distance": 590.8,
+      "avg_grade": 9.5,
+      "elev_difference": 55.9,
+      "effort_count_cumulative": 135,
+      "athlete_count": 115,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 135
+    }
+  },
+  "4987186": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.286839,
+      "lng": 19.745719,
+      "distance": 1851.4,
+      "avg_grade": 5.2,
+      "elev_difference": 96.2,
+      "effort_count_cumulative": 24,
+      "athlete_count": 23,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 24
+    }
+  },
+  "5016900": {
+    "meta": {
+      "name": "Szlak pieszy czerwony Climb",
+      "activity_type": "hiking",
+      "lat": 49.153305,
+      "lng": 20.083862,
+      "distance": 628.4,
+      "avg_grade": 12.8,
+      "elev_difference": 80.6,
+      "effort_count_cumulative": 138,
+      "athlete_count": 144,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 138
+    }
+  },
+  "5063498": {
+    "meta": {
+      "name": "Wierch Spiski Climb",
+      "activity_type": "running",
+      "lat": 49.344544,
+      "lng": 20.118199,
+      "distance": 1116.6,
+      "avg_grade": 5.2,
+      "elev_difference": 58.4,
+      "effort_count_cumulative": 106,
+      "athlete_count": 61,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 106
+    }
+  },
+  "5069808": {
+    "meta": {
+      "name": "Gubałówka z Furmanowej",
+      "activity_type": "running",
+      "lat": 49.319583,
+      "lng": 19.946405,
+      "distance": 1581.8,
+      "avg_grade": 5.8,
+      "elev_difference": 93.5,
+      "effort_count_cumulative": 1000,
+      "athlete_count": 629,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1000
+    }
+  },
+  "5105533": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.209686,
+      "lng": 20.221518,
+      "distance": 2365.6,
+      "avg_grade": 18.7,
+      "elev_difference": 446.3,
+      "effort_count_cumulative": 33,
+      "athlete_count": 37,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 33
+    }
+  },
+  "5185988": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.179306,
+      "lng": 19.742369,
+      "distance": 727.3,
+      "avg_grade": 30.3,
+      "elev_difference": 220.7,
+      "effort_count_cumulative": 28,
+      "athlete_count": 27,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 28
+    }
+  },
+  "5186847": {
+    "meta": {
+      "name": "Droga Papieska Climb",
+      "activity_type": "running",
+      "lat": 49.337235,
+      "lng": 19.935524,
+      "distance": 980.5,
+      "avg_grade": 4.5,
+      "elev_difference": 43.7,
+      "effort_count_cumulative": 26,
+      "athlete_count": 44,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 26
+    }
+  },
+  "5244759": {
+    "meta": {
+      "name": "Szlak pieszy czerwony Climb",
+      "activity_type": "hiking",
+      "lat": 49.176033,
+      "lng": 20.089033,
+      "distance": 892.6,
+      "avg_grade": 16.4,
+      "elev_difference": 146.0,
+      "effort_count_cumulative": 209,
+      "athlete_count": 245,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 209
+    }
+  },
+  "5260113": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.10637,
+      "lng": 20.066031,
+      "distance": 1653.4,
+      "avg_grade": 4.9,
+      "elev_difference": 81.1,
+      "effort_count_cumulative": 18374,
+      "athlete_count": 4826,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 18374
+    }
+  },
+  "5278568": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.288616,
+      "lng": 19.772129,
+      "distance": 1580.2,
+      "avg_grade": 7.0,
+      "elev_difference": 110.1,
+      "effort_count_cumulative": 25,
+      "athlete_count": 28,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 25
+    }
+  },
+  "5321064": {
+    "meta": {
+      "name": "Koprova Valley UP (from gate to the end of the bike trail)",
+      "activity_type": "hiking",
+      "lat": 49.151514,
+      "lng": 19.9236,
+      "distance": 5899.3,
+      "avg_grade": 3.3,
+      "elev_difference": 194.8,
+      "effort_count_cumulative": 4842,
+      "athlete_count": 3603,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 4842
+    }
+  },
+  "5343706": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.238659,
+      "lng": 19.713076,
+      "distance": 1887.4,
+      "avg_grade": 30.2,
+      "elev_difference": 570.5,
+      "effort_count_cumulative": 1,
+      "athlete_count": 12,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1
+    }
+  },
+  "5405016": {
+    "meta": {
+      "name": "A Climb",
+      "activity_type": "running",
+      "lat": 49.262985,
+      "lng": 19.619182,
+      "distance": 903.0,
+      "avg_grade": 5.4,
+      "elev_difference": 49.0,
+      "effort_count_cumulative": 161,
+      "athlete_count": 113,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 161
+    }
+  },
+  "5405017": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.273046,
+      "lng": 19.647695,
+      "distance": 1055.8,
+      "avg_grade": 3.9,
+      "elev_difference": 40.8,
+      "effort_count_cumulative": 124,
+      "athlete_count": 66,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 124
+    }
+  },
+  "5405018": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.277064,
+      "lng": 19.687199,
+      "distance": 1689.9,
+      "avg_grade": 5.6,
+      "elev_difference": 95.3,
+      "effort_count_cumulative": 34,
+      "athlete_count": 29,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 34
+    }
+  },
+  "5405026": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.278181,
+      "lng": 20.181302,
+      "distance": 2518.1,
+      "avg_grade": 5.7,
+      "elev_difference": 142.6,
+      "effort_count_cumulative": 9,
+      "athlete_count": 19,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 9
+    }
+  },
+  "5415957": {
+    "meta": {
+      "name": "Szlak pieszy zielony Climb",
+      "activity_type": "running",
+      "lat": 49.226543,
+      "lng": 20.077852,
+      "distance": 572.0,
+      "avg_grade": 7.3,
+      "elev_difference": 42.0,
+      "effort_count_cumulative": 1820,
+      "athlete_count": 1645,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1820
+    }
+  },
+  "5419140": {
+    "meta": {
+      "name": "Szlak pieszy żółty Climb",
+      "activity_type": "hiking",
+      "lat": 49.227292,
+      "lng": 20.037953,
+      "distance": 505.7,
+      "avg_grade": 20.7,
+      "elev_difference": 104.9,
+      "effort_count_cumulative": 76,
+      "athlete_count": 79,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 76
+    }
+  },
+  "5455038": {
+    "meta": {
+      "name": "Szlak pieszy czerwony Climb",
+      "activity_type": "running",
+      "lat": 49.151787,
+      "lng": 20.086193,
+      "distance": 355.0,
+      "avg_grade": 19.8,
+      "elev_difference": 79.4,
+      "effort_count_cumulative": 318,
+      "athlete_count": 270,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 318
+    }
+  },
+  "5499988": {
+    "meta": {
+      "name": "Szlak pieszy czarny Climb",
+      "activity_type": "hiking",
+      "lat": 49.257071,
+      "lng": 19.815472,
+      "distance": 1330.0,
+      "avg_grade": 10.1,
+      "elev_difference": 134.9,
+      "effort_count_cumulative": 32,
+      "athlete_count": 20,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 32
+    }
+  },
+  "5546655": {
+    "meta": {
+      "name": "Szlak pieszy niebieski Climb",
+      "activity_type": "hiking",
+      "lat": 49.245875,
+      "lng": 19.904009,
+      "distance": 2699.7,
+      "avg_grade": 24.9,
+      "elev_difference": 673.4,
+      "effort_count_cumulative": 48,
+      "athlete_count": 57,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 48
+    }
+  },
+  "5564604": {
+    "meta": {
+      "name": "Pióro",
+      "activity_type": "hiking",
+      "lat": 49.277021,
+      "lng": 19.991489,
+      "distance": 683.4,
+      "avg_grade": -26.9,
+      "elev_difference": 183.9,
+      "effort_count_cumulative": 156,
+      "athlete_count": 29,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 156
+    }
+  },
+  "5659929": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.131407,
+      "lng": 19.834003,
+      "distance": 675.0,
+      "avg_grade": 7.6,
+      "elev_difference": 51.3,
+      "effort_count_cumulative": 173,
+      "athlete_count": 114,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 173
+    }
+  },
+  "5763042": {
+    "meta": {
+      "name": "Szlak pieszy zielony Climb",
+      "activity_type": "hiking",
+      "lat": 49.249711,
+      "lng": 19.951855,
+      "distance": 1916.8,
+      "avg_grade": 17.2,
+      "elev_difference": 330.4,
+      "effort_count_cumulative": 108,
+      "athlete_count": 127,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 108
+    }
+  },
+  "5777101": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.153294,
+      "lng": 19.796566,
+      "distance": 1869.0,
+      "avg_grade": 22.0,
+      "elev_difference": 411.4,
+      "effort_count_cumulative": 25,
+      "athlete_count": 17,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 25
+    }
+  },
+  "5777102": {
+    "meta": {
+      "name": "Szlak pieszy czerwony Climb",
+      "activity_type": "hiking",
+      "lat": 49.162511,
+      "lng": 19.795169,
+      "distance": 1545.7,
+      "avg_grade": 21.1,
+      "elev_difference": 326.3,
+      "effort_count_cumulative": 33,
+      "athlete_count": 17,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 33
+    }
+  },
+  "5777104": {
+    "meta": {
+      "name": "Szlak pieszy czerwony Climb",
+      "activity_type": "hiking",
+      "lat": 49.181215,
+      "lng": 19.793607,
+      "distance": 639.1,
+      "avg_grade": 15.5,
+      "elev_difference": 98.9,
+      "effort_count_cumulative": 25,
+      "athlete_count": 17,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 25
+    }
+  },
+  "5777105": {
+    "meta": {
+      "name": "Szlak pieszy czerwony Climb",
+      "activity_type": "hiking",
+      "lat": 49.188115,
+      "lng": 19.796443,
+      "distance": 672.0,
+      "avg_grade": 16.0,
+      "elev_difference": 107.8,
+      "effort_count_cumulative": 19,
+      "athlete_count": 17,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 19
+    }
+  },
+  "5831364": {
+    "meta": {
+      "name": "Szlak pieszy zielony Climb",
+      "activity_type": "hiking",
+      "lat": 49.201584,
+      "lng": 20.070884,
+      "distance": 1897.6,
+      "avg_grade": 17.3,
+      "elev_difference": 329.5,
+      "effort_count_cumulative": 56,
+      "athlete_count": 67,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 56
+    }
+  },
+  "5849564": {
+    "meta": {
+      "name": "Karpęciny Climb",
+      "activity_type": "running",
+      "lat": 49.326686,
+      "lng": 20.098852,
+      "distance": 1600.4,
+      "avg_grade": 6.6,
+      "elev_difference": 106.0,
+      "effort_count_cumulative": 247,
+      "athlete_count": 135,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 247
+    }
+  },
+  "5870244": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.244739,
+      "lng": 19.712727,
+      "distance": 1253.3,
+      "avg_grade": 11.6,
+      "elev_difference": 144.9,
+      "effort_count_cumulative": 30,
+      "athlete_count": 29,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 30
+    }
+  },
+  "5870245": {
+    "meta": {
+      "name": "Szlak pieszy niebieski Climb",
+      "activity_type": "running",
+      "lat": 49.239541,
+      "lng": 19.734922,
+      "distance": 1015.5,
+      "avg_grade": 12.1,
+      "elev_difference": 123.1,
+      "effort_count_cumulative": 378,
+      "athlete_count": 260,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 378
+    }
+  },
+  "5870247": {
+    "meta": {
+      "name": "Szlak pieszy niebieski Climb",
+      "activity_type": "running",
+      "lat": 49.224614,
+      "lng": 19.750936,
+      "distance": 551.2,
+      "avg_grade": 24.7,
+      "elev_difference": 136.0,
+      "effort_count_cumulative": 320,
+      "athlete_count": 236,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 320
+    }
+  },
+  "5884658": {
+    "meta": {
+      "name": "Podbanské Climb",
+      "activity_type": "running",
+      "lat": 49.142637,
+      "lng": 19.902867,
+      "distance": 2075.1,
+      "avg_grade": 7.0,
+      "elev_difference": 145.5,
+      "effort_count_cumulative": 79,
+      "athlete_count": 81,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 79
+    }
+  },
+  "5910746": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.157843,
+      "lng": 19.632117,
+      "distance": 1734.2,
+      "avg_grade": 20.0,
+      "elev_difference": 347.3,
+      "effort_count_cumulative": 471,
+      "athlete_count": 326,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 471
+    }
+  },
+  "5916034": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.221384,
+      "lng": 20.23091,
+      "distance": 1293.1,
+      "avg_grade": 12.4,
+      "elev_difference": 160.6,
+      "effort_count_cumulative": 1357,
+      "athlete_count": 989,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1357
+    }
+  },
+  "5916211": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.221695,
+      "lng": 20.231241,
+      "distance": 1315.7,
+      "avg_grade": 12.3,
+      "elev_difference": 161.2,
+      "effort_count_cumulative": 69,
+      "athlete_count": 63,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 69
+    }
+  },
+  "5916212": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.22937,
+      "lng": 20.219986,
+      "distance": 606.6,
+      "avg_grade": 22.5,
+      "elev_difference": 136.9,
+      "effort_count_cumulative": 34,
+      "athlete_count": 33,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 34
+    }
+  },
+  "5944336": {
+    "meta": {
+      "name": "Szlak pieszy żółty Climb",
+      "activity_type": "hiking",
+      "lat": 49.24143,
+      "lng": 19.864463,
+      "distance": 805.0,
+      "avg_grade": 14.0,
+      "elev_difference": 113.6,
+      "effort_count_cumulative": 22,
+      "athlete_count": 41,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 22
+    }
+  },
+  "5954085": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.336558,
+      "lng": 20.242644,
+      "distance": 4459.1,
+      "avg_grade": 3.4,
+      "elev_difference": 153.4,
+      "effort_count_cumulative": 321,
+      "athlete_count": 209,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 321
+    }
+  },
+  "5983964": {
+    "meta": {
+      "name": "Szlak pieszy czerwony Climb",
+      "activity_type": "running",
+      "lat": 49.247839,
+      "lng": 20.086084,
+      "distance": 453.0,
+      "avg_grade": 13.7,
+      "elev_difference": 62.1,
+      "effort_count_cumulative": 142,
+      "athlete_count": 117,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 142
+    }
+  },
+  "6001384": {
+    "meta": {
+      "name": "Szlak pieszy zielony Climb",
+      "activity_type": "hiking",
+      "lat": 49.217297,
+      "lng": 19.805889,
+      "distance": 1351.8,
+      "avg_grade": 18.5,
+      "elev_difference": 250.2,
+      "effort_count_cumulative": 82,
+      "athlete_count": 80,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 82
+    }
+  },
+  "6001410": {
+    "meta": {
+      "name": "Szlak pieszy zielony Climb",
+      "activity_type": "running",
+      "lat": 49.217297,
+      "lng": 19.805889,
+      "distance": 1351.8,
+      "avg_grade": 18.5,
+      "elev_difference": 250.2,
+      "effort_count_cumulative": 597,
+      "athlete_count": 502,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 597
+    }
+  },
+  "6019420": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.199278,
+      "lng": 19.705518,
+      "distance": 666.5,
+      "avg_grade": 19.6,
+      "elev_difference": 130.6,
+      "effort_count_cumulative": 741,
+      "athlete_count": 634,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 741
+    }
+  },
+  "6117724": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.238634,
+      "lng": 19.713405,
+      "distance": 2234.0,
+      "avg_grade": 19.2,
+      "elev_difference": 431.6,
+      "effort_count_cumulative": 15,
+      "athlete_count": 28,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 15
+    }
+  },
+  "6215972": {
+    "meta": {
+      "name": "Szlak pieszy niebieski Climb",
+      "activity_type": "hiking",
+      "lat": 49.272174,
+      "lng": 19.990144,
+      "distance": 1958.9,
+      "avg_grade": 9.0,
+      "elev_difference": 176.0,
+      "effort_count_cumulative": 34,
+      "athlete_count": 33,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 34
+    }
+  },
+  "6323774": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "hiking",
+      "lat": 49.160229,
+      "lng": 20.241351,
+      "distance": 2744.4,
+      "avg_grade": 8.3,
+      "elev_difference": 227.4,
+      "effort_count_cumulative": 21,
+      "athlete_count": 23,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 21
+    }
+  },
+  "6325476": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.121204,
+      "lng": 20.016504,
+      "distance": 1116.6,
+      "avg_grade": 3.9,
+      "elev_difference": 43.4,
+      "effort_count_cumulative": 252,
+      "athlete_count": 220,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 252
+    }
+  },
+  "6346686": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.10332,
+      "lng": 19.806427,
+      "distance": 1373.7,
+      "avg_grade": 3.4,
+      "elev_difference": 46.1,
+      "effort_count_cumulative": 114,
+      "athlete_count": 57,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 114
+    }
+  },
+  "6346687": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.114283,
+      "lng": 19.80049,
+      "distance": 1565.7,
+      "avg_grade": 3.2,
+      "elev_difference": 50.4,
+      "effort_count_cumulative": 618,
+      "athlete_count": 300,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 618
+    }
+  },
+  "6400773": {
+    "meta": {
+      "name": "Szlak pieszy zielony Climb",
+      "activity_type": "hiking",
+      "lat": 49.239928,
+      "lng": 19.974076,
+      "distance": 583.9,
+      "avg_grade": 20.6,
+      "elev_difference": 120.1,
+      "effort_count_cumulative": 242,
+      "athlete_count": 73,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 242
+    }
+  },
+  "6457754": {
+    "meta": {
+      "name": "Červená značka Climb",
+      "activity_type": "hiking",
+      "lat": 49.176363,
+      "lng": 19.77362,
+      "distance": 1071.2,
+      "avg_grade": 8.7,
+      "elev_difference": 93.4,
+      "effort_count_cumulative": 43,
+      "athlete_count": 23,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 43
+    }
+  },
+  "6470271": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.118103,
+      "lng": 20.118784,
+      "distance": 539.0,
+      "avg_grade": 10.8,
+      "elev_difference": 58.0,
+      "effort_count_cumulative": 821,
+      "athlete_count": 355,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 821
+    }
+  },
+  "6470272": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.114616,
+      "lng": 20.093598,
+      "distance": 1299.4,
+      "avg_grade": 4.5,
+      "elev_difference": 58.0,
+      "effort_count_cumulative": 205,
+      "athlete_count": 111,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 205
+    }
+  },
+  "6698573": {
+    "meta": {
+      "name": "Grzegrzółka",
+      "activity_type": "hiking",
+      "lat": 49.237652,
+      "lng": 19.786378,
+      "distance": 2763.6,
+      "avg_grade": 15.1,
+      "elev_difference": 421.7,
+      "effort_count_cumulative": 344,
+      "athlete_count": 334,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 344
+    }
+  },
+  "6758079": {
+    "meta": {
+      "name": "Segment",
+      "activity_type": "running",
+      "lat": 49.304293,
+      "lng": 19.969739,
+      "distance": 909.5,
+      "avg_grade": 8.3,
+      "elev_difference": 75.5,
+      "effort_count_cumulative": 241,
+      "athlete_count": 138,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 241
+    }
+  },
+  "7204767": {
+    "meta": {
+      "name": "Po kamyczkach",
+      "activity_type": "hiking",
+      "lat": 49.269419,
+      "lng": 19.980389,
+      "distance": 1771.7,
+      "avg_grade": 9.9,
+      "elev_difference": 175.7,
+      "effort_count_cumulative": 749,
+      "athlete_count": 470,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 749
+    }
+  },
+  "7321324": {
+    "meta": {
+      "name": "Grzbietem Gubałówki",
+      "activity_type": "running",
+      "lat": 49.307492,
+      "lng": 19.935364,
+      "distance": 1834.9,
+      "avg_grade": 1.1,
+      "elev_difference": 20.9,
+      "effort_count_cumulative": 811,
+      "athlete_count": 594,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 811
+    }
+  },
+  "7564875": {
+    "meta": {
+      "name": "uphill Kośne Hamry - pomost w Małem Cichem",
+      "activity_type": "running",
+      "lat": 49.33179,
+      "lng": 20.041458,
+      "distance": 2989.3,
+      "avg_grade": 1.8,
+      "elev_difference": 56.0,
+      "effort_count_cumulative": 241,
+      "athlete_count": 105,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 241
+    }
+  },
+  "7602971": {
+    "meta": {
+      "name": "C'est gment",
+      "activity_type": "running",
+      "lat": 49.27528,
+      "lng": 19.871143,
+      "distance": 2770.3,
+      "avg_grade": -0.7,
+      "elev_difference": 82.7,
+      "effort_count_cumulative": 4915,
+      "athlete_count": 1549,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 4915
+    }
+  },
+  "7682935": {
+    "meta": {
+      "name": "bobrovecka dolina parkovisko- cesta na mnich",
+      "activity_type": "hiking",
+      "lat": 49.156338,
+      "lng": 19.632093,
+      "distance": 1175.3,
+      "avg_grade": 7.8,
+      "elev_difference": 99.7,
+      "effort_count_cumulative": 5715,
+      "athlete_count": 1700,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 5715
+    }
+  },
+  "7706447": {
+    "meta": {
+      "name": "Tátrasegment",
+      "activity_type": "running",
+      "lat": 49.13487,
+      "lng": 20.014473,
+      "distance": 1208.7,
+      "avg_grade": 0.0,
+      "elev_difference": 23.7,
+      "effort_count_cumulative": 3248,
+      "athlete_count": 1994,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3248
+    }
+  },
+  "7902203": {
+    "meta": {
+      "name": "Przełęcz źdiarska-szczyt",
+      "activity_type": "hiking",
+      "lat": 49.280523,
+      "lng": 20.209474,
+      "distance": 957.1,
+      "avg_grade": 6.9,
+      "elev_difference": 66.0,
+      "effort_count_cumulative": 9995,
+      "athlete_count": 5370,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 9995
+    }
+  },
+  "7903637": {
+    "meta": {
+      "name": "Rzepiska dh",
+      "activity_type": "hiking",
+      "lat": 49.345912,
+      "lng": 20.183387,
+      "distance": 1870.8,
+      "avg_grade": -6.5,
+      "elev_difference": 121.7,
+      "effort_count_cumulative": 8655,
+      "athlete_count": 3867,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 8655
+    }
+  },
+  "7914932": {
+    "meta": {
+      "name": "Kiry - Nędzówka",
+      "activity_type": "hiking",
+      "lat": 49.275457,
+      "lng": 19.869198,
+      "distance": 944.1,
+      "avg_grade": 1.6,
+      "elev_difference": 24.7,
+      "effort_count_cumulative": 18732,
+      "athlete_count": 8036,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 18732
+    }
+  },
+  "8017123": {
+    "meta": {
+      "name": "Ziarske kopce",
+      "activity_type": "hiking",
+      "lat": 49.128701,
+      "lng": 19.668695,
+      "distance": 2189.3,
+      "avg_grade": 4.8,
+      "elev_difference": 105.3,
+      "effort_count_cumulative": 366,
+      "athlete_count": 135,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 366
+    }
+  },
+  "8024693": {
+    "meta": {
+      "name": "Teryho chata - Hrebienok",
+      "activity_type": "running",
+      "lat": 49.190061,
+      "lng": 20.199785,
+      "distance": 5988.4,
+      "avg_grade": -11.5,
+      "elev_difference": 689.2,
+      "effort_count_cumulative": 860,
+      "athlete_count": 775,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 860
+    }
+  },
+  "8027954": {
+    "meta": {
+      "name": "Sądelska-Jaszczurówka DH",
+      "activity_type": "hiking",
+      "lat": 49.28641,
+      "lng": 20.029562,
+      "distance": 3614.3,
+      "avg_grade": -3.5,
+      "elev_difference": 126.1,
+      "effort_count_cumulative": 20473,
+      "athlete_count": 8102,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 20473
+    }
+  },
+  "8170789": {
+    "meta": {
+      "name": "Strbske Pleso",
+      "activity_type": "hiking",
+      "lat": 49.120585,
+      "lng": 20.113142,
+      "distance": 4253.3,
+      "avg_grade": 3.1,
+      "elev_difference": 144.1,
+      "effort_count_cumulative": 24996,
+      "athlete_count": 10591,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 24996
+    }
+  },
+  "8220848": {
+    "meta": {
+      "name": "Popod hory Briste - chata Nitra",
+      "activity_type": "hiking",
+      "lat": 49.13418,
+      "lng": 19.751771,
+      "distance": 1688.2,
+      "avg_grade": 3.1,
+      "elev_difference": 66.8,
+      "effort_count_cumulative": 2319,
+      "athlete_count": 1136,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2319
+    }
+  },
+  "9353795": {
+    "meta": {
+      "name": "Monkova Dolina dh",
+      "activity_type": "hiking",
+      "lat": 49.294994,
+      "lng": 20.229509,
+      "distance": 1184.4,
+      "avg_grade": -6.4,
+      "elev_difference": 90.7,
+      "effort_count_cumulative": 10260,
+      "athlete_count": 5600,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 10260
+    }
+  },
+  "9384511": {
+    "meta": {
+      "name": "Bigosówka-Klin DH",
+      "activity_type": "hiking",
+      "lat": 49.308607,
+      "lng": 20.111332,
+      "distance": 2688.2,
+      "avg_grade": -6.0,
+      "elev_difference": 162.1,
+      "effort_count_cumulative": 13517,
+      "athlete_count": 5542,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 13517
+    }
+  },
+  "9407986": {
+    "meta": {
+      "name": "Red downhill",
+      "activity_type": "running",
+      "lat": 49.134551,
+      "lng": 20.064333,
+      "distance": 1161.9,
+      "avg_grade": -11.4,
+      "elev_difference": 132.9,
+      "effort_count_cumulative": 4018,
+      "athlete_count": 2914,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 4018
+    }
+  },
+  "9587272": {
+    "meta": {
+      "name": "biustonoszowym w dół",
+      "activity_type": "hiking",
+      "lat": 49.266019,
+      "lng": 19.8852,
+      "distance": 1163.5,
+      "avg_grade": -18.1,
+      "elev_difference": 211.1,
+      "effort_count_cumulative": 228,
+      "athlete_count": 59,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 228
+    }
+  },
+  "9681769": {
+    "meta": {
+      "name": "Do Tylasa Mega Up",
+      "activity_type": "hiking",
+      "lat": 49.315626,
+      "lng": 19.977806,
+      "distance": 255.9,
+      "avg_grade": 4.1,
+      "elev_difference": 10.4,
+      "effort_count_cumulative": 13645,
+      "athlete_count": 3752,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 13645
+    }
+  },
+  "9851991": {
+    "meta": {
+      "name": "Stupanie - Oresnica",
+      "activity_type": "hiking",
+      "lat": 49.133715,
+      "lng": 19.791091,
+      "distance": 409.7,
+      "avg_grade": 9.2,
+      "elev_difference": 37.5,
+      "effort_count_cumulative": 3331,
+      "athlete_count": 1466,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3331
+    }
+  },
+  "9888777": {
+    "meta": {
+      "name": "Climb - Tri Studnicky",
+      "activity_type": "hiking",
+      "lat": 49.138932,
+      "lng": 19.953834,
+      "distance": 1162.8,
+      "avg_grade": 5.5,
+      "elev_difference": 63.7,
+      "effort_count_cumulative": 15539,
+      "athlete_count": 8018,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 15539
+    }
+  },
+  "9913699": {
+    "meta": {
+      "name": "Cervenec zjazd (vrchna cast)",
+      "activity_type": "hiking",
+      "lat": 49.172257,
+      "lng": 19.631221,
+      "distance": 217.3,
+      "avg_grade": -23.5,
+      "elev_difference": 51.0,
+      "effort_count_cumulative": 230,
+      "athlete_count": 156,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 230
+    }
+  },
+  "9943509": {
+    "meta": {
+      "name": "Brzeziny-Psia Trawka",
+      "activity_type": "running",
+      "lat": 49.28698,
+      "lng": 20.036042,
+      "distance": 2295.5,
+      "avg_grade": 7.3,
+      "elev_difference": 181.6,
+      "effort_count_cumulative": 1767,
+      "athlete_count": 1006,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1767
+    }
+  },
+  "10039592": {
+    "meta": {
+      "name": "OS3 długi bez początku",
+      "activity_type": "hiking",
+      "lat": 49.307147,
+      "lng": 19.859472,
+      "distance": 1698.2,
+      "avg_grade": -11.5,
+      "elev_difference": 195.9,
+      "effort_count_cumulative": 543,
+      "athlete_count": 204,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 543
+    }
+  },
+  "10044407": {
+    "meta": {
+      "name": "CK 3 zjazd",
+      "activity_type": "hiking",
+      "lat": 49.342888,
+      "lng": 19.856754,
+      "distance": 2038.3,
+      "avg_grade": -8.4,
+      "elev_difference": 172.0,
+      "effort_count_cumulative": 193,
+      "athlete_count": 165,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 193
+    }
+  },
+  "10045966": {
+    "meta": {
+      "name": "Strbskie Pleso DH",
+      "activity_type": "hiking",
+      "lat": 49.116889,
+      "lng": 20.083035,
+      "distance": 3441.2,
+      "avg_grade": -3.8,
+      "elev_difference": 131.9,
+      "effort_count_cumulative": 36113,
+      "athlete_count": 13223,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 36113
+    }
+  },
+  "10123765": {
+    "meta": {
+      "name": "Lejowa",
+      "activity_type": "hiking",
+      "lat": 49.276229,
+      "lng": 19.849091,
+      "distance": 2673.7,
+      "avg_grade": 4.7,
+      "elev_difference": 124.7,
+      "effort_count_cumulative": 61,
+      "athlete_count": 66,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 61
+    }
+  },
+  "10262598": {
+    "meta": {
+      "name": "Osturnia- last 500m",
+      "activity_type": "hiking",
+      "lat": 49.283129,
+      "lng": 20.225075,
+      "distance": 483.4,
+      "avg_grade": 5.0,
+      "elev_difference": 24.1,
+      "effort_count_cumulative": 12516,
+      "athlete_count": 5645,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 12516
+    }
+  },
+  "10282554": {
+    "meta": {
+      "name": "Ostrva",
+      "activity_type": "running",
+      "lat": 49.154157,
+      "lng": 20.082488,
+      "distance": 2383.1,
+      "avg_grade": 18.9,
+      "elev_difference": 451.0,
+      "effort_count_cumulative": 2855,
+      "athlete_count": 1953,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2855
+    }
+  },
+  "10311476": {
+    "meta": {
+      "name": "Dolina Chochołowska do końca asfaltu (Szosa)",
+      "activity_type": "hiking",
+      "lat": 49.279159,
+      "lng": 19.836913,
+      "distance": 3028.5,
+      "avg_grade": 2.0,
+      "elev_difference": 61.2,
+      "effort_count_cumulative": 8135,
+      "athlete_count": 6580,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 8135
+    }
+  },
+  "10418206": {
+    "meta": {
+      "name": "Joseph's segment other side",
+      "activity_type": "hiking",
+      "lat": 49.27928,
+      "lng": 19.858935,
+      "distance": 2197.9,
+      "avg_grade": 0.9,
+      "elev_difference": 34.9,
+      "effort_count_cumulative": 888,
+      "athlete_count": 686,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 888
+    }
+  },
+  "10774028": {
+    "meta": {
+      "name": "Ciemniak ze szczytu do zielonego",
+      "activity_type": "hiking",
+      "lat": 49.231045,
+      "lng": 19.903032,
+      "distance": 971.0,
+      "avg_grade": -20.9,
+      "elev_difference": 211.6,
+      "effort_count_cumulative": 129,
+      "athlete_count": 170,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 129
+    }
+  },
+  "10774062": {
+    "meta": {
+      "name": "Z Hali Ornak na Kazalnicę",
+      "activity_type": "hiking",
+      "lat": 49.229554,
+      "lng": 19.860266,
+      "distance": 4181.0,
+      "avg_grade": 13.4,
+      "elev_difference": 560.8,
+      "effort_count_cumulative": 27,
+      "athlete_count": 39,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 27
+    }
+  },
+  "10791781": {
+    "meta": {
+      "name": "Kozi Wierch czarnym",
+      "activity_type": "running",
+      "lat": 49.210641,
+      "lng": 20.035256,
+      "distance": 1465.0,
+      "avg_grade": 35.3,
+      "elev_difference": 518.0,
+      "effort_count_cumulative": 210,
+      "athlete_count": 197,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 210
+    }
+  },
+  "10822687": {
+    "meta": {
+      "name": "Strednica climb",
+      "activity_type": "running",
+      "lat": 49.274379,
+      "lng": 20.228228,
+      "distance": 1023.1,
+      "avg_grade": 10.2,
+      "elev_difference": 104.3,
+      "effort_count_cumulative": 164,
+      "athlete_count": 147,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 164
+    }
+  },
+  "11112303": {
+    "meta": {
+      "name": "Dolina Olczyska",
+      "activity_type": "running",
+      "lat": 49.283244,
+      "lng": 19.998589,
+      "distance": 2085.8,
+      "avg_grade": 6.0,
+      "elev_difference": 131.4,
+      "effort_count_cumulative": 4112,
+      "athlete_count": 1306,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 4112
+    }
+  },
+  "11131517": {
+    "meta": {
+      "name": "Zuberec Skanzen",
+      "activity_type": "running",
+      "lat": 49.261515,
+      "lng": 19.632653,
+      "distance": 1910.2,
+      "avg_grade": 3.3,
+      "elev_difference": 65.0,
+      "effort_count_cumulative": 1842,
+      "athlete_count": 785,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1842
+    }
+  },
+  "11160871": {
+    "meta": {
+      "name": "Płazówka ",
+      "activity_type": "running",
+      "lat": 49.304203,
+      "lng": 19.851161,
+      "distance": 582.5,
+      "avg_grade": 25.1,
+      "elev_difference": 146.1,
+      "effort_count_cumulative": 189,
+      "athlete_count": 166,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 189
+    }
+  },
+  "11387905": {
+    "meta": {
+      "name": "Budzowa uphill",
+      "activity_type": "running",
+      "lat": 49.304956,
+      "lng": 20.035803,
+      "distance": 439.5,
+      "avg_grade": 11.0,
+      "elev_difference": 48.4,
+      "effort_count_cumulative": 1318,
+      "athlete_count": 523,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1318
+    }
+  },
+  "11391021": {
+    "meta": {
+      "name": "Iwaniacka Przełęcz - Schronisko Hala Ornak",
+      "activity_type": "running",
+      "lat": 49.232217,
+      "lng": 19.836475,
+      "distance": 2115.5,
+      "avg_grade": -17.4,
+      "elev_difference": 368.0,
+      "effort_count_cumulative": 2958,
+      "athlete_count": 1937,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2958
+    }
+  },
+  "11391147": {
+    "meta": {
+      "name": "Grześ - zbieg",
+      "activity_type": "running",
+      "lat": 49.236594,
+      "lng": 19.766869,
+      "distance": 2770.4,
+      "avg_grade": -16.6,
+      "elev_difference": 463.6,
+      "effort_count_cumulative": 1702,
+      "athlete_count": 1255,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1702
+    }
+  },
+  "11394687": {
+    "meta": {
+      "name": "Majreczykówka uphill",
+      "activity_type": "running",
+      "lat": 49.324997,
+      "lng": 20.029432,
+      "distance": 927.4,
+      "avg_grade": 8.9,
+      "elev_difference": 82.6,
+      "effort_count_cumulative": 368,
+      "athlete_count": 208,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 368
+    }
+  },
+  "11411664": {
+    "meta": {
+      "name": "Dzianisz - Witów Ski",
+      "activity_type": "running",
+      "lat": 49.337989,
+      "lng": 19.839438,
+      "distance": 2389.8,
+      "avg_grade": -0.1,
+      "elev_difference": 26.2,
+      "effort_count_cumulative": 106,
+      "athlete_count": 35,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 106
+    }
+  },
+  "11446460": {
+    "meta": {
+      "name": "Gronik Regle",
+      "activity_type": "running",
+      "lat": 49.277992,
+      "lng": 19.904028,
+      "distance": 2711.0,
+      "avg_grade": 1.0,
+      "elev_difference": 74.8,
+      "effort_count_cumulative": 4843,
+      "athlete_count": 1521,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 4843
+    }
+  },
+  "11498656": {
+    "meta": {
+      "name": "Yellow route",
+      "activity_type": "running",
+      "lat": 49.272842,
+      "lng": 19.991458,
+      "distance": 1421.7,
+      "avg_grade": -4.3,
+      "elev_difference": 74.8,
+      "effort_count_cumulative": 2971,
+      "athlete_count": 1385,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2971
+    }
+  },
+  "11678104": {
+    "meta": {
+      "name": "Zbeh z Lapšanky do Osturne",
+      "activity_type": "running",
+      "lat": 49.344111,
+      "lng": 20.19855,
+      "distance": 3043.3,
+      "avg_grade": -6.2,
+      "elev_difference": 196.4,
+      "effort_count_cumulative": 29,
+      "athlete_count": 28,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 29
+    }
+  },
+  "12105999": {
+    "meta": {
+      "name": "Ząb - Nowe Bystre",
+      "activity_type": "running",
+      "lat": 49.342386,
+      "lng": 19.951272,
+      "distance": 2750.3,
+      "avg_grade": -6.0,
+      "elev_difference": 164.2,
+      "effort_count_cumulative": 52,
+      "athlete_count": 44,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 52
+    }
+  },
+  "12149953": {
+    "meta": {
+      "name": "Podejscie - Sarnia Skala",
+      "activity_type": "running",
+      "lat": 49.262865,
+      "lng": 19.942643,
+      "distance": 245.3,
+      "avg_grade": 11.0,
+      "elev_difference": 31.9,
+      "effort_count_cumulative": 4250,
+      "athlete_count": 2671,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 4250
+    }
+  },
+  "12193564": {
+    "meta": {
+      "name": "niespodzianka MKS ",
+      "activity_type": "hiking",
+      "lat": 49.34762,
+      "lng": 20.174741,
+      "distance": 123.6,
+      "avg_grade": 11.1,
+      "elev_difference": 13.7,
+      "effort_count_cumulative": 9391,
+      "athlete_count": 4152,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 9391
+    }
+  },
+  "12199464": {
+    "meta": {
+      "name": "Lejowa",
+      "activity_type": "running",
+      "lat": 49.277424,
+      "lng": 19.849691,
+      "distance": 3234.4,
+      "avg_grade": 5.2,
+      "elev_difference": 166.7,
+      "effort_count_cumulative": 1380,
+      "athlete_count": 914,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1380
+    }
+  },
+  "12260670": {
+    "meta": {
+      "name": "Wierchowa do granicy",
+      "activity_type": "running",
+      "lat": 49.343979,
+      "lng": 19.819864,
+      "distance": 2355.4,
+      "avg_grade": 7.0,
+      "elev_difference": 164.3,
+      "effort_count_cumulative": 178,
+      "athlete_count": 22,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 178
+    }
+  },
+  "12260861": {
+    "meta": {
+      "name": "Wierchowa downhill",
+      "activity_type": "running",
+      "lat": 49.326313,
+      "lng": 19.804006,
+      "distance": 2345.0,
+      "avg_grade": -7.0,
+      "elev_difference": 164.3,
+      "effort_count_cumulative": 188,
+      "athlete_count": 26,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 188
+    }
+  },
+  "12261112": {
+    "meta": {
+      "name": "Witów Ski - Dzianisz",
+      "activity_type": "running",
+      "lat": 49.321316,
+      "lng": 19.826832,
+      "distance": 2406.1,
+      "avg_grade": 0.1,
+      "elev_difference": 26.7,
+      "effort_count_cumulative": 261,
+      "athlete_count": 198,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 261
+    }
+  },
+  "12322184": {
+    "meta": {
+      "name": "Vysoke Tatry 537",
+      "activity_type": "hiking",
+      "lat": 49.140148,
+      "lng": 20.226261,
+      "distance": 4019.9,
+      "avg_grade": 0.0,
+      "elev_difference": 22.6,
+      "effort_count_cumulative": 36998,
+      "athlete_count": 12181,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 36998
+    }
+  },
+  "12481030": {
+    "meta": {
+      "name": "Nosalowa Przełęcz",
+      "activity_type": "running",
+      "lat": 49.269243,
+      "lng": 20.002622,
+      "distance": 1412.2,
+      "avg_grade": 4.3,
+      "elev_difference": 108.0,
+      "effort_count_cumulative": 5640,
+      "athlete_count": 2182,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 5640
+    }
+  },
+  "12487077": {
+    "meta": {
+      "name": "Schr. Ornak - Iwaniacka",
+      "activity_type": "running",
+      "lat": 49.227854,
+      "lng": 19.858144,
+      "distance": 2021.5,
+      "avg_grade": 17.7,
+      "elev_difference": 359.8,
+      "effort_count_cumulative": 3743,
+      "athlete_count": 2273,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3743
+    }
+  },
+  "12568368": {
+    "meta": {
+      "name": "Medzi Bormi - Fast Climb",
+      "activity_type": "hiking",
+      "lat": 49.262752,
+      "lng": 19.618887,
+      "distance": 971.8,
+      "avg_grade": 5.0,
+      "elev_difference": 49.3,
+      "effort_count_cumulative": 15362,
+      "athlete_count": 7672,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 15362
+    }
+  },
+  "12588288": {
+    "meta": {
+      "name": "Uphill Traversing Bystra",
+      "activity_type": "running",
+      "lat": 49.195802,
+      "lng": 19.839697,
+      "distance": 904.1,
+      "avg_grade": 32.9,
+      "elev_difference": 297.0,
+      "effort_count_cumulative": 380,
+      "athlete_count": 341,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 380
+    }
+  },
+  "12625002": {
+    "meta": {
+      "name": "Kopieniec na Trzydniowiański Wierch",
+      "activity_type": "running",
+      "lat": 49.239763,
+      "lng": 19.80618,
+      "distance": 2492.7,
+      "avg_grade": 25.4,
+      "elev_difference": 633.3,
+      "effort_count_cumulative": 627,
+      "athlete_count": 531,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 627
+    }
+  },
+  "12632729": {
+    "meta": {
+      "name": "od bacowki do przystanku",
+      "activity_type": "hiking",
+      "lat": 49.292357,
+      "lng": 20.059487,
+      "distance": 2230.3,
+      "avg_grade": 5.0,
+      "elev_difference": 112.7,
+      "effort_count_cumulative": 17220,
+      "athlete_count": 7643,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 17220
+    }
+  },
+  "12676332": {
+    "meta": {
+      "name": "płazówka",
+      "activity_type": "hiking",
+      "lat": 49.308006,
+      "lng": 19.841764,
+      "distance": 616.3,
+      "avg_grade": 6.8,
+      "elev_difference": 42.1,
+      "effort_count_cumulative": 541,
+      "athlete_count": 481,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 541
+    }
+  },
+  "12676351": {
+    "meta": {
+      "name": "pod Kaplicę na Płazówce",
+      "activity_type": "hiking",
+      "lat": 49.311678,
+      "lng": 19.832223,
+      "distance": 1687.1,
+      "avg_grade": 3.9,
+      "elev_difference": 65.3,
+      "effort_count_cumulative": 497,
+      "athlete_count": 468,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 497
+    }
+  },
+  "12758123": {
+    "meta": {
+      "name": "Climb - Hotel Permon",
+      "activity_type": "hiking",
+      "lat": 49.14319,
+      "lng": 19.904333,
+      "distance": 740.6,
+      "avg_grade": 3.4,
+      "elev_difference": 29.9,
+      "effort_count_cumulative": 733,
+      "athlete_count": 469,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 733
+    }
+  },
+  "12798313": {
+    "meta": {
+      "name": "smokovec sprint climb",
+      "activity_type": "hiking",
+      "lat": 49.137899,
+      "lng": 20.21967,
+      "distance": 504.2,
+      "avg_grade": 3.6,
+      "elev_difference": 18.2,
+      "effort_count_cumulative": 41950,
+      "athlete_count": 13077,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 41950
+    }
+  },
+  "12812763": {
+    "meta": {
+      "name": "Orla Perć  (Zawrat - Krzyżne)",
+      "activity_type": "running",
+      "lat": 49.219209,
+      "lng": 20.016832,
+      "distance": 3708.9,
+      "avg_grade": -1.3,
+      "elev_difference": 215.2,
+      "effort_count_cumulative": 384,
+      "athlete_count": 329,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 384
+    }
+  },
+  "12816177": {
+    "meta": {
+      "name": "Tatliakova Chata Super Steep",
+      "activity_type": "hiking",
+      "lat": 49.220223,
+      "lng": 19.732666,
+      "distance": 1340.0,
+      "avg_grade": 11.4,
+      "elev_difference": 152.5,
+      "effort_count_cumulative": 7216,
+      "athlete_count": 3473,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 7216
+    }
+  },
+  "12911737": {
+    "meta": {
+      "name": "Murzasichle - Budzowy",
+      "activity_type": "hiking",
+      "lat": 49.331468,
+      "lng": 20.041409,
+      "distance": 3472.5,
+      "avg_grade": 4.5,
+      "elev_difference": 156.2,
+      "effort_count_cumulative": 8167,
+      "athlete_count": 3249,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 8167
+    }
+  },
+  "12989833": {
+    "meta": {
+      "name": "Nová Polianka climb",
+      "activity_type": "hiking",
+      "lat": 49.107228,
+      "lng": 20.154152,
+      "distance": 1246.9,
+      "avg_grade": 7.7,
+      "elev_difference": 96.2,
+      "effort_count_cumulative": 2348,
+      "athlete_count": 675,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2348
+    }
+  },
+  "12996383": {
+    "meta": {
+      "name": "Monkova dolina zbeh úvodný strmák",
+      "activity_type": "running",
+      "lat": 49.234995,
+      "lng": 20.218249,
+      "distance": 2646.1,
+      "avg_grade": -26.4,
+      "elev_difference": 699.0,
+      "effort_count_cumulative": 1156,
+      "athlete_count": 847,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1156
+    }
+  },
+  "13054234": {
+    "meta": {
+      "name": "Nova Polianka - V. Hagy",
+      "activity_type": "running",
+      "lat": 49.118779,
+      "lng": 20.150367,
+      "distance": 2270.6,
+      "avg_grade": 1.9,
+      "elev_difference": 51.9,
+      "effort_count_cumulative": 925,
+      "athlete_count": 266,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 925
+    }
+  },
+  "13187843": {
+    "meta": {
+      "name": "Bystre-Toporowa Cyrhla",
+      "activity_type": "hiking",
+      "lat": 49.284485,
+      "lng": 20.000179,
+      "distance": 3665.2,
+      "avg_grade": 3.7,
+      "elev_difference": 136.3,
+      "effort_count_cumulative": 25398,
+      "athlete_count": 9372,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 25398
+    }
+  },
+  "13205454": {
+    "meta": {
+      "name": "Strążyska downhill",
+      "activity_type": "running",
+      "lat": 49.263117,
+      "lng": 19.929765,
+      "distance": 1932.0,
+      "avg_grade": -6.4,
+      "elev_difference": 124.5,
+      "effort_count_cumulative": 6704,
+      "athlete_count": 3388,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 6704
+    }
+  },
+  "13284869": {
+    "meta": {
+      "name": "Strbske pleso",
+      "activity_type": "running",
+      "lat": 49.123133,
+      "lng": 20.062083,
+      "distance": 2188.9,
+      "avg_grade": -0.1,
+      "elev_difference": 4.1,
+      "effort_count_cumulative": 18616,
+      "athlete_count": 2991,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 18616
+    }
+  },
+  "13294571": {
+    "meta": {
+      "name": "lesny chodnik Muzeum-Zuberec",
+      "activity_type": "hiking",
+      "lat": 49.260023,
+      "lng": 19.659185,
+      "distance": 2031.3,
+      "avg_grade": -3.8,
+      "elev_difference": 83.0,
+      "effort_count_cumulative": 9090,
+      "athlete_count": 3684,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 9090
+    }
+  },
+  "13582585": {
+    "meta": {
+      "name": "Po Vydrovu jedlu",
+      "activity_type": "hiking",
+      "lat": 49.101525,
+      "lng": 20.115959,
+      "distance": 903.6,
+      "avg_grade": 3.8,
+      "elev_difference": 34.4,
+      "effort_count_cumulative": 405,
+      "athlete_count": 131,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 405
+    }
+  },
+  "13582695": {
+    "meta": {
+      "name": "Na Novu Polianku",
+      "activity_type": "running",
+      "lat": 49.10384,
+      "lng": 20.143889,
+      "distance": 2084.7,
+      "avg_grade": 5.4,
+      "elev_difference": 115.0,
+      "effort_count_cumulative": 165,
+      "athlete_count": 46,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 165
+    }
+  },
+  "13723232": {
+    "meta": {
+      "name": "hopka na Bystre",
+      "activity_type": "hiking",
+      "lat": 49.284833,
+      "lng": 19.974574,
+      "distance": 535.9,
+      "avg_grade": 2.8,
+      "elev_difference": 14.8,
+      "effort_count_cumulative": 22522,
+      "athlete_count": 8812,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 22522
+    }
+  },
+  "13847239": {
+    "meta": {
+      "name": "Jan III Sobieski lane",
+      "activity_type": "hiking",
+      "lat": 49.143316,
+      "lng": 20.041635,
+      "distance": 2170.9,
+      "avg_grade": -18.5,
+      "elev_difference": 401.0,
+      "effort_count_cumulative": 74,
+      "athlete_count": 123,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 74
+    }
+  },
+  "14818286": {
+    "meta": {
+      "name": "Dolina Strążyska całość",
+      "activity_type": "running",
+      "lat": 49.278364,
+      "lng": 19.938292,
+      "distance": 1886.1,
+      "avg_grade": 6.2,
+      "elev_difference": 117.0,
+      "effort_count_cumulative": 6726,
+      "athlete_count": 3222,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 6726
+    }
+  },
+  "14931881": {
+    "meta": {
+      "name": "oravice -zuberec w dół",
+      "activity_type": "hiking",
+      "lat": 49.281797,
+      "lng": 19.70616,
+      "distance": 7482.3,
+      "avg_grade": -2.5,
+      "elev_difference": 192.0,
+      "effort_count_cumulative": 13220,
+      "athlete_count": 6885,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 13220
+    }
+  },
+  "14965463": {
+    "meta": {
+      "name": "Kotelnica UP",
+      "activity_type": "running",
+      "lat": 49.310626,
+      "lng": 19.960638,
+      "distance": 1391.7,
+      "avg_grade": 11.4,
+      "elev_difference": 158.8,
+      "effort_count_cumulative": 203,
+      "athlete_count": 43,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 203
+    }
+  },
+  "14971716": {
+    "meta": {
+      "name": "Rówień Waksmundzka -> Psia Trawka czerwonym downhill",
+      "activity_type": "running",
+      "lat": 49.255829,
+      "lng": 20.065068,
+      "distance": 3055.5,
+      "avg_grade": -6.8,
+      "elev_difference": 207.0,
+      "effort_count_cumulative": 2131,
+      "athlete_count": 1391,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2131
+    }
+  },
+  "14987207": {
+    "meta": {
+      "name": "Tatra Potok Monster Climb",
+      "activity_type": "hiking",
+      "lat": 49.34699,
+      "lng": 20.160217,
+      "distance": 701.8,
+      "avg_grade": 13.3,
+      "elev_difference": 93.0,
+      "effort_count_cumulative": 14167,
+      "athlete_count": 6745,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 14167
+    }
+  },
+  "14997932": {
+    "meta": {
+      "name": "Solisko (uphill)",
+      "activity_type": "running",
+      "lat": 49.14452,
+      "lng": 20.040696,
+      "distance": 769.5,
+      "avg_grade": 32.5,
+      "elev_difference": 250.3,
+      "effort_count_cumulative": 1223,
+      "athlete_count": 1037,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1223
+    }
+  },
+  "14998507": {
+    "meta": {
+      "name": "Wierch Poroniec-Łysa dh",
+      "activity_type": "hiking",
+      "lat": 49.283496,
+      "lng": 20.113476,
+      "distance": 2866.3,
+      "avg_grade": -4.9,
+      "elev_difference": 151.6,
+      "effort_count_cumulative": 18837,
+      "athlete_count": 8996,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 18837
+    }
+  },
+  "15014333": {
+    "meta": {
+      "name": "Pavlovska",
+      "activity_type": "hiking",
+      "lat": 49.160534,
+      "lng": 19.649461,
+      "distance": 395.5,
+      "avg_grade": 18.3,
+      "elev_difference": 72.4,
+      "effort_count_cumulative": 3374,
+      "athlete_count": 1374,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3374
+    }
+  },
+  "15135040": {
+    "meta": {
+      "name": "Potok Mútnik -> nad Trstené",
+      "activity_type": "running",
+      "lat": 49.112464,
+      "lng": 19.631632,
+      "distance": 416.5,
+      "avg_grade": 10.2,
+      "elev_difference": 43.4,
+      "effort_count_cumulative": 333,
+      "athlete_count": 108,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 333
+    }
+  },
+  "15171763": {
+    "meta": {
+      "name": "Bukowina - Głodówka Climb",
+      "activity_type": "hiking",
+      "lat": 49.329674,
+      "lng": 20.097231,
+      "distance": 3578.8,
+      "avg_grade": 5.0,
+      "elev_difference": 189.5,
+      "effort_count_cumulative": 10804,
+      "athlete_count": 5350,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 10804
+    }
+  },
+  "15252170": {
+    "meta": {
+      "name": "Zuberec - smer Blatná",
+      "activity_type": "hiking",
+      "lat": 49.272475,
+      "lng": 19.636622,
+      "distance": 732.9,
+      "avg_grade": -2.0,
+      "elev_difference": 15.6,
+      "effort_count_cumulative": 14995,
+      "athlete_count": 7701,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 14995
+    }
+  },
+  "15286377": {
+    "meta": {
+      "name": "Nad zabim potokom > Hincovo pl. (blue)",
+      "activity_type": "running",
+      "lat": 49.163301,
+      "lng": 20.070837,
+      "distance": 2005.5,
+      "avg_grade": 17.5,
+      "elev_difference": 355.8,
+      "effort_count_cumulative": 1380,
+      "athlete_count": 1299,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1380
+    }
+  },
+  "15444256": {
+    "meta": {
+      "name": "Potok Grochów",
+      "activity_type": "running",
+      "lat": 49.347866,
+      "lng": 20.162039,
+      "distance": 545.4,
+      "avg_grade": 11.4,
+      "elev_difference": 62.0,
+      "effort_count_cumulative": 59,
+      "athlete_count": 40,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 59
+    }
+  },
+  "15477305": {
+    "meta": {
+      "name": "Jalovecký kopec",
+      "activity_type": "running",
+      "lat": 49.134318,
+      "lng": 19.632354,
+      "distance": 659.0,
+      "avg_grade": 11.4,
+      "elev_difference": 75.7,
+      "effort_count_cumulative": 160,
+      "athlete_count": 29,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 160
+    }
+  },
+  "15525212": {
+    "meta": {
+      "name": "na vodopád a dole na parkovisko",
+      "activity_type": "hiking",
+      "lat": 49.164558,
+      "lng": 19.616874,
+      "distance": 2227.2,
+      "avg_grade": -2.6,
+      "elev_difference": 131.9,
+      "effort_count_cumulative": 271,
+      "athlete_count": 200,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 271
+    }
+  },
+  "15525240": {
+    "meta": {
+      "name": "od Vincka na Trstené",
+      "activity_type": "hiking",
+      "lat": 49.118331,
+      "lng": 19.614115,
+      "distance": 610.8,
+      "avg_grade": 0.8,
+      "elev_difference": 9.5,
+      "effort_count_cumulative": 10127,
+      "athlete_count": 1888,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 10127
+    }
+  },
+  "15591825": {
+    "meta": {
+      "name": "Z Nosu na Slavkáč",
+      "activity_type": "running",
+      "lat": 49.164251,
+      "lng": 20.190902,
+      "distance": 650.4,
+      "avg_grade": 25.0,
+      "elev_difference": 162.7,
+      "effort_count_cumulative": 1859,
+      "athlete_count": 1315,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1859
+    }
+  },
+  "15613469": {
+    "meta": {
+      "name": "Volovec",
+      "activity_type": "running",
+      "lat": 49.211563,
+      "lng": 19.759674,
+      "distance": 574.1,
+      "avg_grade": 30.5,
+      "elev_difference": 175.0,
+      "effort_count_cumulative": 4109,
+      "athlete_count": 2617,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 4109
+    }
+  },
+  "15613483": {
+    "meta": {
+      "name": "Jarząbczy Wierch",
+      "activity_type": "running",
+      "lat": 49.19913,
+      "lng": 19.787462,
+      "distance": 654.9,
+      "avg_grade": 42.0,
+      "elev_difference": 275.0,
+      "effort_count_cumulative": 2881,
+      "athlete_count": 1803,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2881
+    }
+  },
+  "15618616": {
+    "meta": {
+      "name": "od Mieru ku skanzenu",
+      "activity_type": "hiking",
+      "lat": 49.133612,
+      "lng": 19.774866,
+      "distance": 5143.6,
+      "avg_grade": -3.8,
+      "elev_difference": 196.0,
+      "effort_count_cumulative": 565,
+      "athlete_count": 321,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 565
+    }
+  },
+  "15631655": {
+    "meta": {
+      "name": "Sivý - sedlo Pálenica ",
+      "activity_type": "running",
+      "lat": 49.211367,
+      "lng": 19.643279,
+      "distance": 1892.3,
+      "avg_grade": -10.5,
+      "elev_difference": 198.1,
+      "effort_count_cumulative": 494,
+      "athlete_count": 407,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 494
+    }
+  },
+  "15631677": {
+    "meta": {
+      "name": "Pod Lyscom - ústie ",
+      "activity_type": "running",
+      "lat": 49.187606,
+      "lng": 19.662254,
+      "distance": 3195.6,
+      "avg_grade": -6.5,
+      "elev_difference": 209.0,
+      "effort_count_cumulative": 324,
+      "athlete_count": 216,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 324
+    }
+  },
+  "15638080": {
+    "meta": {
+      "name": "Strednica ",
+      "activity_type": "running",
+      "lat": 49.264516,
+      "lng": 20.236291,
+      "distance": 1501.1,
+      "avg_grade": 4.5,
+      "elev_difference": 68.4,
+      "effort_count_cumulative": 300,
+      "athlete_count": 216,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 300
+    }
+  },
+  "15650954": {
+    "meta": {
+      "name": "sliezky: od rampy po most ",
+      "activity_type": "hiking",
+      "lat": 49.125828,
+      "lng": 20.184303,
+      "distance": 2700.2,
+      "avg_grade": 9.9,
+      "elev_difference": 268.0,
+      "effort_count_cumulative": 20323,
+      "athlete_count": 8724,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 20323
+    }
+  },
+  "15651091": {
+    "meta": {
+      "name": "Gliczarów 2 ścianki",
+      "activity_type": "hiking",
+      "lat": 49.342249,
+      "lng": 20.074552,
+      "distance": 1245.7,
+      "avg_grade": 3.7,
+      "elev_difference": 49.6,
+      "effort_count_cumulative": 7286,
+      "athlete_count": 3528,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 7286
+    }
+  },
+  "15681854": {
+    "meta": {
+      "name": "Na Veternú zo Smrečian",
+      "activity_type": "hiking",
+      "lat": 49.119298,
+      "lng": 19.659987,
+      "distance": 2470.0,
+      "avg_grade": 3.8,
+      "elev_difference": 94.4,
+      "effort_count_cumulative": 3332,
+      "athlete_count": 813,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3332
+    }
+  },
+  "15691493": {
+    "meta": {
+      "name": "Donny lollingz",
+      "activity_type": "hiking",
+      "lat": 49.245137,
+      "lng": 19.812477,
+      "distance": 1260.8,
+      "avg_grade": 3.8,
+      "elev_difference": 57.1,
+      "effort_count_cumulative": 8145,
+      "athlete_count": 6594,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 8145
+    }
+  },
+  "15691675": {
+    "meta": {
+      "name": "Donny neukingz",
+      "activity_type": "hiking",
+      "lat": 49.334916,
+      "lng": 19.891271,
+      "distance": 1238.5,
+      "avg_grade": 7.8,
+      "elev_difference": 99.4,
+      "effort_count_cumulative": 5074,
+      "athlete_count": 2064,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 5074
+    }
+  },
+  "15738379": {
+    "meta": {
+      "name": "1000ka na trati Polianka-Hagy",
+      "activity_type": "hiking",
+      "lat": 49.119297,
+      "lng": 20.144059,
+      "distance": 1026.0,
+      "avg_grade": 3.3,
+      "elev_difference": 34.0,
+      "effort_count_cumulative": 39859,
+      "athlete_count": 13122,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 39859
+    }
+  },
+  "15740257": {
+    "meta": {
+      "name": "z cesty slobody dole strmím kopcom",
+      "activity_type": "hiking",
+      "lat": 49.160039,
+      "lng": 19.656694,
+      "distance": 301.9,
+      "avg_grade": -2.8,
+      "elev_difference": 13.7,
+      "effort_count_cumulative": 5275,
+      "athlete_count": 1562,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 5275
+    }
+  },
+  "15740273": {
+    "meta": {
+      "name": "Poronin - Sądelska",
+      "activity_type": "hiking",
+      "lat": 49.336745,
+      "lng": 20.006177,
+      "distance": 2868.1,
+      "avg_grade": 1.3,
+      "elev_difference": 36.6,
+      "effort_count_cumulative": 10994,
+      "athlete_count": 5119,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 10994
+    }
+  },
+  "15853613": {
+    "meta": {
+      "name": "Gubalowka flat path",
+      "activity_type": "running",
+      "lat": 49.303743,
+      "lng": 19.911785,
+      "distance": 1605.4,
+      "avg_grade": -0.9,
+      "elev_difference": 19.2,
+      "effort_count_cumulative": 922,
+      "athlete_count": 689,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 922
+    }
+  },
+  "15883464": {
+    "meta": {
+      "name": "Tri zákruty pred hlavnou",
+      "activity_type": "hiking",
+      "lat": 49.10666,
+      "lng": 20.051502,
+      "distance": 3134.0,
+      "avg_grade": 4.7,
+      "elev_difference": 148.1,
+      "effort_count_cumulative": 18358,
+      "athlete_count": 4785,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 18358
+    }
+  },
+  "15917485": {
+    "meta": {
+      "name": "z  Jalovca do Bobroveckej a znova na Jalovec",
+      "activity_type": "hiking",
+      "lat": 49.13605,
+      "lng": 19.626029,
+      "distance": 4701.9,
+      "avg_grade": 0.0,
+      "elev_difference": 74.5,
+      "effort_count_cumulative": 3769,
+      "athlete_count": 482,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3769
+    }
+  },
+  "15931713": {
+    "meta": {
+      "name": "H. Smokovec - Belleuve",
+      "activity_type": "hiking",
+      "lat": 49.142984,
+      "lng": 20.24128,
+      "distance": 1227.8,
+      "avg_grade": 0.7,
+      "elev_difference": 9.0,
+      "effort_count_cumulative": 48964,
+      "athlete_count": 14006,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 48964
+    }
+  },
+  "15973733": {
+    "meta": {
+      "name": "Subida Krúpová",
+      "activity_type": "hiking",
+      "lat": 49.317534,
+      "lng": 19.746952,
+      "distance": 3155.4,
+      "avg_grade": 7.4,
+      "elev_difference": 233.5,
+      "effort_count_cumulative": 240,
+      "athlete_count": 121,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 240
+    }
+  },
+  "15986218": {
+    "meta": {
+      "name": "Rakoń-Grześ",
+      "activity_type": "hiking",
+      "lat": 49.216087,
+      "lng": 19.758448,
+      "distance": 2250.9,
+      "avg_grade": -11.6,
+      "elev_difference": 271.0,
+      "effort_count_cumulative": 142,
+      "athlete_count": 129,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 142
+    }
+  },
+  "15997776": {
+    "meta": {
+      "name": "Lejowa końcówka",
+      "activity_type": "running",
+      "lat": 49.259483,
+      "lng": 19.851316,
+      "distance": 766.9,
+      "avg_grade": 8.3,
+      "elev_difference": 64.3,
+      "effort_count_cumulative": 1466,
+      "athlete_count": 957,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1466
+    }
+  },
+  "16010343": {
+    "meta": {
+      "name": "z Bobrovca do Jalovca",
+      "activity_type": "hiking",
+      "lat": 49.126259,
+      "lng": 19.619128,
+      "distance": 1127.0,
+      "avg_grade": 2.1,
+      "elev_difference": 23.7,
+      "effort_count_cumulative": 15563,
+      "athlete_count": 2172,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 15563
+    }
+  },
+  "16027912": {
+    "meta": {
+      "name": "z Trsteného ku Vinckovi",
+      "activity_type": "hiking",
+      "lat": 49.115413,
+      "lng": 19.62172,
+      "distance": 644.7,
+      "avg_grade": -1.3,
+      "elev_difference": 14.0,
+      "effort_count_cumulative": 14420,
+      "athlete_count": 2227,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 14420
+    }
+  },
+  "16032858": {
+    "meta": {
+      "name": "Od koliby hore",
+      "activity_type": "running",
+      "lat": 49.184518,
+      "lng": 19.815455,
+      "distance": 3563.8,
+      "avg_grade": 20.1,
+      "elev_difference": 715.8,
+      "effort_count_cumulative": 251,
+      "athlete_count": 157,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 251
+    }
+  },
+  "16042040": {
+    "meta": {
+      "name": "ku Bobroveckému vodopádu",
+      "activity_type": "hiking",
+      "lat": 49.163773,
+      "lng": 19.629712,
+      "distance": 1028.1,
+      "avg_grade": -0.5,
+      "elev_difference": 23.0,
+      "effort_count_cumulative": 6070,
+      "athlete_count": 1797,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 6070
+    }
+  },
+  "16116227": {
+    "meta": {
+      "name": "Szpetny podbieg od Stasi ",
+      "activity_type": "running",
+      "lat": 49.307025,
+      "lng": 19.992433,
+      "distance": 367.8,
+      "avg_grade": 7.9,
+      "elev_difference": 29.1,
+      "effort_count_cumulative": 225,
+      "athlete_count": 106,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 225
+    }
+  },
+  "16118860": {
+    "meta": {
+      "name": "Małe Ciche - szkoła - koniec asfaltu",
+      "activity_type": "hiking",
+      "lat": 49.308052,
+      "lng": 20.067078,
+      "distance": 481.0,
+      "avg_grade": 4.7,
+      "elev_difference": 23.0,
+      "effort_count_cumulative": 181,
+      "athlete_count": 94,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 181
+    }
+  },
+  "16152567": {
+    "meta": {
+      "name": "Potok Grocholow",
+      "activity_type": "hiking",
+      "lat": 49.346861,
+      "lng": 20.148668,
+      "distance": 2879.2,
+      "avg_grade": 6.4,
+      "elev_difference": 186.0,
+      "effort_count_cumulative": 13777,
+      "athlete_count": 6716,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 13777
+    }
+  },
+  "16184222": {
+    "meta": {
+      "name": "z parkoviska ku jaskyni",
+      "activity_type": "hiking",
+      "lat": 49.145275,
+      "lng": 19.70069,
+      "distance": 361.9,
+      "avg_grade": 5.0,
+      "elev_difference": 18.2,
+      "effort_count_cumulative": 10902,
+      "athlete_count": 3666,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 10902
+    }
+  },
+  "16363226": {
+    "meta": {
+      "name": "Malý okruh",
+      "activity_type": "running",
+      "lat": 49.115235,
+      "lng": 20.231802,
+      "distance": 1613.6,
+      "avg_grade": 6.8,
+      "elev_difference": 109.0,
+      "effort_count_cumulative": 124,
+      "athlete_count": 36,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 124
+    }
+  },
+  "16502308": {
+    "meta": {
+      "name": "Nosalowy po schodach up",
+      "activity_type": "running",
+      "lat": 49.278642,
+      "lng": 19.981726,
+      "distance": 799.5,
+      "avg_grade": 32.1,
+      "elev_difference": 256.4,
+      "effort_count_cumulative": 7326,
+      "athlete_count": 2740,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 7326
+    }
+  },
+  "16565208": {
+    "meta": {
+      "name": "Popradské pleso (road, downhill)",
+      "activity_type": "hiking",
+      "lat": 49.148305,
+      "lng": 20.077034,
+      "distance": 3143.6,
+      "avg_grade": -7.5,
+      "elev_difference": 236.3,
+      "effort_count_cumulative": 13286,
+      "athlete_count": 7485,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 13286
+    }
+  },
+  "16777100": {
+    "meta": {
+      "name": "Rysy od jeziora Popradzkiego ",
+      "activity_type": "hiking",
+      "lat": 49.154538,
+      "lng": 20.077175,
+      "distance": 4876.7,
+      "avg_grade": 19.2,
+      "elev_difference": 934.2,
+      "effort_count_cumulative": 188,
+      "athlete_count": 208,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 188
+    }
+  },
+  "16892793": {
+    "meta": {
+      "name": "Podbieg cmentarz Witów.",
+      "activity_type": "running",
+      "lat": 49.325935,
+      "lng": 19.82375,
+      "distance": 239.0,
+      "avg_grade": 14.2,
+      "elev_difference": 35.0,
+      "effort_count_cumulative": 78,
+      "athlete_count": 14,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 78
+    }
+  },
+  "17016028": {
+    "meta": {
+      "name": "Dolný Smokovec - Pekná Vyhliadka ",
+      "activity_type": "running",
+      "lat": 49.136184,
+      "lng": 20.237875,
+      "distance": 418.0,
+      "avg_grade": 11.1,
+      "elev_difference": 46.2,
+      "effort_count_cumulative": 1217,
+      "athlete_count": 453,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1217
+    }
+  },
+  "17016035": {
+    "meta": {
+      "name": "Hrebienok - Rainerka",
+      "activity_type": "running",
+      "lat": 49.158968,
+      "lng": 20.224829,
+      "distance": 1114.0,
+      "avg_grade": 3.2,
+      "elev_difference": 38.0,
+      "effort_count_cumulative": 5555,
+      "athlete_count": 3325,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 5555
+    }
+  },
+  "17409333": {
+    "meta": {
+      "name": "Płazówka - hardest",
+      "activity_type": "hiking",
+      "lat": 49.309997,
+      "lng": 19.835129,
+      "distance": 730.5,
+      "avg_grade": 9.0,
+      "elev_difference": 65.8,
+      "effort_count_cumulative": 964,
+      "athlete_count": 669,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 964
+    }
+  },
+  "17637995": {
+    "meta": {
+      "name": "kopec do Bobrovca(od pastovníka)",
+      "activity_type": "hiking",
+      "lat": 49.109415,
+      "lng": 19.601114,
+      "distance": 565.9,
+      "avg_grade": 3.2,
+      "elev_difference": 18.3,
+      "effort_count_cumulative": 10909,
+      "athlete_count": 2122,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 10909
+    }
+  },
+  "17660180": {
+    "meta": {
+      "name": "Strbske pleso",
+      "activity_type": "hiking",
+      "lat": 49.123489,
+      "lng": 20.061382,
+      "distance": 2278.5,
+      "avg_grade": -0.1,
+      "elev_difference": 4.2,
+      "effort_count_cumulative": 66,
+      "athlete_count": 28,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 66
+    }
+  },
+  "17717379": {
+    "meta": {
+      "name": "Hop Hop Hop w Jurgowie na Granicy",
+      "activity_type": "hiking",
+      "lat": 49.30588,
+      "lng": 20.159762,
+      "distance": 310.2,
+      "avg_grade": 4.6,
+      "elev_difference": 14.2,
+      "effort_count_cumulative": 12642,
+      "athlete_count": 5673,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 12642
+    }
+  },
+  "17718464": {
+    "meta": {
+      "name": "Hop Hop Hop w Jurgowie na obwodnicy",
+      "activity_type": "hiking",
+      "lat": 49.336291,
+      "lng": 20.145919,
+      "distance": 347.5,
+      "avg_grade": 2.9,
+      "elev_difference": 11.8,
+      "effort_count_cumulative": 11835,
+      "athlete_count": 5134,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 11835
+    }
+  },
+  "17734748": {
+    "meta": {
+      "name": "Zbojnicka chata - razcestie nad Rainerkou (downhill)",
+      "activity_type": "running",
+      "lat": 49.176611,
+      "lng": 20.168004,
+      "distance": 4598.5,
+      "avg_grade": -14.0,
+      "elev_difference": 646.0,
+      "effort_count_cumulative": 2369,
+      "athlete_count": 1642,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2369
+    }
+  },
+  "17791701": {
+    "meta": {
+      "name": "Medzi Poliankamy",
+      "activity_type": "hiking",
+      "lat": 49.117743,
+      "lng": 20.154349,
+      "distance": 2300.3,
+      "avg_grade": -1.8,
+      "elev_difference": 51.2,
+      "effort_count_cumulative": 38773,
+      "athlete_count": 13008,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 38773
+    }
+  },
+  "17810104": {
+    "meta": {
+      "name": "Przełęcz pod Kopą Kondracką - Schronisko Kondratowa DH",
+      "activity_type": "running",
+      "lat": 49.234513,
+      "lng": 19.938912,
+      "distance": 2228.0,
+      "avg_grade": -22.8,
+      "elev_difference": 511.7,
+      "effort_count_cumulative": 1906,
+      "athlete_count": 1302,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1906
+    }
+  },
+  "17838591": {
+    "meta": {
+      "name": "Rajec Night run (cast okolo plesa)",
+      "activity_type": "running",
+      "lat": 49.124834,
+      "lng": 20.058111,
+      "distance": 1015.0,
+      "avg_grade": 0.4,
+      "elev_difference": 22.3,
+      "effort_count_cumulative": 31061,
+      "athlete_count": 5636,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 31061
+    }
+  },
+  "17846583": {
+    "meta": {
+      "name": "między niebem a piekłem",
+      "activity_type": "running",
+      "lat": 49.249405,
+      "lng": 19.951311,
+      "distance": 1741.2,
+      "avg_grade": 21.5,
+      "elev_difference": 374.8,
+      "effort_count_cumulative": 2893,
+      "athlete_count": 1939,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2893
+    }
+  },
+  "17987984": {
+    "meta": {
+      "name": "Kmetov vodopad zjazd",
+      "activity_type": "hiking",
+      "lat": 49.172328,
+      "lng": 19.975756,
+      "distance": 5459.1,
+      "avg_grade": -2.6,
+      "elev_difference": 142.9,
+      "effort_count_cumulative": 4688,
+      "athlete_count": 3509,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 4688
+    }
+  },
+  "18000258": {
+    "meta": {
+      "name": "stairway to heaven",
+      "activity_type": "running",
+      "lat": 49.265174,
+      "lng": 20.086168,
+      "distance": 218.0,
+      "avg_grade": 19.7,
+      "elev_difference": 43.4,
+      "effort_count_cumulative": 1329,
+      "athlete_count": 967,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1329
+    }
+  },
+  "18031833": {
+    "meta": {
+      "name": "Hopa do granicy",
+      "activity_type": "hiking",
+      "lat": 49.315383,
+      "lng": 20.155474,
+      "distance": 913.7,
+      "avg_grade": 4.4,
+      "elev_difference": 40.6,
+      "effort_count_cumulative": 8319,
+      "athlete_count": 3923,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 8319
+    }
+  },
+  "18072575": {
+    "meta": {
+      "name": "KingNet Pod kościół w Kościelisku short",
+      "activity_type": "hiking",
+      "lat": 49.291918,
+      "lng": 19.897182,
+      "distance": 603.5,
+      "avg_grade": 2.6,
+      "elev_difference": 19.8,
+      "effort_count_cumulative": 14345,
+      "athlete_count": 5032,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 14345
+    }
+  },
+  "18147470": {
+    "meta": {
+      "name": "Liptovsky Krc (od Razcestniku v sedle pod Babkami na Babky) ",
+      "activity_type": "running",
+      "lat": 49.174671,
+      "lng": 19.630843,
+      "distance": 926.8,
+      "avg_grade": 25.1,
+      "elev_difference": 232.4,
+      "effort_count_cumulative": 926,
+      "athlete_count": 398,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 926
+    }
+  },
+  "18148542": {
+    "meta": {
+      "name": "śmierć na 5",
+      "activity_type": "running",
+      "lat": 49.233537,
+      "lng": 20.086891,
+      "distance": 4657.8,
+      "avg_grade": 11.5,
+      "elev_difference": 536.4,
+      "effort_count_cumulative": 821,
+      "athlete_count": 790,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 821
+    }
+  },
+  "18151850": {
+    "meta": {
+      "name": "Baywatch-Mlyn",
+      "activity_type": "running",
+      "lat": 49.127135,
+      "lng": 19.623672,
+      "distance": 573.7,
+      "avg_grade": -1.8,
+      "elev_difference": 10.2,
+      "effort_count_cumulative": 392,
+      "athlete_count": 85,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 392
+    }
+  },
+  "18152603": {
+    "meta": {
+      "name": "Łosie - Wierch Rusiński - sprint",
+      "activity_type": "hiking",
+      "lat": 49.347378,
+      "lng": 20.080037,
+      "distance": 313.5,
+      "avg_grade": 9.3,
+      "elev_difference": 29.1,
+      "effort_count_cumulative": 13625,
+      "athlete_count": 5575,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 13625
+    }
+  },
+  "18184531": {
+    "meta": {
+      "name": "Przełęcz Kondracka Hala Kondratowa Schronisko niebieski ",
+      "activity_type": "running",
+      "lat": 49.248643,
+      "lng": 19.933888,
+      "distance": 1964.0,
+      "avg_grade": -20.5,
+      "elev_difference": 403.0,
+      "effort_count_cumulative": 1577,
+      "athlete_count": 1158,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1577
+    }
+  },
+  "18185022": {
+    "meta": {
+      "name": "Podrohacsky fast climb - reverse",
+      "activity_type": "hiking",
+      "lat": 49.27398,
+      "lng": 19.643632,
+      "distance": 782.8,
+      "avg_grade": 4.6,
+      "elev_difference": 36.2,
+      "effort_count_cumulative": 15278,
+      "athlete_count": 7365,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 15278
+    }
+  },
+  "18228569": {
+    "meta": {
+      "name": "Dzianisz - Butorowy",
+      "activity_type": "hiking",
+      "lat": 49.332896,
+      "lng": 19.864624,
+      "distance": 5389.0,
+      "avg_grade": 5.0,
+      "elev_difference": 271.1,
+      "effort_count_cumulative": 12519,
+      "athlete_count": 5801,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 12519
+    }
+  },
+  "18234034": {
+    "meta": {
+      "name": "stúpanie od pomníka SNP/Oravaman course",
+      "activity_type": "running",
+      "lat": 49.245032,
+      "lng": 19.707659,
+      "distance": 654.0,
+      "avg_grade": 12.8,
+      "elev_difference": 84.2,
+      "effort_count_cumulative": 742,
+      "athlete_count": 501,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 742
+    }
+  },
+  "18234068": {
+    "meta": {
+      "name": "asfaltkou po skanzen/Oravaman course",
+      "activity_type": "running",
+      "lat": 49.25507,
+      "lng": 19.682038,
+      "distance": 1852.0,
+      "avg_grade": -3.6,
+      "elev_difference": 66.8,
+      "effort_count_cumulative": 1030,
+      "athlete_count": 673,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1030
+    }
+  },
+  "18244892": {
+    "meta": {
+      "name": "Polana Kopieniec - Kopieniec up",
+      "activity_type": "running",
+      "lat": 49.269672,
+      "lng": 20.017866,
+      "distance": 239.9,
+      "avg_grade": 30.3,
+      "elev_difference": 72.6,
+      "effort_count_cumulative": 2039,
+      "athlete_count": 994,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2039
+    }
+  },
+  "18273200": {
+    "meta": {
+      "name": "Oravice - finish",
+      "activity_type": "hiking",
+      "lat": 49.283474,
+      "lng": 19.729633,
+      "distance": 1823.9,
+      "avg_grade": 5.9,
+      "elev_difference": 107.1,
+      "effort_count_cumulative": 15347,
+      "athlete_count": 7350,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 15347
+    }
+  },
+  "18380094": {
+    "meta": {
+      "name": "Seběh ze sedla Pálenica",
+      "activity_type": "running",
+      "lat": 49.222395,
+      "lng": 19.658635,
+      "distance": 3428.3,
+      "avg_grade": -18.2,
+      "elev_difference": 623.0,
+      "effort_count_cumulative": 238,
+      "athlete_count": 193,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 238
+    }
+  },
+  "18416002": {
+    "meta": {
+      "name": "osturnia climb",
+      "activity_type": "hiking",
+      "lat": 49.291727,
+      "lng": 20.223336,
+      "distance": 1245.8,
+      "avg_grade": 7.1,
+      "elev_difference": 88.2,
+      "effort_count_cumulative": 12670,
+      "athlete_count": 5785,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 12670
+    }
+  },
+  "18456649": {
+    "meta": {
+      "name": "Krivan - final climbing",
+      "activity_type": "running",
+      "lat": 49.156803,
+      "lng": 19.998814,
+      "distance": 805.0,
+      "avg_grade": 34.2,
+      "elev_difference": 275.0,
+      "effort_count_cumulative": 1693,
+      "athlete_count": 1496,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1693
+    }
+  },
+  "18469140": {
+    "meta": {
+      "name": "z rakuskiej czuby w dół zygzakami",
+      "activity_type": "running",
+      "lat": 49.204402,
+      "lng": 20.235857,
+      "distance": 2119.6,
+      "avg_grade": -20.0,
+      "elev_difference": 423.8,
+      "effort_count_cumulative": 1415,
+      "athlete_count": 1050,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1415
+    }
+  },
+  "18474460": {
+    "meta": {
+      "name": "Predni Salatyn -> Pod Spalenou",
+      "activity_type": "running",
+      "lat": 49.225312,
+      "lng": 19.692076,
+      "distance": 2957.9,
+      "avg_grade": -24.5,
+      "elev_difference": 727.6,
+      "effort_count_cumulative": 765,
+      "athlete_count": 552,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 765
+    }
+  },
+  "18529605": {
+    "meta": {
+      "name": "Veterná Poruba - Smrečany (2nd downhill)",
+      "activity_type": "hiking",
+      "lat": 49.116726,
+      "lng": 19.665982,
+      "distance": 561.9,
+      "avg_grade": -8.7,
+      "elev_difference": 48.7,
+      "effort_count_cumulative": 3967,
+      "athlete_count": 859,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3967
+    }
+  },
+  "18549765": {
+    "meta": {
+      "name": "Krzeptówki zjazd",
+      "activity_type": "hiking",
+      "lat": 49.280499,
+      "lng": 19.912845,
+      "distance": 1209.7,
+      "avg_grade": -2.0,
+      "elev_difference": 30.6,
+      "effort_count_cumulative": 16934,
+      "athlete_count": 7241,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 16934
+    }
+  },
+  "18580354": {
+    "meta": {
+      "name": "Głodówka - short",
+      "activity_type": "hiking",
+      "lat": 49.282168,
+      "lng": 20.087835,
+      "distance": 3408.2,
+      "avg_grade": 4.4,
+      "elev_difference": 151.8,
+      "effort_count_cumulative": 23877,
+      "athlete_count": 9320,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 23877
+    }
+  },
+  "18613057": {
+    "meta": {
+      "name": "Segment de Fiko",
+      "activity_type": "hiking",
+      "lat": 49.138615,
+      "lng": 19.966686,
+      "distance": 780.0,
+      "avg_grade": -5.3,
+      "elev_difference": 41.7,
+      "effort_count_cumulative": 20187,
+      "athlete_count": 9595,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 20187
+    }
+  },
+  "18652419": {
+    "meta": {
+      "name": "Strmák Zuberec na LM",
+      "activity_type": "hiking",
+      "lat": 49.231544,
+      "lng": 19.602041,
+      "distance": 534.7,
+      "avg_grade": 6.5,
+      "elev_difference": 34.5,
+      "effort_count_cumulative": 16097,
+      "athlete_count": 8470,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 16097
+    }
+  },
+  "18664473": {
+    "meta": {
+      "name": "Zelené pleso -> Jahňací štít",
+      "activity_type": "running",
+      "lat": 49.210551,
+      "lng": 20.221028,
+      "distance": 2482.1,
+      "avg_grade": 23.9,
+      "elev_difference": 593.8,
+      "effort_count_cumulative": 549,
+      "athlete_count": 536,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 549
+    }
+  },
+  "18689648": {
+    "meta": {
+      "name": "Gubałówka finish",
+      "activity_type": "hiking",
+      "lat": 49.319852,
+      "lng": 19.946591,
+      "distance": 1505.1,
+      "avg_grade": 6.5,
+      "elev_difference": 97.6,
+      "effort_count_cumulative": 9255,
+      "athlete_count": 4679,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 9255
+    }
+  },
+  "18693489": {
+    "meta": {
+      "name": "Liptovský kŕč",
+      "activity_type": "running",
+      "lat": 49.174404,
+      "lng": 19.630998,
+      "distance": 935.8,
+      "avg_grade": 28.3,
+      "elev_difference": 266.8,
+      "effort_count_cumulative": 389,
+      "athlete_count": 116,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 389
+    }
+  },
+  "18699121": {
+    "meta": {
+      "name": "FINISH TDPA 2018",
+      "activity_type": "hiking",
+      "lat": 49.335414,
+      "lng": 20.099002,
+      "distance": 507.2,
+      "avg_grade": 5.2,
+      "elev_difference": 26.4,
+      "effort_count_cumulative": 21112,
+      "athlete_count": 8384,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 21112
+    }
+  },
+  "18722401": {
+    "meta": {
+      "name": "Ząb UP Hard",
+      "activity_type": "hiking",
+      "lat": 49.331525,
+      "lng": 19.949617,
+      "distance": 474.4,
+      "avg_grade": 6.3,
+      "elev_difference": 29.8,
+      "effort_count_cumulative": 9015,
+      "athlete_count": 4385,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 9015
+    }
+  },
+  "18731953": {
+    "meta": {
+      "name": "Ząb UP - od północy",
+      "activity_type": "hiking",
+      "lat": 49.347499,
+      "lng": 19.949897,
+      "distance": 513.3,
+      "avg_grade": 4.9,
+      "elev_difference": 25.4,
+      "effort_count_cumulative": 22358,
+      "athlete_count": 6817,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 22358
+    }
+  },
+  "18917470": {
+    "meta": {
+      "name": "F1n@l uphill DS",
+      "activity_type": "hiking",
+      "lat": 49.135198,
+      "lng": 20.239035,
+      "distance": 857.5,
+      "avg_grade": 5.5,
+      "elev_difference": 46.8,
+      "effort_count_cumulative": 15567,
+      "athlete_count": 3062,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 15567
+    }
+  },
+  "18925074": {
+    "meta": {
+      "name": "Holy vrch - Baranec",
+      "activity_type": "running",
+      "lat": 49.156555,
+      "lng": 19.733693,
+      "distance": 2122.3,
+      "avg_grade": 22.9,
+      "elev_difference": 486.7,
+      "effort_count_cumulative": 1226,
+      "athlete_count": 741,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1226
+    }
+  },
+  "18925504": {
+    "meta": {
+      "name": "Smrek - Ziarske Sedlo",
+      "activity_type": "running",
+      "lat": 49.181685,
+      "lng": 19.745968,
+      "distance": 1523.4,
+      "avg_grade": -11.6,
+      "elev_difference": 196.3,
+      "effort_count_cumulative": 974,
+      "athlete_count": 690,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 974
+    }
+  },
+  "18932027": {
+    "meta": {
+      "name": "Ziarske sedlo - Placlive",
+      "activity_type": "running",
+      "lat": 49.19346,
+      "lng": 19.750671,
+      "distance": 556.7,
+      "avg_grade": 40.7,
+      "elev_difference": 226.4,
+      "effort_count_cumulative": 708,
+      "athlete_count": 525,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 708
+    }
+  },
+  "18934666": {
+    "meta": {
+      "name": "Hincovo pleso - Koprovsky stit Climb",
+      "activity_type": "running",
+      "lat": 49.176505,
+      "lng": 20.055819,
+      "distance": 1408.8,
+      "avg_grade": 27.1,
+      "elev_difference": 382.0,
+      "effort_count_cumulative": 958,
+      "athlete_count": 909,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 958
+    }
+  },
+  "18938702": {
+    "meta": {
+      "name": "Stupanie Tatranske zruby",
+      "activity_type": "running",
+      "lat": 49.130481,
+      "lng": 20.198096,
+      "distance": 2250.0,
+      "avg_grade": 16.9,
+      "elev_difference": 380.0,
+      "effort_count_cumulative": 273,
+      "athlete_count": 158,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 273
+    }
+  },
+  "18954322": {
+    "meta": {
+      "name": "Rusinowa",
+      "activity_type": "running",
+      "lat": 49.284298,
+      "lng": 20.112869,
+      "distance": 3114.4,
+      "avg_grade": 2.6,
+      "elev_difference": 85.1,
+      "effort_count_cumulative": 830,
+      "athlete_count": 652,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 830
+    }
+  },
+  "19072540": {
+    "meta": {
+      "name": "ZP finish",
+      "activity_type": "hiking",
+      "lat": 49.21648,
+      "lng": 20.248561,
+      "distance": 2263.8,
+      "avg_grade": 7.1,
+      "elev_difference": 161.6,
+      "effort_count_cumulative": 1825,
+      "athlete_count": 1060,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1825
+    }
+  },
+  "19241019": {
+    "meta": {
+      "name": "Czarny Staw G.- Murowaniec",
+      "activity_type": "hiking",
+      "lat": 49.2327,
+      "lng": 20.014802,
+      "distance": 1608.2,
+      "avg_grade": -7.8,
+      "elev_difference": 126.2,
+      "effort_count_cumulative": 334,
+      "athlete_count": 367,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 334
+    }
+  },
+  "19269112": {
+    "meta": {
+      "name": "Kościeliska - Stolarczyka do Orlenu",
+      "activity_type": "hiking",
+      "lat": 49.293392,
+      "lng": 19.942874,
+      "distance": 2978.3,
+      "avg_grade": 3.0,
+      "elev_difference": 90.4,
+      "effort_count_cumulative": 13222,
+      "athlete_count": 4481,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 13222
+    }
+  },
+  "19275373": {
+    "meta": {
+      "name": "Z pod skoczni-do ronda Jana Pawla",
+      "activity_type": "hiking",
+      "lat": 49.281416,
+      "lng": 19.965431,
+      "distance": 657.2,
+      "avg_grade": 0.0,
+      "elev_difference": 0.0,
+      "effort_count_cumulative": 13589,
+      "athlete_count": 4784,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 13589
+    }
+  },
+  "19562794": {
+    "meta": {
+      "name": "Terasa - Ziarske s.",
+      "activity_type": "running",
+      "lat": 49.190168,
+      "lng": 19.738924,
+      "distance": 1058.0,
+      "avg_grade": 19.8,
+      "elev_difference": 209.8,
+      "effort_count_cumulative": 990,
+      "athlete_count": 678,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 990
+    }
+  },
+  "19562994": {
+    "meta": {
+      "name": "Studenovodske - Zamka",
+      "activity_type": "running",
+      "lat": 49.168272,
+      "lng": 20.216876,
+      "distance": 1621.7,
+      "avg_grade": 8.3,
+      "elev_difference": 137.3,
+      "effort_count_cumulative": 5294,
+      "athlete_count": 3500,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 5294
+    }
+  },
+  "19776792": {
+    "meta": {
+      "name": "Zamkovského chata - Veľký studený potok",
+      "activity_type": "hiking",
+      "lat": 49.172987,
+      "lng": 20.219582,
+      "distance": 1638.3,
+      "avg_grade": -8.7,
+      "elev_difference": 143.1,
+      "effort_count_cumulative": 491,
+      "athlete_count": 405,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 491
+    }
+  },
+  "19860186": {
+    "meta": {
+      "name": "BABKY od kamenolomu",
+      "activity_type": "running",
+      "lat": 49.164749,
+      "lng": 19.631213,
+      "distance": 2927.7,
+      "avg_grade": 23.0,
+      "elev_difference": 674.7,
+      "effort_count_cumulative": 537,
+      "athlete_count": 321,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 537
+    }
+  },
+  "20070826": {
+    "meta": {
+      "name": "Priesadiska-Šimaľová okruh",
+      "activity_type": "running",
+      "lat": 49.340519,
+      "lng": 19.659893,
+      "distance": 6067.2,
+      "avg_grade": 0.0,
+      "elev_difference": 155.7,
+      "effort_count_cumulative": 167,
+      "athlete_count": 26,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 167
+    }
+  },
+  "20357176": {
+    "meta": {
+      "name": "DH to Zuberec",
+      "activity_type": "hiking",
+      "lat": 49.267064,
+      "lng": 19.62429,
+      "distance": 641.3,
+      "avg_grade": -5.7,
+      "elev_difference": 36.8,
+      "effort_count_cumulative": 15377,
+      "athlete_count": 7382,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 15377
+    }
+  },
+  "20407456": {
+    "meta": {
+      "name": "Kocie Łby w dół",
+      "activity_type": "hiking",
+      "lat": 49.240584,
+      "lng": 19.807078,
+      "distance": 467.5,
+      "avg_grade": -5.7,
+      "elev_difference": 27.3,
+      "effort_count_cumulative": 7593,
+      "athlete_count": 6248,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 7593
+    }
+  },
+  "20569129": {
+    "meta": {
+      "name": "Hybická tiesňava - final climb",
+      "activity_type": "hiking",
+      "lat": 49.127775,
+      "lng": 19.926563,
+      "distance": 963.2,
+      "avg_grade": 10.5,
+      "elev_difference": 101.4,
+      "effort_count_cumulative": 587,
+      "athlete_count": 414,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 587
+    }
+  },
+  "20630666": {
+    "meta": {
+      "name": "Konská Climb",
+      "activity_type": "hiking",
+      "lat": 49.104015,
+      "lng": 19.714384,
+      "distance": 1287.8,
+      "avg_grade": 3.8,
+      "elev_difference": 49.1,
+      "effort_count_cumulative": 2303,
+      "athlete_count": 623,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2303
+    }
+  },
+  "20653421": {
+    "meta": {
+      "name": "Bukowina (kościół-poczta)",
+      "activity_type": "hiking",
+      "lat": 49.342455,
+      "lng": 20.108093,
+      "distance": 1016.9,
+      "avg_grade": 1.6,
+      "elev_difference": 16.2,
+      "effort_count_cumulative": 20182,
+      "athlete_count": 8671,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 20182
+    }
+  },
+  "20695553": {
+    "meta": {
+      "name": "Spod Bystrej do Račkovej doliny",
+      "activity_type": "hiking",
+      "lat": 49.134727,
+      "lng": 19.848631,
+      "distance": 4468.4,
+      "avg_grade": -1.9,
+      "elev_difference": 83.4,
+      "effort_count_cumulative": 1023,
+      "athlete_count": 672,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1023
+    }
+  },
+  "20727931": {
+    "meta": {
+      "name": "Razc. pod Slavkacom - Hrebienok",
+      "activity_type": "running",
+      "lat": 49.153743,
+      "lng": 20.210433,
+      "distance": 1123.8,
+      "avg_grade": -5.9,
+      "elev_difference": 82.0,
+      "effort_count_cumulative": 2813,
+      "athlete_count": 1805,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2813
+    }
+  },
+  "20768792": {
+    "meta": {
+      "name": "Pod Muraniem ",
+      "activity_type": "running",
+      "lat": 49.263036,
+      "lng": 20.141109,
+      "distance": 1856.2,
+      "avg_grade": 3.7,
+      "elev_difference": 69.4,
+      "effort_count_cumulative": 1011,
+      "athlete_count": 671,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1011
+    }
+  },
+  "21020751": {
+    "meta": {
+      "name": "Od rzeczki do drogi",
+      "activity_type": "hiking",
+      "lat": 49.336178,
+      "lng": 19.83757,
+      "distance": 325.3,
+      "avg_grade": 8.0,
+      "elev_difference": 26.0,
+      "effort_count_cumulative": 1400,
+      "athlete_count": 739,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1400
+    }
+  },
+  "21058920": {
+    "meta": {
+      "name": "Włosienica-Morskie Oko pod górę",
+      "activity_type": "running",
+      "lat": 49.213022,
+      "lng": 20.079357,
+      "distance": 1550.5,
+      "avg_grade": 4.6,
+      "elev_difference": 75.7,
+      "effort_count_cumulative": 6455,
+      "athlete_count": 5228,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 6455
+    }
+  },
+  "21079980": {
+    "meta": {
+      "name": "K ústiu Račkovej doliny ",
+      "activity_type": "hiking",
+      "lat": 49.10551,
+      "lng": 19.807964,
+      "distance": 3368.7,
+      "avg_grade": 3.4,
+      "elev_difference": 115.4,
+      "effort_count_cumulative": 2396,
+      "athlete_count": 1074,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2396
+    }
+  },
+  "21081041": {
+    "meta": {
+      "name": "Záver na Podbanské",
+      "activity_type": "hiking",
+      "lat": 49.120573,
+      "lng": 19.880522,
+      "distance": 2816.9,
+      "avg_grade": 1.8,
+      "elev_difference": 50.1,
+      "effort_count_cumulative": 2635,
+      "athlete_count": 1395,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2635
+    }
+  },
+  "21084676": {
+    "meta": {
+      "name": "sedlo Pálenica po žltej HILL",
+      "activity_type": "running",
+      "lat": 49.243556,
+      "lng": 19.64492,
+      "distance": 3298.2,
+      "avg_grade": 18.8,
+      "elev_difference": 621.4,
+      "effort_count_cumulative": 874,
+      "athlete_count": 581,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 874
+    }
+  },
+  "21099665": {
+    "meta": {
+      "name": "Štrková start- Štrková finish",
+      "activity_type": "running",
+      "lat": 49.269053,
+      "lng": 19.607425,
+      "distance": 2197.1,
+      "avg_grade": 1.9,
+      "elev_difference": 42.2,
+      "effort_count_cumulative": 878,
+      "athlete_count": 200,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 878
+    }
+  },
+  "21133455": {
+    "meta": {
+      "name": "S-ki z Salamandry",
+      "activity_type": "hiking",
+      "lat": 49.296609,
+      "lng": 19.903089,
+      "distance": 602.6,
+      "avg_grade": -9.8,
+      "elev_difference": 59.2,
+      "effort_count_cumulative": 23595,
+      "athlete_count": 8405,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 23595
+    }
+  },
+  "21145888": {
+    "meta": {
+      "name": "Spalena Kopa ",
+      "activity_type": "running",
+      "lat": 49.208805,
+      "lng": 19.696956,
+      "distance": 958.5,
+      "avg_grade": 16.0,
+      "elev_difference": 153.6,
+      "effort_count_cumulative": 262,
+      "athlete_count": 225,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 262
+    }
+  },
+  "21319462": {
+    "meta": {
+      "name": "Tatranská Polianka - Gerlachov DH",
+      "activity_type": "hiking",
+      "lat": 49.121575,
+      "lng": 20.187325,
+      "distance": 2807.0,
+      "avg_grade": -5.9,
+      "elev_difference": 166.2,
+      "effort_count_cumulative": 15466,
+      "athlete_count": 2935,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 15466
+    }
+  },
+  "21344696": {
+    "meta": {
+      "name": "Kôprovou dolinou",
+      "activity_type": "running",
+      "lat": 49.151578,
+      "lng": 19.922706,
+      "distance": 6010.4,
+      "avg_grade": 3.4,
+      "elev_difference": 204.6,
+      "effort_count_cumulative": 227,
+      "athlete_count": 187,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 227
+    }
+  },
+  "21370568": {
+    "meta": {
+      "name": "Winkiel",
+      "activity_type": "hiking",
+      "lat": 49.275797,
+      "lng": 19.888173,
+      "distance": 527.0,
+      "avg_grade": 0.5,
+      "elev_difference": 6.6,
+      "effort_count_cumulative": 18466,
+      "athlete_count": 7637,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 18466
+    }
+  },
+  "21434066": {
+    "meta": {
+      "name": "Podspady na Prislop",
+      "activity_type": "hiking",
+      "lat": 49.280218,
+      "lng": 20.175993,
+      "distance": 3051.7,
+      "avg_grade": 5.5,
+      "elev_difference": 166.6,
+      "effort_count_cumulative": 18764,
+      "athlete_count": 9418,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 18764
+    }
+  },
+  "21443155": {
+    "meta": {
+      "name": "Brzegi",
+      "activity_type": "hiking",
+      "lat": 49.322582,
+      "lng": 20.106442,
+      "distance": 1390.5,
+      "avg_grade": -2.7,
+      "elev_difference": 40.2,
+      "effort_count_cumulative": 11238,
+      "athlete_count": 5333,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 11238
+    }
+  },
+  "21554820": {
+    "meta": {
+      "name": "Priesadiska-Simalova",
+      "activity_type": "running",
+      "lat": 49.340585,
+      "lng": 19.659867,
+      "distance": 3021.9,
+      "avg_grade": 5.0,
+      "elev_difference": 154.6,
+      "effort_count_cumulative": 246,
+      "athlete_count": 37,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 246
+    }
+  },
+  "21571907": {
+    "meta": {
+      "name": "Lenistwo AL",
+      "activity_type": "running",
+      "lat": 49.300125,
+      "lng": 19.991025,
+      "distance": 870.4,
+      "avg_grade": -5.8,
+      "elev_difference": 50.4,
+      "effort_count_cumulative": 177,
+      "athlete_count": 75,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 177
+    }
+  },
+  "21572010": {
+    "meta": {
+      "name": "Gniew AL",
+      "activity_type": "running",
+      "lat": 49.306027,
+      "lng": 20.009925,
+      "distance": 765.3,
+      "avg_grade": -1.2,
+      "elev_difference": 18.7,
+      "effort_count_cumulative": 494,
+      "athlete_count": 300,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 494
+    }
+  },
+  "21735732": {
+    "meta": {
+      "name": "Ždiar",
+      "activity_type": "hiking",
+      "lat": 49.272349,
+      "lng": 20.223625,
+      "distance": 367.6,
+      "avg_grade": 10.3,
+      "elev_difference": 38.0,
+      "effort_count_cumulative": 2912,
+      "athlete_count": 1649,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2912
+    }
+  },
+  "21860336": {
+    "meta": {
+      "name": "Skalnate pleso od S po vyhliadku",
+      "activity_type": "hiking",
+      "lat": 49.182449,
+      "lng": 20.23252,
+      "distance": 1495.9,
+      "avg_grade": -9.4,
+      "elev_difference": 140.4,
+      "effort_count_cumulative": 88,
+      "athlete_count": 95,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 88
+    }
+  },
+  "21914865": {
+    "meta": {
+      "name": "Koniec Žiaru - Parkovisko Žiarska ",
+      "activity_type": "running",
+      "lat": 49.136487,
+      "lng": 19.676818,
+      "distance": 1857.0,
+      "avg_grade": 4.4,
+      "elev_difference": 81.8,
+      "effort_count_cumulative": 345,
+      "athlete_count": 166,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 345
+    }
+  },
+  "21914907": {
+    "meta": {
+      "name": "Parkovisko Žiarska - Medvedia štôlňa",
+      "activity_type": "running",
+      "lat": 49.144926,
+      "lng": 19.700607,
+      "distance": 386.3,
+      "avg_grade": 5.3,
+      "elev_difference": 20.8,
+      "effort_count_cumulative": 1901,
+      "athlete_count": 1078,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1901
+    }
+  },
+  "21947059": {
+    "meta": {
+      "name": "Oravice climb last part",
+      "activity_type": "hiking",
+      "lat": 49.274676,
+      "lng": 19.679209,
+      "distance": 2271.8,
+      "avg_grade": 4.8,
+      "elev_difference": 109.7,
+      "effort_count_cumulative": 16283,
+      "athlete_count": 7949,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 16283
+    }
+  },
+  "22055979": {
+    "meta": {
+      "name": "Cyrhla - Jaszczurówka ",
+      "activity_type": "hiking",
+      "lat": 49.28902,
+      "lng": 20.013909,
+      "distance": 2376.3,
+      "avg_grade": -4.5,
+      "elev_difference": 106.6,
+      "effort_count_cumulative": 21957,
+      "athlete_count": 8455,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 21957
+    }
+  },
+  "22066882": {
+    "meta": {
+      "name": "Do Chochołowskiej po asfalcie ",
+      "activity_type": "running",
+      "lat": 49.289622,
+      "lng": 19.849753,
+      "distance": 4508.1,
+      "avg_grade": 2.1,
+      "elev_difference": 96.2,
+      "effort_count_cumulative": 452,
+      "athlete_count": 279,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 452
+    }
+  },
+  "22155502": {
+    "meta": {
+      "name": "Z Podbanského (offroad)",
+      "activity_type": "hiking",
+      "lat": 49.134882,
+      "lng": 19.893752,
+      "distance": 2089.5,
+      "avg_grade": -1.5,
+      "elev_difference": 34.0,
+      "effort_count_cumulative": 743,
+      "athlete_count": 428,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 743
+    }
+  },
+  "22161645": {
+    "meta": {
+      "name": "Brestova, Sivy vrch",
+      "activity_type": "running",
+      "lat": 49.2229,
+      "lng": 19.682093,
+      "distance": 4276.0,
+      "avg_grade": -3.0,
+      "elev_difference": 354.4,
+      "effort_count_cumulative": 159,
+      "athlete_count": 130,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 159
+    }
+  },
+  "22191445": {
+    "meta": {
+      "name": "Jaszczurkowy",
+      "activity_type": "running",
+      "lat": 49.303333,
+      "lng": 19.911273,
+      "distance": 550.0,
+      "avg_grade": 4.3,
+      "elev_difference": 24.0,
+      "effort_count_cumulative": 402,
+      "athlete_count": 273,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 402
+    }
+  },
+  "22338416": {
+    "meta": {
+      "name": "Od odbočky ku kapličke sv. Huberta",
+      "activity_type": "running",
+      "lat": 49.349712,
+      "lng": 19.684847,
+      "distance": 2420.5,
+      "avg_grade": 3.8,
+      "elev_difference": 93.0,
+      "effort_count_cumulative": 27,
+      "athlete_count": 15,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 27
+    }
+  },
+  "22757421": {
+    "meta": {
+      "name": "Rainerka DH",
+      "activity_type": "hiking",
+      "lat": 49.16707,
+      "lng": 20.217408,
+      "distance": 1135.4,
+      "avg_grade": -4.6,
+      "elev_difference": 54.8,
+      "effort_count_cumulative": 1126,
+      "athlete_count": 806,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1126
+    }
+  },
+  "22897443": {
+    "meta": {
+      "name": "Od wintertrailu k chate",
+      "activity_type": "hiking",
+      "lat": 49.214418,
+      "lng": 20.240524,
+      "distance": 1506.1,
+      "avg_grade": 6.6,
+      "elev_difference": 98.9,
+      "effort_count_cumulative": 348,
+      "athlete_count": 177,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 348
+    }
+  },
+  "22993564": {
+    "meta": {
+      "name": "Guty-Spyrkówka do końca ",
+      "activity_type": "running",
+      "lat": 49.319184,
+      "lng": 19.982997,
+      "distance": 1513.1,
+      "avg_grade": 1.8,
+      "elev_difference": 27.0,
+      "effort_count_cumulative": 625,
+      "athlete_count": 253,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 625
+    }
+  },
+  "23113806": {
+    "meta": {
+      "name": "VlaDynaf kopček",
+      "activity_type": "hiking",
+      "lat": 49.156425,
+      "lng": 19.60989,
+      "distance": 526.5,
+      "avg_grade": 15.8,
+      "elev_difference": 83.0,
+      "effort_count_cumulative": 206,
+      "athlete_count": 86,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 206
+    }
+  },
+  "23116706": {
+    "meta": {
+      "name": "Brezovica Climb - K penziónu Skorušina",
+      "activity_type": "hiking",
+      "lat": 49.345429,
+      "lng": 19.648222,
+      "distance": 1147.3,
+      "avg_grade": 6.8,
+      "elev_difference": 78.0,
+      "effort_count_cumulative": 80,
+      "athlete_count": 24,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 80
+    }
+  },
+  "23116734": {
+    "meta": {
+      "name": "Brezovica Climb II.",
+      "activity_type": "hiking",
+      "lat": 49.340319,
+      "lng": 19.659561,
+      "distance": 412.2,
+      "avg_grade": 8.6,
+      "elev_difference": 35.6,
+      "effort_count_cumulative": 676,
+      "athlete_count": 207,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 676
+    }
+  },
+  "23141915": {
+    "meta": {
+      "name": "Potoven segemnT",
+      "activity_type": "running",
+      "lat": 49.135157,
+      "lng": 19.620583,
+      "distance": 445.7,
+      "avg_grade": 17.2,
+      "elev_difference": 76.5,
+      "effort_count_cumulative": 180,
+      "athlete_count": 27,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 180
+    }
+  },
+  "23172195": {
+    "meta": {
+      "name": "VlaDynaf Run",
+      "activity_type": "running",
+      "lat": 49.156398,
+      "lng": 19.609934,
+      "distance": 512.7,
+      "avg_grade": 17.0,
+      "elev_difference": 87.3,
+      "effort_count_cumulative": 130,
+      "athlete_count": 37,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 130
+    }
+  },
+  "23220325": {
+    "meta": {
+      "name": "Na razcestie pod Bystrou",
+      "activity_type": "running",
+      "lat": 49.127986,
+      "lng": 19.85588,
+      "distance": 993.9,
+      "avg_grade": 6.6,
+      "elev_difference": 65.6,
+      "effort_count_cumulative": 131,
+      "athlete_count": 94,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 131
+    }
+  },
+  "23222294": {
+    "meta": {
+      "name": "Rakytie climb",
+      "activity_type": "running",
+      "lat": 49.160672,
+      "lng": 19.648921,
+      "distance": 448.0,
+      "avg_grade": 18.5,
+      "elev_difference": 82.8,
+      "effort_count_cumulative": 349,
+      "athlete_count": 204,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 349
+    }
+  },
+  "23311731": {
+    "meta": {
+      "name": "Ostrysz ",
+      "activity_type": "running",
+      "lat": 49.344774,
+      "lng": 19.845569,
+      "distance": 783.1,
+      "avg_grade": 18.9,
+      "elev_difference": 148.2,
+      "effort_count_cumulative": 211,
+      "athlete_count": 175,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 211
+    }
+  },
+  "23594134": {
+    "meta": {
+      "name": "Stúpanie od chaty J.A.K. po rovinku za Kejdák",
+      "activity_type": "hiking",
+      "lat": 49.133854,
+      "lng": 19.803945,
+      "distance": 447.9,
+      "avg_grade": 6.3,
+      "elev_difference": 28.0,
+      "effort_count_cumulative": 1673,
+      "athlete_count": 957,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1673
+    }
+  },
+  "23656484": {
+    "meta": {
+      "name": "Lapsanka po hranicu",
+      "activity_type": "walking",
+      "lat": 49.329313,
+      "lng": 20.226032,
+      "distance": 2624.0,
+      "avg_grade": 7.3,
+      "elev_difference": 191.0,
+      "effort_count_cumulative": 7990,
+      "athlete_count": 4042,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 7990
+    }
+  },
+  "24027625": {
+    "meta": {
+      "name": "Teplica",
+      "activity_type": "hiking",
+      "lat": 49.328949,
+      "lng": 19.667183,
+      "distance": 1573.1,
+      "avg_grade": 5.4,
+      "elev_difference": 84.9,
+      "effort_count_cumulative": 104,
+      "athlete_count": 53,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 104
+    }
+  },
+  "24038567": {
+    "meta": {
+      "name": "hnojisko - lúka nad skládkou",
+      "activity_type": "running",
+      "lat": 49.105398,
+      "lng": 19.648746,
+      "distance": 658.4,
+      "avg_grade": 6.1,
+      "elev_difference": 42.4,
+      "effort_count_cumulative": 198,
+      "athlete_count": 49,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 198
+    }
+  },
+  "24049880": {
+    "meta": {
+      "name": "Od chaty ku krížu",
+      "activity_type": "running",
+      "lat": 49.349649,
+      "lng": 19.684691,
+      "distance": 1006.9,
+      "avg_grade": 10.1,
+      "elev_difference": 102.0,
+      "effort_count_cumulative": 39,
+      "athlete_count": 23,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 39
+    }
+  },
+  "24071796": {
+    "meta": {
+      "name": "Hrebienok zelena DH, horna cast",
+      "activity_type": "hiking",
+      "lat": 49.157585,
+      "lng": 20.22348,
+      "distance": 818.0,
+      "avg_grade": -12.3,
+      "elev_difference": 100.6,
+      "effort_count_cumulative": 570,
+      "athlete_count": 241,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 570
+    }
+  },
+  "24185760": {
+    "meta": {
+      "name": "Hrube - Gawlaki ",
+      "activity_type": "running",
+      "lat": 49.30127,
+      "lng": 20.010479,
+      "distance": 315.7,
+      "avg_grade": 6.9,
+      "elev_difference": 21.8,
+      "effort_count_cumulative": 537,
+      "athlete_count": 332,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 537
+    }
+  },
+  "24211946": {
+    "meta": {
+      "name": "Od putaca Zruby dole do Smokovca",
+      "activity_type": "running",
+      "lat": 49.144834,
+      "lng": 20.178052,
+      "distance": 3011.9,
+      "avg_grade": -12.4,
+      "elev_difference": 373.0,
+      "effort_count_cumulative": 845,
+      "athlete_count": 650,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 845
+    }
+  },
+  "24314567": {
+    "meta": {
+      "name": "Jochy - Račková",
+      "activity_type": "hiking",
+      "lat": 49.11126,
+      "lng": 19.755687,
+      "distance": 3356.2,
+      "avg_grade": 2.3,
+      "elev_difference": 79.6,
+      "effort_count_cumulative": 2423,
+      "athlete_count": 912,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2423
+    }
+  },
+  "24368549": {
+    "meta": {
+      "name": "Ciemniak - Kopa Kondracka",
+      "activity_type": "running",
+      "lat": 49.231087,
+      "lng": 19.903568,
+      "distance": 2487.7,
+      "avg_grade": -3.8,
+      "elev_difference": 195.8,
+      "effort_count_cumulative": 3125,
+      "athlete_count": 2082,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3125
+    }
+  },
+  "24378323": {
+    "meta": {
+      "name": "Chuda Przełączka - Ciemniak UP",
+      "activity_type": "running",
+      "lat": 49.238097,
+      "lng": 19.895675,
+      "distance": 1107.1,
+      "avg_grade": 21.7,
+      "elev_difference": 241.4,
+      "effort_count_cumulative": 3924,
+      "athlete_count": 2426,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3924
+    }
+  },
+  "24547453": {
+    "meta": {
+      "name": "Kopček z Ondreja na Konskú",
+      "activity_type": "running",
+      "lat": 49.103176,
+      "lng": 19.713857,
+      "distance": 1283.4,
+      "avg_grade": 4.1,
+      "elev_difference": 52.3,
+      "effort_count_cumulative": 58,
+      "athlete_count": 28,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 58
+    }
+  },
+  "24580028": {
+    "meta": {
+      "name": "Kejdak",
+      "activity_type": "running",
+      "lat": 49.120814,
+      "lng": 19.801941,
+      "distance": 1346.1,
+      "avg_grade": 7.9,
+      "elev_difference": 106.4,
+      "effort_count_cumulative": 81,
+      "athlete_count": 30,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 81
+    }
+  },
+  "24696933": {
+    "meta": {
+      "name": "Jaworzynka - Przełęcz Między Kopami (stromy odcinek) ",
+      "activity_type": "running",
+      "lat": 49.256901,
+      "lng": 19.99331,
+      "distance": 1051.6,
+      "avg_grade": 25.0,
+      "elev_difference": 263.0,
+      "effort_count_cumulative": 8020,
+      "athlete_count": 3901,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 8020
+    }
+  },
+  "24747209": {
+    "meta": {
+      "name": "Babky z Jalovecké po zelené",
+      "activity_type": "running",
+      "lat": 49.16144,
+      "lng": 19.640833,
+      "distance": 4346.0,
+      "avg_grade": 17.0,
+      "elev_difference": 737.0,
+      "effort_count_cumulative": 67,
+      "athlete_count": 47,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 67
+    }
+  },
+  "24760879": {
+    "meta": {
+      "name": "( DH ) Chata Červenec → Hotel Mnich",
+      "activity_type": "hiking",
+      "lat": 49.183818,
+      "lng": 19.639309,
+      "distance": 5990.0,
+      "avg_grade": -10.1,
+      "elev_difference": 603.0,
+      "effort_count_cumulative": 907,
+      "athlete_count": 417,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 907
+    }
+  },
+  "24804724": {
+    "meta": {
+      "name": "Skanzen - zuberec",
+      "activity_type": "running",
+      "lat": 49.259769,
+      "lng": 19.662304,
+      "distance": 2125.3,
+      "avg_grade": -3.6,
+      "elev_difference": 77.2,
+      "effort_count_cumulative": 1095,
+      "athlete_count": 651,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1095
+    }
+  },
+  "24806968": {
+    "meta": {
+      "name": "Tatra SkyMarathon Dolina Kościeliska DH ",
+      "activity_type": "running",
+      "lat": 49.260406,
+      "lng": 19.869385,
+      "distance": 1662.5,
+      "avg_grade": -1.9,
+      "elev_difference": 31.2,
+      "effort_count_cumulative": 8644,
+      "athlete_count": 4035,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 8644
+    }
+  },
+  "24816010": {
+    "meta": {
+      "name": "1K Kasprowy",
+      "activity_type": "running",
+      "lat": 49.24007,
+      "lng": 19.977357,
+      "distance": 1028.1,
+      "avg_grade": 20.4,
+      "elev_difference": 209.8,
+      "effort_count_cumulative": 6000,
+      "athlete_count": 3160,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 6000
+    }
+  },
+  "24852567": {
+    "meta": {
+      "name": "Ezakimak strmák",
+      "activity_type": "hiking",
+      "lat": 49.163323,
+      "lng": 19.643147,
+      "distance": 2645.2,
+      "avg_grade": 14.1,
+      "elev_difference": 371.8,
+      "effort_count_cumulative": 2005,
+      "athlete_count": 817,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2005
+    }
+  },
+  "24901884": {
+    "meta": {
+      "name": "Medvedia cesta *OC*",
+      "activity_type": "hiking",
+      "lat": 49.129498,
+      "lng": 19.865047,
+      "distance": 2270.8,
+      "avg_grade": 5.3,
+      "elev_difference": 119.6,
+      "effort_count_cumulative": 141,
+      "athlete_count": 60,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 141
+    }
+  },
+  "25009442": {
+    "meta": {
+      "name": "Kondratowa-Kalatówki DH",
+      "activity_type": "running",
+      "lat": 49.250109,
+      "lng": 19.952942,
+      "distance": 1378.8,
+      "avg_grade": -9.6,
+      "elev_difference": 131.8,
+      "effort_count_cumulative": 5923,
+      "athlete_count": 3351,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 5923
+    }
+  },
+  "25152539": {
+    "meta": {
+      "name": "Nad Baňou - Prostrednô",
+      "activity_type": "hiking",
+      "lat": 49.164216,
+      "lng": 19.809686,
+      "distance": 656.4,
+      "avg_grade": 10.4,
+      "elev_difference": 68.0,
+      "effort_count_cumulative": 172,
+      "athlete_count": 103,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 172
+    }
+  },
+  "25206399": {
+    "meta": {
+      "name": "Czarny Staw - DH ",
+      "activity_type": "running",
+      "lat": 49.232837,
+      "lng": 20.014587,
+      "distance": 1369.8,
+      "avg_grade": -8.6,
+      "elev_difference": 118.3,
+      "effort_count_cumulative": 3649,
+      "athlete_count": 2541,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3649
+    }
+  },
+  "25221384": {
+    "meta": {
+      "name": "Ciśnij na Magurkę",
+      "activity_type": "hiking",
+      "lat": 49.314716,
+      "lng": 19.827829,
+      "distance": 664.8,
+      "avg_grade": 14.8,
+      "elev_difference": 98.4,
+      "effort_count_cumulative": 260,
+      "athlete_count": 139,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 260
+    }
+  },
+  "25221496": {
+    "meta": {
+      "name": "Magura Witowska ostatnie up",
+      "activity_type": "hiking",
+      "lat": 49.295892,
+      "lng": 19.799075,
+      "distance": 304.7,
+      "avg_grade": 13.1,
+      "elev_difference": 40.0,
+      "effort_count_cumulative": 329,
+      "athlete_count": 174,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 329
+    }
+  },
+  "25241691": {
+    "meta": {
+      "name": "Lomnicka vyhliadka DH",
+      "activity_type": "hiking",
+      "lat": 49.170404,
+      "lng": 20.226445,
+      "distance": 588.0,
+      "avg_grade": -9.2,
+      "elev_difference": 54.0,
+      "effort_count_cumulative": 110,
+      "athlete_count": 123,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 110
+    }
+  },
+  "25270720": {
+    "meta": {
+      "name": "Rysy od Chaty",
+      "activity_type": "running",
+      "lat": 49.174563,
+      "lng": 20.087139,
+      "distance": 924.9,
+      "avg_grade": 26.9,
+      "elev_difference": 249.2,
+      "effort_count_cumulative": 1665,
+      "athlete_count": 1518,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1665
+    }
+  },
+  "25314349": {
+    "meta": {
+      "name": "Spalena Dolina -> asfalt DH",
+      "activity_type": "running",
+      "lat": 49.207068,
+      "lng": 19.72235,
+      "distance": 1629.2,
+      "avg_grade": -22.7,
+      "elev_difference": 370.4,
+      "effort_count_cumulative": 351,
+      "athlete_count": 299,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 351
+    }
+  },
+  "25323977": {
+    "meta": {
+      "name": "od spodnej lávky downhill",
+      "activity_type": "running",
+      "lat": 49.175538,
+      "lng": 20.192053,
+      "distance": 2130.0,
+      "avg_grade": -11.7,
+      "elev_difference": 250.0,
+      "effort_count_cumulative": 2844,
+      "athlete_count": 1844,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2844
+    }
+  },
+  "25329961": {
+    "meta": {
+      "name": "Ustup-przez Harende",
+      "activity_type": "running",
+      "lat": 49.323197,
+      "lng": 19.986341,
+      "distance": 1186.5,
+      "avg_grade": 0.8,
+      "elev_difference": 16.2,
+      "effort_count_cumulative": 459,
+      "athlete_count": 147,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 459
+    }
+  },
+  "25365706": {
+    "meta": {
+      "name": "Od KEJDAKU na sklad",
+      "activity_type": "running",
+      "lat": 49.130507,
+      "lng": 19.809271,
+      "distance": 3477.1,
+      "avg_grade": 6.9,
+      "elev_difference": 240.2,
+      "effort_count_cumulative": 26,
+      "athlete_count": 16,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 26
+    }
+  },
+  "25437099": {
+    "meta": {
+      "name": "Otočka Podbanské dole",
+      "activity_type": "hiking",
+      "lat": 49.136833,
+      "lng": 19.912808,
+      "distance": 819.1,
+      "avg_grade": -4.1,
+      "elev_difference": 33.5,
+      "effort_count_cumulative": 335,
+      "athlete_count": 212,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 335
+    }
+  },
+  "25473298": {
+    "meta": {
+      "name": "Red up",
+      "activity_type": "hiking",
+      "lat": 49.131357,
+      "lng": 19.83306,
+      "distance": 994.7,
+      "avg_grade": 6.7,
+      "elev_difference": 67.9,
+      "effort_count_cumulative": 1212,
+      "athlete_count": 742,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1212
+    }
+  },
+  "25478842": {
+    "meta": {
+      "name": "Gubałow do widoku ;)",
+      "activity_type": "hiking",
+      "lat": 49.307553,
+      "lng": 19.935542,
+      "distance": 2040.9,
+      "avg_grade": -4.9,
+      "elev_difference": 102.0,
+      "effort_count_cumulative": 7350,
+      "athlete_count": 4081,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 7350
+    }
+  },
+  "25483281": {
+    "meta": {
+      "name": "gerlach uphill ",
+      "activity_type": "running",
+      "lat": 49.16002,
+      "lng": 20.130589,
+      "distance": 792.8,
+      "avg_grade": 61.2,
+      "elev_difference": 485.0,
+      "effort_count_cumulative": 92,
+      "athlete_count": 78,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 92
+    }
+  },
+  "25513815": {
+    "meta": {
+      "name": "Výbeh na Liesecký chotár",
+      "activity_type": "hiking",
+      "lat": 49.305775,
+      "lng": 19.707517,
+      "distance": 2419.0,
+      "avg_grade": 3.3,
+      "elev_difference": 80.0,
+      "effort_count_cumulative": 184,
+      "athlete_count": 85,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 184
+    }
+  },
+  "25549772": {
+    "meta": {
+      "name": "Last Hill Challenge",
+      "activity_type": "running",
+      "lat": 49.126469,
+      "lng": 20.047306,
+      "distance": 300.5,
+      "avg_grade": 5.9,
+      "elev_difference": 17.8,
+      "effort_count_cumulative": 3904,
+      "athlete_count": 2430,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3904
+    }
+  },
+  "25567269": {
+    "meta": {
+      "name": "Rezervoár - kaplnka za Ostrým vrchom",
+      "activity_type": "running",
+      "lat": 49.335456,
+      "lng": 19.654356,
+      "distance": 1921.1,
+      "avg_grade": 7.7,
+      "elev_difference": 148.0,
+      "effort_count_cumulative": 190,
+      "athlete_count": 43,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 190
+    }
+  },
+  "25588083": {
+    "meta": {
+      "name": "Baranec - Žiarske sedlo",
+      "activity_type": "running",
+      "lat": 49.173523,
+      "lng": 19.741122,
+      "distance": 2668.0,
+      "avg_grade": -9.6,
+      "elev_difference": 257.0,
+      "effort_count_cumulative": 969,
+      "athlete_count": 706,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 969
+    }
+  },
+  "25599325": {
+    "meta": {
+      "name": "Ku krížu",
+      "activity_type": "hiking",
+      "lat": 49.349609,
+      "lng": 19.684785,
+      "distance": 1072.8,
+      "avg_grade": 9.9,
+      "elev_difference": 106.3,
+      "effort_count_cumulative": 156,
+      "athlete_count": 41,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 156
+    }
+  },
+  "25607713": {
+    "meta": {
+      "name": "Stúpanie: razc. Popr.Pleso > razc. Štrbské Pleso",
+      "activity_type": "hiking",
+      "lat": 49.116436,
+      "lng": 20.081606,
+      "distance": 1161.3,
+      "avg_grade": 4.4,
+      "elev_difference": 50.6,
+      "effort_count_cumulative": 27133,
+      "athlete_count": 11388,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 27133
+    }
+  },
+  "25612744": {
+    "meta": {
+      "name": "Popradske odbocka - Strbske",
+      "activity_type": "hiking",
+      "lat": 49.127684,
+      "lng": 20.073994,
+      "distance": 1161.8,
+      "avg_grade": 4.2,
+      "elev_difference": 48.4,
+      "effort_count_cumulative": 9787,
+      "athlete_count": 4241,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 9787
+    }
+  },
+  "25613717": {
+    "meta": {
+      "name": "Vodopád Skok-Bystrá lávka",
+      "activity_type": "running",
+      "lat": 49.153642,
+      "lng": 20.045141,
+      "distance": 2745.0,
+      "avg_grade": 18.7,
+      "elev_difference": 513.2,
+      "effort_count_cumulative": 908,
+      "athlete_count": 869,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 908
+    }
+  },
+  "25615717": {
+    "meta": {
+      "name": "Butorowy - Kule DH",
+      "activity_type": "hiking",
+      "lat": 49.30398,
+      "lng": 19.911467,
+      "distance": 2274.4,
+      "avg_grade": -6.1,
+      "elev_difference": 138.9,
+      "effort_count_cumulative": 4791,
+      "athlete_count": 2205,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 4791
+    }
+  },
+  "25711219": {
+    "meta": {
+      "name": "Trať Mateja Tótha - hore",
+      "activity_type": "running",
+      "lat": 49.124407,
+      "lng": 20.186462,
+      "distance": 1871.4,
+      "avg_grade": 0.7,
+      "elev_difference": 12.9,
+      "effort_count_cumulative": 4187,
+      "athlete_count": 1118,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 4187
+    }
+  },
+  "25711226": {
+    "meta": {
+      "name": "Trať Mateja Tótha - dole",
+      "activity_type": "running",
+      "lat": 49.131965,
+      "lng": 20.204442,
+      "distance": 1921.1,
+      "avg_grade": -0.7,
+      "elev_difference": 14.1,
+      "effort_count_cumulative": 756,
+      "athlete_count": 303,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 756
+    }
+  },
+  "25722459": {
+    "meta": {
+      "name": "na złamanie karku",
+      "activity_type": "hiking",
+      "lat": 49.336482,
+      "lng": 19.930902,
+      "distance": 464.5,
+      "avg_grade": -8.3,
+      "elev_difference": 38.4,
+      "effort_count_cumulative": 18927,
+      "athlete_count": 6331,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 18927
+    }
+  },
+  "25746473": {
+    "meta": {
+      "name": "rázcestie pri Tablici žltá uphil",
+      "activity_type": "hiking",
+      "lat": 49.274306,
+      "lng": 20.228166,
+      "distance": 984.4,
+      "avg_grade": 10.1,
+      "elev_difference": 99.2,
+      "effort_count_cumulative": 1005,
+      "athlete_count": 812,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1005
+    }
+  },
+  "25799106": {
+    "meta": {
+      "name": "KOPERKOWY  ZJEZD DLA  DIEDKOW   Z  POLSKO...",
+      "activity_type": "hiking",
+      "lat": 49.150243,
+      "lng": 19.944359,
+      "distance": 1597.2,
+      "avg_grade": -4.8,
+      "elev_difference": 77.9,
+      "effort_count_cumulative": 5012,
+      "athlete_count": 3769,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 5012
+    }
+  },
+  "25817324": {
+    "meta": {
+      "name": "kokavska garaz od rampy",
+      "activity_type": "hiking",
+      "lat": 49.130334,
+      "lng": 19.810051,
+      "distance": 578.2,
+      "avg_grade": 7.8,
+      "elev_difference": 45.1,
+      "effort_count_cumulative": 355,
+      "athlete_count": 145,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 355
+    }
+  },
+  "25917104": {
+    "meta": {
+      "name": "Razcestie pod Bystrou first climb",
+      "activity_type": "running",
+      "lat": 49.135879,
+      "lng": 19.851639,
+      "distance": 326.4,
+      "avg_grade": 15.0,
+      "elev_difference": 49.0,
+      "effort_count_cumulative": 160,
+      "athlete_count": 148,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 160
+    }
+  },
+  "25917498": {
+    "meta": {
+      "name": "Sklad - Bystra first km",
+      "activity_type": "running",
+      "lat": 49.1391,
+      "lng": 19.852637,
+      "distance": 962.7,
+      "avg_grade": 12.5,
+      "elev_difference": 120.6,
+      "effort_count_cumulative": 177,
+      "athlete_count": 147,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 177
+    }
+  },
+  "25948418": {
+    "meta": {
+      "name": "Habovka - Zuberec",
+      "activity_type": "hiking",
+      "lat": 49.278374,
+      "lng": 19.602361,
+      "distance": 2167.8,
+      "avg_grade": 2.3,
+      "elev_difference": 49.8,
+      "effort_count_cumulative": 4894,
+      "athlete_count": 1824,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 4894
+    }
+  },
+  "26004149": {
+    "meta": {
+      "name": "Replica prameň - Podpriesadiská",
+      "activity_type": "hiking",
+      "lat": 49.332954,
+      "lng": 19.663397,
+      "distance": 814.6,
+      "avg_grade": -4.1,
+      "elev_difference": 33.0,
+      "effort_count_cumulative": 357,
+      "athlete_count": 132,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 357
+    }
+  },
+  "26149183": {
+    "meta": {
+      "name": "po modrej zbeh segment do S.Smokovca",
+      "activity_type": "running",
+      "lat": 49.148594,
+      "lng": 20.208833,
+      "distance": 1381.4,
+      "avg_grade": -12.8,
+      "elev_difference": 177.4,
+      "effort_count_cumulative": 1991,
+      "athlete_count": 1396,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1991
+    }
+  },
+  "26172693": {
+    "meta": {
+      "name": "Przysłop miętusi- dolina kościeliska down",
+      "activity_type": "running",
+      "lat": 49.26209,
+      "lng": 19.89231,
+      "distance": 1680.8,
+      "avg_grade": -12.6,
+      "elev_difference": 212.4,
+      "effort_count_cumulative": 3787,
+      "athlete_count": 1706,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 3787
+    }
+  },
+  "26288939": {
+    "meta": {
+      "name": "Nadbanské - nad Hrdovo",
+      "activity_type": "hiking",
+      "lat": 49.138017,
+      "lng": 19.903385,
+      "distance": 2744.5,
+      "avg_grade": -1.8,
+      "elev_difference": 49.9,
+      "effort_count_cumulative": 2022,
+      "athlete_count": 1082,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 2022
+    }
+  },
+  "26288993": {
+    "meta": {
+      "name": "Čabajka hore 1/2",
+      "activity_type": "running",
+      "lat": 49.133951,
+      "lng": 19.792784,
+      "distance": 291.2,
+      "avg_grade": 26.1,
+      "elev_difference": 76.0,
+      "effort_count_cumulative": 41,
+      "athlete_count": 10,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 41
+    }
+  },
+  "26289018": {
+    "meta": {
+      "name": "Chata Komenského - Kejdák",
+      "activity_type": "running",
+      "lat": 49.134503,
+      "lng": 19.800559,
+      "distance": 730.0,
+      "avg_grade": 5.0,
+      "elev_difference": 36.2,
+      "effort_count_cumulative": 233,
+      "athlete_count": 161,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 233
+    }
+  },
+  "26512276": {
+    "meta": {
+      "name": "Skratka - hore kopcom",
+      "activity_type": "hiking",
+      "lat": 49.295895,
+      "lng": 20.16266,
+      "distance": 5794.9,
+      "avg_grade": 2.1,
+      "elev_difference": 123.6,
+      "effort_count_cumulative": 300,
+      "athlete_count": 203,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 300
+    }
+  },
+  "26516347": {
+    "meta": {
+      "name": "Kejdák climb",
+      "activity_type": "hiking",
+      "lat": 49.125204,
+      "lng": 19.803412,
+      "distance": 984.0,
+      "avg_grade": 10.2,
+      "elev_difference": 100.0,
+      "effort_count_cumulative": 193,
+      "athlete_count": 37,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 193
+    }
+  },
+  "26529631": {
+    "meta": {
+      "name": "Rybkówka Dolna do Głównej ",
+      "activity_type": "running",
+      "lat": 49.317756,
+      "lng": 19.991471,
+      "distance": 173.5,
+      "avg_grade": 5.1,
+      "elev_difference": 8.8,
+      "effort_count_cumulative": 353,
+      "athlete_count": 18,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 353
+    }
+  },
+  "26650628": {
+    "meta": {
+      "name": "Mutnik - Dubovec",
+      "activity_type": "running",
+      "lat": 49.102509,
+      "lng": 19.614994,
+      "distance": 840.0,
+      "avg_grade": 11.9,
+      "elev_difference": 99.8,
+      "effort_count_cumulative": 119,
+      "athlete_count": 40,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 119
+    }
+  },
+  "27320110": {
+    "meta": {
+      "name": "Veterná Poruba družstvo - na Smrečany",
+      "activity_type": "running",
+      "lat": 49.112071,
+      "lng": 19.67873,
+      "distance": 2606.3,
+      "avg_grade": -4.6,
+      "elev_difference": 120.2,
+      "effort_count_cumulative": 370,
+      "athlete_count": 125,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 370
+    }
+  },
+  "27344001": {
+    "meta": {
+      "name": "Smreczyski downhill",
+      "activity_type": "running",
+      "lat": 49.222527,
+      "lng": 19.864478,
+      "distance": 1128.1,
+      "avg_grade": -10.4,
+      "elev_difference": 122.6,
+      "effort_count_cumulative": 1648,
+      "athlete_count": 1014,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1648
+    }
+  },
+  "27437528": {
+    "meta": {
+      "name": "Hojdacky DH",
+      "activity_type": "hiking",
+      "lat": 49.170954,
+      "lng": 20.203842,
+      "distance": 1058.3,
+      "avg_grade": -11.9,
+      "elev_difference": 125.9,
+      "effort_count_cumulative": 60,
+      "athlete_count": 56,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 60
+    }
+  },
+  "27451933": {
+    "meta": {
+      "name": "Pod Priesadiská- Ski centrum Brezovica",
+      "activity_type": "running",
+      "lat": 49.339733,
+      "lng": 19.660608,
+      "distance": 1322.2,
+      "avg_grade": 4.9,
+      "elev_difference": 64.9,
+      "effort_count_cumulative": 724,
+      "athlete_count": 127,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 724
+    }
+  },
+  "27599845": {
+    "meta": {
+      "name": "hrebeň Sp.Magury prvý kopec",
+      "activity_type": "hiking",
+      "lat": 49.281928,
+      "lng": 20.221521,
+      "distance": 1866.5,
+      "avg_grade": 3.6,
+      "elev_difference": 74.8,
+      "effort_count_cumulative": 1738,
+      "athlete_count": 1163,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1738
+    }
+  },
+  "27707094": {
+    "meta": {
+      "name": "INOV-8 TRAILTOUR 2021 SK #1",
+      "activity_type": "running",
+      "lat": 49.14383,
+      "lng": 19.90747,
+      "distance": 30735.8,
+      "avg_grade": 0.0,
+      "elev_difference": 1031.1,
+      "effort_count_cumulative": 31,
+      "athlete_count": 30,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 31
+    }
+  },
+  "27746724": {
+    "meta": {
+      "name": "Od skrzyżowania do wygiągu w Jurgowie",
+      "activity_type": "running",
+      "lat": 49.333942,
+      "lng": 20.146643,
+      "distance": 1722.8,
+      "avg_grade": 1.1,
+      "elev_difference": 23.2,
+      "effort_count_cumulative": 129,
+      "athlete_count": 108,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 129
+    }
+  },
+  "27753012": {
+    "meta": {
+      "name": "Brzegi kościół climb",
+      "activity_type": "running",
+      "lat": 49.323059,
+      "lng": 20.124854,
+      "distance": 310.7,
+      "avg_grade": 23.8,
+      "elev_difference": 74.0,
+      "effort_count_cumulative": 13,
+      "athlete_count": 11,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 13
+    }
+  },
+  "27940009": {
+    "meta": {
+      "name": "Bobrovecká Climb ",
+      "activity_type": "hiking",
+      "lat": 49.296818,
+      "lng": 19.74625,
+      "distance": 3310.8,
+      "avg_grade": 3.1,
+      "elev_difference": 103.6,
+      "effort_count_cumulative": 687,
+      "athlete_count": 348,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 687
+    }
+  },
+  "27965324": {
+    "meta": {
+      "name": "Bobrovecka Hopka",
+      "activity_type": "hiking",
+      "lat": 49.296341,
+      "lng": 19.746241,
+      "distance": 415.6,
+      "avg_grade": 6.4,
+      "elev_difference": 26.8,
+      "effort_count_cumulative": 882,
+      "athlete_count": 457,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 882
+    }
+  },
+  "28358010": {
+    "meta": {
+      "name": "Rynias ",
+      "activity_type": "running",
+      "lat": 49.329332,
+      "lng": 20.13797,
+      "distance": 2702.6,
+      "avg_grade": 1.1,
+      "elev_difference": 55.2,
+      "effort_count_cumulative": 31,
+      "athlete_count": 14,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 31
+    }
+  },
+  "28394266": {
+    "meta": {
+      "name": "Brezovica pass",
+      "activity_type": "hiking",
+      "lat": 49.330821,
+      "lng": 19.631153,
+      "distance": 2006.5,
+      "avg_grade": 1.9,
+      "elev_difference": 55.0,
+      "effort_count_cumulative": 32,
+      "athlete_count": 23,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 32
+    }
+  },
+  "29071002": {
+    "meta": {
+      "name": "Tri Studničky - Partizán bunker, rázc.",
+      "activity_type": "running",
+      "lat": 49.140019,
+      "lng": 19.966476,
+      "distance": 1382.2,
+      "avg_grade": 20.1,
+      "elev_difference": 277.6,
+      "effort_count_cumulative": 1154,
+      "athlete_count": 934,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1154
+    }
+  },
+  "29148267": {
+    "meta": {
+      "name": "Hotel Teplica- Pod priesadiská down",
+      "activity_type": "running",
+      "lat": 49.329167,
+      "lng": 19.66708,
+      "distance": 1389.4,
+      "avg_grade": -3.5,
+      "elev_difference": 48.4,
+      "effort_count_cumulative": 770,
+      "athlete_count": 165,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 770
+    }
+  },
+  "29237925": {
+    "meta": {
+      "name": "Kôprova dolina up",
+      "activity_type": "hiking",
+      "lat": 49.151556,
+      "lng": 19.922789,
+      "distance": 5966.5,
+      "avg_grade": 3.3,
+      "elev_difference": 197.9,
+      "effort_count_cumulative": 4673,
+      "athlete_count": 3523,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 4673
+    }
+  },
+  "29314821": {
+    "meta": {
+      "name": "Ścianka Harnasia do Łapszanki ",
+      "activity_type": "running",
+      "lat": 49.347847,
+      "lng": 20.16211,
+      "distance": 1802.8,
+      "avg_grade": 7.7,
+      "elev_difference": 139.8,
+      "effort_count_cumulative": 26,
+      "athlete_count": 24,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 26
+    }
+  },
+  "29432433": {
+    "meta": {
+      "name": "Lysa-Hotel",
+      "activity_type": "running",
+      "lat": 49.265251,
+      "lng": 20.120081,
+      "distance": 1523.3,
+      "avg_grade": 3.9,
+      "elev_difference": 59.3,
+      "effort_count_cumulative": 200,
+      "athlete_count": 142,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 200
+    }
+  },
+  "29941666": {
+    "meta": {
+      "name": "Bobrovecká dolina",
+      "activity_type": "running",
+      "lat": 49.297053,
+      "lng": 19.746392,
+      "distance": 4043.9,
+      "avg_grade": 4.8,
+      "elev_difference": 193.5,
+      "effort_count_cumulative": 29,
+      "athlete_count": 27,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 29
+    }
+  },
+  "29997689": {
+    "meta": {
+      "name": "Beh Brezovickým chotárom- 5km",
+      "activity_type": "running",
+      "lat": 49.345848,
+      "lng": 19.662263,
+      "distance": 5029.7,
+      "avg_grade": 0.0,
+      "elev_difference": 87.4,
+      "effort_count_cumulative": 26,
+      "athlete_count": 18,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 26
+    }
+  },
+  "30127858": {
+    "meta": {
+      "name": "Podbanske - pomedzi chaty (cervena cyklo)",
+      "activity_type": "running",
+      "lat": 49.134922,
+      "lng": 19.894056,
+      "distance": 2079.0,
+      "avg_grade": -1.6,
+      "elev_difference": 37.0,
+      "effort_count_cumulative": 17,
+      "athlete_count": 20,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 17
+    }
+  },
+  "30445297": {
+    "meta": {
+      "name": "Zbeh Jama",
+      "activity_type": "running",
+      "lat": 49.324572,
+      "lng": 19.662061,
+      "distance": 718.6,
+      "avg_grade": -15.3,
+      "elev_difference": 109.8,
+      "effort_count_cumulative": 140,
+      "athlete_count": 48,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 140
+    }
+  },
+  "30803579": {
+    "meta": {
+      "name": "Kondracka-Głazisty",
+      "activity_type": "hiking",
+      "lat": 49.246708,
+      "lng": 19.931911,
+      "distance": 1017.2,
+      "avg_grade": -33.4,
+      "elev_difference": 339.6,
+      "effort_count_cumulative": 71,
+      "athlete_count": 77,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 71
+    }
+  },
+  "31427959": {
+    "meta": {
+      "name": "Tu sa nebrzdí (wintertrail DH)",
+      "activity_type": "hiking",
+      "lat": 49.211557,
+      "lng": 20.231322,
+      "distance": 907.5,
+      "avg_grade": -8.2,
+      "elev_difference": 74.0,
+      "effort_count_cumulative": 328,
+      "athlete_count": 182,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 328
+    }
+  },
+  "32300100": {
+    "meta": {
+      "name": "Witowska Goniacka środkowy uphill",
+      "activity_type": "running",
+      "lat": 49.347824,
+      "lng": 19.795627,
+      "distance": 3948.2,
+      "avg_grade": 4.1,
+      "elev_difference": 161.8,
+      "effort_count_cumulative": 48,
+      "athlete_count": 43,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 48
+    }
+  },
+  "32355113": {
+    "meta": {
+      "name": "Tatra Trail - Magura loop",
+      "activity_type": "running",
+      "lat": 49.296674,
+      "lng": 19.794039,
+      "distance": 3379.9,
+      "avg_grade": 0.3,
+      "elev_difference": 123.0,
+      "effort_count_cumulative": 921,
+      "athlete_count": 804,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 921
+    }
+  },
+  "32357128": {
+    "meta": {
+      "name": "Skoroszyna",
+      "activity_type": "running",
+      "lat": 49.294791,
+      "lng": 19.611786,
+      "distance": 6944.6,
+      "avg_grade": 5.2,
+      "elev_difference": 360.9,
+      "effort_count_cumulative": 453,
+      "athlete_count": 389,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 453
+    }
+  },
+  "32549565": {
+    "meta": {
+      "name": "Podbanské - Nadbanské",
+      "activity_type": "running",
+      "lat": 49.138956,
+      "lng": 19.904441,
+      "distance": 792.7,
+      "avg_grade": 4.5,
+      "elev_difference": 35.4,
+      "effort_count_cumulative": 33,
+      "athlete_count": 43,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 33
+    }
+  },
+  "32549583": {
+    "meta": {
+      "name": "Ku Kriváňu",
+      "activity_type": "running",
+      "lat": 49.138902,
+      "lng": 19.955834,
+      "distance": 1323.4,
+      "avg_grade": 5.2,
+      "elev_difference": 68.4,
+      "effort_count_cumulative": 25,
+      "athlete_count": 42,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 25
+    }
+  },
+  "33136431": {
+    "meta": {
+      "name": "Pod Grúnikom -> Kmeťov vdp.",
+      "activity_type": "running",
+      "lat": 49.155374,
+      "lng": 19.96377,
+      "distance": 2790.0,
+      "avg_grade": 3.0,
+      "elev_difference": 84.0,
+      "effort_count_cumulative": 381,
+      "athlete_count": 326,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 381
+    }
+  },
+  "35599379": {
+    "meta": {
+      "name": "Yellow Bystra to the first corner",
+      "activity_type": "hiking",
+      "lat": 49.18856,
+      "lng": 19.842608,
+      "distance": 979.0,
+      "avg_grade": -19.7,
+      "elev_difference": 193.2,
+      "effort_count_cumulative": 13,
+      "athlete_count": 12,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 13
+    }
+  },
+  "36229385": {
+    "meta": {
+      "name": "Od Strachan ski up",
+      "activity_type": "running",
+      "lat": 49.283135,
+      "lng": 20.229705,
+      "distance": 1190.2,
+      "avg_grade": 5.1,
+      "elev_difference": 61.9,
+      "effort_count_cumulative": 325,
+      "athlete_count": 233,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 325
+    }
+  },
+  "36341517": {
+    "meta": {
+      "name": "Oravice - Vitanová ",
+      "activity_type": "running",
+      "lat": 49.302491,
+      "lng": 19.748376,
+      "distance": 5373.0,
+      "avg_grade": -1.1,
+      "elev_difference": 58.4,
+      "effort_count_cumulative": 28,
+      "athlete_count": 23,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 28
+    }
+  },
+  "36341545": {
+    "meta": {
+      "name": "Vitanová - Oravice",
+      "activity_type": "running",
+      "lat": 49.345263,
+      "lng": 19.737432,
+      "distance": 5359.7,
+      "avg_grade": 1.2,
+      "elev_difference": 63.2,
+      "effort_count_cumulative": 20,
+      "athlete_count": 17,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 20
+    }
+  },
+  "36579334": {
+    "meta": {
+      "name": "Od kaplnky po Zábiedovo",
+      "activity_type": "hiking",
+      "lat": 49.300473,
+      "lng": 19.656078,
+      "distance": 4160.0,
+      "avg_grade": -5.1,
+      "elev_difference": 211.7,
+      "effort_count_cumulative": 139,
+      "athlete_count": 40,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 139
+    }
+  },
+  "37224077": {
+    "meta": {
+      "name": "Strednica downhill po asfalt",
+      "activity_type": "running",
+      "lat": 49.281841,
+      "lng": 20.221202,
+      "distance": 1010.6,
+      "avg_grade": -10.6,
+      "elev_difference": 107.4,
+      "effort_count_cumulative": 441,
+      "athlete_count": 369,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 441
+    }
+  },
+  "37375712": {
+    "meta": {
+      "name": "Kôprová full",
+      "activity_type": "hiking",
+      "lat": 49.15145,
+      "lng": 19.921712,
+      "distance": 7556.1,
+      "avg_grade": 4.1,
+      "elev_difference": 311.4,
+      "effort_count_cumulative": 749,
+      "athlete_count": 663,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 749
+    }
+  },
+  "37500930": {
+    "meta": {
+      "name": "Down Down",
+      "activity_type": "hiking",
+      "lat": 49.33235,
+      "lng": 19.758639,
+      "distance": 2336.7,
+      "avg_grade": -6.1,
+      "elev_difference": 142.2,
+      "effort_count_cumulative": 132,
+      "athlete_count": 83,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 132
+    }
+  },
+  "37590429": {
+    "meta": {
+      "name": "Od chaty ku rozcestniku",
+      "activity_type": "hiking",
+      "lat": 49.240853,
+      "lng": 19.717521,
+      "distance": 2152.4,
+      "avg_grade": 6.6,
+      "elev_difference": 142.8,
+      "effort_count_cumulative": 6815,
+      "athlete_count": 3513,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 6815
+    }
+  },
+  "37741810": {
+    "meta": {
+      "name": "Od kaplnky k studničke",
+      "activity_type": "hiking",
+      "lat": 49.304874,
+      "lng": 19.615123,
+      "distance": 3390.1,
+      "avg_grade": 5.0,
+      "elev_difference": 168.0,
+      "effort_count_cumulative": 179,
+      "athlete_count": 63,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 179
+    }
+  },
+  "38489013": {
+    "meta": {
+      "name": "Chocholowska-Kominiarska Przelecz",
+      "activity_type": "running",
+      "lat": 49.252637,
+      "lng": 19.815337,
+      "distance": 2077.0,
+      "avg_grade": 14.7,
+      "elev_difference": 306.2,
+      "effort_count_cumulative": 1909,
+      "athlete_count": 1269,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 1909
+    }
+  },
+  "38999783": {
+    "meta": {
+      "name": "Górna stacja ",
+      "activity_type": "running",
+      "lat": 49.329876,
+      "lng": 20.156068,
+      "distance": 2238.3,
+      "avg_grade": 9.2,
+      "elev_difference": 206.4,
+      "effort_count_cumulative": 33,
+      "athlete_count": 22,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 33
+    }
+  },
+  "39022994": {
+    "meta": {
+      "name": "Skorušina od Blatnej",
+      "activity_type": "running",
+      "lat": 49.298678,
+      "lng": 19.715958,
+      "distance": 1968.4,
+      "avg_grade": 8.4,
+      "elev_difference": 168.0,
+      "effort_count_cumulative": 69,
+      "athlete_count": 62,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 69
+    }
+  },
+  "39609064": {
+    "meta": {
+      "name": "Monkova dolina - Opálené sedlo",
+      "activity_type": "running",
+      "lat": 49.266521,
+      "lng": 20.242493,
+      "distance": 1875.0,
+      "avg_grade": 18.2,
+      "elev_difference": 340.4,
+      "effort_count_cumulative": 58,
+      "athlete_count": 51,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 58
+    }
+  },
+  "39672523": {
+    "meta": {
+      "name": "Od vracáku po vrch",
+      "activity_type": "hiking",
+      "lat": 49.333367,
+      "lng": 19.719463,
+      "distance": 1269.9,
+      "avg_grade": 8.3,
+      "elev_difference": 106.0,
+      "effort_count_cumulative": 506,
+      "athlete_count": 163,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 506
+    }
+  },
+  "40026630": {
+    "meta": {
+      "name": "Tatraman - extra path",
+      "activity_type": "running",
+      "lat": 49.151459,
+      "lng": 19.921706,
+      "distance": 4655.4,
+      "avg_grade": 0.0,
+      "elev_difference": 101.1,
+      "effort_count_cumulative": 247,
+      "athlete_count": 179,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 247
+    }
+  },
+  "40133207": {
+    "meta": {
+      "name": "UJ Jaworzyna - Jurgów - przelot trasą rowerow",
+      "activity_type": "running",
+      "lat": 49.268603,
+      "lng": 20.12703,
+      "distance": 5989.0,
+      "avg_grade": -2.1,
+      "elev_difference": 127.0,
+      "effort_count_cumulative": 98,
+      "athlete_count": 87,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 98
+    }
+  },
+  "40153538": {
+    "meta": {
+      "name": "Tatraman - agrafka w górę",
+      "activity_type": "running",
+      "lat": 49.151294,
+      "lng": 19.921324,
+      "distance": 2513.0,
+      "avg_grade": 4.3,
+      "elev_difference": 108.6,
+      "effort_count_cumulative": 619,
+      "athlete_count": 457,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 619
+    }
+  },
+  "40159327": {
+    "meta": {
+      "name": "Juranova up",
+      "activity_type": "running",
+      "lat": 49.28293,
+      "lng": 19.817423,
+      "distance": 1444.8,
+      "avg_grade": 7.9,
+      "elev_difference": 113.6,
+      "effort_count_cumulative": 48,
+      "athlete_count": 39,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 48
+    }
+  },
+  "40375518": {
+    "meta": {
+      "name": "Osturna to PL border",
+      "activity_type": "running",
+      "lat": 49.329119,
+      "lng": 20.226227,
+      "distance": 2654.3,
+      "avg_grade": 7.1,
+      "elev_difference": 189.3,
+      "effort_count_cumulative": 361,
+      "athlete_count": 318,
+      "last_snapshot": "2026-02-27"
+    },
+    "series": {
+      "2026-02-27": 361
+    }
+  }
+}
