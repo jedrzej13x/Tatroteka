@@ -285,8 +285,9 @@ print(f"Łącznie: {len(wszystkie)} elementów | Wayów w relacjach: {len(way_id
 
 obszar_tpn   = zbuduj_poligon(tpn_data)
 obszar_tanap = zbuduj_poligon(tanap_data)
-obszar_tpn_buf   = obszar_tpn.buffer(0.01)   if obszar_tpn   else None
-obszar_tanap_buf = obszar_tanap.buffer(0.01) if obszar_tanap else None
+# Bufor 0.03° ≈ 3km — szlaki zaczynające się przed bramą parku też będą widoczne
+obszar_tpn_buf   = obszar_tpn.buffer(0.03)   if obszar_tpn   else None
+obszar_tanap_buf = obszar_tanap.buffer(0.03) if obszar_tanap else None
 print(f"TPN: {'OK' if obszar_tpn else 'BŁĄD'}, TANAP: {'OK' if obszar_tanap else 'BŁĄD'}")
 
 # ── Strava ─────────────────────────────────────────────────────────────────────
@@ -578,29 +579,84 @@ folium.TileLayer(
 
 # ── Legenda ────────────────────────────────────────────────────────────────────
 
+
+# Przygotuj dane szeregów czasowych per relacja dla JS
+relacja_serie = {}
+if strava_dostepna:
+    try:
+        with open("traffic_data.json", encoding="utf-8") as f:
+            traffic_raw = json.load(f)
+    except:
+        traffic_raw = {}
+
+    for relacja_id, seg in kolory_relacji.items():
+        seg_id = str(seg["id"])
+        serie_raw = {}
+        if seg_id in traffic_raw:
+            serie_raw = traffic_raw[seg_id].get("series", {})
+
+        daty = sorted(serie_raw.keys())
+
+        # Jeśli brak szeregu czasowego — stwórz sztuczny wpis z datą snapshotu
+        # żeby dane skumulowane były zawsze dostępne
+        if not daty and seg.get("last_snapshot"):
+            daty = [seg["last_snapshot"]]
+            serie_raw = {seg["last_snapshot"]: seg["effort_count"]}
+
+        relacja_serie[str(relacja_id)] = {
+            "dates":    daty,
+            "efforts":  [serie_raw.get(d, 0) for d in daty],
+            "max_eff":  seg["effort_count"],
+            "seg_name": seg["name"],
+        }
+
+relacja_serie_json = json.dumps(relacja_serie)
+
+# Zbierz wszystkie unikalne daty — z serii + ze snapshotów
+wszystkie_daty = sorted(set(
+    d for v in relacja_serie.values() for d in v["dates"]
+))
+wszystkie_daty_json = json.dumps(wszystkie_daty)
+
+# Zbierz bazowe kolory linii (bez Strava) per klasa CSS — dla reset
+kolory_bazowe = {}
+for element in wszystkie:
+    if element['type'] != 'way' or 'geometry' not in element:
+        continue
+    way_id = element.get('id')
+    if way_id not in way_ids_w_relacjach:
+        continue
+    if way_id in relacje_dla_way:
+        _, _, relacja_id = relacje_dla_way[way_id]
+        klasa = f"trasa-{relacja_id}"
+    else:
+        klasa = f"trasa-way-{way_id}"
+    if klasa not in kolory_bazowe:
+        kolory_bazowe[klasa] = kolor_szlaku(element)
+
+kolory_bazowe_json = json.dumps(kolory_bazowe)
+
+# Globalny max effort dla skalowania kolorów
+max_effort_global = max_effort
+
 if strava_dostepna:
     mapa.get_root().html.add_child(folium.Element("""
-    <div style="position:fixed;bottom:40px;left:10px;z-index:1000;
-        background:rgba(0,0,0,0.75);padding:10px 14px;border-radius:6px;
-        color:white;font-size:12px;font-family:monospace;
-        border:1px solid rgba(255,255,255,0.15);">
+    <div id="legenda-natezenia" style="position:fixed;bottom:120px;left:10px;z-index:1000;
+        background:rgba(0,0,0,0.82);padding:10px 14px;border-radius:6px;
+        color:white;font-size:11px;font-family:monospace;
+        border:1px solid rgba(255,255,255,0.12);min-width:170px;">
         <b>Natężenie ruchu</b><br>
-        <div style="width:160px;height:10px;margin:6px 0 3px;
+        <div style="width:150px;height:8px;margin:6px 0 3px;
             background:linear-gradient(to right,#143cb4,#3c8cdc,#faf014,#fa6400,#e00000);
-            border-radius:3px;"></div>
-        <div style="display:flex;justify-content:space-between;width:160px;font-size:10px;color:#aaa">
-            <span>Niskie</span><span>Średnie</span><span>Wysokie</span>
+            border-radius:2px;"></div>
+        <div style="display:flex;justify-content:space-between;width:150px;font-size:9px;color:#aaa">
+            <span>Niskie</span><span>Wysokie</span>
         </div>
-        <div style="margin-top:6px;font-size:10px;color:#aaa">Szare = brak danych Strava</div>
+        <div style="margin-top:5px;font-size:9px;color:#aaa">Szare = brak danych</div>
     </div>
     """))
 
-# ── Kontrolki ──────────────────────────────────────────────────────────────────
-
-folium.LayerControl(collapsed=False).add_to(mapa)
-folium.plugins.MousePosition(
-    position="bottomleft", separator=" | ", prefix="Dł./Szer.:", num_digits=5
-).add_to(mapa)
+# ── Kontrolki + suwak czasu ────────────────────────────────────────────────────
 
 mapa.get_root().html.add_child(folium.Element("""
 <style>
@@ -615,23 +671,82 @@ mapa.get_root().html.add_child(folium.Element("""
         background:rgba(0,0,0,0.75);border:1px solid rgba(255,255,255,0.2);
         border-radius:4px;padding:5px 10px;font-size:13px;color:white;display:none;
     }
+    #timeline-panel {
+        position:fixed;bottom:0;left:0;right:0;z-index:1000;
+        background:rgba(8,11,16,0.95);border-top:1px solid #182030;
+        padding:8px 18px 10px;font-family:monospace;
+        backdrop-filter:blur(6px);
+    }
+    #tl-top {
+        display:flex;align-items:center;gap:12px;margin-bottom:6px;
+    }
+    #tl-date-label {
+        font-size:11px;color:#f0a030;letter-spacing:0.06em;
+        min-width:90px;flex-shrink:0;
+    }
+    #tl-seg-label {
+        font-size:9px;color:#3a4a5a;flex:1;
+        white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+    }
+    #tl-play-btn {
+        background:#182030;border:none;color:#8aa0b8;
+        width:24px;height:24px;border-radius:2px;cursor:pointer;font-size:11px;
+        flex-shrink:0;
+    }
+    #tl-play-btn.playing { background:#e07020;color:white; }
+    #tl-slider-wrap {
+        display:flex;align-items:center;gap:10px;
+    }
+    #tl-slider-labels {
+        display:flex;justify-content:space-between;
+        font-size:8px;color:#3a4a5a;letter-spacing:0.03em;
+        margin-bottom:4px;
+    }
+    #tl-slider-labels span.tl-lbl-active { color:#e07020; }
+    input[type=range]#tl-slider {
+        -webkit-appearance:none;flex:1;height:3px;
+        background:#182030;border-radius:2px;outline:none;cursor:pointer;
+    }
+    input[type=range]#tl-slider::-webkit-slider-thumb {
+        -webkit-appearance:none;width:13px;height:13px;border-radius:50%;
+        background:#e07020;border:2px solid #080b10;cursor:pointer;
+    }
+    #tl-all-btn {
+        background:#182030;border:1px solid #182030;color:#8aa0b8;
+        font-family:monospace;font-size:8px;padding:3px 8px;
+        border-radius:2px;cursor:pointer;white-space:nowrap;flex-shrink:0;
+        letter-spacing:0.06em;text-transform:uppercase;
+    }
+    #tl-all-btn.active { background:#f0a030;border-color:#f0a030;color:#000; }
 </style>
 <button id="pomiar-btn" title="Zmierz odległość">📏 Pomiar</button>
 <div id="pomiar-wynik"></div>
 """))
 
+folium.LayerControl(collapsed=False).add_to(mapa)
+folium.plugins.MousePosition(
+    position="bottomleft", separator=" | ", prefix="Dł./Szer.:", num_digits=5
+).add_to(mapa)
+
 popupy_json = json.dumps(popupy_relacji)
 
 mapa.get_root().script.add_child(folium.Element(f"""
     document.addEventListener("DOMContentLoaded", function() {{
-        var popupy = {popupy_json};
+        var popupy       = {popupy_json};
+        var relSerie     = {relacja_serie_json};
+        var allDates     = {wszystkie_daty_json};
+        var koloryBazowe = {kolory_bazowe_json};
+        var maxEffort    = {max_effort_global};
         var aktywnaKlasa = null;
         var trybPomiaru  = false;
         var punktyPomiar = [];
         var liniePomiar  = [];
         var markerPomiar = [];
         var mapaL        = null;
+        var playInterval = null;
+        var currentIdx   = 0; // 0 = ogółem, 1..N = data
 
+        // ── Panel info ────────────────────────────────────────────────────────
         var panel = document.createElement('div');
         panel.id  = 'info-panel';
         panel.style.cssText = `
@@ -646,6 +761,167 @@ mapa.get_root().script.add_child(folium.Element(f"""
         `;
         document.body.appendChild(panel);
 
+        // ── Suwak czasu ───────────────────────────────────────────────────────
+        var tlDiv = document.createElement('div');
+        tlDiv.id  = 'timeline-panel';
+        // Pokaż suwak zawsze gdy mamy dane Strava (nawet z jedną datą)
+        var labelsHtml = allDates.map((d,i) =>
+            `<span id="tl-lbl-${{i+1}}">${{d.slice(5).replace('-','.')}}</span>`
+        ).join('');
+        tlDiv.innerHTML = `
+            <div id="tl-top">
+                <span id="tl-date-label">OGÓŁEM</span>
+                <span id="tl-seg-label">Wszystkie dane skumulowane</span>
+                <button id="tl-play-btn" title="Odtwarzaj" ${{allDates.length < 2 ? 'disabled style="opacity:0.3"' : ''}}>▶</button>
+            </div>
+            <div id="tl-slider-labels">
+                <span id="tl-lbl-0" class="tl-lbl-active">Ogółem</span>
+                ${{labelsHtml}}
+            </div>
+            <div id="tl-slider-wrap">
+                <button id="tl-all-btn" class="active">Ogółem</button>
+                <input type="range" id="tl-slider" min="0" max="${{allDates.length}}" value="0" step="1"
+                    ${{allDates.length === 0 ? 'disabled' : ''}}>
+            </div>
+        `;
+        document.body.appendChild(tlDiv);
+
+        // ── Kolor z effort ────────────────────────────────────────────────────
+        function effortToColor(effort, maxEff) {{
+            if (!effort || !maxEff) return null;
+            var t = Math.log(1+effort) / Math.log(1+maxEff);
+            var r,g,b;
+            if (t < 0.25) {{
+                var tt=t/0.25; r=Math.round(20+tt*40); g=Math.round(60+tt*80); b=Math.round(180+tt*40);
+            }} else if (t < 0.5) {{
+                var tt=(t-0.25)/0.25; r=Math.round(60+tt*190); g=Math.round(140+tt*100); b=Math.round(220-tt*200);
+            }} else if (t < 0.75) {{
+                var tt=(t-0.5)/0.25; r=250; g=Math.round(240-tt*140); b=Math.round(20-tt*20);
+            }} else {{
+                var tt=(t-0.75)/0.25; r=Math.round(250-tt*20); g=Math.round(100-tt*100); b=0;
+            }}
+            return `rgb(${{r}},${{g}},${{b}})`;
+        }}
+
+        // ── Przemaluj linie na podstawie daty ────────────────────────────────
+        function recolorLines(dateIdx) {{
+            var date = dateIdx === 0 ? null : allDates[dateIdx-1];
+
+            // Oblicz max effort dla wybranej daty (dla skalowania kolorów)
+            var dayMaxEffort = 0;
+            if (date) {{
+                Object.values(relSerie).forEach(function(s) {{
+                    var idx = s.dates.indexOf(date);
+                    if (idx >= 0 && s.efforts[idx] > dayMaxEffort) dayMaxEffort = s.efforts[idx];
+                }});
+            }}
+
+            document.querySelectorAll('path[class]').forEach(function(el) {{
+                var klasa = Array.from(el.classList).find(k => k.startsWith('trasa-'));
+                if (!klasa) return;
+                var relId = klasa.replace('trasa-','');
+                var serie = relSerie[relId];
+                var bazowy = koloryBazowe[klasa] || '#888888';
+
+                if (!serie) {{
+                    el.style.stroke = bazowy;
+                    return;
+                }}
+
+                if (!date) {{
+                    // Widok ogólny — użyj max effort segmentu
+                    var kolor = effortToColor(serie.max_eff, maxEffort);
+                    el.style.stroke = kolor || bazowy;
+                }} else {{
+                    var idx = serie.dates.indexOf(date);
+                    var eff = idx >= 0 ? serie.efforts[idx] : 0;
+                    if (eff > 0) {{
+                        el.style.stroke = effortToColor(eff, dayMaxEffort || 1);
+                    }} else {{
+                        el.style.stroke = bazowy;
+                    }}
+                }}
+            }});
+        }}
+
+        // ── Aktualizuj UI suwaka ──────────────────────────────────────────────
+        function updateTimelineUI(idx) {{
+            currentIdx = idx;
+            var date = idx === 0 ? null : allDates[idx-1];
+
+            // Etykiety
+            document.querySelectorAll('#tl-slider-labels span').forEach(function(el, i) {{
+                el.className = i === idx ? 'tl-lbl-active' : '';
+            }});
+
+            // Przycisk Ogółem
+            var allBtn = document.getElementById('tl-all-btn');
+            if (allBtn) allBtn.className = idx===0 ? 'active' : '';
+
+            // Label daty
+            var dateLbl = document.getElementById('tl-date-label');
+            var segLbl  = document.getElementById('tl-seg-label');
+            if (dateLbl) dateLbl.textContent = date ? date.slice(5).replace('-','.') : 'OGÓŁEM';
+            if (segLbl)  segLbl.textContent  = date ? 'Aktywność dzienna' : 'Wszystkie dane skumulowane';
+
+            recolorLines(idx);
+        }}
+
+        // ── Inicjalizuj suwak ─────────────────────────────────────────────────
+        setTimeout(function() {{
+            var slider = document.getElementById('tl-slider');
+            if (slider) {{
+                slider.addEventListener('input', function() {{
+                    updateTimelineUI(parseInt(this.value));
+                }});
+            }}
+
+            var allBtn = document.getElementById('tl-all-btn');
+            if (allBtn) {{
+                allBtn.addEventListener('click', function() {{
+                    if (slider) slider.value = 0;
+                    updateTimelineUI(0);
+                }});
+            }}
+
+            var playBtn = document.getElementById('tl-play-btn');
+            if (playBtn) {{
+                playBtn.addEventListener('click', function() {{
+                    if (playInterval) {{
+                        clearInterval(playInterval);
+                        playInterval = null;
+                        this.textContent = '▶';
+                        this.classList.remove('playing');
+                    }} else {{
+                        this.textContent = '⏸';
+                        this.classList.add('playing');
+                        var idx = currentIdx >= allDates.length ? 1 : currentIdx + 1;
+                        playInterval = setInterval(function() {{
+                            if (slider) slider.value = idx;
+                            updateTimelineUI(idx);
+                            idx++;
+                            if (idx > allDates.length) {{
+                                clearInterval(playInterval);
+                                playInterval = null;
+                                if (playBtn) {{ playBtn.textContent='▶'; playBtn.classList.remove('playing'); }}
+                            }}
+                        }}, 1500);
+                    }}
+                }});
+            }}
+
+            // Inicjalny kolor — z retry bo SVG może się jeszcze ładować
+            function applyInitialColors() {{
+                var paths = document.querySelectorAll('path[class]');
+                if (paths.length === 0) {{
+                    setTimeout(applyInitialColors, 500);
+                    return;
+                }}
+                updateTimelineUI(0);
+            }}
+            setTimeout(applyInitialColors, 1800);
+
+        // ── Kliknięcia na linie ───────────────────────────────────────────────
         function podswietl(klasa, aktywny) {{
             document.querySelectorAll('path.' + klasa).forEach(function(el) {{
                 el.style.opacity     = aktywny ? '1.0' : '0.8';
@@ -679,6 +955,7 @@ mapa.get_root().script.add_child(folium.Element(f"""
             }});
         }}, 1500);
 
+        // ── Pomiar odległości ─────────────────────────────────────────────────
         setTimeout(function() {{
             mapaL = Object.values(window).find(v => v && v._leaflet_id && v.getCenter);
             if (!mapaL) return;
