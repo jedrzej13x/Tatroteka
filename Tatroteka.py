@@ -610,13 +610,11 @@ if strava_dostepna:
             "seg_name": seg["name"],
         }
 
-relacja_serie_json = json.dumps(relacja_serie)
 
 # Zbierz wszystkie unikalne daty — z serii + ze snapshotów
 wszystkie_daty = sorted(set(
     d for v in relacja_serie.values() for d in v["dates"]
 ))
-wszystkie_daty_json = json.dumps(wszystkie_daty)
 
 # Zbierz bazowe kolory linii (bez Strava) per klasa CSS — dla reset
 kolory_bazowe = {}
@@ -633,8 +631,6 @@ for element in wszystkie:
         klasa = f"trasa-way-{way_id}"
     if klasa not in kolory_bazowe:
         kolory_bazowe[klasa] = kolor_szlaku(element)
-
-kolory_bazowe_json = json.dumps(kolory_bazowe)
 
 # Globalny max effort dla skalowania kolorów
 max_effort_global = max_effort
@@ -728,7 +724,11 @@ folium.plugins.MousePosition(
     position="bottomleft", separator=" | ", prefix="Dł./Szer.:", num_digits=5
 ).add_to(mapa)
 
-popupy_json = json.dumps(popupy_relacji)
+# Serializuj dane do JS
+popupy_json         = json.dumps(popupy_relacji,  ensure_ascii=True)
+relacja_serie_json  = json.dumps(relacja_serie,   ensure_ascii=True)
+wszystkie_daty_json = json.dumps(wszystkie_daty,  ensure_ascii=True)
+kolory_bazowe_json  = json.dumps(kolory_bazowe,   ensure_ascii=True)
 
 mapa.get_root().script.add_child(folium.Element(f"""
     document.addEventListener("DOMContentLoaded", function() {{
