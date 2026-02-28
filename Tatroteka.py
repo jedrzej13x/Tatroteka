@@ -216,17 +216,19 @@ NAZWY_TYPOW = {
 }
 
 # ── Zapytania Overpass ─────────────────────────────────────────────────────────
+# Pobieramy TYLKO waye należące do oficjalnych relacji szlaków turystycznych.
+# query1 pobiera relacje hiking z osmc:symbol (oficjalne oznakowane szlaki PTTK/TPN/TANAP)
+# query2 pobiera relacje hiking z network=lwn/rwn/nwn (regionalne/krajowe/światowe)
+# Nie pobieramy luźnych wayów highway=path bo to powoduje śmietnik na mapie.
 
 query1 = f"""
-[out:json][timeout:120];
+[out:json][timeout:180];
 (
-  way["highway"="path"]{BBOX};
-  way["highway"="via_ferrata"]{BBOX};
-  way["highway"="footway"]{BBOX};
-  way["highway"="pedestrian"]{BBOX};
-  way["highway"="steps"]{BBOX};
-  way["highway"="track"]{BBOX};
+  relation["route"="hiking"]["osmc:symbol"]{BBOX};
+  relation["route"="hiking"]["network"~"lwn|rwn|nwn"]{BBOX};
+  relation["route"="hiking"]["operator"~"PTTK|TPN|TANAP|KST|Správa"]{BBOX};
 );
+(._;>>;);
 out geom;
 """
 
@@ -234,7 +236,6 @@ query2 = f"""
 [out:json][timeout:120];
 (
   relation["route"="hiking"]{BBOX};
-  way["highway"~"secondary|tertiary|unclassified"]["foot"!="no"]{BBOX};
 );
 (._;>>;);
 out geom;
@@ -254,16 +255,31 @@ out geom;
 
 # ── Pobieranie danych ──────────────────────────────────────────────────────────
 
-dane1      = pobierz_dane(query1,      "ścieżki i szlaki")
+dane1      = pobierz_dane(query1,      "relacje hiking (oznakowane)")
 time.sleep(5)
-dane2      = pobierz_dane(query2,      "drogi i relacje")
+dane2      = pobierz_dane(query2,      "wszystkie relacje hiking")
 time.sleep(5)
 tpn_data   = pobierz_dane(query_tpn,   "granice TPN")
 time.sleep(5)
 tanap_data = pobierz_dane(query_tanap, "granice TANAP")
 
-wszystkie = dane1["elements"] + dane2["elements"]
-print(f"Łącznie pobrano {len(wszystkie)} elementów")
+# Połącz wszystkie elementy, deduplikuj po id
+elementy_all = {}
+for el in dane1["elements"] + dane2["elements"]:
+    eid = (el['type'], el.get('id'))
+    if eid not in elementy_all:
+        elementy_all[eid] = el
+wszystkie = list(elementy_all.values())
+
+# Zbierz ID wayów które należą do relacji hiking — tylko te rysujemy
+way_ids_w_relacjach = set()
+for el in wszystkie:
+    if el['type'] == 'relation' and 'members' in el:
+        for m in el['members']:
+            if m['type'] == 'way':
+                way_ids_w_relacjach.add(m['ref'])
+
+print(f"Łącznie: {len(wszystkie)} elementów | Wayów w relacjach: {len(way_ids_w_relacjach)}")
 
 # ── Poligony parków ────────────────────────────────────────────────────────────
 
@@ -438,11 +454,16 @@ for element in wszystkie:
     if element['type'] != 'way' or 'geometry' not in element:
         continue
 
+    way_id = element.get('id')
+
+    # Rysuj TYLKO waye które należą do relacji hiking
+    if way_id not in way_ids_w_relacjach:
+        continue
+
     highway  = element.get('tags', {}).get('highway', '')
-    styl     = STYL.get(highway, {"color": "gray", "weight": 1, "grupa": "Pozostałe"})
+    styl     = STYL.get(highway, {"color": "#888888", "weight": 2, "grupa": "Szlaki górskie"})
     punkty   = [(p['lat'], p['lon']) for p in element['geometry']]
     punkty   = uprość_geometrie(punkty)
-    way_id   = element.get('id')
 
     if (obszar_tpn_buf is not None or obszar_tanap_buf is not None) and not w_parku(punkty):
         odfiltrowane += 1
