@@ -22,7 +22,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests python-dotenv
+        run: pip install requests python-dotenv folium shapely
 
       - name: Download existing database
         uses: actions/download-artifact@v4
@@ -56,10 +56,13 @@ jobs:
           path: tatry_segments.db
           retention-days: 90
 
-      - name: Commit traffic_data.json to repo
+      - name: Regenerate map (index.html)
+        run: python Tatroteka.py
+
+      - name: Commit traffic_data.json + index.html to repo
         run: |
           git config user.name  "Tatry Flow Bot"
           git config user.email "bot@tatroteka.pl"
-          git add -f traffic_data.json
+          git add -f traffic_data.json index.html map_data.json
           git diff --cached --quiet || git commit -m "data: snapshot $(date +'%Y-%m-%d')"
           git push

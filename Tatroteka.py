@@ -95,7 +95,28 @@ def kolor_szlaku(element):
             return mapa_kolorow[kolor]
     return STYL.get(highway, {"color": "gray"})["color"]
 
+def sanitize(s):
+    """Usuń surrogaty i nieprawidłowe znaki Unicode które crashują utf-8 encode."""
+    if not isinstance(s, str):
+        return str(s)
+    return s.encode('utf-8', errors='replace').decode('utf-8')
+
 def nazwa_koloru(element):
+    tags = element.get('tags', {})
+    osmc = tags.get('osmc:symbol', '')
+    if osmc:
+        kolor = osmc.split(':')[0].strip().lower()
+        nazwy = {
+            'red':    'Szlak czerwony',
+            'blue':   'Szlak niebieski',
+            'green':  'Szlak zielony',
+            'yellow': 'Szlak żółty',
+            'black':  'Szlak czarny',
+        }
+        if kolor in nazwy:
+            return nazwy[kolor]
+    highway = tags.get('highway', '')
+    return NAZWY_TYPOW.get(highway, highway)
     tags = element.get('tags', {})
     osmc = tags.get('osmc:symbol', '')
     if osmc:
@@ -216,10 +237,6 @@ NAZWY_TYPOW = {
 }
 
 # ── Zapytania Overpass ─────────────────────────────────────────────────────────
-# Pobieramy TYLKO waye należące do oficjalnych relacji szlaków turystycznych.
-# query1 pobiera relacje hiking z osmc:symbol (oficjalne oznakowane szlaki PTTK/TPN/TANAP)
-# query2 pobiera relacje hiking z network=lwn/rwn/nwn (regionalne/krajowe/światowe)
-# Nie pobieramy luźnych wayów highway=path bo to powoduje śmietnik na mapie.
 
 query1 = f"""
 [out:json][timeout:180];
@@ -263,7 +280,6 @@ tpn_data   = pobierz_dane(query_tpn,   "granice TPN")
 time.sleep(5)
 tanap_data = pobierz_dane(query_tanap, "granice TANAP")
 
-# Połącz wszystkie elementy, deduplikuj po id
 elementy_all = {}
 for el in dane1["elements"] + dane2["elements"]:
     eid = (el['type'], el.get('id'))
@@ -271,7 +287,6 @@ for el in dane1["elements"] + dane2["elements"]:
         elementy_all[eid] = el
 wszystkie = list(elementy_all.values())
 
-# Zbierz ID wayów które należą do relacji hiking — tylko te rysujemy
 way_ids_w_relacjach = set()
 for el in wszystkie:
     if el['type'] == 'relation' and 'members' in el:
@@ -285,8 +300,8 @@ print(f"Łącznie: {len(wszystkie)} elementów | Wayów w relacjach: {len(way_id
 
 obszar_tpn   = zbuduj_poligon(tpn_data)
 obszar_tanap = zbuduj_poligon(tanap_data)
-obszar_tpn_buf   = obszar_tpn.buffer(0.01)   if obszar_tpn   else None
-obszar_tanap_buf = obszar_tanap.buffer(0.01) if obszar_tanap else None
+obszar_tpn_buf   = obszar_tpn.buffer(0.03)   if obszar_tpn   else None
+obszar_tanap_buf = obszar_tanap.buffer(0.03) if obszar_tanap else None
 print(f"TPN: {'OK' if obszar_tpn else 'BŁĄD'}, TANAP: {'OK' if obszar_tanap else 'BŁĄD'}")
 
 # ── Strava ─────────────────────────────────────────────────────────────────────
@@ -296,21 +311,15 @@ max_effort      = max((s["effort_count"] for s in strava_segmenty), default=1)
 strava_dostepna = len(strava_segmenty) > 0
 print(f"Max effort_count: {max_effort}")
 
-# ── Buduj słownik geometrii ────────────────────────────────────────────────────
-# Zbieramy geometrię ze WSZYSTKICH źródeł przed filtrowaniem parku.
-# To jest kluczowa zmiana — wcześniej filtrowaliśmy za wcześnie
-# i waye relacji poza centrum parku nie trafiały do way_geometry.
+# ── Geometria wayów ────────────────────────────────────────────────────────────
 
-way_geometry = {}  # way_id → [(lat,lon), ...]
-
-# Ze wszystkich elementów
+way_geometry = {}
 for element in wszystkie:
     if element['type'] == 'way' and 'geometry' in element:
         wid = element['id']
         if wid not in way_geometry:
             way_geometry[wid] = [(p['lat'], p['lon']) for p in element['geometry']]
 
-# Z members relacji (mogą mieć geometrię której nie ma nigdzie indziej)
 for element in dane2["elements"]:
     if element['type'] == 'relation' and 'members' in element:
         for member in element['members']:
@@ -321,15 +330,15 @@ for element in dane2["elements"]:
 
 print(f"Zebrano geometrię dla {len(way_geometry)} wayów")
 
-# ── Buduj relacje ──────────────────────────────────────────────────────────────
+# ── Relacje ────────────────────────────────────────────────────────────────────
 
-relacje_dla_way  = {}  # way_id → (nazwa, dlugosc, relacja_id)
-relacja_do_wayow = {}  # relacja_id → [way_id, ...]
+relacje_dla_way  = {}
+relacja_do_wayow = {}
 
 for element in dane2["elements"]:
     if element['type'] != 'relation' or 'members' not in element:
         continue
-    nazwa_rel  = element.get('tags', {}).get('name', 'Brak nazwy')
+    nazwa_rel  = sanitize(element.get('tags', {}).get('name', 'Brak nazwy'))
     relacja_id = element['id']
     total   = 0
     way_ids = []
@@ -348,13 +357,13 @@ for element in dane2["elements"]:
 
 print(f"Relacji: {len(relacja_do_wayow)} | Wayów z relacją: {len(relacje_dla_way)}")
 
-# ── Przebieg 1: spatial join ALL wayów w parku → Strava ───────────────────────
+# ── Spatial join + propagacja ──────────────────────────────────────────────────
 
-kolory_wayow   = {}  # way_id → segment Strava
-kolory_relacji = {}  # relacja_id → najlepszy segment Strava
+kolory_wayow   = {}
+kolory_relacji = {}
 
 if strava_dostepna:
-    print("Przebieg 1: spatial join way → Strava...")
+    print("Przebieg 1: spatial join...")
     for way_id, pts_raw in way_geometry.items():
         pts_skr = uprość_geometrie(pts_raw)
         if (obszar_tpn_buf is not None or obszar_tanap_buf is not None) and not w_parku(pts_skr):
@@ -368,22 +377,16 @@ if strava_dostepna:
             prev = kolory_relacji.get(relacja_id)
             if prev is None or seg["effort_count"] > prev["effort_count"]:
                 kolory_relacji[relacja_id] = seg
-    print(f"Dopasowano: {len(kolory_wayow)} wayów | Relacji z danymi: {len(kolory_relacji)}")
+    print(f"Dopasowano: {len(kolory_wayow)} wayów | Relacji: {len(kolory_relacji)}")
 
-# ── Przebieg 1b: propaguj kolor na WSZYSTKIE waye każdej relacji ───────────────
-
-if strava_dostepna:
     propagowane = 0
     for relacja_id, seg in kolory_relacji.items():
         for way_id in relacja_do_wayow.get(relacja_id, []):
             if way_id not in kolory_wayow:
                 kolory_wayow[way_id] = seg
                 propagowane += 1
-    print(f"Propagacja relacji: +{propagowane} | Łącznie: {len(kolory_wayow)}")
+    print(f"Propagacja: +{propagowane} | Łącznie: {len(kolory_wayow)}")
 
-# ── Przebieg 1c: flood fill przez endpoints (~200m siatka) ────────────────────
-
-if strava_dostepna:
     print("Przebieg 1c: flood fill...")
     grid = {}
     for wid, pts in way_geometry.items():
@@ -436,6 +439,13 @@ mapa = folium.Map(
     tiles="CartoDB dark_matter"
 )
 
+# Dodaj jasny tryb jako alternatywną warstwę bazową
+folium.TileLayer(
+    tiles="CartoDB positron",
+    name="Jasny",
+    attr="CartoDB",
+).add_to(mapa)
+
 grupy = {
     "Szlaki górskie": folium.FeatureGroup(name="Szlaki górskie", show=True),
     "Via ferraty":    folium.FeatureGroup(name="Via ferraty",    show=True),
@@ -444,10 +454,11 @@ grupy = {
     "Pozostałe":      folium.FeatureGroup(name="Pozostałe",      show=True),
 }
 
-# ── Przebieg 2: rysowanie ──────────────────────────────────────────────────────
+# ── Rysowanie ──────────────────────────────────────────────────────────────────
 
 print("Przebieg 2: rysowanie...")
 popupy_relacji = {}
+kolory_bazowe  = {}
 odfiltrowane   = 0
 
 for element in wszystkie:
@@ -455,8 +466,6 @@ for element in wszystkie:
         continue
 
     way_id = element.get('id')
-
-    # Rysuj TYLKO waye które należą do relacji hiking
     if way_id not in way_ids_w_relacjach:
         continue
 
@@ -474,13 +483,18 @@ for element in wszystkie:
 
     if way_id in relacje_dla_way:
         nazwa, dlugosc_total, relacja_id = relacje_dla_way[way_id]
+        nazwa        = sanitize(nazwa)
         info_dlugosc = f"Długość całkowita: {dlugosc_total} km"
         klasa_css    = f"trasa-{relacja_id}"
     else:
-        nazwa        = element.get('tags', {}).get('name', 'Brak nazwy')
+        nazwa        = sanitize(element.get('tags', {}).get('name', 'Brak nazwy'))
         info_dlugosc = f"Długość odcinka: {oblicz_dlugosc(punkty)} km"
         klasa_css    = f"trasa-way-{way_id}"
         relacja_id   = None
+
+    # Zapamiętaj bazowy kolor (bez Strava) do suwaka
+    if klasa_css not in kolory_bazowe:
+        kolory_bazowe[klasa_css] = kolor_oryginalny
 
     seg = kolory_wayow.get(way_id)
     if seg is None and relacja_id is not None:
@@ -576,11 +590,36 @@ folium.TileLayer(
     show=False,
 ).add_to(mapa)
 
+# ── Dane dla suwaka ────────────────────────────────────────────────────────────
+
+relacja_serie = {}
+if strava_dostepna:
+    try:
+        with open("traffic_data.json", encoding="utf-8") as f:
+            traffic_raw = json.load(f)
+    except Exception:
+        traffic_raw = {}
+
+    for relacja_id, seg in kolory_relacji.items():
+        seg_id    = str(seg["id"])
+        serie_raw = traffic_raw.get(seg_id, {}).get("series", {})
+        daty      = sorted(serie_raw.keys())
+        if not daty and seg.get("last_snapshot"):
+            daty      = [seg["last_snapshot"]]
+            serie_raw = {seg["last_snapshot"]: seg["effort_count"]}
+        relacja_serie[str(relacja_id)] = {
+            "dates":   daty,
+            "efforts": [serie_raw.get(d, 0) for d in daty],
+            "max_eff": seg["effort_count"],
+        }
+
+wszystkie_daty = sorted(set(d for v in relacja_serie.values() for d in v["dates"]))
+
 # ── Legenda ────────────────────────────────────────────────────────────────────
 
 if strava_dostepna:
     mapa.get_root().html.add_child(folium.Element("""
-    <div style="position:fixed;bottom:40px;left:10px;z-index:1000;
+    <div style="position:fixed;bottom:75px;left:10px;z-index:1000;
         background:rgba(0,0,0,0.75);padding:10px 14px;border-radius:6px;
         color:white;font-size:12px;font-family:monospace;
         border:1px solid rgba(255,255,255,0.15);">
@@ -595,7 +634,7 @@ if strava_dostepna:
     </div>
     """))
 
-# ── Kontrolki ──────────────────────────────────────────────────────────────────
+# ── Kontrolki + CSS suwaka ─────────────────────────────────────────────────────
 
 folium.LayerControl(collapsed=False).add_to(mapa)
 folium.plugins.MousePosition(
@@ -615,114 +654,396 @@ mapa.get_root().html.add_child(folium.Element("""
         background:rgba(0,0,0,0.75);border:1px solid rgba(255,255,255,0.2);
         border-radius:4px;padding:5px 10px;font-size:13px;color:white;display:none;
     }
+    #tl-panel {
+        position:fixed;bottom:0;left:0;right:0;z-index:1000;
+        background:rgba(8,11,16,0.96);border-top:1px solid #1a2535;
+        padding:7px 18px 9px;display:flex;align-items:center;gap:14px;
+        font-family:monospace;
+    }
+    #tl-date {
+        font-size:11px;color:#f0a030;min-width:68px;
+        letter-spacing:.05em;flex-shrink:0;
+    }
+    #tl-wrap { flex:1;display:flex;flex-direction:column;gap:5px; }
+    #tl-lbls {
+        display:flex;justify-content:space-between;
+        font-size:8px;color:#3a4a5a;letter-spacing:.03em;
+    }
+    #tl-lbls span.act { color:#e07020; }
+    input[type=range]#tl-sl {
+        -webkit-appearance:none;width:100%;height:3px;
+        background:#1a2535;border-radius:2px;outline:none;cursor:pointer;
+    }
+    input[type=range]#tl-sl::-webkit-slider-thumb {
+        -webkit-appearance:none;width:13px;height:13px;
+        border-radius:50%;background:#e07020;
+        border:2px solid #080b10;cursor:pointer;
+    }
+    input[type=range]#tl-sl::-moz-range-thumb {
+        width:13px;height:13px;border-radius:50%;
+        background:#e07020;border:2px solid #080b10;cursor:pointer;
+    }
+    #tl-play {
+        background:#1a2535;border:none;color:#8aa0b8;
+        width:26px;height:26px;border-radius:2px;
+        cursor:pointer;font-size:13px;flex-shrink:0;
+        display:flex;align-items:center;justify-content:center;
+    }
+    #tl-play.on { background:#e07020;color:white; }
 </style>
-<button id="pomiar-btn" title="Zmierz odległość">📏 Pomiar</button>
+<button id="pomiar-btn" title="Zmierz odległość">&#x1F4CF; Pomiar</button>
 <div id="pomiar-wynik"></div>
+<button id="theme-btn" title="Przełącz tryb jasny/ciemny">&#9790; Ciemny</button>
+<style>
+    #theme-btn {
+        position:fixed;top:10px;right:10px;z-index:1000;
+        background:rgba(0,0,0,0.7);border:1px solid rgba(255,255,255,0.3);
+        border-radius:4px;padding:5px 10px;cursor:pointer;font-size:12px;color:white;
+        font-family:monospace;
+    }
+    #theme-btn.light {
+        background:rgba(255,255,255,0.9);border-color:rgba(0,0,0,0.2);color:#333;
+    }
+</style>
 """))
 
-popupy_json = json.dumps(popupy_relacji)
+# ── Zapisz dane do osobnego pliku (nie inline w HTML — za duże) ───────────────
 
-mapa.get_root().script.add_child(folium.Element(f"""
-    document.addEventListener("DOMContentLoaded", function() {{
-        var popupy = {popupy_json};
-        var aktywnaKlasa = null;
-        var trybPomiaru  = false;
-        var punktyPomiar = [];
-        var liniePomiar  = [];
-        var markerPomiar = [];
-        var mapaL        = null;
+td = {
+    "popupy":       popupy_relacji,
+    "relSerie":     relacja_serie,
+    "allDates":     wszystkie_daty,
+    "koloryBazowe": kolory_bazowe,
+    "maxEffort":    max_effort,
+}
+with open("map_data.json", "w", encoding="utf-8") as f:
+    json.dump(td, f, ensure_ascii=True)
+print(f"Zapisano map_data.json ({len(json.dumps(td, ensure_ascii=True))//1024} KB)")
 
-        var panel = document.createElement('div');
-        panel.id  = 'info-panel';
-        panel.style.cssText = `
-            position:fixed;top:80px;left:10px;
-            background:rgba(0,0,0,0.85);color:white;
-            padding:10px 14px;border-radius:6px;
-            box-shadow:0 2px 12px rgba(0,0,0,0.5);
-            z-index:1000;max-width:280px;
-            font-size:13px;display:none;
-            border:1px solid rgba(255,255,255,0.15);
-            font-family:monospace;
-        `;
-        document.body.appendChild(panel);
+# Wstrzyknij tylko loader który pobiera map_data.json przez fetch
+mapa.get_root().html.add_child(folium.Element("""<script>
+window.TD = null;
+fetch('map_data.json')
+    .then(function(r){ return r.json(); })
+    .then(function(d){ window.TD = d; })
+    .catch(function(){ window.TD = {}; });
+</script>"""))
 
-        function podswietl(klasa, aktywny) {{
-            document.querySelectorAll('path.' + klasa).forEach(function(el) {{
-                el.style.opacity     = aktywny ? '1.0' : '0.8';
-                el.style.strokeWidth = aktywny ? '6px' : '';
-            }});
-        }}
+# ── Cały JS jako stała string — zero f-stringów, zero konfliktów ───────────────
 
-        setTimeout(function() {{
-            document.querySelectorAll('path[class]').forEach(function(el) {{
-                var klasa = Array.from(el.classList).find(k => k.startsWith('trasa-'));
-                if (!klasa) return;
-                el.addEventListener('click', function(e) {{
-                    if (trybPomiaru) return;
-                    e.stopPropagation();
-                    if (aktywnaKlasa && aktywnaKlasa !== klasa) podswietl(aktywnaKlasa, false);
-                    aktywnaKlasa = klasa;
-                    podswietl(klasa, true);
-                    if (popupy[klasa]) {{
-                        panel.innerHTML = popupy[klasa] + '<br><small style="color:#888">Kliknij mapę aby zamknąć</small>';
-                        panel.style.display = 'block';
-                    }}
-                }});
-            }});
-            document.querySelector('.leaflet-container').addEventListener('click', function() {{
+JS = """
+document.addEventListener("DOMContentLoaded", function() {
+    var TD  = window.TD || {};
+    var popupy       = TD.popupy       || {};
+    var relSerie     = TD.relSerie     || {};
+    var allDates     = TD.allDates     || [];
+    var koloryBazowe = TD.koloryBazowe || {};
+    var maxEffort    = TD.maxEffort    || 1;
+
+    var aktywnaKlasa = null;
+    var trybPomiaru  = false;
+    var punktyPomiar = [];
+    var liniePomiar  = [];
+    var markerPomiar = [];
+    var mapaL        = null;
+    var playTimer    = null;
+    var currentIdx   = 0;
+
+    // ── Info panel ──────────────────────────────────────────────────────────
+    var panel = document.createElement('div');
+    panel.id  = 'info-panel';
+    panel.style.cssText = [
+        'position:fixed;top:80px;left:10px',
+        'background:rgba(0,0,0,0.85);color:white',
+        'padding:10px 14px;border-radius:6px',
+        'box-shadow:0 2px 12px rgba(0,0,0,0.5)',
+        'z-index:1000;max-width:280px;font-size:13px;display:none',
+        'border:1px solid rgba(255,255,255,0.15);font-family:monospace'
+    ].join(';');
+    document.body.appendChild(panel);
+
+    // ── Suwak czasu ─────────────────────────────────────────────────────────
+    var tlPanel = document.createElement('div');
+    tlPanel.id  = 'tl-panel';
+    var lbls = allDates.map(function(d, i) {
+        return '<span id="tll' + (i+1) + '">' + d.slice(5).replace('-', '.') + '</span>';
+    }).join('');
+    var noData = allDates.length === 0;
+    tlPanel.innerHTML =
+        '<span id="tl-date">' + (noData ? 'BRAK DANYCH' : 'OG\u00d3\u0141EM') + '</span>' +
+        '<div id="tl-wrap">' +
+          '<div id="tl-lbls">' +
+            (noData
+              ? '<span style="color:#3a4a5a;font-size:9px">Uruchom Tatroteka.py z traffic_data.json aby zobaczy\u0107 natężenie ruchu</span>'
+              : '<span id="tll0" class="act">Og\u00f3\u0142em</span>' + lbls
+            ) +
+          '</div>' +
+          '<input type="range" id="tl-sl" min="0" max="' + allDates.length + '" value="0" step="1"' +
+            (noData ? ' disabled style="opacity:0.3"' : '') + '>' +
+        '</div>' +
+        '<button id="tl-play"' + (noData ? ' disabled style="opacity:0.3"' : '') + '>\u25b6</button>';
+    document.body.appendChild(tlPanel);
+
+    // ── Kolor z effort ──────────────────────────────────────────────────────
+    function eff2col(eff, mx) {
+        if (!eff || !mx) return null;
+        var t = Math.log(1 + eff) / Math.log(1 + mx);
+        var r, g, b, tt;
+        if (t < 0.25) {
+            tt = t / 0.25;
+            r = Math.round(20 + tt*40); g = Math.round(60 + tt*80); b = Math.round(180 + tt*40);
+        } else if (t < 0.5) {
+            tt = (t - 0.25) / 0.25;
+            r = Math.round(60 + tt*190); g = Math.round(140 + tt*100); b = Math.round(220 - tt*200);
+        } else if (t < 0.75) {
+            tt = (t - 0.5) / 0.25;
+            r = 250; g = Math.round(240 - tt*140); b = Math.round(20 - tt*20);
+        } else {
+            tt = (t - 0.75) / 0.25;
+            r = Math.round(250 - tt*20); g = Math.round(100 - tt*100); b = 0;
+        }
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+    }
+
+    // ── Przemaluj linie SVG ─────────────────────────────────────────────────
+    function recolor(idx) {
+        var date = idx === 0 ? null : allDates[idx - 1];
+        var dayMax = 0;
+        if (date) {
+            Object.values(relSerie).forEach(function(s) {
+                var i = s.dates.indexOf(date);
+                if (i >= 0 && s.efforts[i] > dayMax) dayMax = s.efforts[i];
+            });
+        }
+        document.querySelectorAll('path[class]').forEach(function(el) {
+            var kl = Array.from(el.classList).find(function(c) {
+                return c.startsWith('trasa-');
+            });
+            if (!kl) return;
+            var rid = kl.replace('trasa-', '');
+            var s   = relSerie[rid];
+            var baz = koloryBazowe[kl] || '#888888';
+            if (!s) { el.style.stroke = baz; return; }
+            if (!date) {
+                el.style.stroke = eff2col(s.max_eff, maxEffort) || baz;
+            } else {
+                var i = s.dates.indexOf(date);
+                var e = i >= 0 ? s.efforts[i] : 0;
+                el.style.stroke = e > 0 ? eff2col(e, dayMax || 1) : baz;
+            }
+        });
+    }
+
+    // ── Ustaw pozycję suwaka ────────────────────────────────────────────────
+    function setIdx(idx) {
+        currentIdx = idx;
+        document.getElementById('tl-sl').value = idx;
+        var date = idx === 0 ? null : allDates[idx - 1];
+        document.getElementById('tl-date').textContent =
+            date ? date.slice(5).replace('-', '.') : 'OG\u00d3\u0141EM';
+        document.querySelectorAll('#tl-lbls span').forEach(function(el, i) {
+            el.className = i === idx ? 'act' : '';
+        });
+        recolor(idx);
+    }
+
+    // ── Eventy suwaka ───────────────────────────────────────────────────────
+    setTimeout(function() {
+        document.getElementById('tl-sl').addEventListener('input', function() {
+            setIdx(parseInt(this.value));
+        });
+        document.getElementById('tl-play').addEventListener('click', function() {
+            if (playTimer) {
+                clearInterval(playTimer); playTimer = null;
+                this.innerHTML = '\u25b6'; this.className = '';
+            } else {
+                var btn = this;
+                btn.innerHTML = '\u23f8'; btn.className = 'on';
+                var idx = currentIdx >= allDates.length ? 0 : currentIdx;
+                playTimer = setInterval(function() {
+                    idx++;
+                    setIdx(idx);
+                    if (idx >= allDates.length) {
+                        clearInterval(playTimer); playTimer = null;
+                        btn.innerHTML = '\u25b6'; btn.className = '';
+                    }
+                }, 1500);
+            }
+        });
+        // Zastosuj kolory gdy SVG i dane gotowe
+        function applyWhenReady() {
+            var paths = document.querySelectorAll('path[class]');
+            var data  = window.TD;
+            if (paths.length === 0 || data === null) {
+                setTimeout(applyWhenReady, 300);
+                return;
+            }
+            // Załaduj dane z fetch jeśli jeszcze nie w zmiennych
+            if (data && data.relSerie) {
+                relSerie     = data.relSerie     || {};
+                allDates     = data.allDates     || [];
+                koloryBazowe = data.koloryBazowe || {};
+                maxEffort    = data.maxEffort    || 1;
+                popupy       = data.popupy       || {};
+                // Przebuduj etykiety suwaka z nowymi datami
+                var noData = allDates.length === 0;
+                var sl = document.getElementById('tl-sl');
+                if (sl) sl.max = allDates.length;
+                var lblsDiv = document.getElementById('tl-lbls');
+                if (lblsDiv) {
+                    if (noData) {
+                        lblsDiv.innerHTML = '<span style="color:#3a4a5a;font-size:9px">Brak danych Strava</span>';
+                    } else {
+                        var html = '<span id="tll0" class="act">Og\u00f3\u0142em</span>';
+                        allDates.forEach(function(d, i) {
+                            html += '<span id="tll'+(i+1)+'">' + d.slice(5).replace('-','.') + '</span>';
+                        });
+                        lblsDiv.innerHTML = html;
+                    }
+                }
+            }
+            setIdx(0);
+        }
+        applyWhenReady();
+    }, 1200);
+
+    // ── Podświetlanie szlaków ───────────────────────────────────────────────
+    function podswietl(kl, on) {
+        document.querySelectorAll('path.' + kl).forEach(function(el) {
+            el.style.opacity     = on ? '1.0' : '0.8';
+            el.style.strokeWidth = on ? '6px' : '';
+        });
+    }
+
+    setTimeout(function() {
+        document.querySelectorAll('path[class]').forEach(function(el) {
+            var kl = Array.from(el.classList).find(function(c) {
+                return c.startsWith('trasa-');
+            });
+            if (!kl) return;
+            el.addEventListener('click', function(e) {
                 if (trybPomiaru) return;
-                if (aktywnaKlasa) {{
-                    podswietl(aktywnaKlasa, false);
-                    aktywnaKlasa = null;
-                    panel.style.display = 'none';
-                }}
-            }});
-        }}, 1500);
+                e.stopPropagation();
+                if (aktywnaKlasa && aktywnaKlasa !== kl) podswietl(aktywnaKlasa, false);
+                aktywnaKlasa = kl;
+                podswietl(kl, true);
+                if (popupy[kl]) {
+                    panel.innerHTML = popupy[kl] +
+                        '<br><small style="color:#888">Kliknij map\u0119 aby zamkn\u0105\u0107</small>';
+                    panel.style.display = 'block';
+                }
+            });
+        });
+        document.querySelector('.leaflet-container').addEventListener('click', function() {
+            if (trybPomiaru) return;
+            if (aktywnaKlasa) {
+                podswietl(aktywnaKlasa, false);
+                aktywnaKlasa = null;
+                panel.style.display = 'none';
+            }
+        });
+    }, 1500);
 
-        setTimeout(function() {{
-            mapaL = Object.values(window).find(v => v && v._leaflet_id && v.getCenter);
-            if (!mapaL) return;
+    // ── Przełącznik trybu jasny/ciemny ─────────────────────────────────────
+    setTimeout(function() {
+        mapaL = Object.values(window).find(function(v) {
+            return v && v._leaflet_id && v.getCenter;
+        });
+        if (!mapaL) return;
 
-            function obliczDystans(p1, p2) {{
-                var R=6371,dLat=(p2.lat-p1.lat)*Math.PI/180,dLon=(p2.lng-p1.lng)*Math.PI/180;
-                var a=Math.sin(dLat/2)*Math.sin(dLat/2)+
-                      Math.cos(p1.lat*Math.PI/180)*Math.cos(p2.lat*Math.PI/180)*
-                      Math.sin(dLon/2)*Math.sin(dLon/2);
-                return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
-            }}
+        var isDark = true;
+        var darkUrl  = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+        var lightUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+        var currentTile = null;
 
-            function resetPomiar() {{
-                liniePomiar.forEach(l=>mapaL.removeLayer(l));
-                markerPomiar.forEach(m=>mapaL.removeLayer(m));
-                liniePomiar=[];markerPomiar=[];punktyPomiar=[];
-                document.getElementById('pomiar-wynik').style.display='none';
-            }}
+        // Znajdź aktywną warstwę bazową
+        mapaL.eachLayer(function(layer) {
+            if (layer._url && (layer._url.indexOf('carto') !== -1 || layer._url.indexOf('basemaps') !== -1)) {
+                currentTile = layer;
+            }
+        });
 
-            document.getElementById('pomiar-btn').addEventListener('click', function() {{
-                trybPomiaru=!trybPomiaru;
-                this.classList.toggle('aktywny',trybPomiaru);
-                this.textContent=trybPomiaru?'✖ Zakończ pomiar':'📏 Pomiar';
-                if (!trybPomiaru) resetPomiar();
-            }});
+        document.getElementById('theme-btn').addEventListener('click', function() {
+            isDark = !isDark;
+            // Usuń wszystkie warstwy tileset
+            mapaL.eachLayer(function(layer) {
+                if (layer._url) mapaL.removeLayer(layer);
+            });
+            // Dodaj nową
+            L.tileLayer(isDark ? darkUrl : lightUrl, {
+                attribution: 'CartoDB',
+                subdomains: 'abcd',
+                maxZoom: 19
+            }).addTo(mapaL);
 
-            mapaL.on('click', function(e) {{
-                if (!trybPomiaru) return;
-                punktyPomiar.push(e.latlng);
-                var marker=L.circleMarker(e.latlng,{{radius:4,color:'cyan',fillColor:'cyan',fillOpacity:1}}).addTo(mapaL);
-                markerPomiar.push(marker);
-                if (punktyPomiar.length>1) {{
-                    var p1=punktyPomiar[punktyPomiar.length-2],p2=punktyPomiar[punktyPomiar.length-1];
-                    liniePomiar.push(L.polyline([p1,p2],{{color:'cyan',weight:2,opacity:0.8,dashArray:'6,4'}}).addTo(mapaL));
-                    var total=0;
-                    for (var i=1;i<punktyPomiar.length;i++) total+=obliczDystans(punktyPomiar[i-1],punktyPomiar[i]);
-                    var wynik=document.getElementById('pomiar-wynik');
-                    wynik.textContent='Dystans: '+total.toFixed(2)+' km';
-                    wynik.style.display='block';
-                }}
-            }});
-        }}, 2000);
-    }});
-"""))
+            // Aktualizuj przycisk
+            this.innerHTML = isDark ? '\u263E Ciemny' : '\u2600 Jasny';
+            this.className = isDark ? '' : 'light';
 
-mapa.save("index.html")
+            // Dostosuj kolor TPN overlay (jasny/ciemny tył)
+            document.querySelectorAll('.leaflet-overlay-pane svg').forEach(function(svg) {
+                svg.style.filter = isDark ? '' : 'brightness(0.7)';
+            });
+        });
+    }, 2100);
+
+        function dist(p1, p2) {
+            var R = 6371;
+            var dLat = (p2.lat - p1.lat) * Math.PI / 180;
+            var dLon = (p2.lng - p1.lng) * Math.PI / 180;
+            var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                    Math.cos(p1.lat * Math.PI/180) * Math.cos(p2.lat * Math.PI/180) *
+                    Math.sin(dLon/2) * Math.sin(dLon/2);
+            return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        }
+
+        function resetPomiar() {
+            liniePomiar.forEach(function(l) { mapaL.removeLayer(l); });
+            markerPomiar.forEach(function(m) { mapaL.removeLayer(m); });
+            liniePomiar = []; markerPomiar = []; punktyPomiar = [];
+            document.getElementById('pomiar-wynik').style.display = 'none';
+        }
+
+        document.getElementById('pomiar-btn').addEventListener('click', function() {
+            trybPomiaru = !trybPomiaru;
+            this.classList.toggle('aktywny', trybPomiaru);
+            this.textContent = trybPomiaru ? '\u2716 Zako\u0144cz pomiar' : '\uD83D\uDCCF Pomiar';
+            if (!trybPomiaru) resetPomiar();
+        });
+
+        mapaL.on('click', function(e) {
+            if (!trybPomiaru) return;
+            punktyPomiar.push(e.latlng);
+            var mk = L.circleMarker(e.latlng, {
+                radius: 4, color: 'cyan', fillColor: 'cyan', fillOpacity: 1
+            }).addTo(mapaL);
+            markerPomiar.push(mk);
+            if (punktyPomiar.length > 1) {
+                var p1 = punktyPomiar[punktyPomiar.length - 2];
+                var p2 = punktyPomiar[punktyPomiar.length - 1];
+                liniePomiar.push(
+                    L.polyline([p1, p2], {
+                        color: 'cyan', weight: 2, opacity: 0.8, dashArray: '6,4'
+                    }).addTo(mapaL)
+                );
+                var total = 0;
+                for (var i = 1; i < punktyPomiar.length; i++) {
+                    total += dist(punktyPomiar[i-1], punktyPomiar[i]);
+                }
+                var wy = document.getElementById('pomiar-wynik');
+                wy.textContent = 'Dystans: ' + total.toFixed(2) + ' km';
+                wy.style.display = 'block';
+            }
+        });
+    }, 2000);
+});
+"""
+
+mapa.get_root().script.add_child(folium.Element(JS))
+
+html_out = mapa._repr_html_()
+# Usuń surrogaty które crashują utf-8
+html_out = html_out.encode('utf-8', errors='replace').decode('utf-8')
+with open("index.html", "w", encoding="utf-8") as f:
+    f.write(html_out)
 print("Gotowe! Zapisano index.html")
