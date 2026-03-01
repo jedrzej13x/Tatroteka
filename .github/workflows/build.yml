@@ -34,6 +34,6 @@ jobs:
         run: |
           git config user.name  "Tatry Flow Bot"
           git config user.email "bot@tatroteka.pl"
-          git add -f index.html map_data.json
+          git add -f index.html
           git diff --cached --quiet || git commit -m "build: regenerate map $(date +'%Y-%m-%d %H:%M')"
           git push

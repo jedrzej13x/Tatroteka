@@ -500,7 +500,6 @@ for element in wszystkie:
     if seg is None and relacja_id is not None:
         seg = kolory_relacji.get(relacja_id)
 
-    strava_info    = ""
     kolor_finalny  = kolor_oryginalny
     weight_finalny = styl["weight"]
 
@@ -509,21 +508,6 @@ for element in wszystkie:
         if kolor_heat:
             kolor_finalny  = kolor_heat
             weight_finalny = STALA_GRUBOSC
-        strava_info = f"""
-            <hr style="margin:6px 0">
-            <b>&#x1F4CA; Natężenie ruchu (Strava)</b><br>
-            Przejść łącznie: <b>{seg['effort_count']:,}</b><br>
-            Atletów: {seg['athlete_count']:,}<br>
-            Segment: {seg['name']}<br>
-            Snapshot: {seg['last_snapshot']}
-        """
-
-    popup_tekst = (
-        f"<b>{nazwa}</b><br>"
-        f"Typ: {typ_nazwa}<br>"
-        f"{info_dlugosc}"
-        f"{strava_info}"
-    )
 
     linia = folium.PolyLine(
         punkty,
@@ -534,8 +518,17 @@ for element in wszystkie:
     )
     linia.options['className'] = klasa_css
 
+    # Przechowuj surowe dane — HTML generuje JS
     if klasa_css not in popupy_relacji:
-        popupy_relacji[klasa_css] = popup_tekst
+        popupy_relacji[klasa_css] = {
+            "nazwa":    nazwa,
+            "typ":      typ_nazwa,
+            "dlugosc":  info_dlugosc,
+            "effort":   seg["effort_count"]   if seg else 0,
+            "atleci":   seg["athlete_count"]  if seg else 0,
+            "seg_name": sanitize(seg["name"]) if seg else "",
+            "snapshot": seg["last_snapshot"]  if seg else "",
+        }
 
     grupy[styl["grupa"]].add_child(linia)
 
@@ -707,7 +700,7 @@ mapa.get_root().html.add_child(folium.Element("""
 </style>
 """))
 
-# ── Zapisz dane do osobnego pliku (nie inline w HTML — za duże) ───────────────
+# ── Wstrzyknij dane inline jako window.TD ─────────────────────────────────────
 
 td = {
     "popupy":       popupy_relacji,
@@ -716,18 +709,11 @@ td = {
     "koloryBazowe": kolory_bazowe,
     "maxEffort":    max_effort,
 }
-with open("map_data.json", "w", encoding="utf-8") as f:
-    json.dump(td, f, ensure_ascii=True)
-print(f"Zapisano map_data.json ({len(json.dumps(td, ensure_ascii=True))//1024} KB)")
-
-# Wstrzyknij tylko loader który pobiera map_data.json przez fetch
-mapa.get_root().html.add_child(folium.Element("""<script>
-window.TD = null;
-fetch('map_data.json')
-    .then(function(r){ return r.json(); })
-    .then(function(d){ window.TD = d; })
-    .catch(function(){ window.TD = {}; });
-</script>"""))
+td_json = json.dumps(td, ensure_ascii=True)
+print(f"window.TD rozmiar: {len(td_json)//1024} KB")
+mapa.get_root().html.add_child(folium.Element(
+    "<script>window.TD=" + td_json + ";</script>"
+))
 
 # ── Cały JS jako stała string — zero f-stringów, zero konfliktów ───────────────
 
@@ -870,37 +856,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 }, 1500);
             }
         });
-        // Zastosuj kolory gdy SVG i dane gotowe
+        // Zastosuj kolory gdy SVG w DOM
         function applyWhenReady() {
-            var paths = document.querySelectorAll('path[class]');
-            var data  = window.TD;
-            if (paths.length === 0 || data === null) {
+            if (document.querySelectorAll('path[class]').length === 0) {
                 setTimeout(applyWhenReady, 300);
                 return;
-            }
-            // Załaduj dane z fetch jeśli jeszcze nie w zmiennych
-            if (data && data.relSerie) {
-                relSerie     = data.relSerie     || {};
-                allDates     = data.allDates     || [];
-                koloryBazowe = data.koloryBazowe || {};
-                maxEffort    = data.maxEffort    || 1;
-                popupy       = data.popupy       || {};
-                // Przebuduj etykiety suwaka z nowymi datami
-                var noData = allDates.length === 0;
-                var sl = document.getElementById('tl-sl');
-                if (sl) sl.max = allDates.length;
-                var lblsDiv = document.getElementById('tl-lbls');
-                if (lblsDiv) {
-                    if (noData) {
-                        lblsDiv.innerHTML = '<span style="color:#3a4a5a;font-size:9px">Brak danych Strava</span>';
-                    } else {
-                        var html = '<span id="tll0" class="act">Og\u00f3\u0142em</span>';
-                        allDates.forEach(function(d, i) {
-                            html += '<span id="tll'+(i+1)+'">' + d.slice(5).replace('-','.') + '</span>';
-                        });
-                        lblsDiv.innerHTML = html;
-                    }
-                }
             }
             setIdx(0);
         }
@@ -928,8 +888,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 aktywnaKlasa = kl;
                 podswietl(kl, true);
                 if (popupy[kl]) {
-                    panel.innerHTML = popupy[kl] +
-                        '<br><small style="color:#888">Kliknij map\u0119 aby zamkn\u0105\u0107</small>';
+                    var p = popupy[kl];
+                    var html = '<b>' + p.nazwa + '</b><br>' +
+                               'Typ: ' + p.typ + '<br>' +
+                               p.dlugosc;
+                    if (p.effort > 0) {
+                        html += '<hr style="margin:6px 0">' +
+                                '<b>&#x1F4CA; Nat\u0119\u017cenie ruchu (Strava)</b><br>' +
+                                'Przej\u015b\u0107 \u0142\u0105cznie: <b>' + p.effort.toLocaleString() + '</b><br>' +
+                                'Atle\u0107w: ' + p.atleci.toLocaleString() + '<br>' +
+                                'Segment: ' + p.seg_name + '<br>' +
+                                'Snapshot: ' + p.snapshot;
+                    }
+                    panel.innerHTML = html + '<br><small style="color:#888">Kliknij map\u0119 aby zamkn\u0105\u0107</small>';
                     panel.style.display = 'block';
                 }
             });
