@@ -8,12 +8,12 @@
       "distance": 2573.1,
       "avg_grade": 7.3,
       "elev_difference": 187.0,
-      "effort_count_cumulative": 9889,
+      "effort_count_cumulative": 9886,
       "athlete_count": 3492,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 9889
+      "2026-03-01": 9886
     }
   },
   "1725045": {
@@ -27,10 +27,10 @@
       "elev_difference": 80.4,
       "effort_count_cumulative": 1830,
       "athlete_count": 976,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1830
+      "2026-03-01": 1830
     }
   },
   "1769775": {
@@ -42,12 +42,12 @@
       "distance": 2582.8,
       "avg_grade": 7.1,
       "elev_difference": 182.5,
-      "effort_count_cumulative": 773,
-      "athlete_count": 771,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 772,
+      "athlete_count": 770,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 773
+      "2026-03-01": 772
     }
   },
   "1803458": {
@@ -61,10 +61,10 @@
       "elev_difference": 476.1,
       "effort_count_cumulative": 745,
       "athlete_count": 545,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 745
+      "2026-03-01": 745
     }
   },
   "1851039": {
@@ -78,10 +78,10 @@
       "elev_difference": 533.8,
       "effort_count_cumulative": 264,
       "athlete_count": 241,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 264
+      "2026-03-01": 264
     }
   },
   "1851041": {
@@ -93,12 +93,12 @@
       "distance": 1808.4,
       "avg_grade": 13.8,
       "elev_difference": 249.6,
-      "effort_count_cumulative": 233,
+      "effort_count_cumulative": 232,
       "athlete_count": 252,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 233
+      "2026-03-01": 232
     }
   },
   "1870897": {
@@ -110,12 +110,12 @@
       "distance": 1828.5,
       "avg_grade": 5.4,
       "elev_difference": 99.1,
-      "effort_count_cumulative": 2944,
-      "athlete_count": 1690,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 2947,
+      "athlete_count": 1692,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2944
+      "2026-03-01": 2947
     }
   },
   "1870909": {
@@ -129,10 +129,10 @@
       "elev_difference": 82.7,
       "effort_count_cumulative": 3121,
       "athlete_count": 2108,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3121
+      "2026-03-01": 3121
     }
   },
   "1890349": {
@@ -146,10 +146,10 @@
       "elev_difference": 53.2,
       "effort_count_cumulative": 3564,
       "athlete_count": 2347,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3564
+      "2026-03-01": 3564
     }
   },
   "1929905": {
@@ -163,10 +163,10 @@
       "elev_difference": 383.1,
       "effort_count_cumulative": 1514,
       "athlete_count": 1409,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1514
+      "2026-03-01": 1514
     }
   },
   "1934599": {
@@ -180,10 +180,10 @@
       "elev_difference": 476.0,
       "effort_count_cumulative": 75,
       "athlete_count": 81,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 75
+      "2026-03-01": 75
     }
   },
   "1976371": {
@@ -197,10 +197,10 @@
       "elev_difference": 927.8,
       "effort_count_cumulative": 39,
       "athlete_count": 29,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 39
+      "2026-03-01": 39
     }
   },
   "2095723": {
@@ -214,10 +214,10 @@
       "elev_difference": 193.4,
       "effort_count_cumulative": 224,
       "athlete_count": 242,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 224
+      "2026-03-01": 224
     }
   },
   "2186160": {
@@ -231,10 +231,10 @@
       "elev_difference": 96.6,
       "effort_count_cumulative": 591,
       "athlete_count": 236,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 591
+      "2026-03-01": 591
     }
   },
   "2212190": {
@@ -248,10 +248,10 @@
       "elev_difference": 257.1,
       "effort_count_cumulative": 16,
       "athlete_count": 23,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 16
+      "2026-03-01": 16
     }
   },
   "2212195": {
@@ -263,12 +263,12 @@
       "distance": 321.2,
       "avg_grade": 17.5,
       "elev_difference": 56.3,
-      "effort_count_cumulative": 7177,
-      "athlete_count": 3622,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 7179,
+      "athlete_count": 3623,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 7177
+      "2026-03-01": 7179
     }
   },
   "2212216": {
@@ -282,10 +282,10 @@
       "elev_difference": 95.6,
       "effort_count_cumulative": 379,
       "athlete_count": 275,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 379
+      "2026-03-01": 379
     }
   },
   "2212217": {
@@ -299,10 +299,10 @@
       "elev_difference": 84.3,
       "effort_count_cumulative": 44,
       "athlete_count": 42,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 44
+      "2026-03-01": 44
     }
   },
   "2212218": {
@@ -316,10 +316,10 @@
       "elev_difference": 148.7,
       "effort_count_cumulative": 28,
       "athlete_count": 15,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 28
+      "2026-03-01": 28
     }
   },
   "2212230": {
@@ -333,10 +333,10 @@
       "elev_difference": 206.0,
       "effort_count_cumulative": 32,
       "athlete_count": 14,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 32
+      "2026-03-01": 32
     }
   },
   "2212241": {
@@ -350,10 +350,10 @@
       "elev_difference": 85.1,
       "effort_count_cumulative": 443,
       "athlete_count": 340,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 443
+      "2026-03-01": 443
     }
   },
   "2212243": {
@@ -367,10 +367,10 @@
       "elev_difference": 42.0,
       "effort_count_cumulative": 436,
       "athlete_count": 337,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 436
+      "2026-03-01": 436
     }
   },
   "2323765": {
@@ -384,10 +384,10 @@
       "elev_difference": 118.1,
       "effort_count_cumulative": 287,
       "athlete_count": 245,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 287
+      "2026-03-01": 287
     }
   },
   "2330481": {
@@ -401,10 +401,10 @@
       "elev_difference": 63.0,
       "effort_count_cumulative": 2776,
       "athlete_count": 2150,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2776
+      "2026-03-01": 2776
     }
   },
   "2339215": {
@@ -418,10 +418,27 @@
       "elev_difference": 67.8,
       "effort_count_cumulative": 227,
       "athlete_count": 185,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 227
+      "2026-03-01": 227
+    }
+  },
+  "2347542": {
+    "meta": {
+      "name": "Ticha Dolina",
+      "activity_type": "hiking",
+      "lat": 49.20972768,
+      "lng": 19.93409586,
+      "distance": 2624.1,
+      "avg_grade": 5.2,
+      "elev_difference": 136.5,
+      "effort_count_cumulative": 5076,
+      "athlete_count": 3888,
+      "last_snapshot": "2026-03-01"
+    },
+    "series": {
+      "2026-03-01": 5076
     }
   },
   "2348177": {
@@ -435,10 +452,10 @@
       "elev_difference": 140.0,
       "effort_count_cumulative": 7787,
       "athlete_count": 3891,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 7787
+      "2026-03-01": 7787
     }
   },
   "2461700": {
@@ -452,10 +469,10 @@
       "elev_difference": 167.9,
       "effort_count_cumulative": 252,
       "athlete_count": 309,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 252
+      "2026-03-01": 252
     }
   },
   "2484474": {
@@ -469,10 +486,10 @@
       "elev_difference": 450.2,
       "effort_count_cumulative": 45,
       "athlete_count": 48,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 45
+      "2026-03-01": 45
     }
   },
   "2585824": {
@@ -486,10 +503,10 @@
       "elev_difference": 83.3,
       "effort_count_cumulative": 146,
       "athlete_count": 157,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 146
+      "2026-03-01": 146
     }
   },
   "2595820": {
@@ -503,10 +520,10 @@
       "elev_difference": 480.8,
       "effort_count_cumulative": 543,
       "athlete_count": 558,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 543
+      "2026-03-01": 543
     }
   },
   "2600546": {
@@ -520,10 +537,10 @@
       "elev_difference": 132.4,
       "effort_count_cumulative": 249,
       "athlete_count": 102,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 249
+      "2026-03-01": 249
     }
   },
   "2619218": {
@@ -537,10 +554,10 @@
       "elev_difference": 490.2,
       "effort_count_cumulative": 114,
       "athlete_count": 92,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 114
+      "2026-03-01": 114
     }
   },
   "2632129": {
@@ -554,10 +571,10 @@
       "elev_difference": 170.6,
       "effort_count_cumulative": 57,
       "athlete_count": 61,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 57
+      "2026-03-01": 57
     }
   },
   "2694981": {
@@ -571,10 +588,10 @@
       "elev_difference": 43.8,
       "effort_count_cumulative": 6578,
       "athlete_count": 4096,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 6578
+      "2026-03-01": 6578
     }
   },
   "2699691": {
@@ -586,12 +603,12 @@
       "distance": 746.5,
       "avg_grade": 11.6,
       "elev_difference": 86.9,
-      "effort_count_cumulative": 1727,
-      "athlete_count": 1187,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 1728,
+      "athlete_count": 1188,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1727
+      "2026-03-01": 1728
     }
   },
   "2757253": {
@@ -605,10 +622,10 @@
       "elev_difference": 137.1,
       "effort_count_cumulative": 8,
       "athlete_count": 21,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 8
+      "2026-03-01": 8
     }
   },
   "2824871": {
@@ -622,10 +639,10 @@
       "elev_difference": 369.6,
       "effort_count_cumulative": 130,
       "athlete_count": 145,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 130
+      "2026-03-01": 130
     }
   },
   "2824925": {
@@ -637,12 +654,12 @@
       "distance": 399.0,
       "avg_grade": 15.0,
       "elev_difference": 59.7,
-      "effort_count_cumulative": 3806,
+      "effort_count_cumulative": 3807,
       "athlete_count": 2652,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3806
+      "2026-03-01": 3807
     }
   },
   "3019231": {
@@ -656,10 +673,10 @@
       "elev_difference": 77.1,
       "effort_count_cumulative": 2042,
       "athlete_count": 1413,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2042
+      "2026-03-01": 2042
     }
   },
   "3091685": {
@@ -673,10 +690,10 @@
       "elev_difference": 526.7,
       "effort_count_cumulative": 48,
       "athlete_count": 55,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 48
+      "2026-03-01": 48
     }
   },
   "3432178": {
@@ -688,12 +705,12 @@
       "distance": 2227.7,
       "avg_grade": 0.0,
       "elev_difference": 26.6,
-      "effort_count_cumulative": 17864,
-      "athlete_count": 2833,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 17868,
+      "athlete_count": 2835,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 17864
+      "2026-03-01": 17868
     }
   },
   "3591546": {
@@ -707,10 +724,10 @@
       "elev_difference": 372.9,
       "effort_count_cumulative": 43,
       "athlete_count": 53,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 43
+      "2026-03-01": 43
     }
   },
   "3620794": {
@@ -724,10 +741,10 @@
       "elev_difference": 215.4,
       "effort_count_cumulative": 24,
       "athlete_count": 34,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 24
+      "2026-03-01": 24
     }
   },
   "3921281": {
@@ -741,10 +758,10 @@
       "elev_difference": 94.6,
       "effort_count_cumulative": 29,
       "athlete_count": 40,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 29
+      "2026-03-01": 29
     }
   },
   "3921288": {
@@ -758,10 +775,10 @@
       "elev_difference": 309.6,
       "effort_count_cumulative": 52,
       "athlete_count": 53,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 52
+      "2026-03-01": 52
     }
   },
   "4004790": {
@@ -773,12 +790,12 @@
       "distance": 3200.6,
       "avg_grade": 4.3,
       "elev_difference": 138.8,
-      "effort_count_cumulative": 13172,
+      "effort_count_cumulative": 13174,
       "athlete_count": 6750,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 13172
+      "2026-03-01": 13174
     }
   },
   "4028642": {
@@ -792,10 +809,10 @@
       "elev_difference": 99.2,
       "effort_count_cumulative": 96,
       "athlete_count": 38,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 96
+      "2026-03-01": 96
     }
   },
   "4247979": {
@@ -809,10 +826,10 @@
       "elev_difference": 167.5,
       "effort_count_cumulative": 204,
       "athlete_count": 233,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 204
+      "2026-03-01": 204
     }
   },
   "4270753": {
@@ -826,10 +843,10 @@
       "elev_difference": 142.0,
       "effort_count_cumulative": 6754,
       "athlete_count": 3456,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 6754
+      "2026-03-01": 6754
     }
   },
   "4398025": {
@@ -843,10 +860,10 @@
       "elev_difference": 76.4,
       "effort_count_cumulative": 3697,
       "athlete_count": 2358,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3697
+      "2026-03-01": 3697
     }
   },
   "4418495": {
@@ -860,10 +877,10 @@
       "elev_difference": 129.7,
       "effort_count_cumulative": 211,
       "athlete_count": 227,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 211
+      "2026-03-01": 211
     }
   },
   "4487446": {
@@ -877,10 +894,10 @@
       "elev_difference": 173.7,
       "effort_count_cumulative": 2702,
       "athlete_count": 1854,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2702
+      "2026-03-01": 2702
     }
   },
   "4520689": {
@@ -892,12 +909,12 @@
       "distance": 1399.4,
       "avg_grade": 3.7,
       "elev_difference": 51.8,
-      "effort_count_cumulative": 544,
-      "athlete_count": 301,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 545,
+      "athlete_count": 302,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 544
+      "2026-03-01": 545
     }
   },
   "4523511": {
@@ -911,10 +928,10 @@
       "elev_difference": 87.3,
       "effort_count_cumulative": 13990,
       "athlete_count": 6763,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 13990
+      "2026-03-01": 13990
     }
   },
   "4551718": {
@@ -928,10 +945,10 @@
       "elev_difference": 262.0,
       "effort_count_cumulative": 508,
       "athlete_count": 545,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 508
+      "2026-03-01": 508
     }
   },
   "4551720": {
@@ -945,10 +962,10 @@
       "elev_difference": 230.9,
       "effort_count_cumulative": 48,
       "athlete_count": 59,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 48
+      "2026-03-01": 48
     }
   },
   "4579155": {
@@ -960,12 +977,12 @@
       "distance": 335.7,
       "avg_grade": 14.6,
       "elev_difference": 49.6,
-      "effort_count_cumulative": 9841,
+      "effort_count_cumulative": 9843,
       "athlete_count": 5312,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 9841
+      "2026-03-01": 9843
     }
   },
   "4682642": {
@@ -979,10 +996,10 @@
       "elev_difference": 195.1,
       "effort_count_cumulative": 145,
       "athlete_count": 196,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 145
+      "2026-03-01": 145
     }
   },
   "4683783": {
@@ -996,10 +1013,10 @@
       "elev_difference": 846.5,
       "effort_count_cumulative": 811,
       "athlete_count": 712,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 811
+      "2026-03-01": 811
     }
   },
   "4746914": {
@@ -1013,10 +1030,10 @@
       "elev_difference": 98.4,
       "effort_count_cumulative": 30,
       "athlete_count": 28,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 30
+      "2026-03-01": 30
     }
   },
   "4755498": {
@@ -1030,10 +1047,10 @@
       "elev_difference": 171.6,
       "effort_count_cumulative": 523,
       "athlete_count": 524,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 523
+      "2026-03-01": 523
     }
   },
   "4790545": {
@@ -1047,10 +1064,10 @@
       "elev_difference": 220.9,
       "effort_count_cumulative": 19,
       "athlete_count": 20,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 19
+      "2026-03-01": 19
     }
   },
   "4855088": {
@@ -1062,12 +1079,12 @@
       "distance": 1516.3,
       "avg_grade": 16.8,
       "elev_difference": 255.1,
-      "effort_count_cumulative": 203,
+      "effort_count_cumulative": 200,
       "athlete_count": 202,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 203
+      "2026-03-01": 200
     }
   },
   "4880686": {
@@ -1081,10 +1098,10 @@
       "elev_difference": 48.3,
       "effort_count_cumulative": 212,
       "athlete_count": 167,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 212
+      "2026-03-01": 212
     }
   },
   "4880689": {
@@ -1098,10 +1115,10 @@
       "elev_difference": 395.9,
       "effort_count_cumulative": 86,
       "athlete_count": 84,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 86
+      "2026-03-01": 86
     }
   },
   "4914013": {
@@ -1115,10 +1132,10 @@
       "elev_difference": 824.4,
       "effort_count_cumulative": 190,
       "athlete_count": 151,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 190
+      "2026-03-01": 190
     }
   },
   "4917041": {
@@ -1132,10 +1149,10 @@
       "elev_difference": 620.8,
       "effort_count_cumulative": 56,
       "athlete_count": 61,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 56
+      "2026-03-01": 56
     }
   },
   "4943710": {
@@ -1147,12 +1164,12 @@
       "distance": 1506.5,
       "avg_grade": 6.7,
       "elev_difference": 101.2,
-      "effort_count_cumulative": 41229,
-      "athlete_count": 13584,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 41235,
+      "athlete_count": 13586,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 41229
+      "2026-03-01": 41235
     }
   },
   "4947432": {
@@ -1166,10 +1183,10 @@
       "elev_difference": 55.9,
       "effort_count_cumulative": 135,
       "athlete_count": 115,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 135
+      "2026-03-01": 135
     }
   },
   "4987186": {
@@ -1183,10 +1200,10 @@
       "elev_difference": 96.2,
       "effort_count_cumulative": 24,
       "athlete_count": 23,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 24
+      "2026-03-01": 24
     }
   },
   "5016900": {
@@ -1200,10 +1217,10 @@
       "elev_difference": 80.6,
       "effort_count_cumulative": 138,
       "athlete_count": 144,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 138
+      "2026-03-01": 138
     }
   },
   "5063498": {
@@ -1217,10 +1234,10 @@
       "elev_difference": 58.4,
       "effort_count_cumulative": 106,
       "athlete_count": 61,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 106
+      "2026-03-01": 106
     }
   },
   "5069808": {
@@ -1234,10 +1251,10 @@
       "elev_difference": 93.5,
       "effort_count_cumulative": 1000,
       "athlete_count": 629,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1000
+      "2026-03-01": 1000
     }
   },
   "5105533": {
@@ -1251,10 +1268,10 @@
       "elev_difference": 446.3,
       "effort_count_cumulative": 33,
       "athlete_count": 37,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 33
+      "2026-03-01": 33
     }
   },
   "5185988": {
@@ -1268,27 +1285,10 @@
       "elev_difference": 220.7,
       "effort_count_cumulative": 28,
       "athlete_count": 27,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 28
-    }
-  },
-  "5186847": {
-    "meta": {
-      "name": "Droga Papieska Climb",
-      "activity_type": "running",
-      "lat": 49.337235,
-      "lng": 19.935524,
-      "distance": 980.5,
-      "avg_grade": 4.5,
-      "elev_difference": 43.7,
-      "effort_count_cumulative": 26,
-      "athlete_count": 44,
-      "last_snapshot": "2026-02-28"
-    },
-    "series": {
-      "2026-02-28": 26
+      "2026-03-01": 28
     }
   },
   "5244759": {
@@ -1302,10 +1302,10 @@
       "elev_difference": 146.0,
       "effort_count_cumulative": 209,
       "athlete_count": 245,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 209
+      "2026-03-01": 209
     }
   },
   "5260113": {
@@ -1317,12 +1317,12 @@
       "distance": 1653.4,
       "avg_grade": 4.9,
       "elev_difference": 81.1,
-      "effort_count_cumulative": 18377,
-      "athlete_count": 4828,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 18379,
+      "athlete_count": 4830,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 18377
+      "2026-03-01": 18379
     }
   },
   "5278568": {
@@ -1336,10 +1336,10 @@
       "elev_difference": 110.1,
       "effort_count_cumulative": 25,
       "athlete_count": 28,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 25
+      "2026-03-01": 25
     }
   },
   "5321064": {
@@ -1353,10 +1353,10 @@
       "elev_difference": 194.8,
       "effort_count_cumulative": 4842,
       "athlete_count": 3603,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 4842
+      "2026-03-01": 4842
     }
   },
   "5343706": {
@@ -1370,10 +1370,10 @@
       "elev_difference": 570.5,
       "effort_count_cumulative": 1,
       "athlete_count": 12,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1
+      "2026-03-01": 1
     }
   },
   "5355284": {
@@ -1387,10 +1387,10 @@
       "elev_difference": 192.4,
       "effort_count_cumulative": 2884,
       "athlete_count": 1792,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2884
+      "2026-03-01": 2884
     }
   },
   "5405016": {
@@ -1404,10 +1404,10 @@
       "elev_difference": 49.0,
       "effort_count_cumulative": 161,
       "athlete_count": 113,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 161
+      "2026-03-01": 161
     }
   },
   "5405017": {
@@ -1421,10 +1421,10 @@
       "elev_difference": 40.8,
       "effort_count_cumulative": 124,
       "athlete_count": 66,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 124
+      "2026-03-01": 124
     }
   },
   "5405018": {
@@ -1438,10 +1438,10 @@
       "elev_difference": 95.3,
       "effort_count_cumulative": 34,
       "athlete_count": 29,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 34
+      "2026-03-01": 34
     }
   },
   "5405026": {
@@ -1455,10 +1455,10 @@
       "elev_difference": 142.6,
       "effort_count_cumulative": 9,
       "athlete_count": 19,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 9
+      "2026-03-01": 9
     }
   },
   "5415957": {
@@ -1472,10 +1472,10 @@
       "elev_difference": 42.0,
       "effort_count_cumulative": 1821,
       "athlete_count": 1645,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1821
+      "2026-03-01": 1821
     }
   },
   "5419140": {
@@ -1489,10 +1489,10 @@
       "elev_difference": 104.9,
       "effort_count_cumulative": 76,
       "athlete_count": 79,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 76
+      "2026-03-01": 76
     }
   },
   "5455038": {
@@ -1506,10 +1506,10 @@
       "elev_difference": 79.4,
       "effort_count_cumulative": 317,
       "athlete_count": 269,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 317
+      "2026-03-01": 317
     }
   },
   "5499988": {
@@ -1523,10 +1523,10 @@
       "elev_difference": 134.9,
       "effort_count_cumulative": 32,
       "athlete_count": 20,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 32
+      "2026-03-01": 32
     }
   },
   "5546655": {
@@ -1540,10 +1540,10 @@
       "elev_difference": 673.4,
       "effort_count_cumulative": 48,
       "athlete_count": 57,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 48
+      "2026-03-01": 48
     }
   },
   "5564604": {
@@ -1557,10 +1557,10 @@
       "elev_difference": 183.9,
       "effort_count_cumulative": 156,
       "athlete_count": 29,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 156
+      "2026-03-01": 156
     }
   },
   "5659929": {
@@ -1574,10 +1574,10 @@
       "elev_difference": 51.3,
       "effort_count_cumulative": 173,
       "athlete_count": 114,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 173
+      "2026-03-01": 173
     }
   },
   "5763042": {
@@ -1591,10 +1591,10 @@
       "elev_difference": 330.4,
       "effort_count_cumulative": 108,
       "athlete_count": 127,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 108
+      "2026-03-01": 108
     }
   },
   "5777101": {
@@ -1608,10 +1608,10 @@
       "elev_difference": 411.4,
       "effort_count_cumulative": 25,
       "athlete_count": 17,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 25
+      "2026-03-01": 25
     }
   },
   "5777102": {
@@ -1625,10 +1625,10 @@
       "elev_difference": 326.3,
       "effort_count_cumulative": 33,
       "athlete_count": 17,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 33
+      "2026-03-01": 33
     }
   },
   "5777104": {
@@ -1642,10 +1642,10 @@
       "elev_difference": 98.9,
       "effort_count_cumulative": 25,
       "athlete_count": 17,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 25
+      "2026-03-01": 25
     }
   },
   "5777105": {
@@ -1659,10 +1659,10 @@
       "elev_difference": 107.8,
       "effort_count_cumulative": 19,
       "athlete_count": 17,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 19
+      "2026-03-01": 19
     }
   },
   "5831364": {
@@ -1676,10 +1676,10 @@
       "elev_difference": 329.5,
       "effort_count_cumulative": 56,
       "athlete_count": 67,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 56
+      "2026-03-01": 56
     }
   },
   "5849564": {
@@ -1693,10 +1693,10 @@
       "elev_difference": 106.0,
       "effort_count_cumulative": 247,
       "athlete_count": 135,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 247
+      "2026-03-01": 247
     }
   },
   "5870244": {
@@ -1710,10 +1710,10 @@
       "elev_difference": 144.9,
       "effort_count_cumulative": 30,
       "athlete_count": 29,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 30
+      "2026-03-01": 30
     }
   },
   "5870245": {
@@ -1727,10 +1727,10 @@
       "elev_difference": 123.1,
       "effort_count_cumulative": 378,
       "athlete_count": 260,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 378
+      "2026-03-01": 378
     }
   },
   "5870247": {
@@ -1744,10 +1744,10 @@
       "elev_difference": 136.0,
       "effort_count_cumulative": 320,
       "athlete_count": 236,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 320
+      "2026-03-01": 320
     }
   },
   "5884658": {
@@ -1761,10 +1761,10 @@
       "elev_difference": 145.5,
       "effort_count_cumulative": 79,
       "athlete_count": 81,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 79
+      "2026-03-01": 79
     }
   },
   "5910746": {
@@ -1778,10 +1778,10 @@
       "elev_difference": 347.3,
       "effort_count_cumulative": 471,
       "athlete_count": 326,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 471
+      "2026-03-01": 471
     }
   },
   "5916034": {
@@ -1795,10 +1795,10 @@
       "elev_difference": 160.6,
       "effort_count_cumulative": 1357,
       "athlete_count": 989,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1357
+      "2026-03-01": 1357
     }
   },
   "5916211": {
@@ -1812,10 +1812,10 @@
       "elev_difference": 161.2,
       "effort_count_cumulative": 69,
       "athlete_count": 63,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 69
+      "2026-03-01": 69
     }
   },
   "5916212": {
@@ -1829,10 +1829,10 @@
       "elev_difference": 136.9,
       "effort_count_cumulative": 34,
       "athlete_count": 33,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 34
+      "2026-03-01": 34
     }
   },
   "5944336": {
@@ -1846,10 +1846,10 @@
       "elev_difference": 113.6,
       "effort_count_cumulative": 22,
       "athlete_count": 41,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 22
+      "2026-03-01": 22
     }
   },
   "5954085": {
@@ -1863,10 +1863,10 @@
       "elev_difference": 153.4,
       "effort_count_cumulative": 321,
       "athlete_count": 209,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 321
+      "2026-03-01": 321
     }
   },
   "5983964": {
@@ -1880,10 +1880,10 @@
       "elev_difference": 62.1,
       "effort_count_cumulative": 142,
       "athlete_count": 117,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 142
+      "2026-03-01": 142
     }
   },
   "6001384": {
@@ -1897,10 +1897,10 @@
       "elev_difference": 250.2,
       "effort_count_cumulative": 82,
       "athlete_count": 80,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 82
+      "2026-03-01": 82
     }
   },
   "6001410": {
@@ -1914,10 +1914,10 @@
       "elev_difference": 250.2,
       "effort_count_cumulative": 597,
       "athlete_count": 502,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 597
+      "2026-03-01": 597
     }
   },
   "6019420": {
@@ -1931,10 +1931,10 @@
       "elev_difference": 130.6,
       "effort_count_cumulative": 741,
       "athlete_count": 634,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 741
+      "2026-03-01": 741
     }
   },
   "6117724": {
@@ -1948,10 +1948,10 @@
       "elev_difference": 431.6,
       "effort_count_cumulative": 15,
       "athlete_count": 28,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 15
+      "2026-03-01": 15
     }
   },
   "6215972": {
@@ -1965,10 +1965,10 @@
       "elev_difference": 176.0,
       "effort_count_cumulative": 34,
       "athlete_count": 33,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 34
+      "2026-03-01": 34
     }
   },
   "6323774": {
@@ -1982,10 +1982,10 @@
       "elev_difference": 227.4,
       "effort_count_cumulative": 21,
       "athlete_count": 23,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 21
+      "2026-03-01": 21
     }
   },
   "6325476": {
@@ -1999,10 +1999,10 @@
       "elev_difference": 43.4,
       "effort_count_cumulative": 252,
       "athlete_count": 220,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 252
+      "2026-03-01": 252
     }
   },
   "6346686": {
@@ -2016,10 +2016,10 @@
       "elev_difference": 46.1,
       "effort_count_cumulative": 114,
       "athlete_count": 57,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 114
+      "2026-03-01": 114
     }
   },
   "6346687": {
@@ -2033,10 +2033,10 @@
       "elev_difference": 50.4,
       "effort_count_cumulative": 619,
       "athlete_count": 300,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 619
+      "2026-03-01": 619
     }
   },
   "6400773": {
@@ -2050,10 +2050,10 @@
       "elev_difference": 120.1,
       "effort_count_cumulative": 242,
       "athlete_count": 73,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 242
+      "2026-03-01": 242
     }
   },
   "6457754": {
@@ -2067,10 +2067,10 @@
       "elev_difference": 93.4,
       "effort_count_cumulative": 43,
       "athlete_count": 23,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 43
+      "2026-03-01": 43
     }
   },
   "6470271": {
@@ -2084,10 +2084,10 @@
       "elev_difference": 58.0,
       "effort_count_cumulative": 821,
       "athlete_count": 355,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 821
+      "2026-03-01": 821
     }
   },
   "6470272": {
@@ -2101,10 +2101,10 @@
       "elev_difference": 58.0,
       "effort_count_cumulative": 205,
       "athlete_count": 111,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 205
+      "2026-03-01": 205
     }
   },
   "6698573": {
@@ -2118,10 +2118,10 @@
       "elev_difference": 421.7,
       "effort_count_cumulative": 342,
       "athlete_count": 334,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 342
+      "2026-03-01": 342
     }
   },
   "6758079": {
@@ -2135,10 +2135,10 @@
       "elev_difference": 75.5,
       "effort_count_cumulative": 241,
       "athlete_count": 138,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 241
+      "2026-03-01": 241
     }
   },
   "7204767": {
@@ -2150,12 +2150,12 @@
       "distance": 1771.7,
       "avg_grade": 9.9,
       "elev_difference": 175.7,
-      "effort_count_cumulative": 749,
-      "athlete_count": 470,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 750,
+      "athlete_count": 471,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 749
+      "2026-03-01": 750
     }
   },
   "7321324": {
@@ -2169,10 +2169,10 @@
       "elev_difference": 20.9,
       "effort_count_cumulative": 811,
       "athlete_count": 594,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 811
+      "2026-03-01": 811
     }
   },
   "7564875": {
@@ -2186,10 +2186,10 @@
       "elev_difference": 56.0,
       "effort_count_cumulative": 240,
       "athlete_count": 105,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 240
+      "2026-03-01": 240
     }
   },
   "7602971": {
@@ -2201,12 +2201,12 @@
       "distance": 2770.3,
       "avg_grade": -0.7,
       "elev_difference": 82.7,
-      "effort_count_cumulative": 4916,
-      "athlete_count": 1549,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 4919,
+      "athlete_count": 1550,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 4916
+      "2026-03-01": 4919
     }
   },
   "7682935": {
@@ -2218,12 +2218,12 @@
       "distance": 1175.3,
       "avg_grade": 7.8,
       "elev_difference": 99.7,
-      "effort_count_cumulative": 5720,
+      "effort_count_cumulative": 5722,
       "athlete_count": 1700,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 5720
+      "2026-03-01": 5722
     }
   },
   "7706447": {
@@ -2237,10 +2237,10 @@
       "elev_difference": 23.7,
       "effort_count_cumulative": 3248,
       "athlete_count": 1994,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3248
+      "2026-03-01": 3248
     }
   },
   "7902203": {
@@ -2254,10 +2254,10 @@
       "elev_difference": 66.0,
       "effort_count_cumulative": 9995,
       "athlete_count": 5370,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 9995
+      "2026-03-01": 9995
     }
   },
   "7903637": {
@@ -2269,12 +2269,12 @@
       "distance": 1870.8,
       "avg_grade": -6.5,
       "elev_difference": 121.7,
-      "effort_count_cumulative": 8655,
+      "effort_count_cumulative": 8657,
       "athlete_count": 3867,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 8655
+      "2026-03-01": 8657
     }
   },
   "7914932": {
@@ -2286,12 +2286,12 @@
       "distance": 944.1,
       "avg_grade": 1.6,
       "elev_difference": 24.7,
-      "effort_count_cumulative": 18734,
-      "athlete_count": 8036,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 18737,
+      "athlete_count": 8038,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 18734
+      "2026-03-01": 18737
     }
   },
   "8017123": {
@@ -2305,10 +2305,10 @@
       "elev_difference": 105.3,
       "effort_count_cumulative": 366,
       "athlete_count": 135,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 366
+      "2026-03-01": 366
     }
   },
   "8024693": {
@@ -2320,29 +2320,29 @@
       "distance": 5988.4,
       "avg_grade": -11.5,
       "elev_difference": 689.2,
-      "effort_count_cumulative": 860,
-      "athlete_count": 775,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 861,
+      "athlete_count": 776,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 860
+      "2026-03-01": 861
     }
   },
-  "8027954": {
+  "8097962": {
     "meta": {
-      "name": "Sądelska-Jaszczurówka DH",
+      "name": "Brzeziny zjazd",
       "activity_type": "hiking",
-      "lat": 49.28641,
-      "lng": 20.029562,
-      "distance": 3614.3,
-      "avg_grade": -3.5,
-      "elev_difference": 126.1,
-      "effort_count_cumulative": 20473,
-      "athlete_count": 8102,
-      "last_snapshot": "2026-02-28"
+      "lat": 49.286654,
+      "lng": 20.030447,
+      "distance": 2346.5,
+      "avg_grade": -4.3,
+      "elev_difference": 99.8,
+      "effort_count_cumulative": 24562,
+      "athlete_count": 9464,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 20473
+      "2026-03-01": 24562
     }
   },
   "8170789": {
@@ -2354,12 +2354,12 @@
       "distance": 4253.3,
       "avg_grade": 3.1,
       "elev_difference": 144.1,
-      "effort_count_cumulative": 24999,
-      "athlete_count": 10591,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 25001,
+      "athlete_count": 10593,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 24999
+      "2026-03-01": 25001
     }
   },
   "8220848": {
@@ -2373,10 +2373,10 @@
       "elev_difference": 66.8,
       "effort_count_cumulative": 2319,
       "athlete_count": 1136,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2319
+      "2026-03-01": 2319
     }
   },
   "9353795": {
@@ -2388,12 +2388,12 @@
       "distance": 1184.4,
       "avg_grade": -6.4,
       "elev_difference": 90.7,
-      "effort_count_cumulative": 10260,
+      "effort_count_cumulative": 10262,
       "athlete_count": 5600,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 10260
+      "2026-03-01": 10262
     }
   },
   "9384511": {
@@ -2405,12 +2405,12 @@
       "distance": 2688.2,
       "avg_grade": -6.0,
       "elev_difference": 162.1,
-      "effort_count_cumulative": 13517,
+      "effort_count_cumulative": 13519,
       "athlete_count": 5542,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 13517
+      "2026-03-01": 13519
     }
   },
   "9407986": {
@@ -2424,10 +2424,10 @@
       "elev_difference": 132.9,
       "effort_count_cumulative": 4017,
       "athlete_count": 2913,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 4017
+      "2026-03-01": 4017
     }
   },
   "9587272": {
@@ -2441,10 +2441,10 @@
       "elev_difference": 211.1,
       "effort_count_cumulative": 228,
       "athlete_count": 59,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 228
+      "2026-03-01": 228
     }
   },
   "9681769": {
@@ -2456,12 +2456,12 @@
       "distance": 255.9,
       "avg_grade": 4.1,
       "elev_difference": 10.4,
-      "effort_count_cumulative": 13645,
+      "effort_count_cumulative": 13648,
       "athlete_count": 3752,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 13645
+      "2026-03-01": 13648
     }
   },
   "9851991": {
@@ -2473,12 +2473,12 @@
       "distance": 409.7,
       "avg_grade": 9.2,
       "elev_difference": 37.5,
-      "effort_count_cumulative": 3331,
-      "athlete_count": 1466,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 3330,
+      "athlete_count": 1465,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3331
+      "2026-03-01": 3330
     }
   },
   "9888777": {
@@ -2490,12 +2490,12 @@
       "distance": 1162.8,
       "avg_grade": 5.5,
       "elev_difference": 63.7,
-      "effort_count_cumulative": 15541,
+      "effort_count_cumulative": 15543,
       "athlete_count": 8018,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 15541
+      "2026-03-01": 15543
     }
   },
   "9913699": {
@@ -2509,10 +2509,10 @@
       "elev_difference": 51.0,
       "effort_count_cumulative": 230,
       "athlete_count": 156,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 230
+      "2026-03-01": 230
     }
   },
   "9943509": {
@@ -2526,10 +2526,10 @@
       "elev_difference": 181.6,
       "effort_count_cumulative": 1767,
       "athlete_count": 1006,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1767
+      "2026-03-01": 1767
     }
   },
   "10039592": {
@@ -2543,10 +2543,10 @@
       "elev_difference": 195.9,
       "effort_count_cumulative": 543,
       "athlete_count": 204,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 543
+      "2026-03-01": 543
     }
   },
   "10044407": {
@@ -2560,10 +2560,10 @@
       "elev_difference": 172.0,
       "effort_count_cumulative": 193,
       "athlete_count": 165,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 193
+      "2026-03-01": 193
     }
   },
   "10045966": {
@@ -2575,12 +2575,12 @@
       "distance": 3441.2,
       "avg_grade": -3.8,
       "elev_difference": 131.9,
-      "effort_count_cumulative": 36115,
-      "athlete_count": 13223,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 36123,
+      "athlete_count": 13225,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 36115
+      "2026-03-01": 36123
     }
   },
   "10123765": {
@@ -2594,10 +2594,10 @@
       "elev_difference": 124.7,
       "effort_count_cumulative": 61,
       "athlete_count": 66,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 61
+      "2026-03-01": 61
     }
   },
   "10262598": {
@@ -2609,12 +2609,12 @@
       "distance": 483.4,
       "avg_grade": 5.0,
       "elev_difference": 24.1,
-      "effort_count_cumulative": 12516,
+      "effort_count_cumulative": 12522,
       "athlete_count": 5645,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 12516
+      "2026-03-01": 12522
     }
   },
   "10282554": {
@@ -2628,10 +2628,10 @@
       "elev_difference": 451.0,
       "effort_count_cumulative": 2854,
       "athlete_count": 1952,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2854
+      "2026-03-01": 2854
     }
   },
   "10311476": {
@@ -2645,10 +2645,10 @@
       "elev_difference": 61.2,
       "effort_count_cumulative": 8132,
       "athlete_count": 6579,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 8132
+      "2026-03-01": 8132
     }
   },
   "10418206": {
@@ -2662,10 +2662,10 @@
       "elev_difference": 34.9,
       "effort_count_cumulative": 888,
       "athlete_count": 686,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 888
+      "2026-03-01": 888
     }
   },
   "10774028": {
@@ -2677,12 +2677,12 @@
       "distance": 971.0,
       "avg_grade": -20.9,
       "elev_difference": 211.6,
-      "effort_count_cumulative": 129,
-      "athlete_count": 170,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 130,
+      "athlete_count": 171,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 129
+      "2026-03-01": 130
     }
   },
   "10774062": {
@@ -2696,10 +2696,10 @@
       "elev_difference": 560.8,
       "effort_count_cumulative": 27,
       "athlete_count": 39,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 27
+      "2026-03-01": 27
     }
   },
   "10791781": {
@@ -2713,10 +2713,10 @@
       "elev_difference": 518.0,
       "effort_count_cumulative": 210,
       "athlete_count": 197,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 210
+      "2026-03-01": 210
     }
   },
   "10822687": {
@@ -2730,10 +2730,10 @@
       "elev_difference": 104.3,
       "effort_count_cumulative": 164,
       "athlete_count": 147,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 164
+      "2026-03-01": 164
     }
   },
   "11112303": {
@@ -2745,12 +2745,12 @@
       "distance": 2085.8,
       "avg_grade": 6.0,
       "elev_difference": 131.4,
-      "effort_count_cumulative": 4113,
+      "effort_count_cumulative": 4114,
       "athlete_count": 1306,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 4113
+      "2026-03-01": 4114
     }
   },
   "11131517": {
@@ -2762,29 +2762,29 @@
       "distance": 1910.2,
       "avg_grade": 3.3,
       "elev_difference": 65.0,
-      "effort_count_cumulative": 1843,
+      "effort_count_cumulative": 1847,
       "athlete_count": 786,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1843
+      "2026-03-01": 1847
     }
   },
-  "11160871": {
+  "11191807": {
     "meta": {
-      "name": "Płazówka ",
+      "name": "Skorusówka Witów",
       "activity_type": "running",
-      "lat": 49.304203,
-      "lng": 19.851161,
-      "distance": 582.5,
-      "avg_grade": 25.1,
-      "elev_difference": 146.1,
-      "effort_count_cumulative": 189,
-      "athlete_count": 166,
-      "last_snapshot": "2026-02-28"
+      "lat": 49.310152,
+      "lng": 19.798472,
+      "distance": 4356.4,
+      "avg_grade": -6.5,
+      "elev_difference": 284.1,
+      "effort_count_cumulative": 83,
+      "athlete_count": 10,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 189
+      "2026-03-01": 83
     }
   },
   "11387905": {
@@ -2796,12 +2796,12 @@
       "distance": 439.5,
       "avg_grade": 11.0,
       "elev_difference": 48.4,
-      "effort_count_cumulative": 1318,
+      "effort_count_cumulative": 1320,
       "athlete_count": 523,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1318
+      "2026-03-01": 1320
     }
   },
   "11391021": {
@@ -2813,12 +2813,12 @@
       "distance": 2115.5,
       "avg_grade": -17.4,
       "elev_difference": 368.0,
-      "effort_count_cumulative": 2958,
-      "athlete_count": 1937,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 2960,
+      "athlete_count": 1938,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2958
+      "2026-03-01": 2960
     }
   },
   "11391147": {
@@ -2830,12 +2830,12 @@
       "distance": 2770.4,
       "avg_grade": -16.6,
       "elev_difference": 463.6,
-      "effort_count_cumulative": 1703,
-      "athlete_count": 1256,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 1705,
+      "athlete_count": 1258,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1703
+      "2026-03-01": 1705
     }
   },
   "11394687": {
@@ -2849,10 +2849,10 @@
       "elev_difference": 82.6,
       "effort_count_cumulative": 368,
       "athlete_count": 208,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 368
+      "2026-03-01": 368
     }
   },
   "11411664": {
@@ -2866,10 +2866,10 @@
       "elev_difference": 26.2,
       "effort_count_cumulative": 106,
       "athlete_count": 35,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 106
+      "2026-03-01": 106
     }
   },
   "11446460": {
@@ -2881,12 +2881,29 @@
       "distance": 2711.0,
       "avg_grade": 1.0,
       "elev_difference": 74.8,
-      "effort_count_cumulative": 4843,
-      "athlete_count": 1521,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 4846,
+      "athlete_count": 1522,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 4843
+      "2026-03-01": 4846
+    }
+  },
+  "11498656": {
+    "meta": {
+      "name": "Yellow route",
+      "activity_type": "running",
+      "lat": 49.272842,
+      "lng": 19.991458,
+      "distance": 1421.7,
+      "avg_grade": -4.3,
+      "elev_difference": 74.8,
+      "effort_count_cumulative": 2972,
+      "athlete_count": 1385,
+      "last_snapshot": "2026-03-01"
+    },
+    "series": {
+      "2026-03-01": 2972
     }
   },
   "11678104": {
@@ -2900,10 +2917,10 @@
       "elev_difference": 196.4,
       "effort_count_cumulative": 29,
       "athlete_count": 28,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 29
+      "2026-03-01": 29
     }
   },
   "12105999": {
@@ -2917,10 +2934,10 @@
       "elev_difference": 164.2,
       "effort_count_cumulative": 52,
       "athlete_count": 44,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 52
+      "2026-03-01": 52
     }
   },
   "12149953": {
@@ -2934,10 +2951,10 @@
       "elev_difference": 31.9,
       "effort_count_cumulative": 4250,
       "athlete_count": 2671,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 4250
+      "2026-03-01": 4250
     }
   },
   "12193564": {
@@ -2949,12 +2966,12 @@
       "distance": 123.6,
       "avg_grade": 11.1,
       "elev_difference": 13.7,
-      "effort_count_cumulative": 9391,
+      "effort_count_cumulative": 9393,
       "athlete_count": 4152,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 9391
+      "2026-03-01": 9393
     }
   },
   "12199464": {
@@ -2968,27 +2985,10 @@
       "elev_difference": 166.7,
       "effort_count_cumulative": 1380,
       "athlete_count": 914,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1380
-    }
-  },
-  "12260670": {
-    "meta": {
-      "name": "Wierchowa do granicy",
-      "activity_type": "running",
-      "lat": 49.343979,
-      "lng": 19.819864,
-      "distance": 2355.4,
-      "avg_grade": 7.0,
-      "elev_difference": 164.3,
-      "effort_count_cumulative": 178,
-      "athlete_count": 22,
-      "last_snapshot": "2026-02-28"
-    },
-    "series": {
-      "2026-02-28": 178
+      "2026-03-01": 1380
     }
   },
   "12260861": {
@@ -3002,10 +3002,10 @@
       "elev_difference": 164.3,
       "effort_count_cumulative": 188,
       "athlete_count": 26,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 188
+      "2026-03-01": 188
     }
   },
   "12261112": {
@@ -3019,10 +3019,10 @@
       "elev_difference": 26.7,
       "effort_count_cumulative": 261,
       "athlete_count": 198,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 261
+      "2026-03-01": 261
     }
   },
   "12322184": {
@@ -3034,12 +3034,12 @@
       "distance": 4019.9,
       "avg_grade": 0.0,
       "elev_difference": 22.6,
-      "effort_count_cumulative": 37003,
+      "effort_count_cumulative": 37007,
       "athlete_count": 12182,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 37003
+      "2026-03-01": 37007
     }
   },
   "12481030": {
@@ -3051,12 +3051,12 @@
       "distance": 1412.2,
       "avg_grade": 4.3,
       "elev_difference": 108.0,
-      "effort_count_cumulative": 5642,
+      "effort_count_cumulative": 5643,
       "athlete_count": 2183,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 5642
+      "2026-03-01": 5643
     }
   },
   "12487077": {
@@ -3068,12 +3068,12 @@
       "distance": 2021.5,
       "avg_grade": 17.7,
       "elev_difference": 359.8,
-      "effort_count_cumulative": 3743,
+      "effort_count_cumulative": 3744,
       "athlete_count": 2273,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3743
+      "2026-03-01": 3744
     }
   },
   "12493876": {
@@ -3087,10 +3087,10 @@
       "elev_difference": 211.2,
       "effort_count_cumulative": 92,
       "athlete_count": 98,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 92
+      "2026-03-01": 92
     }
   },
   "12568368": {
@@ -3102,12 +3102,12 @@
       "distance": 971.8,
       "avg_grade": 5.0,
       "elev_difference": 49.3,
-      "effort_count_cumulative": 15363,
-      "athlete_count": 7672,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 15368,
+      "athlete_count": 7674,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 15363
+      "2026-03-01": 15368
     }
   },
   "12588288": {
@@ -3121,10 +3121,10 @@
       "elev_difference": 297.0,
       "effort_count_cumulative": 380,
       "athlete_count": 341,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 380
+      "2026-03-01": 380
     }
   },
   "12625002": {
@@ -3138,10 +3138,10 @@
       "elev_difference": 633.3,
       "effort_count_cumulative": 627,
       "athlete_count": 531,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 627
+      "2026-03-01": 627
     }
   },
   "12632729": {
@@ -3153,12 +3153,12 @@
       "distance": 2230.3,
       "avg_grade": 5.0,
       "elev_difference": 112.7,
-      "effort_count_cumulative": 17220,
+      "effort_count_cumulative": 17221,
       "athlete_count": 7643,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 17220
+      "2026-03-01": 17221
     }
   },
   "12676332": {
@@ -3172,10 +3172,10 @@
       "elev_difference": 42.1,
       "effort_count_cumulative": 541,
       "athlete_count": 481,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 541
+      "2026-03-01": 541
     }
   },
   "12676351": {
@@ -3189,10 +3189,10 @@
       "elev_difference": 65.3,
       "effort_count_cumulative": 497,
       "athlete_count": 468,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 497
+      "2026-03-01": 497
     }
   },
   "12758123": {
@@ -3206,10 +3206,10 @@
       "elev_difference": 29.9,
       "effort_count_cumulative": 733,
       "athlete_count": 469,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 733
+      "2026-03-01": 733
     }
   },
   "12798313": {
@@ -3221,12 +3221,12 @@
       "distance": 504.2,
       "avg_grade": 3.6,
       "elev_difference": 18.2,
-      "effort_count_cumulative": 41954,
-      "athlete_count": 13077,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 41962,
+      "athlete_count": 13079,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 41954
+      "2026-03-01": 41962
     }
   },
   "12812763": {
@@ -3240,10 +3240,10 @@
       "elev_difference": 215.2,
       "effort_count_cumulative": 384,
       "athlete_count": 329,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 384
+      "2026-03-01": 384
     }
   },
   "12816177": {
@@ -3255,12 +3255,12 @@
       "distance": 1340.0,
       "avg_grade": 11.4,
       "elev_difference": 152.5,
-      "effort_count_cumulative": 7216,
+      "effort_count_cumulative": 7215,
       "athlete_count": 3473,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 7216
+      "2026-03-01": 7215
     }
   },
   "12911737": {
@@ -3274,10 +3274,10 @@
       "elev_difference": 156.2,
       "effort_count_cumulative": 8167,
       "athlete_count": 3249,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 8167
+      "2026-03-01": 8167
     }
   },
   "12989833": {
@@ -3289,12 +3289,12 @@
       "distance": 1246.9,
       "avg_grade": 7.7,
       "elev_difference": 96.2,
-      "effort_count_cumulative": 2348,
+      "effort_count_cumulative": 2350,
       "athlete_count": 675,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2348
+      "2026-03-01": 2350
     }
   },
   "12996383": {
@@ -3308,10 +3308,10 @@
       "elev_difference": 699.0,
       "effort_count_cumulative": 1156,
       "athlete_count": 847,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1156
+      "2026-03-01": 1156
     }
   },
   "13054234": {
@@ -3325,10 +3325,10 @@
       "elev_difference": 51.9,
       "effort_count_cumulative": 925,
       "athlete_count": 266,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 925
+      "2026-03-01": 925
     }
   },
   "13187843": {
@@ -3340,12 +3340,12 @@
       "distance": 3665.2,
       "avg_grade": 3.7,
       "elev_difference": 136.3,
-      "effort_count_cumulative": 25394,
+      "effort_count_cumulative": 25396,
       "athlete_count": 9372,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 25394
+      "2026-03-01": 25396
     }
   },
   "13205454": {
@@ -3357,12 +3357,12 @@
       "distance": 1932.0,
       "avg_grade": -6.4,
       "elev_difference": 124.5,
-      "effort_count_cumulative": 6704,
-      "athlete_count": 3388,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 6705,
+      "athlete_count": 3389,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 6704
+      "2026-03-01": 6705
     }
   },
   "13284869": {
@@ -3374,12 +3374,12 @@
       "distance": 2188.9,
       "avg_grade": -0.1,
       "elev_difference": 4.1,
-      "effort_count_cumulative": 18619,
-      "athlete_count": 2993,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 18623,
+      "athlete_count": 2994,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 18619
+      "2026-03-01": 18623
     }
   },
   "13294571": {
@@ -3393,10 +3393,10 @@
       "elev_difference": 83.0,
       "effort_count_cumulative": 9090,
       "athlete_count": 3684,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 9090
+      "2026-03-01": 9090
     }
   },
   "13582585": {
@@ -3410,10 +3410,10 @@
       "elev_difference": 34.4,
       "effort_count_cumulative": 405,
       "athlete_count": 131,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 405
+      "2026-03-01": 405
     }
   },
   "13582695": {
@@ -3427,10 +3427,10 @@
       "elev_difference": 115.0,
       "effort_count_cumulative": 166,
       "athlete_count": 47,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 166
+      "2026-03-01": 166
     }
   },
   "13723232": {
@@ -3442,12 +3442,12 @@
       "distance": 535.9,
       "avg_grade": 2.8,
       "elev_difference": 14.8,
-      "effort_count_cumulative": 22523,
+      "effort_count_cumulative": 22525,
       "athlete_count": 8812,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 22523
+      "2026-03-01": 22525
     }
   },
   "13847239": {
@@ -3461,10 +3461,10 @@
       "elev_difference": 401.0,
       "effort_count_cumulative": 74,
       "athlete_count": 123,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 74
+      "2026-03-01": 74
     }
   },
   "14818286": {
@@ -3476,12 +3476,12 @@
       "distance": 1886.1,
       "avg_grade": 6.2,
       "elev_difference": 117.0,
-      "effort_count_cumulative": 6726,
-      "athlete_count": 3222,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 6728,
+      "athlete_count": 3223,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 6726
+      "2026-03-01": 6728
     }
   },
   "14931881": {
@@ -3493,12 +3493,12 @@
       "distance": 7482.3,
       "avg_grade": -2.5,
       "elev_difference": 192.0,
-      "effort_count_cumulative": 13221,
-      "athlete_count": 6885,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 13225,
+      "athlete_count": 6886,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 13221
+      "2026-03-01": 13225
     }
   },
   "14965463": {
@@ -3512,10 +3512,10 @@
       "elev_difference": 158.8,
       "effort_count_cumulative": 203,
       "athlete_count": 43,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 203
+      "2026-03-01": 203
     }
   },
   "14971716": {
@@ -3529,10 +3529,10 @@
       "elev_difference": 207.0,
       "effort_count_cumulative": 2132,
       "athlete_count": 1392,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2132
+      "2026-03-01": 2132
     }
   },
   "14987207": {
@@ -3546,10 +3546,10 @@
       "elev_difference": 93.0,
       "effort_count_cumulative": 14168,
       "athlete_count": 6746,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 14168
+      "2026-03-01": 14168
     }
   },
   "14997932": {
@@ -3561,12 +3561,12 @@
       "distance": 769.5,
       "avg_grade": 32.5,
       "elev_difference": 250.3,
-      "effort_count_cumulative": 1223,
+      "effort_count_cumulative": 1222,
       "athlete_count": 1037,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1223
+      "2026-03-01": 1222
     }
   },
   "14998507": {
@@ -3578,12 +3578,12 @@
       "distance": 2866.3,
       "avg_grade": -4.9,
       "elev_difference": 151.6,
-      "effort_count_cumulative": 18836,
-      "athlete_count": 8996,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 18838,
+      "athlete_count": 8998,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 18836
+      "2026-03-01": 18838
     }
   },
   "15014333": {
@@ -3595,12 +3595,12 @@
       "distance": 395.5,
       "avg_grade": 18.3,
       "elev_difference": 72.4,
-      "effort_count_cumulative": 3374,
+      "effort_count_cumulative": 3375,
       "athlete_count": 1374,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3374
+      "2026-03-01": 3375
     }
   },
   "15135040": {
@@ -3614,10 +3614,10 @@
       "elev_difference": 43.4,
       "effort_count_cumulative": 333,
       "athlete_count": 108,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 333
+      "2026-03-01": 333
     }
   },
   "15171763": {
@@ -3629,12 +3629,12 @@
       "distance": 3578.8,
       "avg_grade": 5.0,
       "elev_difference": 189.5,
-      "effort_count_cumulative": 10804,
-      "athlete_count": 5350,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 10807,
+      "athlete_count": 5352,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 10804
+      "2026-03-01": 10807
     }
   },
   "15252170": {
@@ -3646,12 +3646,12 @@
       "distance": 732.9,
       "avg_grade": -2.0,
       "elev_difference": 15.6,
-      "effort_count_cumulative": 14995,
-      "athlete_count": 7701,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 15000,
+      "athlete_count": 7702,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 14995
+      "2026-03-01": 15000
     }
   },
   "15286377": {
@@ -3665,10 +3665,10 @@
       "elev_difference": 355.8,
       "effort_count_cumulative": 1380,
       "athlete_count": 1299,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1380
+      "2026-03-01": 1380
     }
   },
   "15444256": {
@@ -3682,10 +3682,10 @@
       "elev_difference": 62.0,
       "effort_count_cumulative": 59,
       "athlete_count": 40,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 59
+      "2026-03-01": 59
     }
   },
   "15477305": {
@@ -3699,10 +3699,10 @@
       "elev_difference": 75.7,
       "effort_count_cumulative": 160,
       "athlete_count": 29,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 160
+      "2026-03-01": 160
     }
   },
   "15525212": {
@@ -3716,10 +3716,10 @@
       "elev_difference": 131.9,
       "effort_count_cumulative": 271,
       "athlete_count": 200,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 271
+      "2026-03-01": 271
     }
   },
   "15525240": {
@@ -3731,12 +3731,12 @@
       "distance": 610.8,
       "avg_grade": 0.8,
       "elev_difference": 9.5,
-      "effort_count_cumulative": 10129,
-      "athlete_count": 1888,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 10133,
+      "athlete_count": 1889,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 10129
+      "2026-03-01": 10133
     }
   },
   "15591825": {
@@ -3750,10 +3750,10 @@
       "elev_difference": 162.7,
       "effort_count_cumulative": 1859,
       "athlete_count": 1315,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1859
+      "2026-03-01": 1859
     }
   },
   "15613469": {
@@ -3767,10 +3767,10 @@
       "elev_difference": 175.0,
       "effort_count_cumulative": 4110,
       "athlete_count": 2617,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 4110
+      "2026-03-01": 4110
     }
   },
   "15613483": {
@@ -3784,10 +3784,10 @@
       "elev_difference": 275.0,
       "effort_count_cumulative": 2881,
       "athlete_count": 1803,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2881
+      "2026-03-01": 2881
     }
   },
   "15618616": {
@@ -3801,10 +3801,10 @@
       "elev_difference": 196.0,
       "effort_count_cumulative": 565,
       "athlete_count": 321,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 565
+      "2026-03-01": 565
     }
   },
   "15631655": {
@@ -3818,10 +3818,10 @@
       "elev_difference": 198.1,
       "effort_count_cumulative": 494,
       "athlete_count": 407,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 494
+      "2026-03-01": 494
     }
   },
   "15631677": {
@@ -3835,10 +3835,10 @@
       "elev_difference": 209.0,
       "effort_count_cumulative": 324,
       "athlete_count": 216,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 324
+      "2026-03-01": 324
     }
   },
   "15638080": {
@@ -3852,10 +3852,10 @@
       "elev_difference": 68.4,
       "effort_count_cumulative": 300,
       "athlete_count": 216,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 300
+      "2026-03-01": 300
     }
   },
   "15650954": {
@@ -3869,10 +3869,10 @@
       "elev_difference": 268.0,
       "effort_count_cumulative": 20323,
       "athlete_count": 8724,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 20323
+      "2026-03-01": 20323
     }
   },
   "15651091": {
@@ -3886,10 +3886,10 @@
       "elev_difference": 49.6,
       "effort_count_cumulative": 7286,
       "athlete_count": 3528,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 7286
+      "2026-03-01": 7286
     }
   },
   "15681854": {
@@ -3901,12 +3901,12 @@
       "distance": 2470.0,
       "avg_grade": 3.8,
       "elev_difference": 94.4,
-      "effort_count_cumulative": 3337,
+      "effort_count_cumulative": 3340,
       "athlete_count": 813,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3337
+      "2026-03-01": 3340
     }
   },
   "15691493": {
@@ -3920,10 +3920,10 @@
       "elev_difference": 57.1,
       "effort_count_cumulative": 8142,
       "athlete_count": 6593,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 8142
+      "2026-03-01": 8142
     }
   },
   "15691675": {
@@ -3937,10 +3937,10 @@
       "elev_difference": 99.4,
       "effort_count_cumulative": 5074,
       "athlete_count": 2064,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 5074
+      "2026-03-01": 5074
     }
   },
   "15738379": {
@@ -3952,12 +3952,12 @@
       "distance": 1026.0,
       "avg_grade": 3.3,
       "elev_difference": 34.0,
-      "effort_count_cumulative": 39865,
-      "athlete_count": 13124,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 39871,
+      "athlete_count": 13125,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 39865
+      "2026-03-01": 39871
     }
   },
   "15740257": {
@@ -3969,12 +3969,12 @@
       "distance": 301.9,
       "avg_grade": -2.8,
       "elev_difference": 13.7,
-      "effort_count_cumulative": 5275,
-      "athlete_count": 1562,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 5276,
+      "athlete_count": 1563,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 5275
+      "2026-03-01": 5276
     }
   },
   "15740273": {
@@ -3986,12 +3986,12 @@
       "distance": 2868.1,
       "avg_grade": 1.3,
       "elev_difference": 36.6,
-      "effort_count_cumulative": 10994,
-      "athlete_count": 5119,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 10995,
+      "athlete_count": 5121,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 10994
+      "2026-03-01": 10995
     }
   },
   "15853613": {
@@ -4005,10 +4005,10 @@
       "elev_difference": 19.2,
       "effort_count_cumulative": 923,
       "athlete_count": 690,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 923
+      "2026-03-01": 923
     }
   },
   "15883464": {
@@ -4020,12 +4020,12 @@
       "distance": 3134.0,
       "avg_grade": 4.7,
       "elev_difference": 148.1,
-      "effort_count_cumulative": 18361,
-      "athlete_count": 4787,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 18363,
+      "athlete_count": 4789,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 18361
+      "2026-03-01": 18363
     }
   },
   "15917485": {
@@ -4039,10 +4039,10 @@
       "elev_difference": 74.5,
       "effort_count_cumulative": 3771,
       "athlete_count": 483,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3771
+      "2026-03-01": 3771
     }
   },
   "15931713": {
@@ -4054,12 +4054,12 @@
       "distance": 1227.8,
       "avg_grade": 0.7,
       "elev_difference": 9.0,
-      "effort_count_cumulative": 48969,
+      "effort_count_cumulative": 48973,
       "athlete_count": 14006,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 48969
+      "2026-03-01": 48973
     }
   },
   "15973733": {
@@ -4073,10 +4073,10 @@
       "elev_difference": 233.5,
       "effort_count_cumulative": 240,
       "athlete_count": 121,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 240
+      "2026-03-01": 240
     }
   },
   "15986218": {
@@ -4090,10 +4090,10 @@
       "elev_difference": 271.0,
       "effort_count_cumulative": 142,
       "athlete_count": 129,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 142
+      "2026-03-01": 142
     }
   },
   "15997776": {
@@ -4107,10 +4107,10 @@
       "elev_difference": 64.3,
       "effort_count_cumulative": 1467,
       "athlete_count": 958,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1467
+      "2026-03-01": 1467
     }
   },
   "16010343": {
@@ -4122,12 +4122,12 @@
       "distance": 1127.0,
       "avg_grade": 2.1,
       "elev_difference": 23.7,
-      "effort_count_cumulative": 15571,
+      "effort_count_cumulative": 15576,
       "athlete_count": 2172,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 15571
+      "2026-03-01": 15576
     }
   },
   "16027912": {
@@ -4139,12 +4139,12 @@
       "distance": 644.7,
       "avg_grade": -1.3,
       "elev_difference": 14.0,
-      "effort_count_cumulative": 14425,
-      "athlete_count": 2228,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 14435,
+      "athlete_count": 2229,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 14425
+      "2026-03-01": 14435
     }
   },
   "16032858": {
@@ -4158,10 +4158,10 @@
       "elev_difference": 715.8,
       "effort_count_cumulative": 251,
       "athlete_count": 157,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 251
+      "2026-03-01": 251
     }
   },
   "16042040": {
@@ -4173,12 +4173,12 @@
       "distance": 1028.1,
       "avg_grade": -0.5,
       "elev_difference": 23.0,
-      "effort_count_cumulative": 6075,
+      "effort_count_cumulative": 6077,
       "athlete_count": 1797,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 6075
+      "2026-03-01": 6077
     }
   },
   "16116227": {
@@ -4192,10 +4192,10 @@
       "elev_difference": 29.1,
       "effort_count_cumulative": 225,
       "athlete_count": 106,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 225
+      "2026-03-01": 225
     }
   },
   "16118860": {
@@ -4209,10 +4209,10 @@
       "elev_difference": 23.0,
       "effort_count_cumulative": 181,
       "athlete_count": 94,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 181
+      "2026-03-01": 181
     }
   },
   "16152567": {
@@ -4226,10 +4226,10 @@
       "elev_difference": 186.0,
       "effort_count_cumulative": 13778,
       "athlete_count": 6717,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 13778
+      "2026-03-01": 13778
     }
   },
   "16184222": {
@@ -4241,12 +4241,12 @@
       "distance": 361.9,
       "avg_grade": 5.0,
       "elev_difference": 18.2,
-      "effort_count_cumulative": 10903,
-      "athlete_count": 3666,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 10902,
+      "athlete_count": 3664,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 10903
+      "2026-03-01": 10902
     }
   },
   "16363226": {
@@ -4260,10 +4260,10 @@
       "elev_difference": 109.0,
       "effort_count_cumulative": 124,
       "athlete_count": 36,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 124
+      "2026-03-01": 124
     }
   },
   "16502308": {
@@ -4275,12 +4275,12 @@
       "distance": 799.5,
       "avg_grade": 32.1,
       "elev_difference": 256.4,
-      "effort_count_cumulative": 7327,
-      "athlete_count": 2740,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 7330,
+      "athlete_count": 2741,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 7327
+      "2026-03-01": 7330
     }
   },
   "16565208": {
@@ -4293,11 +4293,11 @@
       "avg_grade": -7.5,
       "elev_difference": 236.3,
       "effort_count_cumulative": 13284,
-      "athlete_count": 7485,
-      "last_snapshot": "2026-02-28"
+      "athlete_count": 7484,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 13284
+      "2026-03-01": 13284
     }
   },
   "16777100": {
@@ -4311,10 +4311,10 @@
       "elev_difference": 934.2,
       "effort_count_cumulative": 188,
       "athlete_count": 208,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 188
+      "2026-03-01": 188
     }
   },
   "16892793": {
@@ -4328,10 +4328,10 @@
       "elev_difference": 35.0,
       "effort_count_cumulative": 78,
       "athlete_count": 14,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 78
+      "2026-03-01": 78
     }
   },
   "17016028": {
@@ -4343,12 +4343,12 @@
       "distance": 418.0,
       "avg_grade": 11.1,
       "elev_difference": 46.2,
-      "effort_count_cumulative": 1218,
+      "effort_count_cumulative": 1219,
       "athlete_count": 454,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1218
+      "2026-03-01": 1219
     }
   },
   "17016035": {
@@ -4360,12 +4360,12 @@
       "distance": 1114.0,
       "avg_grade": 3.2,
       "elev_difference": 38.0,
-      "effort_count_cumulative": 5555,
+      "effort_count_cumulative": 5558,
       "athlete_count": 3326,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 5555
+      "2026-03-01": 5558
     }
   },
   "17409333": {
@@ -4379,10 +4379,10 @@
       "elev_difference": 65.8,
       "effort_count_cumulative": 964,
       "athlete_count": 669,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 964
+      "2026-03-01": 964
     }
   },
   "17637995": {
@@ -4394,12 +4394,12 @@
       "distance": 565.9,
       "avg_grade": 3.2,
       "elev_difference": 18.3,
-      "effort_count_cumulative": 10910,
-      "athlete_count": 2122,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 10916,
+      "athlete_count": 2123,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 10910
+      "2026-03-01": 10916
     }
   },
   "17660180": {
@@ -4413,10 +4413,10 @@
       "elev_difference": 4.2,
       "effort_count_cumulative": 66,
       "athlete_count": 28,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 66
+      "2026-03-01": 66
     }
   },
   "17717379": {
@@ -4428,12 +4428,12 @@
       "distance": 310.2,
       "avg_grade": 4.6,
       "elev_difference": 14.2,
-      "effort_count_cumulative": 12642,
+      "effort_count_cumulative": 12643,
       "athlete_count": 5673,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 12642
+      "2026-03-01": 12643
     }
   },
   "17718464": {
@@ -4445,12 +4445,12 @@
       "distance": 347.5,
       "avg_grade": 2.9,
       "elev_difference": 11.8,
-      "effort_count_cumulative": 11835,
+      "effort_count_cumulative": 11837,
       "athlete_count": 5134,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 11835
+      "2026-03-01": 11837
     }
   },
   "17734748": {
@@ -4462,12 +4462,12 @@
       "distance": 4598.5,
       "avg_grade": -14.0,
       "elev_difference": 646.0,
-      "effort_count_cumulative": 2369,
-      "athlete_count": 1642,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 2370,
+      "athlete_count": 1643,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2369
+      "2026-03-01": 2370
     }
   },
   "17791701": {
@@ -4479,12 +4479,12 @@
       "distance": 2300.3,
       "avg_grade": -1.8,
       "elev_difference": 51.2,
-      "effort_count_cumulative": 38776,
-      "athlete_count": 13009,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 38787,
+      "athlete_count": 13011,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 38776
+      "2026-03-01": 38787
     }
   },
   "17810104": {
@@ -4497,11 +4497,11 @@
       "avg_grade": -22.8,
       "elev_difference": 511.7,
       "effort_count_cumulative": 1906,
-      "athlete_count": 1302,
-      "last_snapshot": "2026-02-28"
+      "athlete_count": 1303,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1906
+      "2026-03-01": 1906
     }
   },
   "17838591": {
@@ -4513,12 +4513,12 @@
       "distance": 1015.0,
       "avg_grade": 0.4,
       "elev_difference": 22.3,
-      "effort_count_cumulative": 31063,
-      "athlete_count": 5638,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 31071,
+      "athlete_count": 5640,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 31063
+      "2026-03-01": 31071
     }
   },
   "17846583": {
@@ -4532,10 +4532,10 @@
       "elev_difference": 374.8,
       "effort_count_cumulative": 2893,
       "athlete_count": 1939,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2893
+      "2026-03-01": 2893
     }
   },
   "17987984": {
@@ -4549,10 +4549,10 @@
       "elev_difference": 142.9,
       "effort_count_cumulative": 4688,
       "athlete_count": 3601,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 4688
+      "2026-03-01": 4688
     }
   },
   "18000258": {
@@ -4564,12 +4564,12 @@
       "distance": 218.0,
       "avg_grade": 19.7,
       "elev_difference": 43.4,
-      "effort_count_cumulative": 1330,
-      "athlete_count": 967,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 1331,
+      "athlete_count": 968,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1330
+      "2026-03-01": 1331
     }
   },
   "18031833": {
@@ -4581,12 +4581,29 @@
       "distance": 913.7,
       "avg_grade": 4.4,
       "elev_difference": 40.6,
-      "effort_count_cumulative": 8319,
+      "effort_count_cumulative": 8320,
       "athlete_count": 3923,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 8319
+      "2026-03-01": 8320
+    }
+  },
+  "18072575": {
+    "meta": {
+      "name": "KingNet Pod kościół w Kościelisku short",
+      "activity_type": "hiking",
+      "lat": 49.291918,
+      "lng": 19.897182,
+      "distance": 603.5,
+      "avg_grade": 2.6,
+      "elev_difference": 19.8,
+      "effort_count_cumulative": 14342,
+      "athlete_count": 5032,
+      "last_snapshot": "2026-03-01"
+    },
+    "series": {
+      "2026-03-01": 14342
     }
   },
   "18147470": {
@@ -4600,10 +4617,10 @@
       "elev_difference": 232.4,
       "effort_count_cumulative": 926,
       "athlete_count": 398,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 926
+      "2026-03-01": 926
     }
   },
   "18148542": {
@@ -4617,10 +4634,10 @@
       "elev_difference": 536.4,
       "effort_count_cumulative": 821,
       "athlete_count": 790,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 821
+      "2026-03-01": 821
     }
   },
   "18151850": {
@@ -4634,10 +4651,10 @@
       "elev_difference": 10.2,
       "effort_count_cumulative": 392,
       "athlete_count": 85,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 392
+      "2026-03-01": 392
     }
   },
   "18152603": {
@@ -4649,12 +4666,12 @@
       "distance": 313.5,
       "avg_grade": 9.3,
       "elev_difference": 29.1,
-      "effort_count_cumulative": 13625,
-      "athlete_count": 5575,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 13629,
+      "athlete_count": 5576,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 13625
+      "2026-03-01": 13629
     }
   },
   "18184531": {
@@ -4666,29 +4683,12 @@
       "distance": 1964.0,
       "avg_grade": -20.5,
       "elev_difference": 403.0,
-      "effort_count_cumulative": 1577,
-      "athlete_count": 1158,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 1578,
+      "athlete_count": 1159,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1577
-    }
-  },
-  "18185022": {
-    "meta": {
-      "name": "Podrohacsky fast climb - reverse",
-      "activity_type": "hiking",
-      "lat": 49.27398,
-      "lng": 19.643632,
-      "distance": 782.8,
-      "avg_grade": 4.6,
-      "elev_difference": 36.2,
-      "effort_count_cumulative": 15279,
-      "athlete_count": 7365,
-      "last_snapshot": "2026-02-28"
-    },
-    "series": {
-      "2026-02-28": 15279
+      "2026-03-01": 1578
     }
   },
   "18228569": {
@@ -4700,12 +4700,12 @@
       "distance": 5389.0,
       "avg_grade": 5.0,
       "elev_difference": 271.1,
-      "effort_count_cumulative": 12519,
+      "effort_count_cumulative": 12520,
       "athlete_count": 5801,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 12519
+      "2026-03-01": 12520
     }
   },
   "18234034": {
@@ -4719,10 +4719,10 @@
       "elev_difference": 84.2,
       "effort_count_cumulative": 742,
       "athlete_count": 501,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 742
+      "2026-03-01": 742
     }
   },
   "18234068": {
@@ -4736,10 +4736,10 @@
       "elev_difference": 66.8,
       "effort_count_cumulative": 1030,
       "athlete_count": 673,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1030
+      "2026-03-01": 1030
     }
   },
   "18244892": {
@@ -4751,12 +4751,12 @@
       "distance": 239.9,
       "avg_grade": 30.3,
       "elev_difference": 72.6,
-      "effort_count_cumulative": 2039,
+      "effort_count_cumulative": 2040,
       "athlete_count": 990,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2039
+      "2026-03-01": 2040
     }
   },
   "18273200": {
@@ -4768,12 +4768,12 @@
       "distance": 1823.9,
       "avg_grade": 5.9,
       "elev_difference": 107.1,
-      "effort_count_cumulative": 15351,
-      "athlete_count": 7350,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 15357,
+      "athlete_count": 7351,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 15351
+      "2026-03-01": 15357
     }
   },
   "18373184": {
@@ -4787,10 +4787,10 @@
       "elev_difference": 175.4,
       "effort_count_cumulative": 2455,
       "athlete_count": 1878,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2455
+      "2026-03-01": 2455
     }
   },
   "18380094": {
@@ -4804,10 +4804,10 @@
       "elev_difference": 623.0,
       "effort_count_cumulative": 238,
       "athlete_count": 193,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 238
+      "2026-03-01": 238
     }
   },
   "18416002": {
@@ -4819,12 +4819,12 @@
       "distance": 1245.8,
       "avg_grade": 7.1,
       "elev_difference": 88.2,
-      "effort_count_cumulative": 12670,
+      "effort_count_cumulative": 12676,
       "athlete_count": 5785,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 12670
+      "2026-03-01": 12676
     }
   },
   "18456649": {
@@ -4838,10 +4838,10 @@
       "elev_difference": 275.0,
       "effort_count_cumulative": 1693,
       "athlete_count": 1496,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1693
+      "2026-03-01": 1693
     }
   },
   "18469140": {
@@ -4855,10 +4855,10 @@
       "elev_difference": 423.8,
       "effort_count_cumulative": 1415,
       "athlete_count": 1050,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1415
+      "2026-03-01": 1415
     }
   },
   "18474460": {
@@ -4872,10 +4872,10 @@
       "elev_difference": 727.6,
       "effort_count_cumulative": 765,
       "athlete_count": 552,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 765
+      "2026-03-01": 765
     }
   },
   "18529605": {
@@ -4887,12 +4887,12 @@
       "distance": 561.9,
       "avg_grade": -8.7,
       "elev_difference": 48.7,
-      "effort_count_cumulative": 3968,
-      "athlete_count": 859,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 3971,
+      "athlete_count": 860,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3968
+      "2026-03-01": 3971
     }
   },
   "18549765": {
@@ -4904,12 +4904,12 @@
       "distance": 1209.7,
       "avg_grade": -2.0,
       "elev_difference": 30.6,
-      "effort_count_cumulative": 16936,
+      "effort_count_cumulative": 16938,
       "athlete_count": 7241,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 16936
+      "2026-03-01": 16938
     }
   },
   "18580354": {
@@ -4921,12 +4921,12 @@
       "distance": 3408.2,
       "avg_grade": 4.4,
       "elev_difference": 151.8,
-      "effort_count_cumulative": 23877,
+      "effort_count_cumulative": 23878,
       "athlete_count": 9320,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 23877
+      "2026-03-01": 23878
     }
   },
   "18613057": {
@@ -4939,11 +4939,11 @@
       "avg_grade": -5.3,
       "elev_difference": 41.7,
       "effort_count_cumulative": 20189,
-      "athlete_count": 9594,
-      "last_snapshot": "2026-02-28"
+      "athlete_count": 9597,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 20189
+      "2026-03-01": 20189
     }
   },
   "18652419": {
@@ -4955,12 +4955,12 @@
       "distance": 534.7,
       "avg_grade": 6.5,
       "elev_difference": 34.5,
-      "effort_count_cumulative": 16098,
+      "effort_count_cumulative": 16099,
       "athlete_count": 8470,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 16098
+      "2026-03-01": 16099
     }
   },
   "18664473": {
@@ -4974,10 +4974,10 @@
       "elev_difference": 593.8,
       "effort_count_cumulative": 549,
       "athlete_count": 536,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 549
+      "2026-03-01": 549
     }
   },
   "18689648": {
@@ -4989,12 +4989,12 @@
       "distance": 1505.1,
       "avg_grade": 6.5,
       "elev_difference": 97.6,
-      "effort_count_cumulative": 9256,
+      "effort_count_cumulative": 9257,
       "athlete_count": 4679,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 9256
+      "2026-03-01": 9257
     }
   },
   "18693489": {
@@ -5008,10 +5008,10 @@
       "elev_difference": 266.8,
       "effort_count_cumulative": 388,
       "athlete_count": 116,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 388
+      "2026-03-01": 388
     }
   },
   "18699121": {
@@ -5025,10 +5025,10 @@
       "elev_difference": 26.4,
       "effort_count_cumulative": 21112,
       "athlete_count": 8384,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 21112
+      "2026-03-01": 21112
     }
   },
   "18722401": {
@@ -5040,12 +5040,12 @@
       "distance": 474.4,
       "avg_grade": 6.3,
       "elev_difference": 29.8,
-      "effort_count_cumulative": 9016,
+      "effort_count_cumulative": 9017,
       "athlete_count": 4385,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 9016
+      "2026-03-01": 9017
     }
   },
   "18731953": {
@@ -5057,12 +5057,12 @@
       "distance": 513.3,
       "avg_grade": 4.9,
       "elev_difference": 25.4,
-      "effort_count_cumulative": 22360,
+      "effort_count_cumulative": 22362,
       "athlete_count": 6817,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 22360
+      "2026-03-01": 22362
     }
   },
   "18917470": {
@@ -5074,12 +5074,12 @@
       "distance": 857.5,
       "avg_grade": 5.5,
       "elev_difference": 46.8,
-      "effort_count_cumulative": 15572,
+      "effort_count_cumulative": 15574,
       "athlete_count": 3062,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 15572
+      "2026-03-01": 15574
     }
   },
   "18925074": {
@@ -5091,12 +5091,12 @@
       "distance": 2122.3,
       "avg_grade": 22.9,
       "elev_difference": 486.7,
-      "effort_count_cumulative": 1229,
-      "athlete_count": 741,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 1233,
+      "athlete_count": 742,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1229
+      "2026-03-01": 1233
     }
   },
   "18925504": {
@@ -5110,10 +5110,10 @@
       "elev_difference": 196.3,
       "effort_count_cumulative": 974,
       "athlete_count": 690,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 974
+      "2026-03-01": 974
     }
   },
   "18932027": {
@@ -5127,10 +5127,10 @@
       "elev_difference": 226.4,
       "effort_count_cumulative": 708,
       "athlete_count": 525,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 708
+      "2026-03-01": 708
     }
   },
   "18934666": {
@@ -5144,10 +5144,10 @@
       "elev_difference": 382.0,
       "effort_count_cumulative": 958,
       "athlete_count": 909,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 958
+      "2026-03-01": 958
     }
   },
   "18938702": {
@@ -5161,10 +5161,10 @@
       "elev_difference": 380.0,
       "effort_count_cumulative": 273,
       "athlete_count": 158,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 273
+      "2026-03-01": 273
     }
   },
   "18954322": {
@@ -5178,10 +5178,10 @@
       "elev_difference": 85.1,
       "effort_count_cumulative": 832,
       "athlete_count": 654,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 832
+      "2026-03-01": 832
     }
   },
   "19072540": {
@@ -5193,12 +5193,12 @@
       "distance": 2263.8,
       "avg_grade": 7.1,
       "elev_difference": 161.6,
-      "effort_count_cumulative": 1825,
+      "effort_count_cumulative": 1826,
       "athlete_count": 1060,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1825
+      "2026-03-01": 1826
     }
   },
   "19241019": {
@@ -5210,12 +5210,12 @@
       "distance": 1608.2,
       "avg_grade": -7.8,
       "elev_difference": 126.2,
-      "effort_count_cumulative": 333,
+      "effort_count_cumulative": 331,
       "athlete_count": 367,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 333
+      "2026-03-01": 331
     }
   },
   "19269112": {
@@ -5227,12 +5227,12 @@
       "distance": 2978.3,
       "avg_grade": 3.0,
       "elev_difference": 90.4,
-      "effort_count_cumulative": 13223,
+      "effort_count_cumulative": 13224,
       "athlete_count": 4481,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 13223
+      "2026-03-01": 13224
     }
   },
   "19275373": {
@@ -5244,12 +5244,12 @@
       "distance": 657.2,
       "avg_grade": 0.0,
       "elev_difference": 0.0,
-      "effort_count_cumulative": 13590,
+      "effort_count_cumulative": 13593,
       "athlete_count": 4781,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 13590
+      "2026-03-01": 13593
     }
   },
   "19562794": {
@@ -5263,10 +5263,10 @@
       "elev_difference": 209.8,
       "effort_count_cumulative": 990,
       "athlete_count": 678,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 990
+      "2026-03-01": 990
     }
   },
   "19562994": {
@@ -5278,12 +5278,12 @@
       "distance": 1621.7,
       "avg_grade": 8.3,
       "elev_difference": 137.3,
-      "effort_count_cumulative": 5294,
-      "athlete_count": 3500,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 5296,
+      "athlete_count": 3501,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 5294
+      "2026-03-01": 5296
     }
   },
   "19776792": {
@@ -5297,10 +5297,10 @@
       "elev_difference": 143.1,
       "effort_count_cumulative": 491,
       "athlete_count": 405,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 491
+      "2026-03-01": 491
     }
   },
   "19860186": {
@@ -5314,10 +5314,10 @@
       "elev_difference": 674.7,
       "effort_count_cumulative": 537,
       "athlete_count": 321,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 537
+      "2026-03-01": 537
     }
   },
   "20070826": {
@@ -5331,10 +5331,10 @@
       "elev_difference": 155.7,
       "effort_count_cumulative": 167,
       "athlete_count": 26,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 167
+      "2026-03-01": 167
     }
   },
   "20357176": {
@@ -5346,12 +5346,12 @@
       "distance": 641.3,
       "avg_grade": -5.7,
       "elev_difference": 36.8,
-      "effort_count_cumulative": 15378,
-      "athlete_count": 7382,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 15382,
+      "athlete_count": 7383,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 15378
+      "2026-03-01": 15382
     }
   },
   "20407456": {
@@ -5365,10 +5365,10 @@
       "elev_difference": 27.3,
       "effort_count_cumulative": 7590,
       "athlete_count": 6247,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 7590
+      "2026-03-01": 7590
     }
   },
   "20569129": {
@@ -5382,10 +5382,10 @@
       "elev_difference": 101.4,
       "effort_count_cumulative": 587,
       "athlete_count": 414,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 587
+      "2026-03-01": 587
     }
   },
   "20630666": {
@@ -5397,12 +5397,12 @@
       "distance": 1287.8,
       "avg_grade": 3.8,
       "elev_difference": 49.1,
-      "effort_count_cumulative": 2303,
+      "effort_count_cumulative": 2304,
       "athlete_count": 623,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2303
+      "2026-03-01": 2304
     }
   },
   "20653421": {
@@ -5414,12 +5414,12 @@
       "distance": 1016.9,
       "avg_grade": 1.6,
       "elev_difference": 16.2,
-      "effort_count_cumulative": 20182,
-      "athlete_count": 8671,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 20184,
+      "athlete_count": 8672,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 20182
+      "2026-03-01": 20184
     }
   },
   "20695553": {
@@ -5433,10 +5433,10 @@
       "elev_difference": 83.4,
       "effort_count_cumulative": 1023,
       "athlete_count": 672,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1023
+      "2026-03-01": 1023
     }
   },
   "20727931": {
@@ -5450,10 +5450,10 @@
       "elev_difference": 82.0,
       "effort_count_cumulative": 2811,
       "athlete_count": 1804,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2811
+      "2026-03-01": 2811
     }
   },
   "20768792": {
@@ -5467,10 +5467,10 @@
       "elev_difference": 69.4,
       "effort_count_cumulative": 1011,
       "athlete_count": 671,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1011
+      "2026-03-01": 1011
     }
   },
   "21020751": {
@@ -5484,10 +5484,10 @@
       "elev_difference": 26.0,
       "effort_count_cumulative": 1397,
       "athlete_count": 739,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1397
+      "2026-03-01": 1397
     }
   },
   "21058920": {
@@ -5501,10 +5501,10 @@
       "elev_difference": 75.7,
       "effort_count_cumulative": 6455,
       "athlete_count": 5228,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 6455
+      "2026-03-01": 6455
     }
   },
   "21079980": {
@@ -5518,10 +5518,10 @@
       "elev_difference": 115.4,
       "effort_count_cumulative": 2396,
       "athlete_count": 1074,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2396
+      "2026-03-01": 2396
     }
   },
   "21081041": {
@@ -5533,12 +5533,12 @@
       "distance": 2816.9,
       "avg_grade": 1.8,
       "elev_difference": 50.1,
-      "effort_count_cumulative": 2635,
+      "effort_count_cumulative": 2637,
       "athlete_count": 1397,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2635
+      "2026-03-01": 2637
     }
   },
   "21084676": {
@@ -5552,10 +5552,10 @@
       "elev_difference": 621.4,
       "effort_count_cumulative": 874,
       "athlete_count": 581,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 874
+      "2026-03-01": 874
     }
   },
   "21099665": {
@@ -5567,12 +5567,12 @@
       "distance": 2197.1,
       "avg_grade": 1.9,
       "elev_difference": 42.2,
-      "effort_count_cumulative": 878,
+      "effort_count_cumulative": 882,
       "athlete_count": 200,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 878
+      "2026-03-01": 882
     }
   },
   "21133455": {
@@ -5584,12 +5584,12 @@
       "distance": 602.6,
       "avg_grade": -9.8,
       "elev_difference": 59.2,
-      "effort_count_cumulative": 23595,
+      "effort_count_cumulative": 23596,
       "athlete_count": 8405,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 23595
+      "2026-03-01": 23596
     }
   },
   "21145888": {
@@ -5603,10 +5603,10 @@
       "elev_difference": 153.6,
       "effort_count_cumulative": 262,
       "athlete_count": 225,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 262
+      "2026-03-01": 262
     }
   },
   "21319462": {
@@ -5618,12 +5618,12 @@
       "distance": 2807.0,
       "avg_grade": -5.9,
       "elev_difference": 166.2,
-      "effort_count_cumulative": 15469,
-      "athlete_count": 2935,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 15474,
+      "athlete_count": 2936,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 15469
+      "2026-03-01": 15474
     }
   },
   "21344696": {
@@ -5635,12 +5635,12 @@
       "distance": 6010.4,
       "avg_grade": 3.4,
       "elev_difference": 204.6,
-      "effort_count_cumulative": 227,
-      "athlete_count": 187,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 228,
+      "athlete_count": 188,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 227
+      "2026-03-01": 228
     }
   },
   "21370568": {
@@ -5652,12 +5652,12 @@
       "distance": 527.0,
       "avg_grade": 0.5,
       "elev_difference": 6.6,
-      "effort_count_cumulative": 18468,
+      "effort_count_cumulative": 18470,
       "athlete_count": 7637,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 18468
+      "2026-03-01": 18470
     }
   },
   "21434066": {
@@ -5669,12 +5669,12 @@
       "distance": 3051.7,
       "avg_grade": 5.5,
       "elev_difference": 166.6,
-      "effort_count_cumulative": 18764,
-      "athlete_count": 9418,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 18767,
+      "athlete_count": 9419,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 18764
+      "2026-03-01": 18767
     }
   },
   "21443155": {
@@ -5686,12 +5686,12 @@
       "distance": 1390.5,
       "avg_grade": -2.7,
       "elev_difference": 40.2,
-      "effort_count_cumulative": 11238,
+      "effort_count_cumulative": 11239,
       "athlete_count": 5333,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 11238
+      "2026-03-01": 11239
     }
   },
   "21554820": {
@@ -5705,10 +5705,10 @@
       "elev_difference": 154.6,
       "effort_count_cumulative": 246,
       "athlete_count": 37,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 246
+      "2026-03-01": 246
     }
   },
   "21571907": {
@@ -5722,10 +5722,10 @@
       "elev_difference": 50.4,
       "effort_count_cumulative": 177,
       "athlete_count": 75,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 177
+      "2026-03-01": 177
     }
   },
   "21572010": {
@@ -5739,10 +5739,10 @@
       "elev_difference": 18.7,
       "effort_count_cumulative": 494,
       "athlete_count": 300,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 494
+      "2026-03-01": 494
     }
   },
   "21735732": {
@@ -5756,10 +5756,10 @@
       "elev_difference": 38.0,
       "effort_count_cumulative": 2912,
       "athlete_count": 1649,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2912
+      "2026-03-01": 2912
     }
   },
   "21860336": {
@@ -5773,10 +5773,10 @@
       "elev_difference": 140.4,
       "effort_count_cumulative": 88,
       "athlete_count": 95,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 88
+      "2026-03-01": 88
     }
   },
   "21914865": {
@@ -5790,10 +5790,10 @@
       "elev_difference": 81.8,
       "effort_count_cumulative": 345,
       "athlete_count": 166,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 345
+      "2026-03-01": 345
     }
   },
   "21914907": {
@@ -5807,10 +5807,10 @@
       "elev_difference": 20.8,
       "effort_count_cumulative": 1901,
       "athlete_count": 1078,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1901
+      "2026-03-01": 1901
     }
   },
   "21947059": {
@@ -5822,12 +5822,12 @@
       "distance": 2271.8,
       "avg_grade": 4.8,
       "elev_difference": 109.7,
-      "effort_count_cumulative": 16287,
-      "athlete_count": 7949,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 16294,
+      "athlete_count": 7950,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 16287
+      "2026-03-01": 16294
     }
   },
   "22055979": {
@@ -5841,10 +5841,10 @@
       "elev_difference": 106.6,
       "effort_count_cumulative": 21957,
       "athlete_count": 8455,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 21957
+      "2026-03-01": 21957
     }
   },
   "22066882": {
@@ -5858,10 +5858,10 @@
       "elev_difference": 96.2,
       "effort_count_cumulative": 452,
       "athlete_count": 279,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 452
+      "2026-03-01": 452
     }
   },
   "22155502": {
@@ -5875,10 +5875,10 @@
       "elev_difference": 34.0,
       "effort_count_cumulative": 743,
       "athlete_count": 428,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 743
+      "2026-03-01": 743
     }
   },
   "22161645": {
@@ -5892,10 +5892,10 @@
       "elev_difference": 354.4,
       "effort_count_cumulative": 159,
       "athlete_count": 130,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 159
+      "2026-03-01": 159
     }
   },
   "22191445": {
@@ -5909,10 +5909,10 @@
       "elev_difference": 24.0,
       "effort_count_cumulative": 402,
       "athlete_count": 273,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 402
+      "2026-03-01": 402
     }
   },
   "22338416": {
@@ -5926,10 +5926,10 @@
       "elev_difference": 93.0,
       "effort_count_cumulative": 27,
       "athlete_count": 15,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 27
+      "2026-03-01": 27
     }
   },
   "22757421": {
@@ -5943,10 +5943,10 @@
       "elev_difference": 54.8,
       "effort_count_cumulative": 1126,
       "athlete_count": 806,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1126
+      "2026-03-01": 1126
     }
   },
   "22897443": {
@@ -5960,10 +5960,10 @@
       "elev_difference": 98.9,
       "effort_count_cumulative": 348,
       "athlete_count": 177,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 348
+      "2026-03-01": 348
     }
   },
   "22993564": {
@@ -5977,10 +5977,10 @@
       "elev_difference": 27.0,
       "effort_count_cumulative": 625,
       "athlete_count": 253,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 625
+      "2026-03-01": 625
     }
   },
   "23113806": {
@@ -5994,10 +5994,10 @@
       "elev_difference": 83.0,
       "effort_count_cumulative": 206,
       "athlete_count": 86,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 206
+      "2026-03-01": 206
     }
   },
   "23116706": {
@@ -6011,10 +6011,10 @@
       "elev_difference": 78.0,
       "effort_count_cumulative": 80,
       "athlete_count": 24,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 80
+      "2026-03-01": 80
     }
   },
   "23116734": {
@@ -6028,10 +6028,10 @@
       "elev_difference": 35.6,
       "effort_count_cumulative": 676,
       "athlete_count": 207,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 676
+      "2026-03-01": 676
     }
   },
   "23141915": {
@@ -6045,10 +6045,10 @@
       "elev_difference": 76.5,
       "effort_count_cumulative": 180,
       "athlete_count": 27,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 180
+      "2026-03-01": 180
     }
   },
   "23172195": {
@@ -6062,10 +6062,10 @@
       "elev_difference": 87.3,
       "effort_count_cumulative": 130,
       "athlete_count": 37,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 130
+      "2026-03-01": 130
     }
   },
   "23220325": {
@@ -6079,10 +6079,10 @@
       "elev_difference": 65.6,
       "effort_count_cumulative": 131,
       "athlete_count": 94,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 131
+      "2026-03-01": 131
     }
   },
   "23222294": {
@@ -6096,10 +6096,10 @@
       "elev_difference": 82.8,
       "effort_count_cumulative": 349,
       "athlete_count": 204,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 349
+      "2026-03-01": 349
     }
   },
   "23311731": {
@@ -6113,10 +6113,10 @@
       "elev_difference": 148.2,
       "effort_count_cumulative": 211,
       "athlete_count": 175,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 211
+      "2026-03-01": 211
     }
   },
   "23594134": {
@@ -6130,10 +6130,10 @@
       "elev_difference": 28.0,
       "effort_count_cumulative": 1673,
       "athlete_count": 957,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1673
+      "2026-03-01": 1673
     }
   },
   "24027625": {
@@ -6147,10 +6147,10 @@
       "elev_difference": 84.9,
       "effort_count_cumulative": 104,
       "athlete_count": 53,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 104
+      "2026-03-01": 104
     }
   },
   "24038567": {
@@ -6164,10 +6164,10 @@
       "elev_difference": 42.4,
       "effort_count_cumulative": 198,
       "athlete_count": 49,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 198
+      "2026-03-01": 198
     }
   },
   "24049880": {
@@ -6181,10 +6181,10 @@
       "elev_difference": 102.0,
       "effort_count_cumulative": 39,
       "athlete_count": 23,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 39
+      "2026-03-01": 39
     }
   },
   "24071796": {
@@ -6198,10 +6198,10 @@
       "elev_difference": 100.6,
       "effort_count_cumulative": 570,
       "athlete_count": 241,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 570
+      "2026-03-01": 570
     }
   },
   "24185760": {
@@ -6215,10 +6215,10 @@
       "elev_difference": 21.8,
       "effort_count_cumulative": 538,
       "athlete_count": 333,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 538
+      "2026-03-01": 538
     }
   },
   "24211946": {
@@ -6232,10 +6232,10 @@
       "elev_difference": 373.0,
       "effort_count_cumulative": 846,
       "athlete_count": 650,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 846
+      "2026-03-01": 846
     }
   },
   "24314567": {
@@ -6247,12 +6247,12 @@
       "distance": 3356.2,
       "avg_grade": 2.3,
       "elev_difference": 79.6,
-      "effort_count_cumulative": 2423,
-      "athlete_count": 912,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 2422,
+      "athlete_count": 910,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2423
+      "2026-03-01": 2422
     }
   },
   "24368549": {
@@ -6266,10 +6266,10 @@
       "elev_difference": 195.8,
       "effort_count_cumulative": 3125,
       "athlete_count": 2082,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3125
+      "2026-03-01": 3125
     }
   },
   "24378323": {
@@ -6283,10 +6283,27 @@
       "elev_difference": 241.4,
       "effort_count_cumulative": 3924,
       "athlete_count": 2426,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3924
+      "2026-03-01": 3924
+    }
+  },
+  "24547453": {
+    "meta": {
+      "name": "Kopček z Ondreja na Konskú",
+      "activity_type": "running",
+      "lat": 49.103176,
+      "lng": 19.713857,
+      "distance": 1283.4,
+      "avg_grade": 4.1,
+      "elev_difference": 52.3,
+      "effort_count_cumulative": 58,
+      "athlete_count": 28,
+      "last_snapshot": "2026-03-01"
+    },
+    "series": {
+      "2026-03-01": 58
     }
   },
   "24580028": {
@@ -6300,10 +6317,10 @@
       "elev_difference": 106.4,
       "effort_count_cumulative": 81,
       "athlete_count": 30,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 81
+      "2026-03-01": 81
     }
   },
   "24696933": {
@@ -6315,12 +6332,12 @@
       "distance": 1051.6,
       "avg_grade": 25.0,
       "elev_difference": 263.0,
-      "effort_count_cumulative": 8023,
+      "effort_count_cumulative": 8024,
       "athlete_count": 3901,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 8023
+      "2026-03-01": 8024
     }
   },
   "24747209": {
@@ -6334,10 +6351,10 @@
       "elev_difference": 737.0,
       "effort_count_cumulative": 67,
       "athlete_count": 47,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 67
+      "2026-03-01": 67
     }
   },
   "24760879": {
@@ -6351,10 +6368,10 @@
       "elev_difference": 603.0,
       "effort_count_cumulative": 907,
       "athlete_count": 417,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 907
+      "2026-03-01": 907
     }
   },
   "24804724": {
@@ -6366,12 +6383,12 @@
       "distance": 2125.3,
       "avg_grade": -3.6,
       "elev_difference": 77.2,
-      "effort_count_cumulative": 1097,
+      "effort_count_cumulative": 1099,
       "athlete_count": 652,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1097
+      "2026-03-01": 1099
     }
   },
   "24806968": {
@@ -6383,12 +6400,12 @@
       "distance": 1662.5,
       "avg_grade": -1.9,
       "elev_difference": 31.2,
-      "effort_count_cumulative": 8646,
-      "athlete_count": 4035,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 8651,
+      "athlete_count": 4037,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 8646
+      "2026-03-01": 8651
     }
   },
   "24816010": {
@@ -6402,10 +6419,10 @@
       "elev_difference": 209.8,
       "effort_count_cumulative": 6000,
       "athlete_count": 3160,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 6000
+      "2026-03-01": 6000
     }
   },
   "24852567": {
@@ -6419,10 +6436,10 @@
       "elev_difference": 371.8,
       "effort_count_cumulative": 2005,
       "athlete_count": 817,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2005
+      "2026-03-01": 2005
     }
   },
   "24901884": {
@@ -6436,10 +6453,10 @@
       "elev_difference": 119.6,
       "effort_count_cumulative": 141,
       "athlete_count": 60,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 141
+      "2026-03-01": 141
     }
   },
   "25009442": {
@@ -6451,12 +6468,12 @@
       "distance": 1378.8,
       "avg_grade": -9.6,
       "elev_difference": 131.8,
-      "effort_count_cumulative": 5924,
-      "athlete_count": 3351,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 5926,
+      "athlete_count": 3352,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 5924
+      "2026-03-01": 5926
     }
   },
   "25152539": {
@@ -6470,10 +6487,10 @@
       "elev_difference": 68.0,
       "effort_count_cumulative": 172,
       "athlete_count": 103,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 172
+      "2026-03-01": 172
     }
   },
   "25206399": {
@@ -6487,10 +6504,10 @@
       "elev_difference": 118.3,
       "effort_count_cumulative": 3650,
       "athlete_count": 2543,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3650
+      "2026-03-01": 3650
     }
   },
   "25221384": {
@@ -6504,10 +6521,10 @@
       "elev_difference": 98.4,
       "effort_count_cumulative": 260,
       "athlete_count": 139,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 260
+      "2026-03-01": 260
     }
   },
   "25221496": {
@@ -6521,10 +6538,10 @@
       "elev_difference": 40.0,
       "effort_count_cumulative": 329,
       "athlete_count": 174,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 329
+      "2026-03-01": 329
     }
   },
   "25241691": {
@@ -6538,10 +6555,10 @@
       "elev_difference": 54.0,
       "effort_count_cumulative": 110,
       "athlete_count": 123,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 110
+      "2026-03-01": 110
     }
   },
   "25270720": {
@@ -6555,10 +6572,10 @@
       "elev_difference": 249.2,
       "effort_count_cumulative": 1665,
       "athlete_count": 1518,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1665
+      "2026-03-01": 1665
     }
   },
   "25314349": {
@@ -6572,10 +6589,10 @@
       "elev_difference": 370.4,
       "effort_count_cumulative": 351,
       "athlete_count": 299,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 351
+      "2026-03-01": 351
     }
   },
   "25323977": {
@@ -6587,12 +6604,12 @@
       "distance": 2130.0,
       "avg_grade": -11.7,
       "elev_difference": 250.0,
-      "effort_count_cumulative": 2844,
+      "effort_count_cumulative": 2846,
       "athlete_count": 1844,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2844
+      "2026-03-01": 2846
     }
   },
   "25329961": {
@@ -6606,10 +6623,10 @@
       "elev_difference": 16.2,
       "effort_count_cumulative": 459,
       "athlete_count": 147,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 459
+      "2026-03-01": 459
     }
   },
   "25365706": {
@@ -6623,10 +6640,10 @@
       "elev_difference": 240.2,
       "effort_count_cumulative": 26,
       "athlete_count": 16,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 26
+      "2026-03-01": 26
     }
   },
   "25437099": {
@@ -6640,10 +6657,10 @@
       "elev_difference": 33.5,
       "effort_count_cumulative": 335,
       "athlete_count": 212,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 335
+      "2026-03-01": 335
     }
   },
   "25473298": {
@@ -6657,10 +6674,10 @@
       "elev_difference": 67.9,
       "effort_count_cumulative": 1212,
       "athlete_count": 742,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1212
+      "2026-03-01": 1212
     }
   },
   "25478842": {
@@ -6672,12 +6689,12 @@
       "distance": 2040.9,
       "avg_grade": -4.9,
       "elev_difference": 102.0,
-      "effort_count_cumulative": 7350,
+      "effort_count_cumulative": 7351,
       "athlete_count": 4081,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 7350
+      "2026-03-01": 7351
     }
   },
   "25483281": {
@@ -6691,10 +6708,10 @@
       "elev_difference": 485.0,
       "effort_count_cumulative": 92,
       "athlete_count": 78,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 92
+      "2026-03-01": 92
     }
   },
   "25513815": {
@@ -6708,10 +6725,10 @@
       "elev_difference": 80.0,
       "effort_count_cumulative": 184,
       "athlete_count": 85,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 184
+      "2026-03-01": 184
     }
   },
   "25549772": {
@@ -6725,10 +6742,10 @@
       "elev_difference": 17.8,
       "effort_count_cumulative": 3904,
       "athlete_count": 2430,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3904
+      "2026-03-01": 3904
     }
   },
   "25567269": {
@@ -6740,12 +6757,12 @@
       "distance": 1921.1,
       "avg_grade": 7.7,
       "elev_difference": 148.0,
-      "effort_count_cumulative": 190,
+      "effort_count_cumulative": 189,
       "athlete_count": 43,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 190
+      "2026-03-01": 189
     }
   },
   "25588083": {
@@ -6759,10 +6776,10 @@
       "elev_difference": 257.0,
       "effort_count_cumulative": 969,
       "athlete_count": 706,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 969
+      "2026-03-01": 969
     }
   },
   "25599325": {
@@ -6776,10 +6793,10 @@
       "elev_difference": 106.3,
       "effort_count_cumulative": 156,
       "athlete_count": 41,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 156
+      "2026-03-01": 156
     }
   },
   "25607713": {
@@ -6791,12 +6808,12 @@
       "distance": 1161.3,
       "avg_grade": 4.4,
       "elev_difference": 50.6,
-      "effort_count_cumulative": 27136,
-      "athlete_count": 11389,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 27138,
+      "athlete_count": 11390,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 27136
+      "2026-03-01": 27138
     }
   },
   "25612744": {
@@ -6808,12 +6825,12 @@
       "distance": 1161.8,
       "avg_grade": 4.2,
       "elev_difference": 48.4,
-      "effort_count_cumulative": 9785,
+      "effort_count_cumulative": 9788,
       "athlete_count": 4241,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 9785
+      "2026-03-01": 9788
     }
   },
   "25613717": {
@@ -6827,10 +6844,10 @@
       "elev_difference": 513.2,
       "effort_count_cumulative": 908,
       "athlete_count": 869,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 908
+      "2026-03-01": 908
     }
   },
   "25615717": {
@@ -6844,10 +6861,10 @@
       "elev_difference": 138.9,
       "effort_count_cumulative": 4792,
       "athlete_count": 2205,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 4792
+      "2026-03-01": 4792
     }
   },
   "25711219": {
@@ -6859,12 +6876,12 @@
       "distance": 1871.4,
       "avg_grade": 0.7,
       "elev_difference": 12.9,
-      "effort_count_cumulative": 4189,
+      "effort_count_cumulative": 4191,
       "athlete_count": 1119,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 4189
+      "2026-03-01": 4191
     }
   },
   "25711226": {
@@ -6878,10 +6895,10 @@
       "elev_difference": 14.1,
       "effort_count_cumulative": 757,
       "athlete_count": 303,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 757
+      "2026-03-01": 757
     }
   },
   "25722459": {
@@ -6893,12 +6910,12 @@
       "distance": 464.5,
       "avg_grade": -8.3,
       "elev_difference": 38.4,
-      "effort_count_cumulative": 18928,
+      "effort_count_cumulative": 18929,
       "athlete_count": 6331,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 18928
+      "2026-03-01": 18929
     }
   },
   "25746473": {
@@ -6912,10 +6929,10 @@
       "elev_difference": 99.2,
       "effort_count_cumulative": 1005,
       "athlete_count": 812,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1005
+      "2026-03-01": 1005
     }
   },
   "25799106": {
@@ -6929,10 +6946,10 @@
       "elev_difference": 77.9,
       "effort_count_cumulative": 5012,
       "athlete_count": 3770,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 5012
+      "2026-03-01": 5012
     }
   },
   "25817324": {
@@ -6946,10 +6963,10 @@
       "elev_difference": 45.1,
       "effort_count_cumulative": 355,
       "athlete_count": 145,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 355
+      "2026-03-01": 355
     }
   },
   "25917104": {
@@ -6963,10 +6980,10 @@
       "elev_difference": 49.0,
       "effort_count_cumulative": 160,
       "athlete_count": 148,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 160
+      "2026-03-01": 160
     }
   },
   "25917498": {
@@ -6980,10 +6997,10 @@
       "elev_difference": 120.6,
       "effort_count_cumulative": 177,
       "athlete_count": 147,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 177
+      "2026-03-01": 177
     }
   },
   "25948418": {
@@ -6995,12 +7012,12 @@
       "distance": 2167.8,
       "avg_grade": 2.3,
       "elev_difference": 49.8,
-      "effort_count_cumulative": 4894,
+      "effort_count_cumulative": 4895,
       "athlete_count": 1824,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 4894
+      "2026-03-01": 4895
     }
   },
   "26004149": {
@@ -7014,10 +7031,10 @@
       "elev_difference": 33.0,
       "effort_count_cumulative": 357,
       "athlete_count": 132,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 357
+      "2026-03-01": 357
     }
   },
   "26149183": {
@@ -7029,12 +7046,12 @@
       "distance": 1381.4,
       "avg_grade": -12.8,
       "elev_difference": 177.4,
-      "effort_count_cumulative": 1990,
-      "athlete_count": 1395,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 1991,
+      "athlete_count": 1396,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1990
+      "2026-03-01": 1991
     }
   },
   "26172693": {
@@ -7046,12 +7063,12 @@
       "distance": 1680.8,
       "avg_grade": -12.6,
       "elev_difference": 212.4,
-      "effort_count_cumulative": 3788,
-      "athlete_count": 1706,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 3792,
+      "athlete_count": 1707,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 3788
+      "2026-03-01": 3792
     }
   },
   "26288939": {
@@ -7065,10 +7082,10 @@
       "elev_difference": 49.9,
       "effort_count_cumulative": 2022,
       "athlete_count": 1082,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 2022
+      "2026-03-01": 2022
     }
   },
   "26288993": {
@@ -7082,10 +7099,10 @@
       "elev_difference": 76.0,
       "effort_count_cumulative": 41,
       "athlete_count": 10,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 41
+      "2026-03-01": 41
     }
   },
   "26289018": {
@@ -7099,10 +7116,10 @@
       "elev_difference": 36.2,
       "effort_count_cumulative": 233,
       "athlete_count": 161,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 233
+      "2026-03-01": 233
     }
   },
   "26512276": {
@@ -7116,10 +7133,10 @@
       "elev_difference": 123.6,
       "effort_count_cumulative": 300,
       "athlete_count": 203,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 300
+      "2026-03-01": 300
     }
   },
   "26516347": {
@@ -7133,10 +7150,10 @@
       "elev_difference": 100.0,
       "effort_count_cumulative": 193,
       "athlete_count": 37,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 193
+      "2026-03-01": 193
     }
   },
   "26529631": {
@@ -7148,12 +7165,12 @@
       "distance": 173.5,
       "avg_grade": 5.1,
       "elev_difference": 8.8,
-      "effort_count_cumulative": 353,
+      "effort_count_cumulative": 354,
       "athlete_count": 18,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 353
+      "2026-03-01": 354
     }
   },
   "26650628": {
@@ -7165,12 +7182,12 @@
       "distance": 840.0,
       "avg_grade": 11.9,
       "elev_difference": 99.8,
-      "effort_count_cumulative": 119,
+      "effort_count_cumulative": 120,
       "athlete_count": 40,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 119
+      "2026-03-01": 120
     }
   },
   "27320110": {
@@ -7184,10 +7201,10 @@
       "elev_difference": 120.2,
       "effort_count_cumulative": 370,
       "athlete_count": 125,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 370
+      "2026-03-01": 370
     }
   },
   "27344001": {
@@ -7199,12 +7216,12 @@
       "distance": 1128.1,
       "avg_grade": -10.4,
       "elev_difference": 122.6,
-      "effort_count_cumulative": 1648,
-      "athlete_count": 1014,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 1647,
+      "athlete_count": 1015,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1648
+      "2026-03-01": 1647
     }
   },
   "27437528": {
@@ -7218,10 +7235,10 @@
       "elev_difference": 125.9,
       "effort_count_cumulative": 60,
       "athlete_count": 56,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 60
+      "2026-03-01": 60
     }
   },
   "27451933": {
@@ -7235,10 +7252,10 @@
       "elev_difference": 64.9,
       "effort_count_cumulative": 724,
       "athlete_count": 127,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 724
+      "2026-03-01": 724
     }
   },
   "27599845": {
@@ -7252,10 +7269,10 @@
       "elev_difference": 74.8,
       "effort_count_cumulative": 1738,
       "athlete_count": 1163,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1738
+      "2026-03-01": 1738
     }
   },
   "27707094": {
@@ -7269,10 +7286,10 @@
       "elev_difference": 1031.1,
       "effort_count_cumulative": 31,
       "athlete_count": 30,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 31
+      "2026-03-01": 31
     }
   },
   "27746724": {
@@ -7284,12 +7301,12 @@
       "distance": 1722.8,
       "avg_grade": 1.1,
       "elev_difference": 23.2,
-      "effort_count_cumulative": 129,
+      "effort_count_cumulative": 131,
       "athlete_count": 108,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 129
+      "2026-03-01": 131
     }
   },
   "27753012": {
@@ -7303,10 +7320,10 @@
       "elev_difference": 74.0,
       "effort_count_cumulative": 13,
       "athlete_count": 11,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 13
+      "2026-03-01": 13
     }
   },
   "27940009": {
@@ -7318,12 +7335,12 @@
       "distance": 3310.8,
       "avg_grade": 3.1,
       "elev_difference": 103.6,
-      "effort_count_cumulative": 687,
+      "effort_count_cumulative": 689,
       "athlete_count": 348,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 687
+      "2026-03-01": 689
     }
   },
   "27965324": {
@@ -7335,12 +7352,12 @@
       "distance": 415.6,
       "avg_grade": 6.4,
       "elev_difference": 26.8,
-      "effort_count_cumulative": 882,
+      "effort_count_cumulative": 884,
       "athlete_count": 457,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 882
+      "2026-03-01": 884
     }
   },
   "28358010": {
@@ -7354,10 +7371,10 @@
       "elev_difference": 55.2,
       "effort_count_cumulative": 31,
       "athlete_count": 14,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 31
+      "2026-03-01": 31
     }
   },
   "28394266": {
@@ -7371,10 +7388,10 @@
       "elev_difference": 55.0,
       "effort_count_cumulative": 32,
       "athlete_count": 23,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 32
+      "2026-03-01": 32
     }
   },
   "29071002": {
@@ -7388,10 +7405,10 @@
       "elev_difference": 277.6,
       "effort_count_cumulative": 1154,
       "athlete_count": 934,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1154
+      "2026-03-01": 1154
     }
   },
   "29148267": {
@@ -7405,10 +7422,10 @@
       "elev_difference": 48.4,
       "effort_count_cumulative": 770,
       "athlete_count": 165,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 770
+      "2026-03-01": 770
     }
   },
   "29237925": {
@@ -7422,10 +7439,10 @@
       "elev_difference": 197.9,
       "effort_count_cumulative": 4673,
       "athlete_count": 3523,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 4673
+      "2026-03-01": 4673
     }
   },
   "29314821": {
@@ -7439,10 +7456,10 @@
       "elev_difference": 139.8,
       "effort_count_cumulative": 26,
       "athlete_count": 24,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 26
+      "2026-03-01": 26
     }
   },
   "29432433": {
@@ -7456,10 +7473,10 @@
       "elev_difference": 59.3,
       "effort_count_cumulative": 200,
       "athlete_count": 142,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 200
+      "2026-03-01": 200
     }
   },
   "29941666": {
@@ -7473,10 +7490,10 @@
       "elev_difference": 193.5,
       "effort_count_cumulative": 29,
       "athlete_count": 27,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 29
+      "2026-03-01": 29
     }
   },
   "29997689": {
@@ -7490,10 +7507,10 @@
       "elev_difference": 87.4,
       "effort_count_cumulative": 26,
       "athlete_count": 18,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 26
+      "2026-03-01": 26
     }
   },
   "30127858": {
@@ -7507,10 +7524,10 @@
       "elev_difference": 37.0,
       "effort_count_cumulative": 17,
       "athlete_count": 20,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 17
+      "2026-03-01": 17
     }
   },
   "30445297": {
@@ -7524,10 +7541,10 @@
       "elev_difference": 109.8,
       "effort_count_cumulative": 140,
       "athlete_count": 48,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 140
+      "2026-03-01": 140
     }
   },
   "30803579": {
@@ -7541,10 +7558,10 @@
       "elev_difference": 339.6,
       "effort_count_cumulative": 71,
       "athlete_count": 77,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 71
+      "2026-03-01": 71
     }
   },
   "31427959": {
@@ -7558,10 +7575,10 @@
       "elev_difference": 74.0,
       "effort_count_cumulative": 328,
       "athlete_count": 182,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 328
+      "2026-03-01": 328
     }
   },
   "32300100": {
@@ -7575,10 +7592,10 @@
       "elev_difference": 161.8,
       "effort_count_cumulative": 48,
       "athlete_count": 43,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 48
+      "2026-03-01": 48
     }
   },
   "32355113": {
@@ -7592,10 +7609,10 @@
       "elev_difference": 123.0,
       "effort_count_cumulative": 921,
       "athlete_count": 804,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 921
+      "2026-03-01": 921
     }
   },
   "32357128": {
@@ -7609,10 +7626,10 @@
       "elev_difference": 360.9,
       "effort_count_cumulative": 453,
       "athlete_count": 389,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 453
+      "2026-03-01": 453
     }
   },
   "32549565": {
@@ -7626,10 +7643,10 @@
       "elev_difference": 35.4,
       "effort_count_cumulative": 33,
       "athlete_count": 43,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 33
+      "2026-03-01": 33
     }
   },
   "32549583": {
@@ -7643,10 +7660,10 @@
       "elev_difference": 68.4,
       "effort_count_cumulative": 25,
       "athlete_count": 42,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 25
+      "2026-03-01": 25
     }
   },
   "33136431": {
@@ -7658,12 +7675,12 @@
       "distance": 2790.0,
       "avg_grade": 3.0,
       "elev_difference": 84.0,
-      "effort_count_cumulative": 381,
-      "athlete_count": 326,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 382,
+      "athlete_count": 327,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 381
+      "2026-03-01": 382
     }
   },
   "35599379": {
@@ -7677,10 +7694,10 @@
       "elev_difference": 193.2,
       "effort_count_cumulative": 13,
       "athlete_count": 12,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 13
+      "2026-03-01": 13
     }
   },
   "36229385": {
@@ -7694,10 +7711,10 @@
       "elev_difference": 61.9,
       "effort_count_cumulative": 325,
       "athlete_count": 233,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 325
+      "2026-03-01": 325
     }
   },
   "36341517": {
@@ -7711,10 +7728,10 @@
       "elev_difference": 58.4,
       "effort_count_cumulative": 28,
       "athlete_count": 23,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 28
+      "2026-03-01": 28
     }
   },
   "36341545": {
@@ -7728,10 +7745,10 @@
       "elev_difference": 63.2,
       "effort_count_cumulative": 20,
       "athlete_count": 17,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 20
+      "2026-03-01": 20
     }
   },
   "36579334": {
@@ -7745,10 +7762,10 @@
       "elev_difference": 211.7,
       "effort_count_cumulative": 139,
       "athlete_count": 40,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 139
+      "2026-03-01": 139
     }
   },
   "37224077": {
@@ -7762,10 +7779,10 @@
       "elev_difference": 107.4,
       "effort_count_cumulative": 441,
       "athlete_count": 369,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 441
+      "2026-03-01": 441
     }
   },
   "37375712": {
@@ -7779,10 +7796,10 @@
       "elev_difference": 311.4,
       "effort_count_cumulative": 749,
       "athlete_count": 663,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 749
+      "2026-03-01": 749
     }
   },
   "37500930": {
@@ -7796,10 +7813,10 @@
       "elev_difference": 142.2,
       "effort_count_cumulative": 132,
       "athlete_count": 83,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 132
+      "2026-03-01": 132
     }
   },
   "37590429": {
@@ -7811,12 +7828,12 @@
       "distance": 2152.4,
       "avg_grade": 6.6,
       "elev_difference": 142.8,
-      "effort_count_cumulative": 6815,
+      "effort_count_cumulative": 6814,
       "athlete_count": 3513,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 6815
+      "2026-03-01": 6814
     }
   },
   "37741810": {
@@ -7830,10 +7847,10 @@
       "elev_difference": 168.0,
       "effort_count_cumulative": 179,
       "athlete_count": 63,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 179
+      "2026-03-01": 179
     }
   },
   "38489013": {
@@ -7847,10 +7864,10 @@
       "elev_difference": 306.2,
       "effort_count_cumulative": 1909,
       "athlete_count": 1269,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 1909
+      "2026-03-01": 1909
     }
   },
   "38999783": {
@@ -7864,10 +7881,10 @@
       "elev_difference": 206.4,
       "effort_count_cumulative": 33,
       "athlete_count": 22,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 33
+      "2026-03-01": 33
     }
   },
   "39022994": {
@@ -7881,10 +7898,10 @@
       "elev_difference": 168.0,
       "effort_count_cumulative": 69,
       "athlete_count": 62,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 69
+      "2026-03-01": 69
     }
   },
   "39609064": {
@@ -7898,10 +7915,10 @@
       "elev_difference": 340.4,
       "effort_count_cumulative": 58,
       "athlete_count": 51,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 58
+      "2026-03-01": 58
     }
   },
   "39672523": {
@@ -7915,10 +7932,10 @@
       "elev_difference": 106.0,
       "effort_count_cumulative": 506,
       "athlete_count": 163,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 506
+      "2026-03-01": 506
     }
   },
   "40026630": {
@@ -7932,10 +7949,10 @@
       "elev_difference": 101.1,
       "effort_count_cumulative": 247,
       "athlete_count": 179,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 247
+      "2026-03-01": 247
     }
   },
   "40133207": {
@@ -7949,10 +7966,10 @@
       "elev_difference": 127.0,
       "effort_count_cumulative": 98,
       "athlete_count": 87,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 98
+      "2026-03-01": 98
     }
   },
   "40153538": {
@@ -7964,12 +7981,12 @@
       "distance": 2513.0,
       "avg_grade": 4.3,
       "elev_difference": 108.6,
-      "effort_count_cumulative": 619,
-      "athlete_count": 457,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 620,
+      "athlete_count": 458,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 619
+      "2026-03-01": 620
     }
   },
   "40153548": {
@@ -7981,12 +7998,12 @@
       "distance": 2494.3,
       "avg_grade": -4.3,
       "elev_difference": 106.8,
-      "effort_count_cumulative": 656,
-      "athlete_count": 486,
-      "last_snapshot": "2026-02-28"
+      "effort_count_cumulative": 657,
+      "athlete_count": 487,
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 656
+      "2026-03-01": 657
     }
   },
   "40159327": {
@@ -8000,27 +8017,10 @@
       "elev_difference": 113.6,
       "effort_count_cumulative": 48,
       "athlete_count": 39,
-      "last_snapshot": "2026-02-28"
+      "last_snapshot": "2026-03-01"
     },
     "series": {
-      "2026-02-28": 48
-    }
-  },
-  "40375518": {
-    "meta": {
-      "name": "Osturna to PL border",
-      "activity_type": "running",
-      "lat": 49.329119,
-      "lng": 20.226227,
-      "distance": 2654.3,
-      "avg_grade": 7.1,
-      "elev_difference": 189.3,
-      "effort_count_cumulative": 360,
-      "athlete_count": 318,
-      "last_snapshot": "2026-02-28"
-    },
-    "series": {
-      "2026-02-28": 360
+      "2026-03-01": 48
     }
   }
 }
