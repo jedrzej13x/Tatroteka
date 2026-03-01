@@ -1,0 +1,38 @@
+name: Tatry Flow — Build Map
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'Tatroteka.py'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests folium shapely
+
+      - name: Build map
+        run: python Tatroteka.py
+
+      - name: Commit index.html + map_data.json
+        run: |
+          git config user.name  "Tatry Flow Bot"
+          git config user.email "bot@tatroteka.pl"
+          git add -f index.html map_data.json
+          git diff --cached --quiet || git commit -m "build: regenerate map $(date +'%Y-%m-%d %H:%M')"
+          git push
