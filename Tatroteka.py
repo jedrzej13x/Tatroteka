@@ -956,8 +956,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 svg.style.filter = isDark ? '' : 'brightness(0.7)';
             });
         });
-    }, 2100);
 
+        // Pomiar odległości
         function dist(p1, p2) {
             var R = 6371;
             var dLat = (p2.lat - p1.lat) * Math.PI / 180;
