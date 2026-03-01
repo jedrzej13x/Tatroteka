@@ -514,7 +514,7 @@ for element in wszystkie:
         color=kolor_finalny,
         weight=weight_finalny,
         opacity=0.8,
-        tooltip=nazwa,
+        tooltip=sanitize(nazwa),
     )
     linia.options['className'] = klasa_css
 
@@ -1012,9 +1012,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 mapa.get_root().script.add_child(folium.Element(JS))
 
-html_out = mapa._repr_html_()
-# Usuń surrogaty które crashują utf-8
-html_out = html_out.encode('utf-8', errors='replace').decode('utf-8')
-with open("index.html", "w", encoding="utf-8") as f:
-    f.write(html_out)
-print("Gotowe! Zapisano index.html")
+import io
+
+# Przechwytujemy HTML z Folium i czyścimy surrogaty przed zapisem
+buf = io.StringIO()
+try:
+    mapa.save("index.html")
+except UnicodeEncodeError:
+    # Folium/branca crashuje na surogatach — generuj HTML ręcznie
+    root = mapa.get_root()
+    html_out = root.render()
+    html_out = html_out.encode('utf-8', errors='replace').decode('utf-8')
+    with open("index.html", "w", encoding="utf-8") as f:
+        f.write(html_out)
+    print("Zapisano index.html (z czyszczeniem surogatów)")
+else:
+    # Jeśli save się udał, przepisz z czyszczeniem na wszelki wypadek
+    with open("index.html", encoding="utf-8", errors="replace") as f:
+        html_out = f.read()
+    with open("index.html", "w", encoding="utf-8") as f:
+        f.write(html_out)
+    print("Gotowe! Zapisano index.html")
