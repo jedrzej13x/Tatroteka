@@ -6,6 +6,7 @@ on:
     branches: [master]
     paths:
       - 'Tatroteka.py'
+      - '.github/workflows/build.yml'
 
 jobs:
   build:

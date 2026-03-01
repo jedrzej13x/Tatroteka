@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: '0 5 * * *'   # codziennie o 5:00 UTC (7:00 czasu polskiego)
   workflow_dispatch:        # możliwość ręcznego uruchomienia z GitHub UI
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/collect.yml'
 
 jobs:
   collect:
