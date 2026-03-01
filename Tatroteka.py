@@ -198,7 +198,9 @@ def znajdz_segment_dla_way(punkty, segmenty):
 def effort_do_koloru(effort, max_effort):
     if max_effort <= 0 or effort <= 0:
         return None
-    t = math.log(1 + effort) / math.log(1 + max_effort)
+    import math
+    t = math.sqrt(effort) / math.sqrt(max_effort)
+    t = min(1.0, max(0.0, t))
     if t < 0.25:
         tt = t / 0.25
         r = int(20  + tt * 40);  g = int(60  + tt * 80);  b = int(180 + tt * 40)
@@ -300,8 +302,8 @@ print(f"Łącznie: {len(wszystkie)} elementów | Wayów w relacjach: {len(way_id
 
 obszar_tpn   = zbuduj_poligon(tpn_data)
 obszar_tanap = zbuduj_poligon(tanap_data)
-obszar_tpn_buf   = obszar_tpn.buffer(0.03)   if obszar_tpn   else None
-obszar_tanap_buf = obszar_tanap.buffer(0.03) if obszar_tanap else None
+obszar_tpn_buf   = obszar_tpn.buffer(0.06)   if obszar_tpn   else None
+obszar_tanap_buf = obszar_tanap.buffer(0.06) if obszar_tanap else None
 print(f"TPN: {'OK' if obszar_tpn else 'BŁĄD'}, TANAP: {'OK' if obszar_tanap else 'BŁĄD'}")
 
 # ── Strava ─────────────────────────────────────────────────────────────────────
@@ -558,8 +560,9 @@ if obszar_tanap:
     folium.GeoJson(
         mapping(obszar_tanap),
         style_function=lambda x: {
-            "color": "darkgreen", "weight": 3, "opacity": 0.9,
-            "fillColor": "darkgreen", "fillOpacity": 0.1,
+            "color": "#1a6b1a", "weight": 4, "opacity": 1.0,
+            "fillColor": "#2d8a2d", "fillOpacity": 0.08,
+            "dashArray": "8,4",
         },
         interactive=False
     ).add_to(grupy["Granice TANAP"])
@@ -569,7 +572,8 @@ else:
             for member in element["members"]:
                 if member["type"] == "way" and "geometry" in member:
                     pts = [(p["lat"], p["lon"]) for p in member["geometry"]]
-                    folium.PolyLine(pts, color="darkgreen", weight=4, opacity=0.9).add_to(grupy["Granice TANAP"])
+                    folium.PolyLine(pts, color="#1a6b1a", weight=4, opacity=1.0,
+                                    dash_array="8,4").add_to(grupy["Granice TANAP"])
 grupy["Granice TANAP"].add_to(mapa)
 
 # ── Waymarked Trails ───────────────────────────────────────────────────────────
@@ -752,7 +756,10 @@ document.addEventListener("DOMContentLoaded", function() {
     var tlPanel = document.createElement('div');
     tlPanel.id  = 'tl-panel';
     var lbls = allDates.map(function(d, i) {
-        return '<span id="tll' + (i+1) + '">' + d.slice(5).replace('-', '.') + '</span>';
+        // d = "2026-03-01" → "01.03"
+        var parts = d.slice(5).split('-');
+        var label = parts[1] + '.' + parts[0];
+        return '<span id="tll' + (i+1) + '">' + label + '</span>';
     }).join('');
     var noData = allDates.length === 0;
     tlPanel.innerHTML =
@@ -770,10 +777,12 @@ document.addEventListener("DOMContentLoaded", function() {
         '<button id="tl-play"' + (noData ? ' disabled style="opacity:0.3"' : '') + '>\u25b6</button>';
     document.body.appendChild(tlPanel);
 
-    // ── Kolor z effort ──────────────────────────────────────────────────────
+    // ── Kolor z effort (skala percentylowa) ────────────────────────────────
     function eff2col(eff, mx) {
         if (!eff || !mx) return null;
-        var t = Math.log(1 + eff) / Math.log(1 + mx);
+        // Pierwiastek kwadratowy zamiast logarytmu — bardziej liniowy rozkład
+        var t = Math.sqrt(eff) / Math.sqrt(mx);
+        t = Math.min(1, Math.max(0, t));
         var r, g, b, tt;
         if (t < 0.25) {
             tt = t / 0.25;
@@ -825,8 +834,13 @@ document.addEventListener("DOMContentLoaded", function() {
         currentIdx = idx;
         document.getElementById('tl-sl').value = idx;
         var date = idx === 0 ? null : allDates[idx - 1];
+        var dateLabel = '';
+        if (date) {
+            var parts = date.slice(5).split('-');
+            dateLabel = parts[1] + '.' + parts[0];
+        }
         document.getElementById('tl-date').textContent =
-            date ? date.slice(5).replace('-', '.') : 'OG\u00d3\u0141EM';
+            date ? dateLabel : 'OG\u00d3\u0141EM';
         document.querySelectorAll('#tl-lbls span').forEach(function(el, i) {
             el.className = i === idx ? 'act' : '';
         });
