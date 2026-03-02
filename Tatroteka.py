@@ -198,8 +198,7 @@ def znajdz_segment_dla_way(punkty, segmenty):
 def effort_do_koloru(effort, max_effort):
     if max_effort <= 0 or effort <= 0:
         return None
-    import math
-    t = math.sqrt(effort) / math.sqrt(max_effort)
+    t = math.log(1 + effort) / math.log(1 + max_effort)
     t = min(1.0, max(0.0, t))
     if t < 0.25:
         tt = t / 0.25
@@ -389,48 +388,26 @@ if strava_dostepna:
                 propagowane += 1
     print(f"Propagacja: +{propagowane} | Łącznie: {len(kolory_wayow)}")
 
-    print("Przebieg 1c: flood fill...")
-    grid = {}
-    for wid, pts in way_geometry.items():
-        if len(pts) >= 2:
-            for pt in [pts[0], pts[-1]]:
-                gk = (round(pt[0] * 100), round(pt[1] * 100))
-                grid.setdefault(gk, []).append(wid)
-
-    def sasiedzi(wid):
-        pts = way_geometry.get(wid)
-        if not pts or len(pts) < 2:
-            return set()
-        wynik = set()
-        for pt in [pts[0], pts[-1]]:
-            gk = (round(pt[0] * 100), round(pt[1] * 100))
-            for dk in [(-2,-2),(-2,-1),(-2,0),(-2,1),(-2,2),
-                       (-1,-2),(-1,-1),(-1,0),(-1,1),(-1,2),
-                       ( 0,-2),( 0,-1),( 0,0),( 0,1),( 0,2),
-                       ( 1,-2),( 1,-1),( 1,0),( 1,1),( 1,2),
-                       ( 2,-2),( 2,-1),( 2,0),( 2,1),( 2,2)]:
-                for c in grid.get((gk[0]+dk[0], gk[1]+dk[1]), []):
-                    if c != wid:
-                        wynik.add(c)
-        return wynik
-
-    zmieniono = True
-    iteracje  = 0
-    while zmieniono and iteracje < 30:
-        zmieniono = False
-        iteracje += 1
-        for way_id, pts in way_geometry.items():
+    print("Przebieg 1c: flood fill (tylko w obrębie relacji)...")
+    propagowane_ff = 0
+    for relacja_id, way_ids in relacja_do_wayow.items():
+        # Znajdź najlepszy segment dla tej relacji
+        seg_rel = kolory_relacji.get(relacja_id)
+        if not seg_rel:
+            continue
+        # Pokoloruj wszystkie waye tej relacji które są w parku
+        for way_id in way_ids:
             if way_id in kolory_wayow:
+                continue
+            pts = way_geometry.get(way_id, [])
+            if not pts:
                 continue
             pts_skr = uprość_geometrie(pts)
             if (obszar_tpn_buf is not None or obszar_tanap_buf is not None) and not w_parku(pts_skr):
                 continue
-            for s in sasiedzi(way_id):
-                if s in kolory_wayow:
-                    kolory_wayow[way_id] = kolory_wayow[s]
-                    zmieniono = True
-                    break
-    print(f"Po {iteracje} iteracjach: {len(kolory_wayow)} wayów z kolorem")
+            kolory_wayow[way_id] = seg_rel
+            propagowane_ff += 1
+    print(f"Flood fill relacji: +{propagowane_ff} | Łącznie: {len(kolory_wayow)}")
 
 # ── Mapa ───────────────────────────────────────────────────────────────────────
 
@@ -542,6 +519,7 @@ for grupa in grupy.values():
 # ── Granice TPN (WMS) ──────────────────────────────────────────────────────────
 
 grupy["Granice TPN"] = folium.FeatureGroup(name="Granice TPN", show=True)
+# WMS — wypełnienie zielone po stronie polskiej
 folium.WmsTileLayer(
     url="https://sdi.gdos.gov.pl/wms",
     layers="ParkiNarodowe",
@@ -549,8 +527,18 @@ folium.WmsTileLayer(
     transparent=True,
     name="Granice TPN (GDOŚ)",
     attr="GDOŚ",
-    opacity=0.5
+    opacity=0.4
 ).add_to(grupy["Granice TPN"])
+# OSM — linia graniczna (widoczna w obu trybach)
+if obszar_tpn:
+    folium.GeoJson(
+        mapping(obszar_tpn),
+        style_function=lambda x: {
+            "color": "#2a7a2a", "weight": 3, "opacity": 1.0,
+            "fillOpacity": 0,
+        },
+        interactive=False
+    ).add_to(grupy["Granice TPN"])
 grupy["Granice TPN"].add_to(mapa)
 
 # ── Granice TANAP ──────────────────────────────────────────────────────────────
@@ -560,9 +548,8 @@ if obszar_tanap:
     folium.GeoJson(
         mapping(obszar_tanap),
         style_function=lambda x: {
-            "color": "#1a6b1a", "weight": 4, "opacity": 1.0,
+            "color": "#1a6b1a", "weight": 3, "opacity": 1.0,
             "fillColor": "#2d8a2d", "fillOpacity": 0.08,
-            "dashArray": "8,4",
         },
         interactive=False
     ).add_to(grupy["Granice TANAP"])
@@ -572,8 +559,7 @@ else:
             for member in element["members"]:
                 if member["type"] == "way" and "geometry" in member:
                     pts = [(p["lat"], p["lon"]) for p in member["geometry"]]
-                    folium.PolyLine(pts, color="#1a6b1a", weight=4, opacity=1.0,
-                                    dash_array="8,4").add_to(grupy["Granice TANAP"])
+                    folium.PolyLine(pts, color="#1a6b1a", weight=3, opacity=1.0).add_to(grupy["Granice TANAP"])
 grupy["Granice TANAP"].add_to(mapa)
 
 # ── Waymarked Trails ───────────────────────────────────────────────────────────
@@ -601,12 +587,25 @@ if strava_dostepna:
         seg_id    = str(seg["id"])
         serie_raw = traffic_raw.get(seg_id, {}).get("series", {})
         daty      = sorted(serie_raw.keys())
+
         if not daty and seg.get("last_snapshot"):
             daty      = [seg["last_snapshot"]]
             serie_raw = {seg["last_snapshot"]: seg["effort_count"]}
+
+        # Oblicz dzienne delty z wartości skumulowanych
+        efforts_delta = []
+        for i, d in enumerate(daty):
+            cum = serie_raw.get(d, 0)
+            if i == 0:
+                # Pierwszy dzień — nie wiemy co było przed, delta = 0
+                efforts_delta.append(0)
+            else:
+                prev_cum = serie_raw.get(daty[i-1], 0)
+                efforts_delta.append(max(0, cum - prev_cum))
+
         relacja_serie[str(relacja_id)] = {
             "dates":   daty,
-            "efforts": [serie_raw.get(d, 0) for d in daty],
+            "efforts": efforts_delta,
             "max_eff": seg["effort_count"],
         }
 
@@ -777,11 +776,10 @@ document.addEventListener("DOMContentLoaded", function() {
         '<button id="tl-play"' + (noData ? ' disabled style="opacity:0.3"' : '') + '>\u25b6</button>';
     document.body.appendChild(tlPanel);
 
-    // ── Kolor z effort (skala percentylowa) ────────────────────────────────
+    // ── Kolor z effort (skala logarytmiczna) ───────────────────────────────
     function eff2col(eff, mx) {
         if (!eff || !mx) return null;
-        // Pierwiastek kwadratowy zamiast logarytmu — bardziej liniowy rozkład
-        var t = Math.sqrt(eff) / Math.sqrt(mx);
+        var t = Math.log(1 + eff) / Math.log(1 + mx);
         t = Math.min(1, Math.max(0, t));
         var r, g, b, tt;
         if (t < 0.25) {

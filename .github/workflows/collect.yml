@@ -3,7 +3,7 @@ name: Tatry Flow — Daily Segment Collection
 on:
   schedule:
     - cron: '0 5 * * *'   # codziennie o 5:00 UTC (7:00 czasu polskiego)
-  workflow_dispatch:        # możliwość ręcznego uruchomienia z GitHub UI
+  workflow_dispatch:
   push:
     branches: [master]
     paths:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write       # potrzebne do commitu z powrotem do repo
+      contents: write
 
     steps:
       - name: Checkout repo
@@ -28,12 +28,14 @@ jobs:
       - name: Install dependencies
         run: pip install requests python-dotenv folium shapely
 
-      - name: Download existing database
-        uses: actions/download-artifact@v4
-        with:
-          name: tatry-database
-          path: .
-        continue-on-error: true   # pierwsze uruchomienie — baza nie istnieje
+      # Baza danych jest w repo — checkout już ją pobrał
+      - name: Check database
+        run: |
+          if [ -f tatry_segments.db ]; then
+            echo "Baza istnieje: $(du -sh tatry_segments.db)"
+          else
+            echo "Brak bazy — pierwsze uruchomienie, zostanie utworzona"
+          fi
 
       - name: Run collector
         env:
@@ -53,20 +55,13 @@ jobs:
           DB_PATH: tatry_segments.db
         run: python "Strava API fetcher.py" --export
 
-      - name: Save database artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: tatry-database
-          path: tatry_segments.db
-          retention-days: 90
-
       - name: Regenerate map (index.html)
         run: python Tatroteka.py
 
-      - name: Commit traffic_data.json + index.html to repo
+      - name: Commit all changes to repo
         run: |
           git config user.name  "Tatry Flow Bot"
           git config user.email "bot@tatroteka.pl"
-          git add -f traffic_data.json index.html
+          git add -f tatry_segments.db traffic_data.json index.html
           git diff --cached --quiet || git commit -m "data: snapshot $(date +'%Y-%m-%d')"
           git push

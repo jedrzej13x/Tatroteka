@@ -1,7 +1,7 @@
 .env
-*.db
-*.db-shm
-*.db-wal
 .venv/
 __pycache__/
 get_token.py
+
+# Baza danych jest w repo — potrzebna do szeregu czasowego
+# *.db  ← celowo wykomentowane
