@@ -14,23 +14,31 @@ def uprość_geometrie(punkty, co_n=2):
 
 def pobierz_dane(query, opis):
     serwery = [
-        "https://overpass.kumi.systems/api/interpreter",
         "https://overpass-api.de/api/interpreter",
+        "https://overpass.kumi.systems/api/interpreter",
+        "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+        "https://overpass.openstreetmap.ru/api/interpreter",
     ]
     for serwer in serwery:
         try:
             print(f"Pobieram: {opis} ({serwer})...")
             response = requests.post(serwer, data=query, timeout=180)
             if response.status_code == 200 and response.text.strip():
-                print(f"OK!")
+                print(f"  OK!")
                 return response.json()
             else:
-                print(f"Błąd {response.status_code}, próbuję kolejny serwer...")
+                print(f"  Błąd HTTP {response.status_code}, próbuję kolejny serwer...")
+        except requests.exceptions.SSLError as e:
+            print(f"  SSL error: {e} — próbuję kolejny serwer...")
         except requests.exceptions.Timeout:
-            print(f"Timeout, próbuję kolejny serwer...")
+            print(f"  Timeout — próbuję kolejny serwer...")
+        except requests.exceptions.ConnectionError as e:
+            print(f"  Błąd połączenia: {e} — próbuję kolejny serwer...")
         except requests.exceptions.JSONDecodeError:
-            print(f"Błąd parsowania JSON, próbuję kolejny serwer...")
-    print(f"Wszystkie serwery zawiodły dla: {opis}")
+            print(f"  Błąd parsowania JSON — próbuję kolejny serwer...")
+        except Exception as e:
+            print(f"  Nieoczekiwany błąd: {e} — próbuję kolejny serwer...")
+    print(f"  Wszystkie serwery zawiodły dla: {opis}")
     return {"elements": []}
 
 def oblicz_dlugosc(punkty):
@@ -44,27 +52,36 @@ def oblicz_dlugosc(punkty):
     return round(dlugosc, 2)
 
 def zbuduj_poligon(data):
+    """Zbiera linie ze WSZYSTKICH relacji w odpowiedzi i buduje jeden unary_union poligon."""
+    wszystkie_linie = []
     for element in data["elements"]:
         if element["type"] == "relation" and "members" in element:
-            linie = []
             for member in element["members"]:
                 if member["type"] == "way" and "geometry" in member:
                     punkty = [(p["lon"], p["lat"]) for p in member["geometry"]]
                     if len(punkty) >= 2:
-                        linie.append(LineString(punkty))
-            if linie:
-                try:
-                    merged = linemerge(MultiLineString(linie))
-                    polys  = list(polygonize(merged))
-                    if polys:
-                        result = unary_union(polys).buffer(0)
-                        print(f"Poligon OK, powierzchnia: {result.area:.4f}")
-                        return result
-                except Exception as e:
-                    print(f"Błąd polygonize: {e}")
-    return None
+                        wszystkie_linie.append(LineString(punkty))
+
+    if not wszystkie_linie:
+        print("  Brak linii do zbudowania poligonu")
+        return None
+
+    print(f"  Linii zebranych: {len(wszystkie_linie)}")
+    try:
+        merged = linemerge(MultiLineString(wszystkie_linie))
+        polys  = list(polygonize(merged))
+        if not polys:
+            print("  polygonize nie zwróciło poligonów — fallback na buforowane linie")
+            return unary_union(wszystkie_linie).buffer(0.001)
+        result = unary_union(polys).buffer(0)
+        print(f"  Poligon OK, powierzchnia: {result.area:.4f}, typ: {result.geom_type}")
+        return result
+    except Exception as e:
+        print(f"  Błąd polygonize: {e}")
+        return None
 
 def w_parku(punkty):
+    """Zwraca True jeśli KTÓRYKOLWIEK punkt leży w buforze TPN lub TANAP."""
     if not punkty:
         return False
     for obszar in [obszar_tpn_buf, obszar_tanap_buf]:
@@ -96,27 +113,11 @@ def kolor_szlaku(element):
     return STYL.get(highway, {"color": "gray"})["color"]
 
 def sanitize(s):
-    """Usuń surrogaty i nieprawidłowe znaki Unicode które crashują utf-8 encode."""
     if not isinstance(s, str):
         return str(s)
     return s.encode('utf-8', errors='replace').decode('utf-8')
 
 def nazwa_koloru(element):
-    tags = element.get('tags', {})
-    osmc = tags.get('osmc:symbol', '')
-    if osmc:
-        kolor = osmc.split(':')[0].strip().lower()
-        nazwy = {
-            'red':    'Szlak czerwony',
-            'blue':   'Szlak niebieski',
-            'green':  'Szlak zielony',
-            'yellow': 'Szlak żółty',
-            'black':  'Szlak czarny',
-        }
-        if kolor in nazwy:
-            return nazwy[kolor]
-    highway = tags.get('highway', '')
-    return NAZWY_TYPOW.get(highway, highway)
     tags = element.get('tags', {})
     osmc = tags.get('osmc:symbol', '')
     if osmc:
@@ -260,14 +261,19 @@ out geom;
 """
 
 query_tpn = """
-[out:json][timeout:60];
-relation["name"="Tatrzański Park Narodowy"]["boundary"="national_park"];
+[out:json][timeout:120];
+(
+  relation["name"="Tatrzański Park Narodowy"]["boundary"="national_park"];
+  relation["name"~"Tatrzański Park Narodowy"]["boundary"="national_park"];
+);
+(._;>>;);
 out geom;
 """
 
 query_tanap = """
 [out:json][timeout:60];
 relation["name"="Tatranský národný park"]["boundary"="national_park"];
+(._;>>;);
 out geom;
 """
 
@@ -358,17 +364,30 @@ for element in dane2["elements"]:
 
 print(f"Relacji: {len(relacja_do_wayow)} | Wayów z relacją: {len(relacje_dla_way)}")
 
-# ── Spatial join + propagacja ──────────────────────────────────────────────────
+# ── Wyznacz zbiór wayów leżących w parku (filtr per-way) ──────────────────────
+print("Wyznaczam waye w parku...")
+ways_w_parku = set()
+if obszar_tpn_buf is not None or obszar_tanap_buf is not None:
+    for way_id, pts_raw in way_geometry.items():
+        if w_parku(pts_raw):
+            ways_w_parku.add(way_id)
+    print(f"Wayów w parku: {len(ways_w_parku)}")
+else:
+    ways_w_parku = set(way_geometry.keys())
+    print("Brak poligonów parków — pokazuję wszystkie waye")
+
+# ── Spatial join + propagacja (tylko waye w parku) ────────────────────────────
 
 kolory_wayow   = {}
 kolory_relacji = {}
 
 if strava_dostepna:
     print("Przebieg 1: spatial join...")
-    for way_id, pts_raw in way_geometry.items():
-        pts_skr = uprość_geometrie(pts_raw)
-        if (obszar_tpn_buf is not None or obszar_tanap_buf is not None) and not w_parku(pts_skr):
+    for way_id in ways_w_parku:
+        pts_raw = way_geometry.get(way_id, [])
+        if not pts_raw:
             continue
+        pts_skr = uprość_geometrie(pts_raw)
         seg = znajdz_segment_dla_way(pts_skr, strava_segmenty)
         if not seg:
             continue
@@ -383,27 +402,21 @@ if strava_dostepna:
     propagowane = 0
     for relacja_id, seg in kolory_relacji.items():
         for way_id in relacja_do_wayow.get(relacja_id, []):
-            if way_id not in kolory_wayow:
+            if way_id not in kolory_wayow and way_id in ways_w_parku:
                 kolory_wayow[way_id] = seg
                 propagowane += 1
     print(f"Propagacja: +{propagowane} | Łącznie: {len(kolory_wayow)}")
 
-    print("Przebieg 1c: flood fill (tylko w obrębie relacji)...")
+    print("Przebieg 1c: flood fill (tylko waye w parku)...")
     propagowane_ff = 0
     for relacja_id, way_ids in relacja_do_wayow.items():
-        # Znajdź najlepszy segment dla tej relacji
         seg_rel = kolory_relacji.get(relacja_id)
         if not seg_rel:
             continue
-        # Pokoloruj wszystkie waye tej relacji które są w parku
         for way_id in way_ids:
             if way_id in kolory_wayow:
                 continue
-            pts = way_geometry.get(way_id, [])
-            if not pts:
-                continue
-            pts_skr = uprość_geometrie(pts)
-            if (obszar_tpn_buf is not None or obszar_tanap_buf is not None) and not w_parku(pts_skr):
+            if way_id not in ways_w_parku:
                 continue
             kolory_wayow[way_id] = seg_rel
             propagowane_ff += 1
@@ -418,7 +431,6 @@ mapa = folium.Map(
     tiles="CartoDB dark_matter"
 )
 
-# Dodaj jasny tryb jako alternatywną warstwę bazową
 folium.TileLayer(
     tiles="CartoDB positron",
     name="Jasny",
@@ -448,21 +460,22 @@ for element in wszystkie:
     if way_id not in way_ids_w_relacjach:
         continue
 
-    highway  = element.get('tags', {}).get('highway', '')
-    styl     = STYL.get(highway, {"color": "#888888", "weight": 2, "grupa": "Szlaki górskie"})
-    punkty   = [(p['lat'], p['lon']) for p in element['geometry']]
-    punkty   = uprość_geometrie(punkty)
-
-    if (obszar_tpn_buf is not None or obszar_tanap_buf is not None) and not w_parku(punkty):
+    # JEDYNY FILTR: czy ten konkretny way leży w parku
+    if way_id not in ways_w_parku:
         odfiltrowane += 1
         continue
+
+    highway   = element.get('tags', {}).get('highway', '')
+    styl      = STYL.get(highway, {"color": "#888888", "weight": 2, "grupa": "Szlaki górskie"})
+    pts_pelne = [(p['lat'], p['lon']) for p in element['geometry']]
+    punkty    = uprość_geometrie(pts_pelne)
 
     kolor_oryginalny = kolor_szlaku(element)
     typ_nazwa        = nazwa_koloru(element)
 
     if way_id in relacje_dla_way:
-        nazwa, dlugosc_total, relacja_id = relacje_dla_way[way_id]
-        nazwa        = sanitize(nazwa)
+        nazwa_rel, dlugosc_total, relacja_id = relacje_dla_way[way_id]
+        nazwa        = sanitize(nazwa_rel)
         info_dlugosc = f"Długość całkowita: {dlugosc_total} km"
         klasa_css    = f"trasa-{relacja_id}"
     else:
@@ -471,7 +484,6 @@ for element in wszystkie:
         klasa_css    = f"trasa-way-{way_id}"
         relacja_id   = None
 
-    # Zapamiętaj bazowy kolor (bez Strava) do suwaka
     if klasa_css not in kolory_bazowe:
         kolory_bazowe[klasa_css] = kolor_oryginalny
 
@@ -497,7 +509,6 @@ for element in wszystkie:
     )
     linia.options['className'] = klasa_css
 
-    # Przechowuj surowe dane — HTML generuje JS
     if klasa_css not in popupy_relacji:
         popupy_relacji[klasa_css] = {
             "nazwa":    nazwa,
@@ -519,7 +530,6 @@ for grupa in grupy.values():
 # ── Granice TPN (WMS) ──────────────────────────────────────────────────────────
 
 grupy["Granice TPN"] = folium.FeatureGroup(name="Granice TPN", show=True)
-# WMS — wypełnienie zielone po stronie polskiej
 folium.WmsTileLayer(
     url="https://sdi.gdos.gov.pl/wms",
     layers="ParkiNarodowe",
@@ -529,7 +539,6 @@ folium.WmsTileLayer(
     attr="GDOŚ",
     opacity=0.4
 ).add_to(grupy["Granice TPN"])
-# OSM — linia graniczna (widoczna w obu trybach)
 if obszar_tpn:
     folium.GeoJson(
         mapping(obszar_tpn),
@@ -592,12 +601,10 @@ if strava_dostepna:
             daty      = [seg["last_snapshot"]]
             serie_raw = {seg["last_snapshot"]: seg["effort_count"]}
 
-        # Oblicz dzienne delty z wartości skumulowanych
         efforts_delta = []
         for i, d in enumerate(daty):
             cum = serie_raw.get(d, 0)
             if i == 0:
-                # Pierwszy dzień — nie wiemy co było przed, delta = 0
                 efforts_delta.append(0)
             else:
                 prev_cum = serie_raw.get(daty[i-1], 0)
@@ -718,7 +725,7 @@ mapa.get_root().html.add_child(folium.Element(
     "<script>window.TD=" + td_json + ";</script>"
 ))
 
-# ── Cały JS jako stała string — zero f-stringów, zero konfliktów ───────────────
+# ── Cały JS jako stała string ──────────────────────────────────────────────────
 
 JS = """
 document.addEventListener("DOMContentLoaded", function() {
@@ -746,16 +753,54 @@ document.addEventListener("DOMContentLoaded", function() {
         'background:rgba(0,0,0,0.85);color:white',
         'padding:10px 14px;border-radius:6px',
         'box-shadow:0 2px 12px rgba(0,0,0,0.5)',
-        'z-index:1000;max-width:280px;font-size:13px;display:none',
+        'z-index:1000;max-width:300px;font-size:13px;display:none',
         'border:1px solid rgba(255,255,255,0.15);font-family:monospace'
     ].join(';');
     document.body.appendChild(panel);
+
+    // ── Buduje HTML panelu info uwzględniając aktualny dzień suwaka ────────
+    function budujPanel(kl, idx) {
+        if (!popupy[kl]) return '';
+        var p   = popupy[kl];
+        var rid = kl.replace('trasa-', '');
+        var s   = relSerie[rid];
+
+        var html = '<b>' + p.nazwa + '</b><br>' +
+                   'Typ: ' + p.typ + '<br>' +
+                   p.dlugosc;
+
+        if (p.effort > 0) {
+            html += '<hr style="margin:6px 0;border-color:#333">' +
+                    '<b>&#x1F4CA; Nat\u0119\u017cenie ruchu (Strava)</b><br>';
+
+            if (idx === 0) {
+                html += 'Przej\u015b\u0107 \u0142\u0105cznie: <b>' + p.effort.toLocaleString() + '</b><br>' +
+                        'Atle\u0107w: ' + p.atleci.toLocaleString() + '<br>';
+            } else {
+                var date    = allDates[idx - 1];
+                var dzienne = 0;
+                if (s) {
+                    var di  = s.dates.indexOf(date);
+                    dzienne = di >= 0 ? (s.efforts[di] || 0) : 0;
+                }
+                var dp        = date.split('-');
+                var dataLabel = dp[2] + '.' + dp[1] + '.' + dp[0];
+                html += 'Dzie\u0144: <b>' + dataLabel + '</b><br>' +
+                        'Przej\u015b\u0107 tego dnia: <b>' + dzienne.toLocaleString() + '</b><br>';
+            }
+
+            html += 'Segment: ' + p.seg_name + '<br>' +
+                    'Snapshot: ' + p.snapshot;
+        }
+
+        html += '<br><small style="color:#888">Kliknij map\u0119 aby zamkn\u0105\u0107</small>';
+        return html;
+    }
 
     // ── Suwak czasu ─────────────────────────────────────────────────────────
     var tlPanel = document.createElement('div');
     tlPanel.id  = 'tl-panel';
     var lbls = allDates.map(function(d, i) {
-        // d = "2026-03-01" → "01.03"
         var parts = d.slice(5).split('-');
         var label = parts[1] + '.' + parts[0];
         return '<span id="tll' + (i+1) + '">' + label + '</span>';
@@ -766,7 +811,7 @@ document.addEventListener("DOMContentLoaded", function() {
         '<div id="tl-wrap">' +
           '<div id="tl-lbls">' +
             (noData
-              ? '<span style="color:#3a4a5a;font-size:9px">Uruchom Tatroteka.py z traffic_data.json aby zobaczy\u0107 natężenie ruchu</span>'
+              ? '<span style="color:#3a4a5a;font-size:9px">Uruchom Tatroteka.py z traffic_data.json aby zobaczy\u0107 nat\u0119\u017cenie ruchu</span>'
               : '<span id="tll0" class="act">Og\u00f3\u0142em</span>' + lbls
             ) +
           '</div>' +
@@ -843,6 +888,10 @@ document.addEventListener("DOMContentLoaded", function() {
             el.className = i === idx ? 'act' : '';
         });
         recolor(idx);
+
+        if (aktywnaKlasa && panel.style.display !== 'none') {
+            panel.innerHTML = budujPanel(aktywnaKlasa, idx);
+        }
     }
 
     // ── Eventy suwaka ───────────────────────────────────────────────────────
@@ -868,7 +917,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 }, 1500);
             }
         });
-        // Zastosuj kolory gdy SVG w DOM
         function applyWhenReady() {
             if (document.querySelectorAll('path[class]').length === 0) {
                 setTimeout(applyWhenReady, 300);
@@ -879,7 +927,7 @@ document.addEventListener("DOMContentLoaded", function() {
         applyWhenReady();
     }, 1200);
 
-    // ── Podświetlanie szlaków ───────────────────────────────────────────────
+    // ── Podświetlanie i klik szlaków ────────────────────────────────────────
     function podswietl(kl, on) {
         document.querySelectorAll('path.' + kl).forEach(function(el) {
             el.style.opacity     = on ? '1.0' : '0.8';
@@ -899,22 +947,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (aktywnaKlasa && aktywnaKlasa !== kl) podswietl(aktywnaKlasa, false);
                 aktywnaKlasa = kl;
                 podswietl(kl, true);
-                if (popupy[kl]) {
-                    var p = popupy[kl];
-                    var html = '<b>' + p.nazwa + '</b><br>' +
-                               'Typ: ' + p.typ + '<br>' +
-                               p.dlugosc;
-                    if (p.effort > 0) {
-                        html += '<hr style="margin:6px 0">' +
-                                '<b>&#x1F4CA; Nat\u0119\u017cenie ruchu (Strava)</b><br>' +
-                                'Przej\u015b\u0107 \u0142\u0105cznie: <b>' + p.effort.toLocaleString() + '</b><br>' +
-                                'Atle\u0107w: ' + p.atleci.toLocaleString() + '<br>' +
-                                'Segment: ' + p.seg_name + '<br>' +
-                                'Snapshot: ' + p.snapshot;
-                    }
-                    panel.innerHTML = html + '<br><small style="color:#888">Kliknij map\u0119 aby zamkn\u0105\u0107</small>';
-                    panel.style.display = 'block';
-                }
+                panel.innerHTML = budujPanel(kl, currentIdx);
+                panel.style.display = 'block';
             });
         });
         document.querySelector('.leaflet-container').addEventListener('click', function() {
@@ -934,42 +968,28 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         if (!mapaL) return;
 
-        var isDark = true;
+        var isDark   = true;
         var darkUrl  = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
         var lightUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
-        var currentTile = null;
-
-        // Znajdź aktywną warstwę bazową
-        mapaL.eachLayer(function(layer) {
-            if (layer._url && (layer._url.indexOf('carto') !== -1 || layer._url.indexOf('basemaps') !== -1)) {
-                currentTile = layer;
-            }
-        });
 
         document.getElementById('theme-btn').addEventListener('click', function() {
             isDark = !isDark;
-            // Usuń wszystkie warstwy tileset
             mapaL.eachLayer(function(layer) {
                 if (layer._url) mapaL.removeLayer(layer);
             });
-            // Dodaj nową
             L.tileLayer(isDark ? darkUrl : lightUrl, {
                 attribution: 'CartoDB',
                 subdomains: 'abcd',
                 maxZoom: 19
             }).addTo(mapaL);
-
-            // Aktualizuj przycisk
             this.innerHTML = isDark ? '\u263E Ciemny' : '\u2600 Jasny';
             this.className = isDark ? '' : 'light';
-
-            // Dostosuj kolor TPN overlay (jasny/ciemny tył)
             document.querySelectorAll('.leaflet-overlay-pane svg').forEach(function(svg) {
                 svg.style.filter = isDark ? '' : 'brightness(0.7)';
             });
         });
 
-        // Pomiar odległości
+        // ── Pomiar odległości ───────────────────────────────────────────────
         function dist(p1, p2) {
             var R = 6371;
             var dLat = (p2.lat - p1.lat) * Math.PI / 180;
@@ -1026,12 +1046,9 @@ mapa.get_root().script.add_child(folium.Element(JS))
 
 import io
 
-# Przechwytujemy HTML z Folium i czyścimy surrogaty przed zapisem
-buf = io.StringIO()
 try:
     mapa.save("index.html")
 except UnicodeEncodeError:
-    # Folium/branca crashuje na surogatach — generuj HTML ręcznie
     root = mapa.get_root()
     html_out = root.render()
     html_out = html_out.encode('utf-8', errors='replace').decode('utf-8')
@@ -1039,7 +1056,6 @@ except UnicodeEncodeError:
         f.write(html_out)
     print("Zapisano index.html (z czyszczeniem surogatów)")
 else:
-    # Jeśli save się udał, przepisz z czyszczeniem na wszelki wypadek
     with open("index.html", encoding="utf-8", errors="replace") as f:
         html_out = f.read()
     with open("index.html", "w", encoding="utf-8") as f:
