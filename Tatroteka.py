@@ -191,6 +191,17 @@ def wczytaj_pogode(path="weather_data.json"):
         print(f"Blad wczytywania {path}: {e}")
         return {}
 
+def wczytaj_lawiny(path="avalanche_data.json"):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print(f"Brak pliku {path} — dane lawinowe wylaczone")
+        return {}
+    except Exception as e:
+        print(f"Blad wczytywania {path}: {e}")
+        return {}
+
 def znajdz_najblizszy_segment_punkt(lat, lon, segmenty, promien_km=0.55):
     najblizszy  = None
     min_dystans = float('inf')
@@ -357,6 +368,7 @@ max_effort      = max((s["effort_count"] for s in strava_segmenty), default=1)
 strava_dostepna = len(strava_segmenty) > 0
 print(f"Max effort_count: {max_effort}")
 pogoda_dane     = wczytaj_pogode("weather_data.json")
+lawiny_dane     = wczytaj_lawiny("avalanche_data.json")
 
 # ── Geometria wayów ────────────────────────────────────────────────────────────
 
@@ -811,6 +823,7 @@ td = {
     "koloryBazowe": kolory_bazowe,
     "maxEffort":    max_effort,
     "weatherData":  pogoda_dane,
+    "avalancheData": lawiny_dane,
 }
 td_json = json.dumps(td, ensure_ascii=True)
 print(f"window.TD rozmiar: {len(td_json)//1024} KB")
@@ -823,12 +836,13 @@ mapa.get_root().html.add_child(folium.Element(
 JS = """
 document.addEventListener("DOMContentLoaded", function() {
     var TD  = window.TD || {};
-    var popupy       = TD.popupy       || {};
-    var relSerie     = TD.relSerie     || {};
-    var allDates     = TD.allDates     || [];
-    var koloryBazowe = TD.koloryBazowe || {};
-    var maxEffort    = TD.maxEffort    || 1;
-    var weatherData  = TD.weatherData  || {};
+    var popupy        = TD.popupy        || {};
+    var relSerie      = TD.relSerie      || {};
+    var allDates      = TD.allDates      || [];
+    var koloryBazowe  = TD.koloryBazowe  || {};
+    var maxEffort     = TD.maxEffort     || 1;
+    var weatherData   = TD.weatherData   || {};
+    var avalancheData = TD.avalancheData || {};
 
     var aktywnaKlasa = null;
     var trybPomiaru  = false;
@@ -839,15 +853,210 @@ document.addEventListener("DOMContentLoaded", function() {
     var playTimer    = null;
     var currentIdx   = 0;
 
+    // ── Helpers pogodowych ──────────────────────────────────────────────────
+    function windDir(deg) {
+        if (deg === null || deg === undefined) return '\u2013';
+        var dirs = ['N','NE','E','SE','S','SW','W','NW'];
+        return dirs[Math.round(deg / 45) % 8];
+    }
+
+    function distKm(lat1, lon1, lat2, lon2) {
+        var R = 6371;
+        var dLat = (lat2-lat1)*Math.PI/180, dLon = (lon2-lon1)*Math.PI/180;
+        var a = Math.sin(dLat/2)*Math.sin(dLat/2) +
+                Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*
+                Math.sin(dLon/2)*Math.sin(dLon/2);
+        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    }
+
+    function najblizszaStacja(lat, lon) {
+        var bestKey = null, bestDist = Infinity;
+        Object.keys(weatherData).forEach(function(key) {
+            var m = (weatherData[key].meta || {});
+            if (m.lat == null) return;
+            var d = distKm(lat, lon, m.lat, m.lon);
+            if (d < bestDist) { bestDist = d; bestKey = key; }
+        });
+        return bestKey;
+    }
+
+    function getDaneStacji(key, idx) {
+        var serie = (weatherData[key] || {}).series || {};
+        if (idx === 0) {
+            var daty = Object.keys(serie).sort();
+            return daty.length ? serie[daty[daty.length - 1]] : null;
+        }
+        return serie[allDates[idx - 1]] || null;
+    }
+
+    function renderPogoda(key, idx) {
+        var meta  = (weatherData[key] || {}).meta || {};
+        var d     = getDaneStacji(key, idx);
+        var nazwa = meta.nazwa || key;
+        var alt   = meta.alt ? ' (' + meta.alt + '\u00a0m)' : '';
+        if (!d) return '<div style="color:#556;font-size:11px">\u26C5 ' + nazwa + alt + ': brak danych</div>';
+        var temp = d.temperatura     != null ? '<b>' + d.temperatura + '\u00b0C</b>'                            : '\u2013';
+        var wind = d.predkosc_wiatru != null ? d.predkosc_wiatru + '\u00a0m/s\u00a0' + windDir(d.kierunek_wiatru) : '\u2013';
+        var rain = d.suma_opadu      != null ? d.suma_opadu + '\u00a0mm'                                        : '\u2013';
+        var hum  = d.wilgotnosc      != null ? d.wilgotnosc + '%'                                               : '\u2013';
+        return '<div style="margin-top:4px;font-size:11px;line-height:1.6">' +
+               '<span style="color:#8ab4f8">\u26C5 ' + nazwa + alt + '</span><br>' +
+               '\uD83C\uDF21\uFE0F\u00a0' + temp +
+               '\u2003\uD83D\uDCA8\u00a0' + wind +
+               '\u2003\uD83C\uDF27\uFE0F\u00a0' + rain +
+               '\u2003\uD83D\uDCA7\u00a0' + hum + '</div>';
+    }
+
+    // ── Helpers lawinowych ──────────────────────────────────────────────────
+    // Zwraca dane lawinowe dla danego źródła i indeksu suwaka
+    function getDaneLawiny(key, idx) {
+        var serie = (avalancheData[key] || {}).series || {};
+        if (idx === 0) {
+            var daty = Object.keys(serie).sort();
+            return daty.length ? serie[daty[daty.length - 1]] : null;
+        }
+        return serie[allDates[idx - 1]] || null;
+    }
+
+    // Emoji dla stopnia lawinowego
+    function lawinaEmoji(stopien) {
+        var e = ['\u26A0\uFE0F', '\uD83D\uDFE2', '\uD83D\uDFE1', '\uD83D\uDFE0', '\uD83D\uDD34', '\u26AB'];
+        return e[stopien] || e[0];
+    }
+
+    // Renderuje sekcję lawinową w popupie — najgorszy stopień z obu regionów PL/SK
+    function renderLawiny(lat, lon, idx) {
+        var keys = Object.keys(avalancheData);
+        if (!keys.length) return '';
+
+        // Czy jest aktywny sezon lawinowy (jakikolwiek stopień > 0 dziś)
+        var aktywne = keys.some(function(k) {
+            var d = getDaneLawiny(k, idx);
+            return d && d.stopien;
+        });
+        if (!aktywne) return '';
+
+        var html = '<hr style="margin:6px 0;border-color:#333"><b>\u26A0\uFE0F Zagrożenie lawinowe</b>';
+
+        keys.forEach(function(key) {
+            var meta = (avalancheData[key] || {}).meta || {};
+            var d    = getDaneLawiny(key, idx);
+            if (!d || !d.stopien) return;
+
+            var kolor = d.kolor || '#888';
+            html += '<div style="margin-top:5px;font-size:11px;line-height:1.5">' +
+                    '<span style="display:inline-block;background:' + kolor +
+                    ';color:#000;font-weight:bold;padding:1px 6px;border-radius:3px;margin-right:5px">' +
+                    d.stopien + '</span>' +
+                    '<span style="color:#ccc">' + meta.nazwa + '</span>' +
+                    (d.stopien_nazwa ? ' \u2014 <b>' + d.stopien_nazwa + '</b>' : '') +
+                    (d.tendencja ? '<br><span style="color:#888;font-size:10px">' + d.tendencja + '</span>' : '') +
+                    (d.wazne_do  ? '<br><span style="color:#667;font-size:10px">Ważne do: ' + d.wazne_do + '</span>' : '') +
+                    '</div>';
+        });
+
+        return html;
+    }
+
+    // ── Popup lawinowy (osobny panel, klikalny przycisk) ────────────────────
+    var avalancheBtn = document.createElement('button');
+    avalancheBtn.id  = 'avalanche-btn';
+    avalancheBtn.style.cssText = [
+        'position:fixed;top:10px;right:10px',
+        'background:rgba(8,15,28,0.92);color:white',
+        'padding:6px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.15)',
+        'box-shadow:0 2px 12px rgba(0,0,0,0.5)',
+        'z-index:1001;font-size:12px;font-family:monospace;cursor:pointer',
+        'display:none'
+    ].join(';');
+    document.body.appendChild(avalancheBtn);
+
+    var avalanchePanel = document.createElement('div');
+    avalanchePanel.id  = 'avalanche-panel';
+    avalanchePanel.style.cssText = [
+        'position:fixed;top:46px;right:10px',
+        'background:rgba(8,15,28,0.96);color:white',
+        'padding:10px 14px;border-radius:8px',
+        'box-shadow:0 2px 16px rgba(0,0,0,0.6)',
+        'z-index:1001;font-size:12px;font-family:monospace',
+        'border:1px solid rgba(255,255,255,0.12)',
+        'max-width:280px;display:none'
+    ].join(';');
+    document.body.appendChild(avalanchePanel);
+
+    avalancheBtn.addEventListener('click', function() {
+        var vis = avalanchePanel.style.display !== 'none';
+        avalanchePanel.style.display = vis ? 'none' : 'block';
+    });
+
+    // Kliknięcie mapy zamyka panel lawinowy
+    document.addEventListener('click', function(e) {
+        if (!avalancheBtn.contains(e.target) && !avalanchePanel.contains(e.target)) {
+            avalanchePanel.style.display = 'none';
+        }
+    });
+
+    function updateAvalancheBtn(idx) {
+        var keys = Object.keys(avalancheData);
+        if (!keys.length) { avalancheBtn.style.display = 'none'; return; }
+
+        var maxStopien = 0;
+        var maxKolor   = null;
+        keys.forEach(function(k) {
+            var d = getDaneLawiny(k, idx);
+            if (d && d.stopien && d.stopien > maxStopien) {
+                maxStopien = d.stopien;
+                maxKolor   = d.kolor;
+            }
+        });
+
+        if (!maxStopien) { avalancheBtn.style.display = 'none'; return; }
+
+        // Pokaż przycisk z najwyższym stopniem
+        avalancheBtn.style.display = 'block';
+        avalancheBtn.style.borderColor = maxKolor || '#888';
+        avalancheBtn.innerHTML = '\u26A0\uFE0F Lawiny: <span style="display:inline-block;background:' +
+            (maxKolor || '#888') + ';color:#000;font-weight:bold;padding:0 5px;border-radius:3px">' +
+            maxStopien + '</span>';
+
+        // Zaktualizuj zawartość panelu
+        var html = '<b>\u26A0\uFE0F Zagrożenie lawinowe</b>';
+        keys.forEach(function(key) {
+            var meta = (avalancheData[key] || {}).meta || {};
+            var d    = getDaneLawiny(key, idx);
+            if (!d || !d.stopien) {
+                html += '<div style="margin-top:6px;color:#445;font-size:11px">' + meta.nazwa + ': brak danych</div>';
+                return;
+            }
+            var kolor = d.kolor || '#888';
+            html += '<div style="margin-top:8px;padding:6px 8px;background:rgba(255,255,255,0.04);border-radius:4px">' +
+                    '<div style="font-size:11px;color:#aaa">' + meta.nazwa + '</div>' +
+                    '<div style="margin-top:3px">' +
+                    '<span style="display:inline-block;background:' + kolor +
+                    ';color:#000;font-weight:bold;font-size:16px;padding:2px 10px;border-radius:4px">' +
+                    d.stopien + '</span>' +
+                    '<span style="font-size:13px;font-weight:bold;margin-left:8px">' + (d.stopien_nazwa || '') + '</span>' +
+                    '</div>' +
+                    (d.tendencja ? '<div style="margin-top:3px;font-size:10px;color:#888">' + d.tendencja + '</div>' : '') +
+                    (d.wazne_do  ? '<div style="font-size:10px;color:#556">Wa\u017cne do: ' + d.wazne_do + '</div>' : '') +
+                    (d.opis      ? '<div style="margin-top:4px;font-size:10px;color:#9ab">' + d.opis + '</div>' : '') +
+                    '</div>';
+        });
+        html += '<div style="margin-top:8px;font-size:10px;color:#445">Skala EAWS 1\u20135 \u2022 ' +
+                '<a href="https://lawiny.topr.pl" target="_blank" style="color:#567">lawiny.topr.pl</a>' +
+                ' \u2022 <a href="https://hzs.sk" target="_blank" style="color:#567">hzs.sk</a></div>';
+        avalanchePanel.innerHTML = html;
+    }
+
     // ── Info panel (szlaki) ─────────────────────────────────────────────────
     var panel = document.createElement('div');
     panel.id  = 'info-panel';
     panel.style.cssText = [
         'position:fixed;top:80px;left:10px',
-        'background:rgba(0,0,0,0.85);color:white',
+        'background:rgba(0,0,0,0.88);color:white',
         'padding:10px 14px;border-radius:6px',
         'box-shadow:0 2px 12px rgba(0,0,0,0.5)',
-        'z-index:1000;max-width:300px;font-size:13px;display:none',
+        'z-index:1000;max-width:320px;font-size:13px;display:none',
         'border:1px solid rgba(255,255,255,0.15);font-family:monospace'
     ].join(';');
     document.body.appendChild(panel);
@@ -857,114 +1066,100 @@ document.addEventListener("DOMContentLoaded", function() {
         var p   = popupy[kl];
         var rid = kl.replace('trasa-', '');
         var s   = relSerie[rid];
+
         var html = '<b>' + p.nazwa + '</b><br>Typ: ' + p.typ + '<br>' + p.dlugosc;
+
         if (p.effort > 0) {
             html += '<hr style="margin:6px 0;border-color:#333"><b>&#x1F4CA; Nat\u0119\u017cenie ruchu (Strava)</b><br>';
             if (idx === 0) {
-                html += 'Przej\u015b\u0107 \u0142\u0105cznie: <b>' + p.effort.toLocaleString() + '</b><br>Atle\u0107w: ' + p.atleci.toLocaleString() + '<br>';
+                html += 'Przej\u015b\u0107 \u0142\u0105cznie: <b>' + p.effort.toLocaleString() + '</b><br>' +
+                        'Atle\u0107w: ' + p.atleci.toLocaleString() + '<br>';
             } else {
-                var date = allDates[idx - 1];
+                var dt = allDates[idx - 1];
                 var dzienne = 0;
-                if (s) { var di = s.dates.indexOf(date); dzienne = di >= 0 ? (s.efforts[di] || 0) : 0; }
-                var dp = date.split('-');
-                html += 'Dzie\u0144: <b>' + dp[2] + '.' + dp[1] + '.' + dp[0] + '</b><br>Przej\u015b\u0107 tego dnia: <b>' + dzienne.toLocaleString() + '</b><br>';
+                if (s) { var di = s.dates.indexOf(dt); dzienne = di >= 0 ? (s.efforts[di] || 0) : 0; }
+                var dp = dt.split('-');
+                html += 'Dzie\u0144: <b>' + dp[2] + '.' + dp[1] + '.' + dp[0] + '</b><br>' +
+                        'Przej\u015b\u0107 tego dnia: <b>' + dzienne.toLocaleString() + '</b><br>';
             }
             html += 'Segment: ' + p.seg_name + '<br>Snapshot: ' + p.snapshot;
         }
+
+        // Pogoda z najbliższej stacji
+        if (Object.keys(weatherData).length > 0 && p.lat != null) {
+            var stKey = najblizszaStacja(p.lat, p.lon);
+            if (stKey) html += '<hr style="margin:6px 0;border-color:#333">' + renderPogoda(stKey, idx);
+        }
+
+        // Zagrożenie lawinowe
+        if (p.lat != null) {
+            var lawinaHtml = renderLawiny(p.lat, p.lon, idx);
+            if (lawinaHtml) html += lawinaHtml;
+        }
+
         html += '<br><small style="color:#888">Kliknij map\u0119 aby zamkn\u0105\u0107</small>';
         return html;
     }
 
-    // ── Panel pogodowy ──────────────────────────────────────────────────────
+    // ── Pasek pogodowy ──────────────────────────────────────────────────────
     var weatherPanel = document.createElement('div');
     weatherPanel.id  = 'weather-panel';
     weatherPanel.style.cssText = [
         'position:fixed;top:10px;left:50%;transform:translateX(-50%)',
         'background:rgba(8,15,28,0.92);color:white',
-        'padding:8px 16px;border-radius:8px',
+        'padding:6px 14px;border-radius:8px',
         'box-shadow:0 2px 16px rgba(0,0,0,0.6)',
-        'z-index:1000;font-size:12px;font-family:monospace',
+        'z-index:1000;font-size:11px;font-family:monospace',
         'border:1px solid rgba(255,255,255,0.12)',
-        'display:flex;gap:24px;align-items:center;white-space:nowrap'
+        'display:flex;gap:14px;align-items:center;flex-wrap:wrap;white-space:nowrap'
     ].join(';');
     document.body.appendChild(weatherPanel);
 
-    // Kierunek wiatru stopnie → strzałka + nazwa
-    function windDir(deg) {
-        if (deg === null || deg === undefined) return '–';
-        var dirs = ['N','NE','E','SE','S','SW','W','NW'];
-        return dirs[Math.round(deg / 45) % 8];
-    }
-
-    function renderWeatherStation(key, label, serie, idx) {
-        var d = null;
-        if (idx === 0) {
-            // Bieżące — ostatni dostępny snapshot
-            var daty = Object.keys(serie).sort();
-            if (daty.length) d = serie[daty[daty.length - 1]];
-        } else {
-            var date = allDates[idx - 1];
-            d = serie[date] || null;
-        }
-        if (!d) return '<span style="color:#445">' + label + ': brak danych</span>';
-
-        var temp  = d.temperatura !== null ? d.temperatura + '\u00b0C' : '–';
-        var wind  = d.predkosc_wiatru !== null ? d.predkosc_wiatru + ' m/s ' + windDir(d.kierunek_wiatru) : '–';
-        var rain  = d.suma_opadu !== null ? d.suma_opadu + ' mm' : '–';
-        var hum   = d.wilgotnosc !== null ? d.wilgotnosc + '%' : '–';
-
-        return '<span style="color:#8ab4f8;font-weight:bold">' + label + '</span> &nbsp;' +
-               '\uD83C\uDF21\uFE0F ' + temp +
-               ' &nbsp;\uD83D\uDCA8 ' + wind +
-               ' &nbsp;\uD83C\uDF27\uFE0F ' + rain +
-               ' &nbsp;\uD83D\uDCA7 ' + hum;
+    function renderStacjaPasek(key, idx) {
+        var meta  = (weatherData[key] || {}).meta || {};
+        var d     = getDaneStacji(key, idx);
+        var nazwa = meta.nazwa || key;
+        if (!d) return '<span style="color:#334">' + nazwa + ':\u00a0\u2013</span>';
+        var temp = d.temperatura     != null ? d.temperatura + '\u00b0C' : '\u2013';
+        var wind = d.predkosc_wiatru != null ? d.predkosc_wiatru + '\u00a0m/s' : '\u2013';
+        return '<span><span style="color:#8ab4f8">' + nazwa + '</span>\u00a0' +
+               '\uD83C\uDF21\uFE0F\u00a0' + temp + '\u00a0\uD83D\uDCA8\u00a0' + wind + '</span>';
     }
 
     function updateWeatherPanel(idx) {
-        var kw = weatherData['kasprowy_wierch'] || {};
-        var zk = weatherData['zakopane']        || {};
-        var kwSerie = kw.series || {};
-        var zkSerie = zk.series || {};
-
-        var hasSeries = Object.keys(kwSerie).length > 0 || Object.keys(zkSerie).length > 0;
-        if (!hasSeries) {
-            // Brak danych lokalnych — pobierz live z IMGW
-            fetchWeatherLive();
-            return;
-        }
-
-        var html = renderWeatherStation('kasprowy_wierch', 'Kasprowy Wierch', kwSerie, idx) +
-                   '<span style="color:#223;margin:0 4px">|</span>' +
-                   renderWeatherStation('zakopane', 'Zakopane', zkSerie, idx);
-        weatherPanel.innerHTML = html;
+        var keys = Object.keys(weatherData);
+        if (!keys.length) { fetchWeatherLive(); return; }
+        var maSerie = keys.some(function(k) {
+            return Object.keys((weatherData[k].series || {})).length > 0;
+        });
+        if (!maSerie) { fetchWeatherLive(); return; }
+        weatherPanel.innerHTML = keys
+            .map(function(k) { return renderStacjaPasek(k, idx); })
+            .join('<span style="color:#1a2535">\u00a0|\u00a0</span>');
     }
 
     function fetchWeatherLive() {
-        weatherPanel.innerHTML = '<span style="color:#666">Pobieranie pogody...</span>';
+        weatherPanel.innerHTML = '<span style="color:#556">Pobieranie pogody...</span>';
         fetch('https://danepubliczne.imgw.pl/api/data/synop')
             .then(function(r) { return r.json(); })
             .then(function(all) {
                 var idx = {};
                 all.forEach(function(s) { idx[s.id_stacji] = s; });
-                var kw = idx['12650'];  // Kasprowy Wierch
-                var zk = idx['12640'];  // Zakopane
-
-                function fmtStation(d, label) {
-                    if (!d) return '<span style="color:#445">' + label + ': brak</span>';
-                    return '<span style="color:#8ab4f8;font-weight:bold">' + label + '</span> &nbsp;' +
-                           '\uD83C\uDF21\uFE0F ' + (d.temperatura || '–') + '\u00b0C' +
-                           ' &nbsp;\uD83D\uDCA8 ' + (d.predkosc_wiatru || '–') + ' m/s ' + windDir(parseInt(d.kierunek_wiatru)) +
-                           ' &nbsp;\uD83C\uDF27\uFE0F ' + (d.suma_opadu || '–') + ' mm' +
-                           ' &nbsp;\uD83D\uDCA7 ' + (d.wilgotnosc_wzgledna || '–') + '%';
-                }
-                weatherPanel.innerHTML =
-                    fmtStation(kw, 'Kasprowy Wierch') +
-                    '<span style="color:#223;margin:0 4px">|</span>' +
-                    fmtStation(zk, 'Zakopane') +
-                    ' &nbsp;<small style="color:#334">(na \u017cywo)</small>';
+                var parts = [
+                    {id: '12650', nazwa: 'Kasprowy Wierch'},
+                    {id: '12640', nazwa: 'Zakopane'},
+                ].map(function(st) {
+                    var d = idx[st.id];
+                    if (!d) return '<span style="color:#334">' + st.nazwa + ':\u00a0\u2013</span>';
+                    return '<span><span style="color:#8ab4f8">' + st.nazwa + '</span>\u00a0' +
+                           '\uD83C\uDF21\uFE0F\u00a0' + (d.temperatura || '\u2013') + '\u00b0C\u00a0' +
+                           '\uD83D\uDCA8\u00a0' + (d.predkosc_wiatru || '\u2013') + '\u00a0m/s</span>';
+                });
+                weatherPanel.innerHTML = parts.join('<span style="color:#1a2535">\u00a0|\u00a0</span>') +
+                    '\u00a0<small style="color:#334">(live)</small>';
             })
             .catch(function() {
-                weatherPanel.innerHTML = '<span style="color:#445">Brak danych pogodowych</span>';
+                weatherPanel.innerHTML = '<span style="color:#334">Brak danych pogodowych</span>';
             });
     }
 
@@ -979,8 +1174,10 @@ document.addEventListener("DOMContentLoaded", function() {
     tlPanel.innerHTML =
         '<span id="tl-date">' + (noData ? 'BRAK DANYCH' : 'OG\u00d3\u0141EM') + '</span>' +
         '<div id="tl-wrap"><div id="tl-lbls">' +
-        (noData ? '<span style="color:#3a4a5a;font-size:9px">Brak traffic_data.json</span>' : '<span id="tll0" class="act">Og\u00f3\u0142em</span>' + lbls) +
-        '</div><input type="range" id="tl-sl" min="0" max="' + allDates.length + '" value="0" step="1"' + (noData ? ' disabled style="opacity:0.3"' : '') + '></div>' +
+        (noData ? '<span style="color:#3a4a5a;font-size:9px">Brak traffic_data.json</span>'
+                : '<span id="tll0" class="act">Og\u00f3\u0142em</span>' + lbls) +
+        '</div><input type="range" id="tl-sl" min="0" max="' + allDates.length + '" value="0" step="1"' +
+        (noData ? ' disabled style="opacity:0.3"' : '') + '></div>' +
         '<button id="tl-play"' + (noData ? ' disabled style="opacity:0.3"' : '') + '>\u25b6</button>';
     document.body.appendChild(tlPanel);
 
@@ -989,7 +1186,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var t = Math.log(1 + eff) / Math.log(1 + mx);
         t = Math.min(1, Math.max(0, t));
         var r, g, b, tt;
-        if (t < 0.25) { tt = t/0.25; r=Math.round(20+tt*40); g=Math.round(60+tt*80); b=Math.round(180+tt*40); }
+        if (t < 0.25) { tt=t/0.25; r=Math.round(20+tt*40); g=Math.round(60+tt*80); b=Math.round(180+tt*40); }
         else if (t < 0.5) { tt=(t-0.25)/0.25; r=Math.round(60+tt*190); g=Math.round(140+tt*100); b=Math.round(220-tt*200); }
         else if (t < 0.75) { tt=(t-0.5)/0.25; r=250; g=Math.round(240-tt*140); b=Math.round(20-tt*20); }
         else { tt=(t-0.75)/0.25; r=Math.round(250-tt*20); g=Math.round(100-tt*100); b=0; }
@@ -999,14 +1196,19 @@ document.addEventListener("DOMContentLoaded", function() {
     function recolor(idx) {
         var date = idx === 0 ? null : allDates[idx - 1];
         var dayMax = 0;
-        if (date) Object.values(relSerie).forEach(function(s) { var i=s.dates.indexOf(date); if(i>=0&&s.efforts[i]>dayMax) dayMax=s.efforts[i]; });
+        if (date) Object.values(relSerie).forEach(function(s) {
+            var i = s.dates.indexOf(date);
+            if (i >= 0 && s.efforts[i] > dayMax) dayMax = s.efforts[i];
+        });
         document.querySelectorAll('path[class]').forEach(function(el) {
             var kl = Array.from(el.classList).find(function(c) { return c.startsWith('trasa-'); });
             if (!kl) return;
-            var rid = kl.replace('trasa-', ''); var s = relSerie[rid]; var baz = koloryBazowe[kl] || '#888888';
+            var rid = kl.replace('trasa-', '');
+            var s   = relSerie[rid];
+            var baz = koloryBazowe[kl] || '#888888';
             if (!s) { el.style.stroke = baz; return; }
             if (!date) { el.style.stroke = eff2col(s.max_eff, maxEffort) || baz; }
-            else { var i=s.dates.indexOf(date); var e=i>=0?s.efforts[i]:0; el.style.stroke = e>0 ? eff2col(e, dayMax||1) : baz; }
+            else { var i = s.dates.indexOf(date); var e = i >= 0 ? s.efforts[i] : 0; el.style.stroke = e > 0 ? eff2col(e, dayMax||1) : baz; }
         });
     }
 
@@ -1014,71 +1216,112 @@ document.addEventListener("DOMContentLoaded", function() {
         currentIdx = idx;
         document.getElementById('tl-sl').value = idx;
         var date = idx === 0 ? null : allDates[idx - 1];
-        document.getElementById('tl-date').textContent = date ? (date.slice(5).split('-').reverse().join('.')) : 'OG\u00d3\u0141EM';
-        document.querySelectorAll('#tl-lbls span').forEach(function(el, i) { el.className = i===idx?'act':''; });
+        document.getElementById('tl-date').textContent =
+            date ? date.slice(5).split('-').reverse().join('.') : 'OG\u00d3\u0141EM';
+        document.querySelectorAll('#tl-lbls span').forEach(function(el, i) {
+            el.className = i === idx ? 'act' : '';
+        });
         recolor(idx);
-        if (aktywnaKlasa && panel.style.display !== 'none') panel.innerHTML = budujPanel(aktywnaKlasa, idx);
+        if (aktywnaKlasa && panel.style.display !== 'none')
+            panel.innerHTML = budujPanel(aktywnaKlasa, idx);
         updateWeatherPanel(idx);
+        updateAvalancheBtn(idx);
     }
 
     setTimeout(function() {
         document.getElementById('tl-sl').addEventListener('input', function() { setIdx(parseInt(this.value)); });
         document.getElementById('tl-play').addEventListener('click', function() {
-            if (playTimer) { clearInterval(playTimer); playTimer=null; this.innerHTML='\u25b6'; this.className=''; }
-            else {
-                var btn=this; btn.innerHTML='\u23f8'; btn.className='on';
-                var idx=currentIdx>=allDates.length?0:currentIdx;
-                playTimer=setInterval(function() { idx++; setIdx(idx); if(idx>=allDates.length){clearInterval(playTimer);playTimer=null;btn.innerHTML='\u25b6';btn.className='';} }, 1500);
+            if (playTimer) {
+                clearInterval(playTimer); playTimer = null;
+                this.innerHTML = '\u25b6'; this.className = '';
+            } else {
+                var btn = this; btn.innerHTML = '\u23f8'; btn.className = 'on';
+                var idx = currentIdx >= allDates.length ? 0 : currentIdx;
+                playTimer = setInterval(function() {
+                    idx++; setIdx(idx);
+                    if (idx >= allDates.length) {
+                        clearInterval(playTimer); playTimer = null;
+                        btn.innerHTML = '\u25b6'; btn.className = '';
+                    }
+                }, 1500);
             }
         });
-        (function applyWhenReady() { if(!document.querySelectorAll('path[class]').length){setTimeout(applyWhenReady,300);return;} setIdx(0); })();
+        (function applyWhenReady() {
+            if (!document.querySelectorAll('path[class]').length) { setTimeout(applyWhenReady, 300); return; }
+            setIdx(0);
+        })();
     }, 1200);
 
     function podswietl(kl, on) {
-        document.querySelectorAll('path.'+kl).forEach(function(el) { el.style.opacity=on?'1.0':'0.8'; el.style.strokeWidth=on?'6px':''; });
+        document.querySelectorAll('path.' + kl).forEach(function(el) {
+            el.style.opacity     = on ? '1.0' : '0.8';
+            el.style.strokeWidth = on ? '6px' : '';
+        });
     }
 
     setTimeout(function() {
         document.querySelectorAll('path[class]').forEach(function(el) {
-            var kl = Array.from(el.classList).find(function(c){return c.startsWith('trasa-');});
+            var kl = Array.from(el.classList).find(function(c) { return c.startsWith('trasa-'); });
             if (!kl) return;
             el.addEventListener('click', function(e) {
                 if (trybPomiaru) return;
                 e.stopPropagation();
                 if (aktywnaKlasa && aktywnaKlasa !== kl) podswietl(aktywnaKlasa, false);
                 aktywnaKlasa = kl; podswietl(kl, true);
-                panel.innerHTML = budujPanel(kl, currentIdx); panel.style.display = 'block';
+                panel.innerHTML = budujPanel(kl, currentIdx);
+                panel.style.display = 'block';
             });
         });
         document.querySelector('.leaflet-container').addEventListener('click', function() {
             if (trybPomiaru) return;
-            if (aktywnaKlasa) { podswietl(aktywnaKlasa, false); aktywnaKlasa=null; panel.style.display='none'; }
+            if (aktywnaKlasa) { podswietl(aktywnaKlasa, false); aktywnaKlasa = null; panel.style.display = 'none'; }
         });
     }, 1500);
 
     setTimeout(function() {
-        mapaL = Object.values(window).find(function(v){return v&&v._leaflet_id&&v.getCenter;});
+        mapaL = Object.values(window).find(function(v) { return v && v._leaflet_id && v.getCenter; });
         if (!mapaL) return;
-        var isDark=true, darkUrl='https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', lightUrl='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+        var isDark = true;
+        var darkUrl  = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
+        var lightUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
         document.getElementById('theme-btn').addEventListener('click', function() {
-            isDark=!isDark;
-            mapaL.eachLayer(function(layer){if(layer._url)mapaL.removeLayer(layer);});
-            L.tileLayer(isDark?darkUrl:lightUrl,{attribution:'CartoDB',subdomains:'abcd',maxZoom:19}).addTo(mapaL);
-            this.innerHTML=isDark?'\u263E Ciemny':'\u2600 Jasny'; this.className=isDark?'':'light';
+            isDark = !isDark;
+            mapaL.eachLayer(function(l) { if (l._url) mapaL.removeLayer(l); });
+            L.tileLayer(isDark ? darkUrl : lightUrl,
+                {attribution: 'CartoDB', subdomains: 'abcd', maxZoom: 19}).addTo(mapaL);
+            this.innerHTML = isDark ? '\u263E Ciemny' : '\u2600 Jasny';
+            this.className = isDark ? '' : 'light';
         });
 
-        function dist(p1,p2){var R=6371,dLat=(p2.lat-p1.lat)*Math.PI/180,dLon=(p2.lng-p1.lng)*Math.PI/180,a=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(p1.lat*Math.PI/180)*Math.cos(p2.lat*Math.PI/180)*Math.sin(dLon/2)*Math.sin(dLon/2);return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));}
-        function resetPomiar(){liniePomiar.forEach(function(l){mapaL.removeLayer(l);}); markerPomiar.forEach(function(m){mapaL.removeLayer(m);}); liniePomiar=[];markerPomiar=[];punktyPomiar=[]; document.getElementById('pomiar-wynik').style.display='none';}
-        document.getElementById('pomiar-btn').addEventListener('click', function(){trybPomiaru=!trybPomiaru;this.classList.toggle('aktywny',trybPomiaru);this.textContent=trybPomiaru?'\u2716 Zako\u0144cz pomiar':'\uD83D\uDCCF Pomiar';if(!trybPomiaru)resetPomiar();});
-        mapaL.on('click', function(e){
-            if(!trybPomiaru)return;
+        function dist(p1, p2) {
+            var R = 6371, dLat=(p2.lat-p1.lat)*Math.PI/180, dLon=(p2.lng-p1.lng)*Math.PI/180,
+                a = Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(p1.lat*Math.PI/180)*Math.cos(p2.lat*Math.PI/180)*Math.sin(dLon/2)*Math.sin(dLon/2);
+            return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        }
+        function resetPomiar() {
+            liniePomiar.forEach(function(l) { mapaL.removeLayer(l); });
+            markerPomiar.forEach(function(m) { mapaL.removeLayer(m); });
+            liniePomiar = []; markerPomiar = []; punktyPomiar = [];
+            document.getElementById('pomiar-wynik').style.display = 'none';
+        }
+        document.getElementById('pomiar-btn').addEventListener('click', function() {
+            trybPomiaru = !trybPomiaru;
+            this.classList.toggle('aktywny', trybPomiaru);
+            this.textContent = trybPomiaru ? '\u2716 Zako\u0144cz pomiar' : '\uD83D\uDCCF Pomiar';
+            if (!trybPomiaru) resetPomiar();
+        });
+        mapaL.on('click', function(e) {
+            if (!trybPomiaru) return;
             punktyPomiar.push(e.latlng);
-            markerPomiar.push(L.circleMarker(e.latlng,{radius:4,color:'cyan',fillColor:'cyan',fillOpacity:1}).addTo(mapaL));
-            if(punktyPomiar.length>1){
-                var p1=punktyPomiar[punktyPomiar.length-2],p2=punktyPomiar[punktyPomiar.length-1];
-                liniePomiar.push(L.polyline([p1,p2],{color:'cyan',weight:2,opacity:0.8,dashArray:'6,4'}).addTo(mapaL));
-                var total=0; for(var i=1;i<punktyPomiar.length;i++) total+=dist(punktyPomiar[i-1],punktyPomiar[i]);
-                var wy=document.getElementById('pomiar-wynik'); wy.textContent='Dystans: '+total.toFixed(2)+' km'; wy.style.display='block';
+            markerPomiar.push(L.circleMarker(e.latlng, {radius:4, color:'cyan', fillColor:'cyan', fillOpacity:1}).addTo(mapaL));
+            if (punktyPomiar.length > 1) {
+                var p1 = punktyPomiar[punktyPomiar.length-2], p2 = punktyPomiar[punktyPomiar.length-1];
+                liniePomiar.push(L.polyline([p1,p2], {color:'cyan', weight:2, opacity:0.8, dashArray:'6,4'}).addTo(mapaL));
+                var total = 0;
+                for (var i = 1; i < punktyPomiar.length; i++) total += dist(punktyPomiar[i-1], punktyPomiar[i]);
+                var wy = document.getElementById('pomiar-wynik');
+                wy.textContent = 'Dystans: ' + total.toFixed(2) + ' km';
+                wy.style.display = 'block';
             }
         });
     }, 2000);
