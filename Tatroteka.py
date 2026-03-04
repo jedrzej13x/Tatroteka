@@ -405,6 +405,56 @@ else:
     ways_w_parku = set(way_geometry.keys())
     print("Brak poligonów parków — pokazuję wszystkie waye")
 
+# ── Filtr topologiczny: usuń izolowane waye (min. 2 sąsiadów w sieci) ─────────
+# Buduje graf połączeń: waye dzielące węzeł (punkt końcowy) są sąsiadami.
+# Waye z 0 sąsiadów w ways_w_parku to odcięte "kikuty" — usuwamy je.
+# Powtarzamy w pętli aż sieć się ustabilizuje (cascade removal).
+if ways_w_parku:
+    print("Filtr topologiczny — usuwanie izolowanych fragmentów...")
+
+    # Indeks: punkt (zaokrąglony) → zbiór way_id które przez niego przechodzą
+    punkt_do_wayow = {}
+    for wid in ways_w_parku:
+        pts = way_geometry.get(wid, [])
+        if not pts:
+            continue
+        # Rejestruj tylko punkty końcowe (węzły sieci)
+        for pt in [pts[0], pts[-1]]:
+            key = (round(pt[0], 5), round(pt[1], 5))
+            punkt_do_wayow.setdefault(key, set()).add(wid)
+
+    def sasiedzi(wid):
+        """Zwraca zbiór wayów sąsiadujących z wid przez węzły końcowe."""
+        pts = way_geometry.get(wid, [])
+        if not pts:
+            return set()
+        s = set()
+        for pt in [pts[0], pts[-1]]:
+            key = (round(pt[0], 5), round(pt[1], 5))
+            s |= punkt_do_wayow.get(key, set())
+        s.discard(wid)
+        return s & ways_w_parku
+
+    iteracja = 0
+    while True:
+        iteracja += 1
+        do_usuniecia = set()
+        for wid in ways_w_parku:
+            if len(sasiedzi(wid)) == 0:
+                do_usuniecia.add(wid)
+        if not do_usuniecia:
+            break
+        # Usuń z indeksu punkt→way
+        for wid in do_usuniecia:
+            pts = way_geometry.get(wid, [])
+            for pt in ([pts[0], pts[-1]] if pts else []):
+                key = (round(pt[0], 5), round(pt[1], 5))
+                punkt_do_wayow.get(key, set()).discard(wid)
+        ways_w_parku -= do_usuniecia
+        print(f"  Iteracja {iteracja}: usunięto {len(do_usuniecia)} izolowanych wayów, pozostało {len(ways_w_parku)}")
+
+    print(f"Po filtrze topologicznym: {len(ways_w_parku)} wayów")
+
 # ── Spatial join + propagacja (tylko waye w parku) ────────────────────────────
 
 kolory_wayow   = {}
