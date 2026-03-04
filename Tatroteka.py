@@ -180,6 +180,17 @@ def wczytaj_strava(path="traffic_data.json"):
         print(f"Błąd wczytywania {path}: {e}")
         return []
 
+def wczytaj_pogode(path="weather_data.json"):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print(f"Brak pliku {path} — dane pogodowe wyłączone")
+        return {}
+    except Exception as e:
+        print(f"Blad wczytywania {path}: {e}")
+        return {}
+
 def znajdz_najblizszy_segment_punkt(lat, lon, segmenty, promien_km=0.55):
     najblizszy  = None
     min_dystans = float('inf')
@@ -345,6 +356,7 @@ strava_segmenty = wczytaj_strava("traffic_data.json")
 max_effort      = max((s["effort_count"] for s in strava_segmenty), default=1)
 strava_dostepna = len(strava_segmenty) > 0
 print(f"Max effort_count: {max_effort}")
+pogoda_dane     = wczytaj_pogode("weather_data.json")
 
 # ── Geometria wayów ────────────────────────────────────────────────────────────
 
@@ -798,6 +810,7 @@ td = {
     "allDates":     wszystkie_daty,
     "koloryBazowe": kolory_bazowe,
     "maxEffort":    max_effort,
+    "weatherData":  pogoda_dane,
 }
 td_json = json.dumps(td, ensure_ascii=True)
 print(f"window.TD rozmiar: {len(td_json)//1024} KB")
@@ -815,6 +828,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var allDates     = TD.allDates     || [];
     var koloryBazowe = TD.koloryBazowe || {};
     var maxEffort    = TD.maxEffort    || 1;
+    var weatherData  = TD.weatherData  || {};
 
     var aktywnaKlasa = null;
     var trybPomiaru  = false;
@@ -825,6 +839,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var playTimer    = null;
     var currentIdx   = 0;
 
+    // ── Info panel (szlaki) ─────────────────────────────────────────────────
     var panel = document.createElement('div');
     panel.id  = 'info-panel';
     panel.style.cssText = [
@@ -860,6 +875,100 @@ document.addEventListener("DOMContentLoaded", function() {
         return html;
     }
 
+    // ── Panel pogodowy ──────────────────────────────────────────────────────
+    var weatherPanel = document.createElement('div');
+    weatherPanel.id  = 'weather-panel';
+    weatherPanel.style.cssText = [
+        'position:fixed;top:10px;left:50%;transform:translateX(-50%)',
+        'background:rgba(8,15,28,0.92);color:white',
+        'padding:8px 16px;border-radius:8px',
+        'box-shadow:0 2px 16px rgba(0,0,0,0.6)',
+        'z-index:1000;font-size:12px;font-family:monospace',
+        'border:1px solid rgba(255,255,255,0.12)',
+        'display:flex;gap:24px;align-items:center;white-space:nowrap'
+    ].join(';');
+    document.body.appendChild(weatherPanel);
+
+    // Kierunek wiatru stopnie → strzałka + nazwa
+    function windDir(deg) {
+        if (deg === null || deg === undefined) return '–';
+        var dirs = ['N','NE','E','SE','S','SW','W','NW'];
+        return dirs[Math.round(deg / 45) % 8];
+    }
+
+    function renderWeatherStation(key, label, serie, idx) {
+        var d = null;
+        if (idx === 0) {
+            // Bieżące — ostatni dostępny snapshot
+            var daty = Object.keys(serie).sort();
+            if (daty.length) d = serie[daty[daty.length - 1]];
+        } else {
+            var date = allDates[idx - 1];
+            d = serie[date] || null;
+        }
+        if (!d) return '<span style="color:#445">' + label + ': brak danych</span>';
+
+        var temp  = d.temperatura !== null ? d.temperatura + '\u00b0C' : '–';
+        var wind  = d.predkosc_wiatru !== null ? d.predkosc_wiatru + ' m/s ' + windDir(d.kierunek_wiatru) : '–';
+        var rain  = d.suma_opadu !== null ? d.suma_opadu + ' mm' : '–';
+        var hum   = d.wilgotnosc !== null ? d.wilgotnosc + '%' : '–';
+
+        return '<span style="color:#8ab4f8;font-weight:bold">' + label + '</span> &nbsp;' +
+               '\uD83C\uDF21\uFE0F ' + temp +
+               ' &nbsp;\uD83D\uDCA8 ' + wind +
+               ' &nbsp;\uD83C\uDF27\uFE0F ' + rain +
+               ' &nbsp;\uD83D\uDCA7 ' + hum;
+    }
+
+    function updateWeatherPanel(idx) {
+        var kw = weatherData['kasprowy_wierch'] || {};
+        var zk = weatherData['zakopane']        || {};
+        var kwSerie = kw.series || {};
+        var zkSerie = zk.series || {};
+
+        var hasSeries = Object.keys(kwSerie).length > 0 || Object.keys(zkSerie).length > 0;
+        if (!hasSeries) {
+            // Brak danych lokalnych — pobierz live z IMGW
+            fetchWeatherLive();
+            return;
+        }
+
+        var html = renderWeatherStation('kasprowy_wierch', 'Kasprowy Wierch', kwSerie, idx) +
+                   '<span style="color:#223;margin:0 4px">|</span>' +
+                   renderWeatherStation('zakopane', 'Zakopane', zkSerie, idx);
+        weatherPanel.innerHTML = html;
+    }
+
+    function fetchWeatherLive() {
+        weatherPanel.innerHTML = '<span style="color:#666">Pobieranie pogody...</span>';
+        fetch('https://danepubliczne.imgw.pl/api/data/synop')
+            .then(function(r) { return r.json(); })
+            .then(function(all) {
+                var idx = {};
+                all.forEach(function(s) { idx[s.id_stacji] = s; });
+                var kw = idx['12650'];  // Kasprowy Wierch
+                var zk = idx['12640'];  // Zakopane
+
+                function fmtStation(d, label) {
+                    if (!d) return '<span style="color:#445">' + label + ': brak</span>';
+                    return '<span style="color:#8ab4f8;font-weight:bold">' + label + '</span> &nbsp;' +
+                           '\uD83C\uDF21\uFE0F ' + (d.temperatura || '–') + '\u00b0C' +
+                           ' &nbsp;\uD83D\uDCA8 ' + (d.predkosc_wiatru || '–') + ' m/s ' + windDir(parseInt(d.kierunek_wiatru)) +
+                           ' &nbsp;\uD83C\uDF27\uFE0F ' + (d.suma_opadu || '–') + ' mm' +
+                           ' &nbsp;\uD83D\uDCA7 ' + (d.wilgotnosc_wzgledna || '–') + '%';
+                }
+                weatherPanel.innerHTML =
+                    fmtStation(kw, 'Kasprowy Wierch') +
+                    '<span style="color:#223;margin:0 4px">|</span>' +
+                    fmtStation(zk, 'Zakopane') +
+                    ' &nbsp;<small style="color:#334">(na \u017cywo)</small>';
+            })
+            .catch(function() {
+                weatherPanel.innerHTML = '<span style="color:#445">Brak danych pogodowych</span>';
+            });
+    }
+
+    // ── Suwak czasu ─────────────────────────────────────────────────────────
     var tlPanel = document.createElement('div');
     tlPanel.id  = 'tl-panel';
     var lbls = allDates.map(function(d, i) {
@@ -909,6 +1018,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll('#tl-lbls span').forEach(function(el, i) { el.className = i===idx?'act':''; });
         recolor(idx);
         if (aktywnaKlasa && panel.style.display !== 'none') panel.innerHTML = budujPanel(aktywnaKlasa, idx);
+        updateWeatherPanel(idx);
     }
 
     setTimeout(function() {
@@ -974,7 +1084,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 2000);
 });
 """
-
 mapa.get_root().script.add_child(folium.Element(JS))
 
 try:

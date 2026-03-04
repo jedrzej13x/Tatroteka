@@ -55,6 +55,11 @@ jobs:
           DB_PATH: tatry_segments.db
         run: python "Strava API fetcher.py" --export
 
+      - name: Collect IMGW weather
+        env:
+          DB_PATH: tatry_segments.db
+        run: python "imgw fetcher.py"
+
       - name: Regenerate map (index.html)
         run: python Tatroteka.py
 
@@ -62,6 +67,6 @@ jobs:
         run: |
           git config user.name  "Tatry Flow Bot"
           git config user.email "bot@tatroteka.pl"
-          git add -f tatry_segments.db traffic_data.json index.html
+          git add -f tatry_segments.db traffic_data.json weather_data.json index.html
           git diff --cached --quiet || git commit -m "data: snapshot $(date +'%Y-%m-%d')"
           git push
