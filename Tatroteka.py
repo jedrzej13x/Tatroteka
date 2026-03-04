@@ -695,7 +695,8 @@ if strava_dostepna:
             "max_eff": seg["effort_count"],
         }
 
-wszystkie_daty = sorted(set(d for v in relacja_serie.values() for d in v["dates"]))
+wszystkie_daty_raw = sorted(set(d for v in relacja_serie.values() for d in v["dates"]))
+wszystkie_daty = wszystkie_daty_raw[1:] if len(wszystkie_daty_raw) > 1 else wszystkie_daty_raw
 
 # ── Legenda ────────────────────────────────────────────────────────────────────
 
