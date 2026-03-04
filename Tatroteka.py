@@ -80,35 +80,32 @@ def zbuduj_poligon(data):
         print(f"  Błąd polygonize: {e}")
         return None
 
-def way_w_parku(punkty_latlon):
+# Połączony obszar obu parków (budowany po zbudowaniu poligonów)
+obszar_parki = None  # inicjalizowany poniżej
+
+def procent_w_parku(punkty_latlon):
     """
-    Zwraca True jeśli linia waya przecina lub dotyka obszaru parku.
-    Używa Shapely intersects() zamiast point-in-polygon —
-    wyłapuje waye które tylko muśkają granicę parku i eliminuje
-    efekt poszatkowania na obrzeżach.
+    Zwraca jaki procent długości waya leży wewnątrz obszaru parków.
     Punkty w formacie [(lat, lon), ...]
+    Używa Shapely intersection() — precyzyjne cięcie linii poligonem.
     """
-    if not punkty_latlon or len(punkty_latlon) < 1:
-        return False
+    if not punkty_latlon or len(punkty_latlon) < 2:
+        return 0.0
+    if obszar_parki is None:
+        return 100.0  # brak danych o parkach — przepuść wszystko
 
-    # Buduj linię w formacie (lon, lat) dla Shapely
     try:
-        if len(punkty_latlon) == 1:
-            geom = Point(punkty_latlon[0][1], punkty_latlon[0][0])
-        else:
-            geom = LineString([(lon, lat) for lat, lon in punkty_latlon])
-    except Exception:
-        return False
+        # Shapely używa (lon, lat)
+        line = LineString([(lon, lat) for lat, lon in punkty_latlon])
+        total_len = line.length
+        if total_len == 0:
+            return 0.0
 
-    for obszar in [obszar_tpn_buf, obszar_tanap_buf]:
-        if obszar is None:
-            continue
-        try:
-            if obszar.intersects(geom):
-                return True
-        except Exception:
-            pass
-    return False
+        inside = obszar_parki.intersection(line)
+        inside_len = inside.length
+        return (inside_len / total_len) * 100.0
+    except Exception:
+        return 0.0
 
 def kolor_szlaku(element):
     tags    = element.get('tags', {})
@@ -234,6 +231,7 @@ def effort_do_koloru(effort, max_effort):
 
 BBOX = "(49.10, 19.60, 49.35, 20.25)"
 STALA_GRUBOSC = 3
+PROG_W_PARKU = 90.0  # % długości waya który musi leżeć w parku
 
 STYL = {
     "path":        {"color": "#888888", "weight": 2, "grupa": "Szlaki górskie"},
@@ -322,11 +320,24 @@ print(f"Łącznie: {len(wszystkie)} elementów | Wayów w relacjach: {len(way_id
 
 obszar_tpn   = zbuduj_poligon(tpn_data)
 obszar_tanap = zbuduj_poligon(tanap_data)
-# Bufor 0.008° (~900m) — wystarczający żeby złapać waye na granicy parku,
-# ale nie tak duży żeby wciągać szlaki kilka km poza parkiem
-obszar_tpn_buf   = obszar_tpn.buffer(0.008)   if obszar_tpn   else None
-obszar_tanap_buf = obszar_tanap.buffer(0.008) if obszar_tanap else None
+
+# Mały bufor tylko dla tolerancji geometrycznej OSM (~100m)
+buf_tpn   = obszar_tpn.buffer(0.001)   if obszar_tpn   else None
+buf_tanap = obszar_tanap.buffer(0.001) if obszar_tanap else None
+
+# Połączony obszar używany do filtrowania wayów (union TPN + TANAP)
+if buf_tpn is not None and buf_tanap is not None:
+    obszar_parki = unary_union([buf_tpn, buf_tanap])
+elif buf_tpn is not None:
+    obszar_parki = buf_tpn
+elif buf_tanap is not None:
+    obszar_parki = buf_tanap
+else:
+    obszar_parki = None
+
 print(f"TPN: {'OK' if obszar_tpn else 'BŁĄD'}, TANAP: {'OK' if obszar_tanap else 'BŁĄD'}")
+if obszar_parki:
+    print(f"Połączony obszar parków: {obszar_parki.geom_type}, powierzchnia: {obszar_parki.area:.4f}")
 
 # ── Strava ─────────────────────────────────────────────────────────────────────
 
@@ -381,14 +392,15 @@ for element in dane2["elements"]:
 
 print(f"Relacji: {len(relacja_do_wayow)} | Wayów z relacją: {len(relacje_dla_way)}")
 
-# ── Wyznacz zbiór wayów leżących w parku (intersects zamiast point-in-polygon) ─
-print("Wyznaczam waye w parku (intersects)...")
+# ── Filtr: >= 90% długości waya musi leżeć w parku ────────────────────────────
+print(f"Filtrowanie wayów (próg: {PROG_W_PARKU}% w parku)...")
 ways_w_parku = set()
-if obszar_tpn_buf is not None or obszar_tanap_buf is not None:
+if obszar_parki is not None:
     for way_id, pts_raw in way_geometry.items():
-        if way_w_parku(pts_raw):
+        pct = procent_w_parku(pts_raw)
+        if pct >= PROG_W_PARKU:
             ways_w_parku.add(way_id)
-    print(f"Wayów w parku: {len(ways_w_parku)}")
+    print(f"Wayów spełniających próg {PROG_W_PARKU}%: {len(ways_w_parku)}")
 else:
     ways_w_parku = set(way_geometry.keys())
     print("Brak poligonów parków — pokazuję wszystkie waye")
@@ -477,7 +489,7 @@ for element in wszystkie:
     if way_id not in way_ids_w_relacjach:
         continue
 
-    # JEDYNY FILTR: czy ten konkretny way przecina obszar parku
+    # FILTR: >= 90% waya w granicach TPN/TANAP
     if way_id not in ways_w_parku:
         odfiltrowane += 1
         continue
@@ -742,7 +754,7 @@ mapa.get_root().html.add_child(folium.Element(
     "<script>window.TD=" + td_json + ";</script>"
 ))
 
-# ── Cały JS jako stała string ──────────────────────────────────────────────────
+# ── Cały JS ────────────────────────────────────────────────────────────────────
 
 JS = """
 document.addEventListener("DOMContentLoaded", function() {
@@ -762,7 +774,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var playTimer    = null;
     var currentIdx   = 0;
 
-    // ── Info panel ──────────────────────────────────────────────────────────
     var panel = document.createElement('div');
     panel.id  = 'info-panel';
     panel.style.cssText = [
@@ -775,284 +786,138 @@ document.addEventListener("DOMContentLoaded", function() {
     ].join(';');
     document.body.appendChild(panel);
 
-    // ── Buduje HTML panelu info uwzględniając aktualny dzień suwaka ────────
     function budujPanel(kl, idx) {
         if (!popupy[kl]) return '';
         var p   = popupy[kl];
         var rid = kl.replace('trasa-', '');
         var s   = relSerie[rid];
-
-        var html = '<b>' + p.nazwa + '</b><br>' +
-                   'Typ: ' + p.typ + '<br>' +
-                   p.dlugosc;
-
+        var html = '<b>' + p.nazwa + '</b><br>Typ: ' + p.typ + '<br>' + p.dlugosc;
         if (p.effort > 0) {
-            html += '<hr style="margin:6px 0;border-color:#333">' +
-                    '<b>&#x1F4CA; Nat\u0119\u017cenie ruchu (Strava)</b><br>';
-
+            html += '<hr style="margin:6px 0;border-color:#333"><b>&#x1F4CA; Nat\u0119\u017cenie ruchu (Strava)</b><br>';
             if (idx === 0) {
-                html += 'Przej\u015b\u0107 \u0142\u0105cznie: <b>' + p.effort.toLocaleString() + '</b><br>' +
-                        'Atle\u0107w: ' + p.atleci.toLocaleString() + '<br>';
+                html += 'Przej\u015b\u0107 \u0142\u0105cznie: <b>' + p.effort.toLocaleString() + '</b><br>Atle\u0107w: ' + p.atleci.toLocaleString() + '<br>';
             } else {
-                var date    = allDates[idx - 1];
+                var date = allDates[idx - 1];
                 var dzienne = 0;
-                if (s) {
-                    var di  = s.dates.indexOf(date);
-                    dzienne = di >= 0 ? (s.efforts[di] || 0) : 0;
-                }
-                var dp        = date.split('-');
-                var dataLabel = dp[2] + '.' + dp[1] + '.' + dp[0];
-                html += 'Dzie\u0144: <b>' + dataLabel + '</b><br>' +
-                        'Przej\u015b\u0107 tego dnia: <b>' + dzienne.toLocaleString() + '</b><br>';
+                if (s) { var di = s.dates.indexOf(date); dzienne = di >= 0 ? (s.efforts[di] || 0) : 0; }
+                var dp = date.split('-');
+                html += 'Dzie\u0144: <b>' + dp[2] + '.' + dp[1] + '.' + dp[0] + '</b><br>Przej\u015b\u0107 tego dnia: <b>' + dzienne.toLocaleString() + '</b><br>';
             }
-
-            html += 'Segment: ' + p.seg_name + '<br>' +
-                    'Snapshot: ' + p.snapshot;
+            html += 'Segment: ' + p.seg_name + '<br>Snapshot: ' + p.snapshot;
         }
-
         html += '<br><small style="color:#888">Kliknij map\u0119 aby zamkn\u0105\u0107</small>';
         return html;
     }
 
-    // ── Suwak czasu ─────────────────────────────────────────────────────────
     var tlPanel = document.createElement('div');
     tlPanel.id  = 'tl-panel';
     var lbls = allDates.map(function(d, i) {
         var parts = d.slice(5).split('-');
-        var label = parts[1] + '.' + parts[0];
-        return '<span id="tll' + (i+1) + '">' + label + '</span>';
+        return '<span id="tll' + (i+1) + '">' + parts[1] + '.' + parts[0] + '</span>';
     }).join('');
     var noData = allDates.length === 0;
     tlPanel.innerHTML =
         '<span id="tl-date">' + (noData ? 'BRAK DANYCH' : 'OG\u00d3\u0141EM') + '</span>' +
-        '<div id="tl-wrap">' +
-          '<div id="tl-lbls">' +
-            (noData
-              ? '<span style="color:#3a4a5a;font-size:9px">Uruchom Tatroteka.py z traffic_data.json aby zobaczy\u0107 nat\u0119\u017cenie ruchu</span>'
-              : '<span id="tll0" class="act">Og\u00f3\u0142em</span>' + lbls
-            ) +
-          '</div>' +
-          '<input type="range" id="tl-sl" min="0" max="' + allDates.length + '" value="0" step="1"' +
-            (noData ? ' disabled style="opacity:0.3"' : '') + '>' +
-        '</div>' +
+        '<div id="tl-wrap"><div id="tl-lbls">' +
+        (noData ? '<span style="color:#3a4a5a;font-size:9px">Brak traffic_data.json</span>' : '<span id="tll0" class="act">Og\u00f3\u0142em</span>' + lbls) +
+        '</div><input type="range" id="tl-sl" min="0" max="' + allDates.length + '" value="0" step="1"' + (noData ? ' disabled style="opacity:0.3"' : '') + '></div>' +
         '<button id="tl-play"' + (noData ? ' disabled style="opacity:0.3"' : '') + '>\u25b6</button>';
     document.body.appendChild(tlPanel);
 
-    // ── Kolor z effort (skala logarytmiczna) ───────────────────────────────
     function eff2col(eff, mx) {
         if (!eff || !mx) return null;
         var t = Math.log(1 + eff) / Math.log(1 + mx);
         t = Math.min(1, Math.max(0, t));
         var r, g, b, tt;
-        if (t < 0.25) {
-            tt = t / 0.25;
-            r = Math.round(20 + tt*40); g = Math.round(60 + tt*80); b = Math.round(180 + tt*40);
-        } else if (t < 0.5) {
-            tt = (t - 0.25) / 0.25;
-            r = Math.round(60 + tt*190); g = Math.round(140 + tt*100); b = Math.round(220 - tt*200);
-        } else if (t < 0.75) {
-            tt = (t - 0.5) / 0.25;
-            r = 250; g = Math.round(240 - tt*140); b = Math.round(20 - tt*20);
-        } else {
-            tt = (t - 0.75) / 0.25;
-            r = Math.round(250 - tt*20); g = Math.round(100 - tt*100); b = 0;
-        }
-        return 'rgb(' + r + ',' + g + ',' + b + ')';
+        if (t < 0.25) { tt = t/0.25; r=Math.round(20+tt*40); g=Math.round(60+tt*80); b=Math.round(180+tt*40); }
+        else if (t < 0.5) { tt=(t-0.25)/0.25; r=Math.round(60+tt*190); g=Math.round(140+tt*100); b=Math.round(220-tt*200); }
+        else if (t < 0.75) { tt=(t-0.5)/0.25; r=250; g=Math.round(240-tt*140); b=Math.round(20-tt*20); }
+        else { tt=(t-0.75)/0.25; r=Math.round(250-tt*20); g=Math.round(100-tt*100); b=0; }
+        return 'rgb('+r+','+g+','+b+')';
     }
 
-    // ── Przemaluj linie SVG ─────────────────────────────────────────────────
     function recolor(idx) {
         var date = idx === 0 ? null : allDates[idx - 1];
         var dayMax = 0;
-        if (date) {
-            Object.values(relSerie).forEach(function(s) {
-                var i = s.dates.indexOf(date);
-                if (i >= 0 && s.efforts[i] > dayMax) dayMax = s.efforts[i];
-            });
-        }
+        if (date) Object.values(relSerie).forEach(function(s) { var i=s.dates.indexOf(date); if(i>=0&&s.efforts[i]>dayMax) dayMax=s.efforts[i]; });
         document.querySelectorAll('path[class]').forEach(function(el) {
-            var kl = Array.from(el.classList).find(function(c) {
-                return c.startsWith('trasa-');
-            });
+            var kl = Array.from(el.classList).find(function(c) { return c.startsWith('trasa-'); });
             if (!kl) return;
-            var rid = kl.replace('trasa-', '');
-            var s   = relSerie[rid];
-            var baz = koloryBazowe[kl] || '#888888';
+            var rid = kl.replace('trasa-', ''); var s = relSerie[rid]; var baz = koloryBazowe[kl] || '#888888';
             if (!s) { el.style.stroke = baz; return; }
-            if (!date) {
-                el.style.stroke = eff2col(s.max_eff, maxEffort) || baz;
-            } else {
-                var i = s.dates.indexOf(date);
-                var e = i >= 0 ? s.efforts[i] : 0;
-                el.style.stroke = e > 0 ? eff2col(e, dayMax || 1) : baz;
-            }
+            if (!date) { el.style.stroke = eff2col(s.max_eff, maxEffort) || baz; }
+            else { var i=s.dates.indexOf(date); var e=i>=0?s.efforts[i]:0; el.style.stroke = e>0 ? eff2col(e, dayMax||1) : baz; }
         });
     }
 
-    // ── Ustaw pozycję suwaka ────────────────────────────────────────────────
     function setIdx(idx) {
         currentIdx = idx;
         document.getElementById('tl-sl').value = idx;
         var date = idx === 0 ? null : allDates[idx - 1];
-        var dateLabel = '';
-        if (date) {
-            var parts = date.slice(5).split('-');
-            dateLabel = parts[1] + '.' + parts[0];
-        }
-        document.getElementById('tl-date').textContent =
-            date ? dateLabel : 'OG\u00d3\u0141EM';
-        document.querySelectorAll('#tl-lbls span').forEach(function(el, i) {
-            el.className = i === idx ? 'act' : '';
-        });
+        document.getElementById('tl-date').textContent = date ? (date.slice(5).split('-').reverse().join('.')) : 'OG\u00d3\u0141EM';
+        document.querySelectorAll('#tl-lbls span').forEach(function(el, i) { el.className = i===idx?'act':''; });
         recolor(idx);
-
-        if (aktywnaKlasa && panel.style.display !== 'none') {
-            panel.innerHTML = budujPanel(aktywnaKlasa, idx);
-        }
+        if (aktywnaKlasa && panel.style.display !== 'none') panel.innerHTML = budujPanel(aktywnaKlasa, idx);
     }
 
-    // ── Eventy suwaka ───────────────────────────────────────────────────────
     setTimeout(function() {
-        document.getElementById('tl-sl').addEventListener('input', function() {
-            setIdx(parseInt(this.value));
-        });
+        document.getElementById('tl-sl').addEventListener('input', function() { setIdx(parseInt(this.value)); });
         document.getElementById('tl-play').addEventListener('click', function() {
-            if (playTimer) {
-                clearInterval(playTimer); playTimer = null;
-                this.innerHTML = '\u25b6'; this.className = '';
-            } else {
-                var btn = this;
-                btn.innerHTML = '\u23f8'; btn.className = 'on';
-                var idx = currentIdx >= allDates.length ? 0 : currentIdx;
-                playTimer = setInterval(function() {
-                    idx++;
-                    setIdx(idx);
-                    if (idx >= allDates.length) {
-                        clearInterval(playTimer); playTimer = null;
-                        btn.innerHTML = '\u25b6'; btn.className = '';
-                    }
-                }, 1500);
+            if (playTimer) { clearInterval(playTimer); playTimer=null; this.innerHTML='\u25b6'; this.className=''; }
+            else {
+                var btn=this; btn.innerHTML='\u23f8'; btn.className='on';
+                var idx=currentIdx>=allDates.length?0:currentIdx;
+                playTimer=setInterval(function() { idx++; setIdx(idx); if(idx>=allDates.length){clearInterval(playTimer);playTimer=null;btn.innerHTML='\u25b6';btn.className='';} }, 1500);
             }
         });
-        function applyWhenReady() {
-            if (document.querySelectorAll('path[class]').length === 0) {
-                setTimeout(applyWhenReady, 300);
-                return;
-            }
-            setIdx(0);
-        }
-        applyWhenReady();
+        (function applyWhenReady() { if(!document.querySelectorAll('path[class]').length){setTimeout(applyWhenReady,300);return;} setIdx(0); })();
     }, 1200);
 
-    // ── Podświetlanie i klik szlaków ────────────────────────────────────────
     function podswietl(kl, on) {
-        document.querySelectorAll('path.' + kl).forEach(function(el) {
-            el.style.opacity     = on ? '1.0' : '0.8';
-            el.style.strokeWidth = on ? '6px' : '';
-        });
+        document.querySelectorAll('path.'+kl).forEach(function(el) { el.style.opacity=on?'1.0':'0.8'; el.style.strokeWidth=on?'6px':''; });
     }
 
     setTimeout(function() {
         document.querySelectorAll('path[class]').forEach(function(el) {
-            var kl = Array.from(el.classList).find(function(c) {
-                return c.startsWith('trasa-');
-            });
+            var kl = Array.from(el.classList).find(function(c){return c.startsWith('trasa-');});
             if (!kl) return;
             el.addEventListener('click', function(e) {
                 if (trybPomiaru) return;
                 e.stopPropagation();
                 if (aktywnaKlasa && aktywnaKlasa !== kl) podswietl(aktywnaKlasa, false);
-                aktywnaKlasa = kl;
-                podswietl(kl, true);
-                panel.innerHTML = budujPanel(kl, currentIdx);
-                panel.style.display = 'block';
+                aktywnaKlasa = kl; podswietl(kl, true);
+                panel.innerHTML = budujPanel(kl, currentIdx); panel.style.display = 'block';
             });
         });
         document.querySelector('.leaflet-container').addEventListener('click', function() {
             if (trybPomiaru) return;
-            if (aktywnaKlasa) {
-                podswietl(aktywnaKlasa, false);
-                aktywnaKlasa = null;
-                panel.style.display = 'none';
-            }
+            if (aktywnaKlasa) { podswietl(aktywnaKlasa, false); aktywnaKlasa=null; panel.style.display='none'; }
         });
     }, 1500);
 
-    // ── Przełącznik trybu jasny/ciemny ─────────────────────────────────────
     setTimeout(function() {
-        mapaL = Object.values(window).find(function(v) {
-            return v && v._leaflet_id && v.getCenter;
-        });
+        mapaL = Object.values(window).find(function(v){return v&&v._leaflet_id&&v.getCenter;});
         if (!mapaL) return;
-
-        var isDark   = true;
-        var darkUrl  = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
-        var lightUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
-
+        var isDark=true, darkUrl='https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', lightUrl='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
         document.getElementById('theme-btn').addEventListener('click', function() {
-            isDark = !isDark;
-            mapaL.eachLayer(function(layer) {
-                if (layer._url) mapaL.removeLayer(layer);
-            });
-            L.tileLayer(isDark ? darkUrl : lightUrl, {
-                attribution: 'CartoDB',
-                subdomains: 'abcd',
-                maxZoom: 19
-            }).addTo(mapaL);
-            this.innerHTML = isDark ? '\u263E Ciemny' : '\u2600 Jasny';
-            this.className = isDark ? '' : 'light';
-            document.querySelectorAll('.leaflet-overlay-pane svg').forEach(function(svg) {
-                svg.style.filter = isDark ? '' : 'brightness(0.7)';
-            });
+            isDark=!isDark;
+            mapaL.eachLayer(function(layer){if(layer._url)mapaL.removeLayer(layer);});
+            L.tileLayer(isDark?darkUrl:lightUrl,{attribution:'CartoDB',subdomains:'abcd',maxZoom:19}).addTo(mapaL);
+            this.innerHTML=isDark?'\u263E Ciemny':'\u2600 Jasny'; this.className=isDark?'':'light';
         });
 
-        // ── Pomiar odległości ───────────────────────────────────────────────
-        function dist(p1, p2) {
-            var R = 6371;
-            var dLat = (p2.lat - p1.lat) * Math.PI / 180;
-            var dLon = (p2.lng - p1.lng) * Math.PI / 180;
-            var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-                    Math.cos(p1.lat * Math.PI/180) * Math.cos(p2.lat * Math.PI/180) *
-                    Math.sin(dLon/2) * Math.sin(dLon/2);
-            return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        }
-
-        function resetPomiar() {
-            liniePomiar.forEach(function(l) { mapaL.removeLayer(l); });
-            markerPomiar.forEach(function(m) { mapaL.removeLayer(m); });
-            liniePomiar = []; markerPomiar = []; punktyPomiar = [];
-            document.getElementById('pomiar-wynik').style.display = 'none';
-        }
-
-        document.getElementById('pomiar-btn').addEventListener('click', function() {
-            trybPomiaru = !trybPomiaru;
-            this.classList.toggle('aktywny', trybPomiaru);
-            this.textContent = trybPomiaru ? '\u2716 Zako\u0144cz pomiar' : '\uD83D\uDCCF Pomiar';
-            if (!trybPomiaru) resetPomiar();
-        });
-
-        mapaL.on('click', function(e) {
-            if (!trybPomiaru) return;
+        function dist(p1,p2){var R=6371,dLat=(p2.lat-p1.lat)*Math.PI/180,dLon=(p2.lng-p1.lng)*Math.PI/180,a=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(p1.lat*Math.PI/180)*Math.cos(p2.lat*Math.PI/180)*Math.sin(dLon/2)*Math.sin(dLon/2);return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));}
+        function resetPomiar(){liniePomiar.forEach(function(l){mapaL.removeLayer(l);}); markerPomiar.forEach(function(m){mapaL.removeLayer(m);}); liniePomiar=[];markerPomiar=[];punktyPomiar=[]; document.getElementById('pomiar-wynik').style.display='none';}
+        document.getElementById('pomiar-btn').addEventListener('click', function(){trybPomiaru=!trybPomiaru;this.classList.toggle('aktywny',trybPomiaru);this.textContent=trybPomiaru?'\u2716 Zako\u0144cz pomiar':'\uD83D\uDCCF Pomiar';if(!trybPomiaru)resetPomiar();});
+        mapaL.on('click', function(e){
+            if(!trybPomiaru)return;
             punktyPomiar.push(e.latlng);
-            var mk = L.circleMarker(e.latlng, {
-                radius: 4, color: 'cyan', fillColor: 'cyan', fillOpacity: 1
-            }).addTo(mapaL);
-            markerPomiar.push(mk);
-            if (punktyPomiar.length > 1) {
-                var p1 = punktyPomiar[punktyPomiar.length - 2];
-                var p2 = punktyPomiar[punktyPomiar.length - 1];
-                liniePomiar.push(
-                    L.polyline([p1, p2], {
-                        color: 'cyan', weight: 2, opacity: 0.8, dashArray: '6,4'
-                    }).addTo(mapaL)
-                );
-                var total = 0;
-                for (var i = 1; i < punktyPomiar.length; i++) {
-                    total += dist(punktyPomiar[i-1], punktyPomiar[i]);
-                }
-                var wy = document.getElementById('pomiar-wynik');
-                wy.textContent = 'Dystans: ' + total.toFixed(2) + ' km';
-                wy.style.display = 'block';
+            markerPomiar.push(L.circleMarker(e.latlng,{radius:4,color:'cyan',fillColor:'cyan',fillOpacity:1}).addTo(mapaL));
+            if(punktyPomiar.length>1){
+                var p1=punktyPomiar[punktyPomiar.length-2],p2=punktyPomiar[punktyPomiar.length-1];
+                liniePomiar.push(L.polyline([p1,p2],{color:'cyan',weight:2,opacity:0.8,dashArray:'6,4'}).addTo(mapaL));
+                var total=0; for(var i=1;i<punktyPomiar.length;i++) total+=dist(punktyPomiar[i-1],punktyPomiar[i]);
+                var wy=document.getElementById('pomiar-wynik'); wy.textContent='Dystans: '+total.toFixed(2)+' km'; wy.style.display='block';
             }
         });
     }, 2000);
@@ -1061,14 +926,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 mapa.get_root().script.add_child(folium.Element(JS))
 
-import io
-
 try:
     mapa.save("index.html")
 except UnicodeEncodeError:
-    root = mapa.get_root()
-    html_out = root.render()
-    html_out = html_out.encode('utf-8', errors='replace').decode('utf-8')
+    html_out = mapa.get_root().render().encode('utf-8', errors='replace').decode('utf-8')
     with open("index.html", "w", encoding="utf-8") as f:
         f.write(html_out)
     print("Zapisano index.html (z czyszczeniem surogatów)")
