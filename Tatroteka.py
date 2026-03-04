@@ -80,18 +80,33 @@ def zbuduj_poligon(data):
         print(f"  Błąd polygonize: {e}")
         return None
 
-def w_parku(punkty):
-    """Zwraca True jeśli KTÓRYKOLWIEK punkt leży w buforze TPN lub TANAP."""
-    if not punkty:
+def way_w_parku(punkty_latlon):
+    """
+    Zwraca True jeśli linia waya przecina lub dotyka obszaru parku.
+    Używa Shapely intersects() zamiast point-in-polygon —
+    wyłapuje waye które tylko muśkają granicę parku i eliminuje
+    efekt poszatkowania na obrzeżach.
+    Punkty w formacie [(lat, lon), ...]
+    """
+    if not punkty_latlon or len(punkty_latlon) < 1:
         return False
+
+    # Buduj linię w formacie (lon, lat) dla Shapely
+    try:
+        if len(punkty_latlon) == 1:
+            geom = Point(punkty_latlon[0][1], punkty_latlon[0][0])
+        else:
+            geom = LineString([(lon, lat) for lat, lon in punkty_latlon])
+    except Exception:
+        return False
+
     for obszar in [obszar_tpn_buf, obszar_tanap_buf]:
         if obszar is None:
             continue
         try:
-            for lat, lon in punkty:
-                if obszar.contains(Point(lon, lat)):
-                    return True
-        except:
+            if obszar.intersects(geom):
+                return True
+        except Exception:
             pass
     return False
 
@@ -307,8 +322,10 @@ print(f"Łącznie: {len(wszystkie)} elementów | Wayów w relacjach: {len(way_id
 
 obszar_tpn   = zbuduj_poligon(tpn_data)
 obszar_tanap = zbuduj_poligon(tanap_data)
-obszar_tpn_buf   = obszar_tpn.buffer(0.06)   if obszar_tpn   else None
-obszar_tanap_buf = obszar_tanap.buffer(0.06) if obszar_tanap else None
+# Bufor 0.008° (~900m) — wystarczający żeby złapać waye na granicy parku,
+# ale nie tak duży żeby wciągać szlaki kilka km poza parkiem
+obszar_tpn_buf   = obszar_tpn.buffer(0.008)   if obszar_tpn   else None
+obszar_tanap_buf = obszar_tanap.buffer(0.008) if obszar_tanap else None
 print(f"TPN: {'OK' if obszar_tpn else 'BŁĄD'}, TANAP: {'OK' if obszar_tanap else 'BŁĄD'}")
 
 # ── Strava ─────────────────────────────────────────────────────────────────────
@@ -364,12 +381,12 @@ for element in dane2["elements"]:
 
 print(f"Relacji: {len(relacja_do_wayow)} | Wayów z relacją: {len(relacje_dla_way)}")
 
-# ── Wyznacz zbiór wayów leżących w parku (filtr per-way) ──────────────────────
-print("Wyznaczam waye w parku...")
+# ── Wyznacz zbiór wayów leżących w parku (intersects zamiast point-in-polygon) ─
+print("Wyznaczam waye w parku (intersects)...")
 ways_w_parku = set()
 if obszar_tpn_buf is not None or obszar_tanap_buf is not None:
     for way_id, pts_raw in way_geometry.items():
-        if w_parku(pts_raw):
+        if way_w_parku(pts_raw):
             ways_w_parku.add(way_id)
     print(f"Wayów w parku: {len(ways_w_parku)}")
 else:
@@ -460,7 +477,7 @@ for element in wszystkie:
     if way_id not in way_ids_w_relacjach:
         continue
 
-    # JEDYNY FILTR: czy ten konkretny way leży w parku
+    # JEDYNY FILTR: czy ten konkretny way przecina obszar parku
     if way_id not in ways_w_parku:
         odfiltrowane += 1
         continue
