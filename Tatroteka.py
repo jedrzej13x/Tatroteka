@@ -1110,24 +1110,19 @@ document.addEventListener("DOMContentLoaded", function() {
             var kolor = (d && d.kolor) || '#555';
             var stopien = (d && d.stopien) || '\u2013';
 
-            html += '<div style="margin-bottom:10px;padding:8px;background:rgba(255,255,255,0.04);border-radius:6px;border-left:3px solid ' + kolor + '">' +
-                    (function(){
-                        var avUpd = fmtTs((avalancheData[key]||{}).last_updated);
-                        return '<div style="display:flex;justify-content:space-between;align-items:baseline">' +
-                               '<span style="font-size:10px;color:#8ab4f8">' + meta.nazwa + '</span>' +
-                               (avUpd ? '<span style="font-size:9px;color:#445">odswiezono: ' + avUpd + '</span>' : '') +
-                               '</div>';
-                    })() +
-
+            var avUpd = fmtTs((avalancheData[key]||{}).last_updated);
+            html += '<div style="margin-bottom:10px;padding:8px;background:rgba(255,255,255,0.04);border-radius:6px;border-left:3px solid ' + kolor + '">';
+            html += '<div style="display:flex;justify-content:space-between;align-items:baseline">';
+            html += '<span style="font-size:10px;color:#8ab4f8">' + meta.nazwa + '</span>';
+            html += avUpd ? '<span style="font-size:9px;color:#445">Odsw.: ' + avUpd + '</span>' : '';
+            html += '</div>';
             if (d && d.stopien) {
-                html += '<div style="display:flex;align-items:center;gap:8px">' +
-                        '<span style="background:' + kolor + ';color:#000;font-weight:bold;' +
-                        'font-size:20px;width:34px;height:34px;display:flex;align-items:center;' +
-                        'justify-content:center;border-radius:4px">' + d.stopien + '</span>' +
-                        '<div><div style="font-size:13px;font-weight:bold">' + (d.stopien_nazwa||'') + '</div>' +
-                        (d.tendencja ? '<div style="font-size:10px;color:#889">' + d.tendencja + '</div>' : '') +
-                        (d.wazne_do  ? '<div style="font-size:10px;color:#556">Wa\u017Cne do: ' + d.wazne_do + '</div>' : '') +
-                        '</div></div>';
+                html += '<div style="display:flex;align-items:center;gap:8px">';
+                html += '<span style="background:' + kolor + ';color:#000;font-weight:bold;font-size:20px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:4px">' + d.stopien + '</span>';
+                html += '<div><div style="font-size:13px;font-weight:bold">' + (d.stopien_nazwa||'') + '</div>';
+                html += d.tendencja ? '<div style="font-size:10px;color:#889">' + d.tendencja + '</div>' : '';
+                html += d.wazne_do  ? '<div style="font-size:10px;color:#556">Wa\u017Cne do: ' + d.wazne_do + '</div>' : '';
+                html += '</div></div>';
                 if (d.opis) html += '<div style="margin-top:5px;font-size:10px;color:#9ab;line-height:1.4">' + d.opis + '</div>';
             } else {
                 html += '<div style="color:#445;font-size:11px">Brak danych</div>';
@@ -1355,20 +1350,19 @@ document.addEventListener("DOMContentLoaded", function() {
         WARSTWY_GRUPY.forEach(function(nazwa) { stanyWarstw[nazwa] = true; });
 
         function buildLayerPanel() {
-            var html = '<div style="font-size:10px;color:#8ab4f8;margin-bottom:8px;letter-spacing:.05em">TYPY SZLAK\u00D3W</div>';
+            var html = '';
 
             WARSTWY_GRUPY.forEach(function(nazwa) {
                 var checked = stanyWarstw[nazwa];
                 var isBorder = nazwa.indexOf('Granic') >= 0;
-                var sekcja = isBorder ? '' : '';
-                html += '<label style="display:flex;align-items:center;gap:8px;padding:4px 0;cursor:pointer;' +
-                        'border-top:' + (nazwa === 'Granice TPN' ? '1px solid rgba(255,255,255,0.08)' : 'none') + ';' +
-                        'margin-top:' + (nazwa === 'Granice TPN' ? '6px;padding-top:10px' : '0') + '">' +
-                        '<input type="checkbox" id="lyr-' + nazwa.replace(/[^a-z]/gi,'_') + '"' +
-                        (checked ? ' checked' : '') +
-                        ' style="accent-color:#e07020;width:14px;height:14px;cursor:pointer">' +
-                        '<span style="color:' + (isBorder ? '#7fba7f' : '#ddd') + ';font-size:11px">' +
-                        nazwa + '</span></label>';
+                var sep = (nazwa === 'Granice TPN') ? 'border-top:1px solid rgba(255,255,255,0.08);margin-top:6px;padding-top:10px;' : '';
+                var col = isBorder ? '#7fba7f' : '#ddd';
+                var chk = checked ? ' checked' : '';
+                var cbId = 'lyr-' + nazwa.replace(/[^a-zA-Z0-9]/g, '_');
+                html += '<label style="display:flex;align-items:center;gap:8px;padding:4px 0;cursor:pointer;' + sep + '">'
+                     +  '<input type="checkbox" id="' + cbId + '"' + chk + ' style="accent-color:#e07020;width:14px;height:14px;cursor:pointer">'
+                     +  '<span style="color:' + col + ';font-size:11px">' + nazwa + '</span>'
+                     +  '</label>';
             });
 
             layerPanel.innerHTML = html;
