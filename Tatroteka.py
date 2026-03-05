@@ -1035,9 +1035,8 @@ document.addEventListener("DOMContentLoaded", function() {
         var lawinaHtml = renderLawinaPopup(idx);
         if (lawinaHtml) html += lawinaHtml;
 
-        html += '<div style="margin-top:8px;font-size:10px;color:#334;cursor:pointer" ' +
-                'onclick="document.getElementById(\'info-panel\').style.display=\'none\'">' +
-                'Kliknij aby zamkn\u0105\u0107 \u2715</div>';
+        html += '<div id="panel-close" style="margin-top:8px;font-size:10px;color:#556;cursor:pointer">' +
+                'Zamknij \u2715</div>';
         return html;
     }
 
@@ -1244,6 +1243,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 aktywnaKlasa = kl; podswietl(kl, true);
                 panel.innerHTML = budujPanel(kl, currentIdx);
                 panel.style.display = 'block';
+                var closeBtn = document.getElementById('panel-close');
+                if (closeBtn) closeBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    podswietl(aktywnaKlasa, false); aktywnaKlasa = null; panel.style.display = 'none';
+                });
             });
         });
         document.querySelector('.leaflet-container').addEventListener('click', function() {
