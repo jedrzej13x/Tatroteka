@@ -1,0 +1,69 @@
+{
+  "kasprowy_wierch": {
+    "meta": {
+      "nazwa": "Kasprowy Wierch",
+      "lat": 49.2319,
+      "lon": 19.9817,
+      "alt": 1987,
+      "kraj": "PL"
+    },
+    "series": {
+      "2026-03-05": {
+        "temperatura": -2.8,
+        "predkosc_wiatru": 3.0,
+        "kierunek_wiatru": 350,
+        "wilgotnosc": 97.8,
+        "suma_opadu": 0.0,
+        "cisnienie": null
+      }
+    }
+  },
+  "zakopane": {
+    "meta": {
+      "nazwa": "Zakopane",
+      "lat": 49.2992,
+      "lon": 19.9742,
+      "alt": 857,
+      "kraj": "PL"
+    },
+    "series": {}
+  },
+  "lomnica": {
+    "meta": {
+      "nazwa": "Łomnica",
+      "lat": 49.1953,
+      "lon": 20.2131,
+      "alt": 2634,
+      "kraj": "SK"
+    },
+    "series": {
+      "2026-03-05": {
+        "temperatura": -8.5,
+        "predkosc_wiatru": 31.0,
+        "kierunek_wiatru": 297,
+        "wilgotnosc": 63.2,
+        "suma_opadu": 0.6,
+        "cisnienie": 753.1
+      }
+    }
+  },
+  "strbske_pleso": {
+    "meta": {
+      "nazwa": "Szczyrbskie Jezioro",
+      "lat": 49.1197,
+      "lon": 20.0611,
+      "alt": 1346,
+      "kraj": "SK"
+    },
+    "series": {
+      "2026-03-05": {
+        "temperatura": 1.7,
+        "predkosc_wiatru": 16.6,
+        "kierunek_wiatru": 353,
+        "wilgotnosc": 51.0,
+        "suma_opadu": 0.0,
+        "cisnienie": 869.5
+      }
+    }
+  }
+}
