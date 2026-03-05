@@ -2,7 +2,7 @@ name: Tatry Flow — Daily Segment Collection
 
 on:
   schedule:
-    - cron: '0 5 * * *'   # codziennie o 5:00 UTC (7:00 czasu polskiego)
+    - cron: '0 5 * * *'   # codziennie o 5:00 UTC (7:00 PL) — pelna kolekcja Strava + rebuild mapy
   workflow_dispatch:
   push:
     branches: [master]
@@ -12,7 +12,6 @@ on:
 jobs:
   collect:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
 
@@ -33,10 +32,10 @@ jobs:
           if [ -f tatry_segments.db ]; then
             echo "Baza istnieje: $(du -sh tatry_segments.db)"
           else
-            echo "Brak bazy — pierwsze uruchomienie, zostanie utworzona"
+            echo "Brak bazy — pierwsze uruchomienie"
           fi
 
-      - name: Run collector
+      - name: Run Strava collector
         env:
           STRAVA_CLIENT_ID:     ${{ secrets.STRAVA_CLIENT_ID }}
           STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
@@ -44,7 +43,7 @@ jobs:
           DB_PATH:              tatry_segments.db
         run: python "Strava API fetcher.py"
 
-      - name: Show report
+      - name: Show Strava report
         env:
           DB_PATH: tatry_segments.db
         run: python "Strava API fetcher.py" --report
@@ -54,7 +53,7 @@ jobs:
           DB_PATH: tatry_segments.db
         run: python "Strava API fetcher.py" --export
 
-      - name: Collect IMGW weather
+      - name: Collect weather (daily + live JSON)
         env:
           DB_PATH: tatry_segments.db
         run: python "imgw fetcher.py"
@@ -67,7 +66,7 @@ jobs:
       - name: Regenerate map (index.html)
         run: python Tatroteka.py
 
-      - name: Commit all changes to repo
+      - name: Commit all changes
         run: |
           git config user.name  "Tatry Flow Bot"
           git config user.email "bot@tatroteka.pl"

@@ -782,25 +782,11 @@ mapa.get_root().html.add_child(folium.Element("""
     }
     #tl-play.on { background:#e07020;color:white; }
 
-    /* ── Pomiar odległości ── */
-    #pomiar-btn {
-        position:fixed;bottom:55px;right:10px;z-index:1000;
-        background:rgba(8,11,16,0.88);border:1px solid rgba(255,255,255,0.2);
-        border-radius:6px;padding:6px 10px;cursor:pointer;font-size:12px;color:#ccc;
-        font-family:monospace;transition:background .15s;
-    }
-    #pomiar-btn:hover { background:rgba(255,255,255,0.1); }
-    #pomiar-btn.aktywny { background:#1a5c3a;border-color:#2d8; color:white; }
-    #pomiar-wynik {
-        position:fixed;bottom:88px;right:10px;z-index:1000;
-        background:rgba(8,11,16,0.92);border:1px solid rgba(255,255,255,0.15);
-        border-radius:6px;padding:5px 10px;font-size:12px;color:#e07020;
-        font-family:monospace;display:none;
-    }
+    /* pomiar usunięty */
 
     /* ── Przycisk trybu ── */
     #theme-btn {
-        position:fixed;bottom:55px;left:10px;z-index:1000;
+        position:fixed;bottom:55px;right:10px;z-index:1000;
         background:rgba(8,11,16,0.88);border:1px solid rgba(255,255,255,0.2);
         border-radius:6px;padding:6px 10px;cursor:pointer;font-size:12px;color:#ccc;
         font-family:monospace;transition:background .15s;
@@ -809,7 +795,7 @@ mapa.get_root().html.add_child(folium.Element("""
     #theme-btn.light { background:rgba(255,255,255,0.9);border-color:rgba(0,0,0,0.2);color:#333; }
 
     /* ── LayerControl niżej, nie koliduje z lawiny ── */
-    .leaflet-top.leaflet-right { top: 120px !important; }
+    .leaflet-top.leaflet-right { display: none !important; }
 
     /* ── Tooltip szlaków ── */
     .leaflet-tooltip {
@@ -817,8 +803,6 @@ mapa.get_root().html.add_child(folium.Element("""
         color:#ddd;font-family:monospace;font-size:11px;padding:3px 7px;border-radius:4px;
     }
 </style>
-<button id="pomiar-btn" title="Zmierz odległość na mapie">&#x1F4CF; Pomiar</button>
-<div id="pomiar-wynik"></div>
 <button id="theme-btn" title="Przełącz tryb jasny/ciemny">&#9790; Ciemny</button>
 """))
 
@@ -853,10 +837,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var avalancheData = TD.avalancheData || {};
 
     var aktywnaKlasa = null;
-    var trybPomiaru  = false;
-    var punktyPomiar = [];
-    var liniePomiar  = [];
-    var markerPomiar = [];
+
     var mapaL        = null;
     var playTimer    = null;
     var currentIdx   = 0;
@@ -898,14 +879,27 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Renderuje sekcj\u0119 pogodow\u0105 w popupie szlaku
+    function fmtTs(ts) {
+        // Formatuje ISO timestamp "2026-03-05T14:00" na "05.03 14:00"
+        if (!ts) return null;
+        try {
+            var m = ts.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/);
+            if (m) return m[3]+'.'+m[2]+' '+m[4]+':'+m[5];
+        } catch(e) {}
+        return ts;
+    }
+
     function renderPogodaPopup(key, idx) {
-        var meta  = (weatherData[key] || {}).meta || {};
+        var stObj = weatherData[key] || {};
+        var meta  = stObj.meta || {};
         var d     = getDaneStacji(key, idx);
         var nazwa = meta.nazwa || key;
         var alt   = meta.alt ? ' (' + meta.alt + '\u00a0m n.p.m.)' : '';
+        var kraj  = meta.kraj ? ' \u2022 ' + meta.kraj : '';
+        var upd   = fmtTs(stObj.last_updated);
 
         if (!d) {
-            return '<div style="color:#556;font-size:11px;margin-top:4px">Stacja ' + nazwa + ': brak danych</div>';
+            return '<div style="color:#556;font-size:11px;margin-top:4px">Brak danych: ' + nazwa + '</div>';
         }
 
         var rows = [];
@@ -916,14 +910,15 @@ document.addEventListener("DOMContentLoaded", function() {
         if (d.cisnienie       != null) rows.push(['Ci\u015bnienie', d.cisnienie + ' hPa']);
 
         var table = rows.map(function(r) {
-            return '<tr><td style="color:#8ab4f8;padding-right:8px">' + r[0] + '</td>' +
+            return '<tr><td style="color:#8ab4f8;padding-right:8px;white-space:nowrap">' + r[0] + '</td>' +
                    '<td style="color:#eee;font-weight:bold">' + r[1] + '</td></tr>';
         }).join('');
 
         return '<div style="margin-top:4px">' +
-               '<div style="font-size:10px;color:#8ab4f8;margin-bottom:3px">' +
-               'Stacja: ' + nazwa + alt + '</div>' +
-               '<table style="font-size:11px;border-collapse:collapse;width:100%">' + table + '</table>' +
+               '<div style="font-size:10px;color:#8ab4f8;margin-bottom:2px">' +
+               nazwa + alt + kraj + '</div>' +
+               '<table style="font-size:12px;border-collapse:collapse;width:100%">' + table + '</table>' +
+               (upd ? '<div style="font-size:9px;color:#445;margin-top:2px">Pomiar: ' + upd + '</div>' : '') +
                '</div>';
     }
 
@@ -952,18 +947,21 @@ document.addEventListener("DOMContentLoaded", function() {
                    'Zagro\u017cenie lawinowe</div>';
 
         keys.forEach(function(key) {
-            var meta = (avalancheData[key] || {}).meta || {};
-            var d    = getDaneLawiny(key, idx);
+            var avObj = avalancheData[key] || {};
+            var meta  = avObj.meta || {};
+            var d     = getDaneLawiny(key, idx);
+            var upd   = fmtTs(avObj.last_updated);
             if (!d || !d.stopien) return;
             var kolor = d.kolor || '#888';
             html += '<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px">' +
                     '<span style="display:inline-block;background:' + kolor +
                     ';color:#000;font-weight:bold;font-size:13px;min-width:20px;text-align:center;' +
                     'padding:1px 5px;border-radius:3px">' + d.stopien + '</span>' +
-                    '<span style="font-size:11px">' +
-                    '<span style="color:#ccc">' + (d.stopien_nazwa || '') + '</span>' +
-                    '<span style="color:#556;font-size:10px"> \u2014 ' + meta.nazwa + '</span>' +
-                    '</span></div>';
+                    '<div>' +
+                    '<div style="font-size:11px;color:#ccc">' + (d.stopien_nazwa || '') +
+                    ' <span style="color:#556;font-size:10px">\u2014 ' + meta.nazwa + '</span></div>' +
+                    (upd ? '<div style="font-size:9px;color:#445">Odswiezono: ' + upd + '</div>' : '') +
+                    '</div></div>';
         });
 
         return html;
@@ -1047,7 +1045,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var avalancheBtn = document.createElement('button');
     avalancheBtn.id  = 'avalanche-btn';
     avalancheBtn.style.cssText = [
-        'position:fixed;top:10px;right:10px',
+        'position:fixed;top:50px;right:10px',
         'background:rgba(8,11,16,0.92);color:white',
         'padding:6px 12px;border-radius:8px',
         'border:1px solid rgba(255,255,255,0.15)',
@@ -1060,7 +1058,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var avalanchePanel = document.createElement('div');
     avalanchePanel.id  = 'avalanche-panel';
     avalanchePanel.style.cssText = [
-        'position:fixed;top:46px;right:10px',
+        'position:fixed;top:86px;right:10px',
         'background:rgba(8,11,16,0.96);color:white',
         'padding:12px 16px;border-radius:8px',
         'box-shadow:0 4px 20px rgba(0,0,0,0.6)',
@@ -1113,7 +1111,13 @@ document.addEventListener("DOMContentLoaded", function() {
             var stopien = (d && d.stopien) || '\u2013';
 
             html += '<div style="margin-bottom:10px;padding:8px;background:rgba(255,255,255,0.04);border-radius:6px;border-left:3px solid ' + kolor + '">' +
-                    '<div style="font-size:10px;color:#8ab4f8;margin-bottom:4px">' + meta.nazwa + '</div>';
+                    (function(){
+                        var avUpd = fmtTs((avalancheData[key]||{}).last_updated);
+                        return '<div style="display:flex;justify-content:space-between;align-items:baseline">' +
+                               '<span style="font-size:10px;color:#8ab4f8">' + meta.nazwa + '</span>' +
+                               (avUpd ? '<span style="font-size:9px;color:#445">odswiezono: ' + avUpd + '</span>' : '') +
+                               '</div>';
+                    })() +
 
             if (d && d.stopien) {
                 html += '<div style="display:flex;align-items:center;gap:8px">' +
@@ -1249,7 +1253,6 @@ document.addEventListener("DOMContentLoaded", function() {
             el.addEventListener('mouseenter', function() { if (!aktywnaKlasa || aktywnaKlasa !== kl) podswietl(kl, true); });
             el.addEventListener('mouseleave', function() { if (aktywnaKlasa !== kl) podswietl(kl, false); });
             el.addEventListener('click', function(e) {
-                if (trybPomiaru) return;
                 e.stopPropagation();
                 if (aktywnaKlasa && aktywnaKlasa !== kl) podswietl(aktywnaKlasa, false);
                 aktywnaKlasa = kl; podswietl(kl, true);
@@ -1263,7 +1266,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
         document.querySelector('.leaflet-container').addEventListener('click', function() {
-            if (trybPomiaru) return;
             if (aktywnaKlasa) { podswietl(aktywnaKlasa, false); aktywnaKlasa = null; panel.style.display = 'none'; }
         });
     }, 1500);
@@ -1274,46 +1276,153 @@ document.addEventListener("DOMContentLoaded", function() {
         var isDark = true;
         var darkUrl  = 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png';
         var lightUrl = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+        // -- Zmien motyw --
         document.getElementById('theme-btn').addEventListener('click', function() {
             isDark = !isDark;
             mapaL.eachLayer(function(l) { if (l._url) mapaL.removeLayer(l); });
             L.tileLayer(isDark ? darkUrl : lightUrl,
                 {attribution: 'CartoDB', subdomains: 'abcd', maxZoom: 19}).addTo(mapaL);
-            this.innerHTML = isDark ? '&#9790; Ciemny' : '&#9728; Jasny';
+            this.innerHTML = isDark ? '\u263E Zmie\u0144 motyw' : '\u2600\uFE0F Zmie\u0144 motyw';
             this.className = isDark ? '' : 'light';
         });
 
-        function dist(p1, p2) {
-            var R=6371, dLat=(p2.lat-p1.lat)*Math.PI/180, dLon=(p2.lng-p1.lng)*Math.PI/180,
-                a=Math.sin(dLat/2)*Math.sin(dLat/2)+Math.cos(p1.lat*Math.PI/180)*Math.cos(p2.lat*Math.PI/180)*Math.sin(dLon/2)*Math.sin(dLon/2);
-            return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+        // -- Panel warstw --
+        var WARSTWY_GRUPY = [
+            'Szlaki g\u00F3rskie', 'Via ferraty', 'Drogi piesze', 'Drogi le\u015bne', 'Pozosta\u0142e',
+            'Granice TPN', 'Granice TANAP'
+        ];
+        var WARSTWA_OZNAKOWANE = 'Szlaki oznakowane';
+
+        // Mapowanie nazwa grupy -> klasy CSS na leaflet layerach
+        // Leaflet LayerControl uzywa checkboxow z etykieta = nazwa grupy
+        // Pobieramy referencje do warstw przez folium FeatureGroup
+        // Latwiej: toggle przez ukrywanie/pokazywanie grup SVG przez klasy
+
+        // Znajdz wszystkie leaflet layers po nazwie
+        function getLeafletLayer(nazwa) {
+            var found = null;
+            mapaL.eachLayer(function(l) {
+                if (l.options && l.options.name === nazwa) found = l;
+            });
+            return found;
         }
-        function resetPomiar() {
-            liniePomiar.forEach(function(l){mapaL.removeLayer(l);});
-            markerPomiar.forEach(function(m){mapaL.removeLayer(m);});
-            liniePomiar=[]; markerPomiar=[]; punktyPomiar=[];
-            document.getElementById('pomiar-wynik').style.display='none';
+
+        function toggleWarstwa(nazwa, on) {
+            var l = getLeafletLayer(nazwa);
+            if (!l) return;
+            if (on) { if (!mapaL.hasLayer(l)) mapaL.addLayer(l); }
+            else    { if (mapaL.hasLayer(l))  mapaL.removeLayer(l); }
         }
-        document.getElementById('pomiar-btn').addEventListener('click', function(){
-            trybPomiaru=!trybPomiaru;
-            this.classList.toggle('aktywny',trybPomiaru);
-            this.textContent=trybPomiaru?'\u2716 Zako\u0144cz pomiar':'\uD83D\uDCCF Pomiar';
-            if(!trybPomiaru) resetPomiar();
+
+        // Stworz przycisk warstw
+        var layerBtn = document.createElement('button');
+        layerBtn.id = 'layer-btn';
+        layerBtn.innerHTML = '\u2630 Typ szlaku / widok';
+        layerBtn.style.cssText = [
+            'position:fixed;top:10px;right:170px',
+            'background:rgba(8,11,16,0.92);color:white',
+            'padding:6px 12px;border-radius:8px',
+            'border:1px solid rgba(255,255,255,0.2)',
+            'z-index:1001;font-size:11px;font-family:monospace;cursor:pointer',
+            'white-space:nowrap;transition:background .15s'
+        ].join(';');
+        document.body.appendChild(layerBtn);
+
+        // Stworz panel warstw
+        var layerPanel = document.createElement('div');
+        layerPanel.id = 'layer-panel';
+        layerPanel.style.cssText = [
+            'position:fixed;top:46px;right:170px',
+            'background:rgba(8,11,16,0.96);color:white',
+            'padding:12px 16px;border-radius:8px',
+            'box-shadow:0 4px 20px rgba(0,0,0,0.6)',
+            'z-index:1001;font-size:12px;font-family:monospace',
+            'border:1px solid rgba(255,255,255,0.1)',
+            'min-width:190px;display:none'
+        ].join(';');
+
+        var IKONY = {
+            'Szlaki g\u00F3rskie':  '\uD83D\uDEE5\uFE0F',
+            'Via ferraty':          '\u26F0\uFE0F',
+            'Drogi piesze':         '\uD83D\uDEB6',
+            'Drogi le\u015bne':     '\uD83C\uDF32',
+            'Pozosta\u0142e':       '\u2026',
+            'Granice TPN':          '\uD83D\uDDFA\uFE0F',
+            'Granice TANAP':        '\uD83D\uDDFA\uFE0F',
+        };
+
+        var stanyWarstw = {};
+        WARSTWY_GRUPY.forEach(function(nazwa) { stanyWarstw[nazwa] = true; });
+
+        function buildLayerPanel() {
+            var html = '<div style="font-size:10px;color:#8ab4f8;margin-bottom:8px;letter-spacing:.05em">TYPY SZLAK\u00D3W</div>';
+
+            WARSTWY_GRUPY.forEach(function(nazwa) {
+                var checked = stanyWarstw[nazwa];
+                var isBorder = nazwa.indexOf('Granic') >= 0;
+                var sekcja = isBorder ? '' : '';
+                html += '<label style="display:flex;align-items:center;gap:8px;padding:4px 0;cursor:pointer;' +
+                        'border-top:' + (nazwa === 'Granice TPN' ? '1px solid rgba(255,255,255,0.08)' : 'none') + ';' +
+                        'margin-top:' + (nazwa === 'Granice TPN' ? '6px;padding-top:10px' : '0') + '">' +
+                        '<input type="checkbox" id="lyr-' + nazwa.replace(/[^a-z]/gi,'_') + '"' +
+                        (checked ? ' checked' : '') +
+                        ' style="accent-color:#e07020;width:14px;height:14px;cursor:pointer">' +
+                        '<span style="color:' + (isBorder ? '#7fba7f' : '#ddd') + ';font-size:11px">' +
+                        nazwa + '</span></label>';
+            });
+
+            layerPanel.innerHTML = html;
+
+            // Podepnij eventy
+            WARSTWY_GRUPY.forEach(function(nazwa) {
+                var cb = document.getElementById('lyr-' + nazwa.replace(/[^a-z]/gi,'_'));
+                if (!cb) return;
+                cb.addEventListener('change', function() {
+                    stanyWarstw[nazwa] = this.checked;
+                    toggleWarstwa(nazwa, this.checked);
+                });
+            });
+        }
+
+        layerBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var visible = layerPanel.style.display !== 'none';
+            if (!visible) { buildLayerPanel(); layerPanel.style.display = 'block'; }
+            else layerPanel.style.display = 'none';
         });
-        mapaL.on('click', function(e){
-            if(!trybPomiaru) return;
-            punktyPomiar.push(e.latlng);
-            markerPomiar.push(L.circleMarker(e.latlng,{radius:4,color:'#e07020',fillColor:'#e07020',fillOpacity:1}).addTo(mapaL));
-            if(punktyPomiar.length>1){
-                var p1=punktyPomiar[punktyPomiar.length-2],p2=punktyPomiar[punktyPomiar.length-1];
-                liniePomiar.push(L.polyline([p1,p2],{color:'#e07020',weight:2,opacity:0.9,dashArray:'6,4'}).addTo(mapaL));
-                var total=0;
-                for(var i=1;i<punktyPomiar.length;i++) total+=dist(punktyPomiar[i-1],punktyPomiar[i]);
-                var wy=document.getElementById('pomiar-wynik');
-                wy.textContent='Dystans: '+total.toFixed(2)+' km';
-                wy.style.display='block';
-            }
+        document.body.appendChild(layerPanel);
+
+        document.addEventListener('click', function(e) {
+            if (!layerBtn.contains(e.target) && !layerPanel.contains(e.target))
+                layerPanel.style.display = 'none';
         });
+
+        // Stworz osobny przycisk dla szlakow oznakowanych
+        var oznBtn = document.createElement('button');
+        oznBtn.id = 'ozn-btn';
+        oznBtn.innerHTML = '\uD83D\uDEA9 Szlaki oznakowane';
+        var oznActive = false;
+        oznBtn.style.cssText = [
+            'position:fixed;top:10px;right:10px',
+            'background:rgba(8,11,16,0.92);color:#aaa',
+            'padding:6px 12px;border-radius:8px',
+            'border:1px solid rgba(255,255,255,0.15)',
+            'z-index:1001;font-size:11px;font-family:monospace;cursor:pointer',
+            'white-space:nowrap;transition:all .15s'
+        ].join(';');
+        document.body.appendChild(oznBtn);
+
+        // Szlaki oznakowane sa domyslnie OFF - zgodnie z oryginalnym LayerControl
+        toggleWarstwa(WARSTWA_OZNAKOWANE, false);
+
+        oznBtn.addEventListener('click', function() {
+            oznActive = !oznActive;
+            toggleWarstwa(WARSTWA_OZNAKOWANE, oznActive);
+            this.style.background    = oznActive ? 'rgba(224,112,32,0.3)' : 'rgba(8,11,16,0.92)';
+            this.style.borderColor   = oznActive ? '#e07020' : 'rgba(255,255,255,0.15)';
+            this.style.color         = oznActive ? '#e07020' : '#aaa';
+        });
+
     }, 2000);
 });
 """
