@@ -858,9 +858,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var playTimer    = null;
     var currentIdx   = 0;
 
-    // ── Helpers pogodowych ──────────────────────────────────────────────────
+    // \u2500\u2500 Helpers pogodowych \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     function windDir(deg) {
-        if (deg === null || deg === undefined) return '–';
+        if (deg === null || deg === undefined) return '\u2013';
         var dirs = ['N','NE','E','SE','S','SW','W','NW'];
         return dirs[Math.round(deg / 45) % 8];
     }
@@ -894,7 +894,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return serie[allDates[idx - 1]] || null;
     }
 
-    // Renderuje sekcję pogodową w popupie szlaku
+    // Renderuje sekcj\u0119 pogodow\u0105 w popupie szlaku
     function renderPogodaPopup(key, idx) {
         var meta  = (weatherData[key] || {}).meta || {};
         var d     = getDaneStacji(key, idx);
@@ -924,7 +924,7 @@ document.addEventListener("DOMContentLoaded", function() {
                '</div>';
     }
 
-    // ── Helpers lawinowych ──────────────────────────────────────────────────
+    // \u2500\u2500 Helpers lawinowych \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     function getDaneLawiny(key, idx) {
         var serie = (avalancheData[key] || {}).series || {};
         if (idx === 0) {
@@ -959,14 +959,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     'padding:1px 5px;border-radius:3px">' + d.stopien + '</span>' +
                     '<span style="font-size:11px">' +
                     '<span style="color:#ccc">' + (d.stopien_nazwa || '') + '</span>' +
-                    '<span style="color:#556;font-size:10px"> — ' + meta.nazwa + '</span>' +
+                    '<span style="color:#556;font-size:10px"> \u2014 ' + meta.nazwa + '</span>' +
                     '</span></div>';
         });
 
         return html;
     }
 
-    // ── Info panel (szlaki) ─────────────────────────────────────────────────
+    // \u2500\u2500 Info panel (szlaki) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     var panel = document.createElement('div');
     panel.id  = 'info-panel';
     panel.style.cssText = [
@@ -986,21 +986,21 @@ document.addEventListener("DOMContentLoaded", function() {
         var rid = kl.replace('trasa-', '');
         var s   = relSerie[rid];
 
-        // Nagłówek
+        // Nag\u0142\u00F3wek
         var html = '<div style="font-weight:bold;font-size:14px;margin-bottom:4px;color:#fff">' + p.nazwa + '</div>' +
                    '<div style="font-size:11px;color:#8ab4f8">' + p.typ + '</div>' +
                    '<div style="font-size:11px;color:#aaa;margin-bottom:6px">' + p.dlugosc + '</div>';
 
-        // Natężenie ruchu
+        // Nat\u0119\u017Cenie ruchu
         if (p.effort > 0) {
             html += '<hr style="margin:6px 0;border-color:#2a3040">' +
-                    '<div style="font-size:11px;font-weight:bold;color:#f0a030;margin-bottom:4px">Natężenie ruchu (Strava)</div>';
+                    '<div style="font-size:11px;font-weight:bold;color:#f0a030;margin-bottom:4px">Nat\u0119\u017Cenie ruchu (Strava)</div>';
 
             if (idx === 0) {
                 html += '<table style="font-size:11px;border-collapse:collapse;width:100%">' +
-                        '<tr><td style="color:#8ab4f8;padding-right:8px">Przejść łącznie</td>' +
+                        '<tr><td style="color:#8ab4f8;padding-right:8px">Przej\u015B\u0107 \u0142\u0105cznie</td>' +
                         '<td style="color:#eee;font-weight:bold">' + p.effort.toLocaleString() + '</td></tr>' +
-                        '<tr><td style="color:#8ab4f8;padding-right:8px">Atletów</td>' +
+                        '<tr><td style="color:#8ab4f8;padding-right:8px">Atlet\u00F3w</td>' +
                         '<td style="color:#eee">' + p.atleci.toLocaleString() + '</td></tr>' +
                         '<tr><td style="color:#8ab4f8;padding-right:8px">Segment</td>' +
                         '<td style="color:#aaa;font-size:10px">' + p.seg_name + '</td></tr>' +
@@ -1013,15 +1013,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (s) { var di = s.dates.indexOf(dt); dzienne = di >= 0 ? (s.efforts[di] || 0) : 0; }
                 var dp = dt.split('-');
                 html += '<table style="font-size:11px;border-collapse:collapse;width:100%">' +
-                        '<tr><td style="color:#8ab4f8;padding-right:8px">Dzień</td>' +
+                        '<tr><td style="color:#8ab4f8;padding-right:8px">Dzie\u0144</td>' +
                         '<td style="color:#eee;font-weight:bold">' + dp[2] + '.' + dp[1] + '.' + dp[0] + '</td></tr>' +
-                        '<tr><td style="color:#8ab4f8;padding-right:8px">Przejść tego dnia</td>' +
+                        '<tr><td style="color:#8ab4f8;padding-right:8px">Przej\u015B\u0107 tego dnia</td>' +
                         '<td style="color:#eee;font-weight:bold">' + dzienne.toLocaleString() + '</td></tr>' +
                         '</table>';
             }
         }
 
-        // Pogoda z najbliższej stacji
+        // Pogoda z najbli\u017Cszej stacji
         if (Object.keys(weatherData).length > 0 && p.lat != null) {
             var stKey = najblizszaStacja(p.lat, p.lon);
             if (stKey) {
@@ -1031,17 +1031,17 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-        // Zagrożenie lawinowe
+        // Zagro\u017Cenie lawinowe
         var lawinaHtml = renderLawinaPopup(idx);
         if (lawinaHtml) html += lawinaHtml;
 
         html += '<div style="margin-top:8px;font-size:10px;color:#334;cursor:pointer" ' +
                 'onclick="document.getElementById(\'info-panel\').style.display=\'none\'">' +
-                'Kliknij aby zamknąć ✕</div>';
+                'Kliknij aby zamkn\u0105\u0107 \u2715</div>';
         return html;
     }
 
-    // ── Przycisk lawinowy (prawy górny róg) ─────────────────────────────────
+    // \u2500\u2500 Przycisk lawinowy (prawy g\u00F3rny r\u00F3g) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     var avalancheBtn = document.createElement('button');
     avalancheBtn.id  = 'avalanche-btn';
     avalancheBtn.style.cssText = [
@@ -1095,20 +1095,20 @@ document.addEventListener("DOMContentLoaded", function() {
         avalancheBtn.style.display = 'block';
         avalancheBtn.style.borderColor = maxKolor || '#888';
         avalancheBtn.innerHTML =
-            'Stopień zagrożenia lawinowego: ' +
+            'Stopie\u0144 zagro\u017Cenia lawinowego: ' +
             '<span style="display:inline-block;background:' + (maxKolor||'#888') +
             ';color:#000;font-weight:bold;padding:0 6px;border-radius:3px;margin-left:2px">' +
             maxStopien + '</span>';
 
-        // Treść panelu
+        // Tre\u015B\u0107 panelu
         var html = '<div style="font-weight:bold;font-size:13px;margin-bottom:10px;color:#f0a030">' +
-                   'Zagrożenie lawinowe</div>';
+                   'Zagro\u017Cenie lawinowe</div>';
 
         keys.forEach(function(key) {
             var meta = (avalancheData[key] || {}).meta || {};
             var d    = getDaneLawiny(key, idx);
             var kolor = (d && d.kolor) || '#555';
-            var stopien = (d && d.stopien) || '–';
+            var stopien = (d && d.stopien) || '\u2013';
 
             html += '<div style="margin-bottom:10px;padding:8px;background:rgba(255,255,255,0.04);border-radius:6px;border-left:3px solid ' + kolor + '">' +
                     '<div style="font-size:10px;color:#8ab4f8;margin-bottom:4px">' + meta.nazwa + '</div>';
@@ -1120,7 +1120,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         'justify-content:center;border-radius:4px">' + d.stopien + '</span>' +
                         '<div><div style="font-size:13px;font-weight:bold">' + (d.stopien_nazwa||'') + '</div>' +
                         (d.tendencja ? '<div style="font-size:10px;color:#889">' + d.tendencja + '</div>' : '') +
-                        (d.wazne_do  ? '<div style="font-size:10px;color:#556">Ważne do: ' + d.wazne_do + '</div>' : '') +
+                        (d.wazne_do  ? '<div style="font-size:10px;color:#556">Wa\u017Cne do: ' + d.wazne_do + '</div>' : '') +
                         '</div></div>';
                 if (d.opis) html += '<div style="margin-top:5px;font-size:10px;color:#9ab;line-height:1.4">' + d.opis + '</div>';
             } else {
@@ -1130,14 +1130,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         html += '<div style="font-size:10px;color:#445;margin-top:4px">' +
-                'Skala EAWS 1–5 &nbsp;·&nbsp; ' +
+                'Skala EAWS 1\u20135 &nbsp;\u00B7&nbsp; ' +
                 '<a href="https://lawiny.topr.pl" target="_blank" style="color:#567">lawiny.topr.pl</a>' +
-                ' &nbsp;·&nbsp; <a href="https://hzs.sk" target="_blank" style="color:#567">hzs.sk</a></div>';
+                ' &nbsp;\u00B7&nbsp; <a href="https://hzs.sk" target="_blank" style="color:#567">hzs.sk</a></div>';
 
         avalanchePanel.innerHTML = html;
     }
 
-    // ── Suwak czasu ─────────────────────────────────────────────────────────
+    // \u2500\u2500 Suwak czasu \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     var tlPanel = document.createElement('div');
     tlPanel.id  = 'tl-panel';
     var lbls = allDates.map(function(d, i) {
@@ -1146,10 +1146,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }).join('');
     var noData = allDates.length === 0;
     tlPanel.innerHTML =
-        '<span id="tl-date">' + (noData ? 'BRAK DANYCH' : 'OGÓŁEM') + '</span>' +
+        '<span id="tl-date">' + (noData ? 'BRAK DANYCH' : 'OG\u00D3\u0141EM') + '</span>' +
         '<div id="tl-wrap"><div id="tl-lbls">' +
         (noData ? '<span style="color:#3a4a5a;font-size:9px">Brak traffic_data.json</span>'
-                : '<span id="tll0" class="act">Ogółem</span>' + lbls) +
+                : '<span id="tll0" class="act">Og\u00F3\u0142em</span>' + lbls) +
         '</div><input type="range" id="tl-sl" min="0" max="' + allDates.length + '" value="0" step="1"' +
         (noData ? ' disabled style="opacity:0.3"' : '') + '></div>' +
         '<button id="tl-play"' + (noData ? ' disabled style="opacity:0.3"' : '') + '>&#9654;</button>';
@@ -1189,7 +1189,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('tl-sl').value = idx;
         var date = idx === 0 ? null : allDates[idx - 1];
         document.getElementById('tl-date').textContent =
-            date ? date.slice(5).split('-').reverse().join('.') : 'OGÓŁEM';
+            date ? date.slice(5).split('-').reverse().join('.') : 'OG\u00D3\u0141EM';
         document.querySelectorAll('#tl-lbls span').forEach(function(el, i) {
             el.className = i === idx ? 'act' : '';
         });
@@ -1281,7 +1281,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('pomiar-btn').addEventListener('click', function(){
             trybPomiaru=!trybPomiaru;
             this.classList.toggle('aktywny',trybPomiaru);
-            this.textContent=trybPomiaru?'✖ Zakończ pomiar':'📏 Pomiar';
+            this.textContent=trybPomiaru?'\u2716 Zako\u0144cz pomiar':'\uD83D\uDCCF Pomiar';
             if(!trybPomiaru) resetPomiar();
         });
         mapaL.on('click', function(e){
