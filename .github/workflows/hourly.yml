@@ -1,0 +1,38 @@
+name: Tatry Flow — Hourly Weather & Avalanche
+
+on:
+  schedule:
+    - cron: '5 * * * *'   # co godzine, 5 minut po pelnej (np. 7:05, 8:05...)
+  workflow_dispatch:
+
+jobs:
+  hourly:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests python-dotenv
+
+      - name: Live weather JSON
+        run: python "imgw fetcher.py" --live
+
+      - name: Live avalanche JSON
+        run: python "avalanche fetcher.py" --live
+
+      - name: Commit JSON files
+        run: |
+          git config user.name  "Tatry Flow Bot"
+          git config user.email "bot@tatroteka.pl"
+          git add -f weather_data.json avalanche_data.json
+          git diff --cached --quiet || git commit -m "live: weather+avalanche $(date +'%Y-%m-%d %H:%M')"
+          git push
