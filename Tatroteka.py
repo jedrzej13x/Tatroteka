@@ -1281,40 +1281,73 @@ document.addEventListener("DOMContentLoaded", function() {
             this.className = isDark ? '' : 'light';
         });
 
-        // -- Panel warstw --
-        var WARSTWY_GRUPY = [
-            'Szlaki g\u00F3rskie', 'Via ferraty', 'Drogi piesze', 'Drogi le\u015bne', 'Pozosta\u0142e',
-            'Granice TPN', 'Granice TANAP'
-        ];
-        var WARSTWA_OZNAKOWANE = 'Szlaki oznakowane';
+        // -- Kontrola warstw przez natywne checkboxy Leaflet LayerControl --
+        // Leaflet LayerControl renderuje checkboxy w .leaflet-control-layers
+        // Mamy go ukrytego przez CSS - ale DOM istnieje i checkboxy dzialaja
+        // Klikamy je programowo przez label[title] lub input
 
-        // Mapowanie nazwa grupy -> klasy CSS na leaflet layerach
-        // Leaflet LayerControl uzywa checkboxow z etykieta = nazwa grupy
-        // Pobieramy referencje do warstw przez folium FeatureGroup
-        // Latwiej: toggle przez ukrywanie/pokazywanie grup SVG przez klasy
-
-        // Znajdz wszystkie leaflet layers po nazwie
-        function getLeafletLayer(nazwa) {
-            var found = null;
-            mapaL.eachLayer(function(l) {
-                if (l.options && l.options.name === nazwa) found = l;
-            });
-            return found;
+        function getLeafletCheckbox(nazwa) {
+            // Leaflet renderuje <label><input type=checkbox/span>NazwaGrupy</label>
+            var labels = document.querySelectorAll('.leaflet-control-layers-overlays label');
+            for (var i = 0; i < labels.length; i++) {
+                var span = labels[i].querySelector('span');
+                if (span && span.textContent.trim() === nazwa) {
+                    return labels[i].querySelector('input');
+                }
+            }
+            return null;
         }
 
         function toggleWarstwa(nazwa, on) {
-            var l = getLeafletLayer(nazwa);
-            if (!l) return;
-            if (on) { if (!mapaL.hasLayer(l)) mapaL.addLayer(l); }
-            else    { if (mapaL.hasLayer(l))  mapaL.removeLayer(l); }
+            var cb = getLeafletCheckbox(nazwa);
+            if (!cb) { return; }
+            if (cb.checked !== on) { cb.click(); }
         }
 
-        // Stworz przycisk warstw
+        function isWarstwaDomyslnieWlaczona(nazwa) {
+            var cb = getLeafletCheckbox(nazwa);
+            return cb ? cb.checked : true;
+        }
+
+        // -- Przycisk "Szlaki oznakowane" (lewy gorny) --
+        var oznBtn = document.createElement('button');
+        oznBtn.id = 'ozn-btn';
+        var oznActive = false;
+        // Sprawdz czy szlaki oznakowane sa juz wlaczone domyslnie
+        // (moga byc wylaczone - Folium show=False)
+        function updateOznBtn() {
+            oznBtn.innerHTML = oznActive
+                ? '\u2691 Ukryj szlaki oznakowane'
+                : '\u2690 Poka\u017C szlaki oznakowane';
+            oznBtn.style.background   = oznActive ? 'rgba(224,112,32,0.25)' : 'rgba(8,11,16,0.92)';
+            oznBtn.style.borderColor  = oznActive ? '#e07020' : 'rgba(255,255,255,0.15)';
+            oznBtn.style.color        = oznActive ? '#e07020' : '#aaa';
+        }
+        oznBtn.style.cssText = [
+            'position:fixed;top:10px;left:10px',
+            'padding:6px 12px;border-radius:8px',
+            'border:1px solid rgba(255,255,255,0.15)',
+            'z-index:1001;font-size:11px;font-family:monospace;cursor:pointer',
+            'white-space:nowrap;transition:all .15s'
+        ].join(';');
+        updateOznBtn();
+        document.body.appendChild(oznBtn);
+
+        // Wylacz szlaki oznakowane domyslnie
+        toggleWarstwa('Szlaki oznakowane', false);
+
+        oznBtn.addEventListener('click', function() {
+            oznActive = !oznActive;
+            toggleWarstwa('Szlaki oznakowane', oznActive);
+            updateOznBtn();
+        });
+
+        // -- Przycisk "Typ szlaku / widok" (obok lawiny) --
         var layerBtn = document.createElement('button');
         layerBtn.id = 'layer-btn';
         layerBtn.innerHTML = '\u2630 Typ szlaku / widok';
         layerBtn.style.cssText = [
-            'position:fixed;top:10px;right:170px',
+            'position:fixed;top:10px;left:230px',
             'background:rgba(8,11,16,0.92);color:white',
             'padding:6px 12px;border-radius:8px',
             'border:1px solid rgba(255,255,255,0.2)',
@@ -1323,56 +1356,57 @@ document.addEventListener("DOMContentLoaded", function() {
         ].join(';');
         document.body.appendChild(layerBtn);
 
-        // Stworz panel warstw
+        // -- Panel warstw --
         var layerPanel = document.createElement('div');
         layerPanel.id = 'layer-panel';
         layerPanel.style.cssText = [
-            'position:fixed;top:46px;right:170px',
+            'position:fixed;top:46px;left:230px',
             'background:rgba(8,11,16,0.96);color:white',
             'padding:12px 16px;border-radius:8px',
             'box-shadow:0 4px 20px rgba(0,0,0,0.6)',
             'z-index:1001;font-size:12px;font-family:monospace',
             'border:1px solid rgba(255,255,255,0.1)',
-            'min-width:190px;display:none'
+            'min-width:200px;display:none'
         ].join(';');
+        document.body.appendChild(layerPanel);
 
-        var IKONY = {
-            'Szlaki g\u00F3rskie':  '\uD83D\uDEE5\uFE0F',
-            'Via ferraty':          '\u26F0\uFE0F',
-            'Drogi piesze':         '\uD83D\uDEB6',
-            'Drogi le\u015bne':     '\uD83C\uDF32',
-            'Pozosta\u0142e':       '\u2026',
-            'Granice TPN':          '\uD83D\uDDFA\uFE0F',
-            'Granice TANAP':        '\uD83D\uDDFA\uFE0F',
-        };
-
-        var stanyWarstw = {};
-        WARSTWY_GRUPY.forEach(function(nazwa) { stanyWarstw[nazwa] = true; });
+        var WARSTWY_SZLAKI  = ['Szlaki g\u00F3rskie','Via ferraty','Drogi piesze','Drogi le\u015bne','Pozosta\u0142e'];
+        var WARSTWY_GRANICE = ['Granice TPN','Granice TANAP'];
 
         function buildLayerPanel() {
-            var html = '';
+            var html = '<div style="font-size:10px;color:#8ab4f8;margin-bottom:6px;letter-spacing:.05em">TYPY SZLAK\u00D3W</div>';
 
-            WARSTWY_GRUPY.forEach(function(nazwa) {
-                var checked = stanyWarstw[nazwa];
-                var isBorder = nazwa.indexOf('Granic') >= 0;
-                var sep = (nazwa === 'Granice TPN') ? 'border-top:1px solid rgba(255,255,255,0.08);margin-top:6px;padding-top:10px;' : '';
-                var col = isBorder ? '#7fba7f' : '#ddd';
-                var chk = checked ? ' checked' : '';
-                var cbId = 'lyr-' + nazwa.replace(/[^a-zA-Z0-9]/g, '_');
-                html += '<label style="display:flex;align-items:center;gap:8px;padding:4px 0;cursor:pointer;' + sep + '">'
-                     +  '<input type="checkbox" id="' + cbId + '"' + chk + ' style="accent-color:#e07020;width:14px;height:14px;cursor:pointer">'
-                     +  '<span style="color:' + col + ';font-size:11px">' + nazwa + '</span>'
+            WARSTWY_SZLAKI.forEach(function(nazwa) {
+                var cb = getLeafletCheckbox(nazwa);
+                var checked = cb ? cb.checked : true;
+                var cbId = 'ui-lyr-' + nazwa.replace(/[^a-zA-Z0-9]/g, '_');
+                html += '<label style="display:flex;align-items:center;gap:8px;padding:3px 0;cursor:pointer">'
+                     +  '<input type="checkbox" id="' + cbId + '"' + (checked ? ' checked' : '')
+                     +  ' style="accent-color:#e07020;width:14px;height:14px;cursor:pointer">'
+                     +  '<span style="color:#ddd;font-size:11px">' + nazwa + '</span>'
+                     +  '</label>';
+            });
+
+            html += '<div style="font-size:10px;color:#7fba7f;margin:8px 0 5px;letter-spacing:.05em;border-top:1px solid rgba(255,255,255,0.08);padding-top:8px">GRANICE</div>';
+
+            WARSTWY_GRANICE.forEach(function(nazwa) {
+                var cb = getLeafletCheckbox(nazwa);
+                var checked = cb ? cb.checked : true;
+                var cbId = 'ui-lyr-' + nazwa.replace(/[^a-zA-Z0-9]/g, '_');
+                html += '<label style="display:flex;align-items:center;gap:8px;padding:3px 0;cursor:pointer">'
+                     +  '<input type="checkbox" id="' + cbId + '"' + (checked ? ' checked' : '')
+                     +  ' style="accent-color:#7fba7f;width:14px;height:14px;cursor:pointer">'
+                     +  '<span style="color:#7fba7f;font-size:11px">' + nazwa + '</span>'
                      +  '</label>';
             });
 
             layerPanel.innerHTML = html;
 
-            // Podepnij eventy
-            WARSTWY_GRUPY.forEach(function(nazwa) {
-                var cb = document.getElementById('lyr-' + nazwa.replace(/[^a-z]/gi,'_'));
-                if (!cb) return;
-                cb.addEventListener('change', function() {
-                    stanyWarstw[nazwa] = this.checked;
+            // Podepnij eventy - klikniecie naszego checkboxa = klikniecie Leaflet checkboxa
+            WARSTWY_SZLAKI.concat(WARSTWY_GRANICE).forEach(function(nazwa) {
+                var uiCb = document.getElementById('ui-lyr-' + nazwa.replace(/[^a-zA-Z0-9]/g, '_'));
+                if (!uiCb) return;
+                uiCb.addEventListener('change', function() {
                     toggleWarstwa(nazwa, this.checked);
                 });
             });
@@ -1384,37 +1418,10 @@ document.addEventListener("DOMContentLoaded", function() {
             if (!visible) { buildLayerPanel(); layerPanel.style.display = 'block'; }
             else layerPanel.style.display = 'none';
         });
-        document.body.appendChild(layerPanel);
 
         document.addEventListener('click', function(e) {
             if (!layerBtn.contains(e.target) && !layerPanel.contains(e.target))
                 layerPanel.style.display = 'none';
-        });
-
-        // Stworz osobny przycisk dla szlakow oznakowanych
-        var oznBtn = document.createElement('button');
-        oznBtn.id = 'ozn-btn';
-        oznBtn.innerHTML = '\uD83D\uDEA9 Szlaki oznakowane';
-        var oznActive = false;
-        oznBtn.style.cssText = [
-            'position:fixed;top:10px;right:10px',
-            'background:rgba(8,11,16,0.92);color:#aaa',
-            'padding:6px 12px;border-radius:8px',
-            'border:1px solid rgba(255,255,255,0.15)',
-            'z-index:1001;font-size:11px;font-family:monospace;cursor:pointer',
-            'white-space:nowrap;transition:all .15s'
-        ].join(';');
-        document.body.appendChild(oznBtn);
-
-        // Szlaki oznakowane sa domyslnie OFF - zgodnie z oryginalnym LayerControl
-        toggleWarstwa(WARSTWA_OZNAKOWANE, false);
-
-        oznBtn.addEventListener('click', function() {
-            oznActive = !oznActive;
-            toggleWarstwa(WARSTWA_OZNAKOWANE, oznActive);
-            this.style.background    = oznActive ? 'rgba(224,112,32,0.3)' : 'rgba(8,11,16,0.92)';
-            this.style.borderColor   = oznActive ? '#e07020' : 'rgba(255,255,255,0.15)';
-            this.style.color         = oznActive ? '#e07020' : '#aaa';
         });
 
     }, 2000);
