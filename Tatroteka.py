@@ -613,6 +613,7 @@ for element in wszystkie:
     linia.options['className'] = klasa_css
 
     if klasa_css not in popupy_relacji:
+        mid = punkty[len(punkty)//2]
         popupy_relacji[klasa_css] = {
             "nazwa":    nazwa,
             "typ":      typ_nazwa,
@@ -621,6 +622,8 @@ for element in wszystkie:
             "atleci":   seg["athlete_count"]  if seg else 0,
             "seg_name": sanitize(seg["name"]) if seg else "",
             "snapshot": seg["last_snapshot"]  if seg else "",
+            "lat":      mid[0],
+            "lon":      mid[1],
         }
 
     grupy[styl["grupa"]].add_child(linia)
@@ -1218,7 +1221,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         (function applyWhenReady() {
             if (!document.querySelectorAll('path[class]').length) { setTimeout(applyWhenReady, 300); return; }
-            setIdx(0);
+            // Ustaw suwak na dzisiejsz\u0105 dat\u0119 (lub ostatni\u0105 dost\u0119pn\u0105)
+            var today = new Date().toISOString().slice(0, 10);
+            var todayIdx = allDates.indexOf(today);
+            if (todayIdx >= 0) {
+                setIdx(todayIdx + 1); // +1 bo idx=0 to "Og\u00F3\u0142em"
+            } else if (allDates.length > 0) {
+                setIdx(allDates.length); // ostatnia dost\u0119pna data
+            } else {
+                setIdx(0);
+            }
         })();
     }, 1200);
 
