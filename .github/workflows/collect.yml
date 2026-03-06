@@ -2,7 +2,7 @@ name: Tatry Flow — Daily Segment Collection
 
 on:
   schedule:
-    - cron: '0 5 * * *'   # codziennie o 5:00 UTC (7:00 PL) — pelna kolekcja Strava + rebuild mapy
+    - cron: '0 5 * * *'   # codziennie o 5:00 UTC (7:00 PL)
   workflow_dispatch:
   push:
     branches: [master]
@@ -35,7 +35,12 @@ jobs:
             echo "Brak bazy — pierwsze uruchomienie"
           fi
 
+      # Strava: continue-on-error = prawda — rate limit nie blokuje reszty
+      # Timeout 90 min żeby nie zamrozić całego workflow
       - name: Run Strava collector
+        id: strava
+        continue-on-error: true
+        timeout-minutes: 90
         env:
           STRAVA_CLIENT_ID:     ${{ secrets.STRAVA_CLIENT_ID }}
           STRAVA_CLIENT_SECRET: ${{ secrets.STRAVA_CLIENT_SECRET }}
@@ -44,15 +49,18 @@ jobs:
         run: python "Strava API fetcher.py"
 
       - name: Show Strava report
+        continue-on-error: true
         env:
           DB_PATH: tatry_segments.db
         run: python "Strava API fetcher.py" --report
 
       - name: Export traffic JSON
+        continue-on-error: true
         env:
           DB_PATH: tatry_segments.db
         run: python "Strava API fetcher.py" --export
 
+      # Pogoda i lawiny zawsze się wykonują — niezależnie od Strava
       - name: Collect weather (daily + live JSON)
         env:
           DB_PATH: tatry_segments.db
@@ -71,5 +79,5 @@ jobs:
           git config user.name  "Tatry Flow Bot"
           git config user.email "bot@tatroteka.pl"
           git add -f tatry_segments.db traffic_data.json weather_data.json avalanche_data.json index.html
-          git diff --cached --quiet || git commit -m "data: snapshot $(date +'%Y-%m-%d')"
+          git diff --cached --quiet || git commit -m "data: snapshot $(date +'%Y-%m-%d') [strava=${{ steps.strava.outcome }}]"
           git push
