@@ -5,7 +5,7 @@
       "region": "PL"
     },
     "series": {},
-    "last_updated": "2026-03-05T23:54"
+    "last_updated": "2026-03-06T02:33"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -13,7 +13,7 @@
       "region": "SK"
     },
     "series": {
-      "2026-03-05": {
+      "2026-03-06": {
         "stopien": 3,
         "stopien_nazwa": "Zvysene",
         "tendencja": null,
@@ -22,7 +22,7 @@
         "kolor": "#FF9800"
       }
     },
-    "last_updated": "2026-03-05T23:54"
+    "last_updated": "2026-03-06T02:33"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -30,7 +30,7 @@
       "region": "SK"
     },
     "series": {
-      "2026-03-05": {
+      "2026-03-06": {
         "stopien": 3,
         "stopien_nazwa": "Zvysene",
         "tendencja": null,
@@ -39,6 +39,6 @@
         "kolor": "#FF9800"
       }
     },
-    "last_updated": "2026-03-05T23:54"
+    "last_updated": "2026-03-06T02:33"
   }
 }
