@@ -4,8 +4,17 @@
       "nazwa": "Tatry Polskie (TOPR)",
       "region": "PL"
     },
-    "series": {},
-    "last_updated": "2026-03-06T15:56"
+    "series": {
+      "2026-03-06": {
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": "--> Komunikat Lawinowy TOPR dla Tatr Polskich Obowiązuje do: 07.03.2026 20:00 Stopień zagrożenia: Zagrożenie określono jako: Niskie Stopień zagrożenia nie powinien ulec zmianie Szczegóły komunikatu --",
+        "wazne_do": "07.03.2026 20:00",
+        "opis": null,
+        "kolor": "#8BC34A"
+      }
+    },
+    "last_updated": "2026-03-06T16:51"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -22,7 +31,7 @@
         "kolor": "#FF9800"
       }
     },
-    "last_updated": "2026-03-06T15:56"
+    "last_updated": "2026-03-06T16:51"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -39,6 +48,6 @@
         "kolor": "#FF9800"
       }
     },
-    "last_updated": "2026-03-06T15:56"
+    "last_updated": "2026-03-06T16:51"
   }
 }
