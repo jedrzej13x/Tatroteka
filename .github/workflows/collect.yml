@@ -4,6 +4,13 @@ on:
   schedule:
     - cron: '0 5 * * *'   # codziennie o 5:00 UTC (7:00 PL)
   workflow_dispatch:
+    inputs:
+      skip_strava:
+        description: 'Pomiń Stravę (tylko pogoda + lawiny + rebuild mapy)'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
   push:
     branches: [master]
     paths:
@@ -35,10 +42,10 @@ jobs:
             echo "Brak bazy — pierwsze uruchomienie"
           fi
 
-      # Strava: continue-on-error = prawda — rate limit nie blokuje reszty
-      # Timeout 90 min żeby nie zamrozić całego workflow
+      # Strava: pomijana gdy skip_strava=true lub continue-on-error po rate limit
       - name: Run Strava collector
         id: strava
+        if: ${{ github.event.inputs.skip_strava != 'true' }}
         continue-on-error: true
         timeout-minutes: 90
         env:
@@ -49,12 +56,14 @@ jobs:
         run: python "Strava API fetcher.py"
 
       - name: Show Strava report
+        if: ${{ github.event.inputs.skip_strava != 'true' }}
         continue-on-error: true
         env:
           DB_PATH: tatry_segments.db
         run: python "Strava API fetcher.py" --report
 
       - name: Export traffic JSON
+        if: ${{ github.event.inputs.skip_strava != 'true' }}
         continue-on-error: true
         env:
           DB_PATH: tatry_segments.db
