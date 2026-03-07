@@ -45,7 +45,7 @@ STACJE = {
     },
     "zakopane": {
         "nazwa": "Zakopane", "lat": 49.2992, "lon": 19.9742, "alt": 857,
-        "kraj": "PL", "zrodlo": "imgw", "imgw_id": "12640",
+        "kraj": "PL", "zrodlo": "open-meteo",
     },
     # -- Open-Meteo NWP - model numeryczny ---------------------------------------
     "morskie_oko": {

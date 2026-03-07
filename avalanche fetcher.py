@@ -174,10 +174,11 @@ def parse_topr(raw):
     if m:
         wazne_do = m.group(1).strip()
 
-    # -- Tendencja --
+    # -- Tendencja -- szukaj po zdaniach (tekst może być jedną linią po strip HTML)
     tendencja = None
-    for line in tekst.split("\n"):
-        l = line.strip()
+    zdania = re.split(r'[.\n]', tekst)
+    for zdanie in zdania:
+        l = zdanie.strip()
         if len(l) < 10: continue
         if re.search(r"stopie[n\u0144].{0,60}(nie\s+powinien|mo[zg\u017c]e\s+male[c\u0107]"
                      r"|ro[s\u015b]n[a\u0105][c\u0107]|bez\s+zmian|zmieni[a\u0105])", l, re.IGNORECASE):
@@ -205,7 +206,7 @@ def parse_topr(raw):
 
 def parse_hzs(html):
     stopien, stopien_nazwa = None, None
-    STOPNIE_SK = {1:"Male", 2:"Mierne", 3:"Zvysene", 4:"Velke", 5:"Velmi velke"}
+    STOPNIE_SK = {1:"Malé", 2:"Mierne", 3:"Zvýšené", 4:"Veľké", 5:"Veľmi veľké"}
 
     m = re.search(r"danger_rating_(\d)\.svg", html, re.IGNORECASE)
     if m:
