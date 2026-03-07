@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-03-07": {
-        "temperatura": 2.4,
-        "predkosc_wiatru": 2.0,
-        "kierunek_wiatru": 30,
-        "wilgotnosc": 24.7,
+        "temperatura": 3.7,
+        "predkosc_wiatru": 3.0,
+        "kierunek_wiatru": 90,
+        "wilgotnosc": 32.7,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-03-07T09:00"
+    "last_updated": "2026-03-07T10:00"
   },
   "zakopane": {
     "meta": {
@@ -40,15 +40,15 @@
     },
     "series": {
       "2026-03-07": {
-        "temperatura": 5.2,
-        "predkosc_wiatru": 3.2,
-        "kierunek_wiatru": 204,
-        "wilgotnosc": 25,
+        "temperatura": 6.6,
+        "predkosc_wiatru": 2.2,
+        "kierunek_wiatru": 359,
+        "wilgotnosc": 22,
         "suma_opadu": 0.0,
-        "cisnienie": 866.7
+        "cisnienie": 867.8
       }
     },
-    "last_updated": "2026-03-07T09:00"
+    "last_updated": "2026-03-07T10:00"
   },
   "hala_gasienicowa": {
     "meta": {
@@ -60,15 +60,15 @@
     },
     "series": {
       "2026-03-07": {
-        "temperatura": 2.2,
-        "predkosc_wiatru": 2.5,
-        "kierunek_wiatru": 164,
-        "wilgotnosc": 32,
+        "temperatura": 3.7,
+        "predkosc_wiatru": 4.0,
+        "kierunek_wiatru": 28,
+        "wilgotnosc": 27,
         "suma_opadu": 0.0,
-        "cisnienie": 842.1
+        "cisnienie": 843.5
       }
     },
-    "last_updated": "2026-03-07T09:00"
+    "last_updated": "2026-03-07T10:00"
   },
   "dolina_chocholowska": {
     "meta": {
@@ -80,15 +80,15 @@
     },
     "series": {
       "2026-03-07": {
-        "temperatura": 4.9,
-        "predkosc_wiatru": 0.7,
-        "kierunek_wiatru": 355,
-        "wilgotnosc": 58,
+        "temperatura": 8.1,
+        "predkosc_wiatru": 2.5,
+        "kierunek_wiatru": 3,
+        "wilgotnosc": 38,
         "suma_opadu": 0.0,
-        "cisnienie": 916.8
+        "cisnienie": 918.5
       }
     },
-    "last_updated": "2026-03-07T09:00"
+    "last_updated": "2026-03-07T10:00"
   },
   "lomnica": {
     "meta": {
@@ -100,15 +100,15 @@
     },
     "series": {
       "2026-03-07": {
-        "temperatura": -8.6,
-        "predkosc_wiatru": 7.9,
-        "kierunek_wiatru": 310,
-        "wilgotnosc": 39,
+        "temperatura": -6.3,
+        "predkosc_wiatru": 6.8,
+        "kierunek_wiatru": 338,
+        "wilgotnosc": 46,
         "suma_opadu": 0.0,
-        "cisnienie": 753.3
+        "cisnienie": 755.8
       }
     },
-    "last_updated": "2026-03-07T09:00"
+    "last_updated": "2026-03-07T10:00"
   },
   "strbske_pleso": {
     "meta": {
@@ -120,15 +120,15 @@
     },
     "series": {
       "2026-03-07": {
-        "temperatura": 5.5,
-        "predkosc_wiatru": 2.5,
-        "kierunek_wiatru": 153,
-        "wilgotnosc": 28,
+        "temperatura": 6.5,
+        "predkosc_wiatru": 4.0,
+        "kierunek_wiatru": 172,
+        "wilgotnosc": 29,
         "suma_opadu": 0.0,
-        "cisnienie": 872.1
+        "cisnienie": 873.2
       }
     },
-    "last_updated": "2026-03-07T09:00"
+    "last_updated": "2026-03-07T10:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -140,14 +140,14 @@
     },
     "series": {
       "2026-03-07": {
-        "temperatura": -9.1,
+        "temperatura": -6.1,
         "predkosc_wiatru": 6.1,
-        "kierunek_wiatru": 12,
-        "wilgotnosc": 43,
+        "kierunek_wiatru": 359,
+        "wilgotnosc": 46,
         "suma_opadu": 0.0,
-        "cisnienie": 780.7
+        "cisnienie": 783.6
       }
     },
-    "last_updated": "2026-03-07T09:00"
+    "last_updated": "2026-03-07T10:00"
   }
 }
