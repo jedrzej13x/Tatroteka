@@ -35,8 +35,17 @@
       "alt": 857,
       "kraj": "PL"
     },
-    "series": {},
-    "last_updated": null
+    "series": {
+      "2026-03-07": {
+        "temperatura": 4.9,
+        "predkosc_wiatru": 9.0,
+        "kierunek_wiatru": 10,
+        "wilgotnosc": 45.8,
+        "suma_opadu": 0.0,
+        "cisnienie": 924.6
+      }
+    },
+    "last_updated": "2026-03-07T23:00"
   },
   "morskie_oko": {
     "meta": {
