@@ -8,24 +8,16 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-03-05": {
-        "temperatura": -2.8,
-        "predkosc_wiatru": 3.0,
-        "kierunek_wiatru": 350,
-        "wilgotnosc": 97.8,
-        "suma_opadu": 0.0,
-        "cisnienie": null
-      },
       "2026-03-07": {
-        "temperatura": -0.1,
+        "temperatura": -0.3,
         "predkosc_wiatru": 5.0,
         "kierunek_wiatru": 30,
-        "wilgotnosc": 39.7,
+        "wilgotnosc": 40.7,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-03-07T22:00"
+    "last_updated": "2026-03-07T23:00"
   },
   "zakopane": {
     "meta": {
@@ -35,17 +27,8 @@
       "alt": 857,
       "kraj": "PL"
     },
-    "series": {
-      "2026-03-07": {
-        "temperatura": 4.9,
-        "predkosc_wiatru": 9.0,
-        "kierunek_wiatru": 10,
-        "wilgotnosc": 45.8,
-        "suma_opadu": 0.0,
-        "cisnienie": 924.6
-      }
-    },
-    "last_updated": "2026-03-07T23:00"
+    "series": {},
+    "last_updated": null
   },
   "morskie_oko": {
     "meta": {
@@ -55,17 +38,8 @@
       "alt": 1395,
       "kraj": "PL"
     },
-    "series": {
-      "2026-03-07": {
-        "temperatura": 2.8,
-        "predkosc_wiatru": 9.0,
-        "kierunek_wiatru": 197,
-        "wilgotnosc": 40.2,
-        "suma_opadu": 0.0,
-        "cisnienie": 865.5
-      }
-    },
-    "last_updated": "2026-03-07T23:00"
+    "series": {},
+    "last_updated": null
   },
   "hala_gasienicowa": {
     "meta": {
@@ -75,17 +49,8 @@
       "alt": 1520,
       "kraj": "PL"
     },
-    "series": {
-      "2026-03-07": {
-        "temperatura": 0.8,
-        "predkosc_wiatru": 7.9,
-        "kierunek_wiatru": 2,
-        "wilgotnosc": 41.0,
-        "suma_opadu": 0.0,
-        "cisnienie": 841.3
-      }
-    },
-    "last_updated": "2026-03-07T23:00"
+    "series": {},
+    "last_updated": null
   },
   "dolina_chocholowska": {
     "meta": {
@@ -95,17 +60,8 @@
       "alt": 1146,
       "kraj": "PL"
     },
-    "series": {
-      "2026-03-07": {
-        "temperatura": 4.1,
-        "predkosc_wiatru": 6.1,
-        "kierunek_wiatru": 11,
-        "wilgotnosc": 54.0,
-        "suma_opadu": 0.0,
-        "cisnienie": 916.4
-      }
-    },
-    "last_updated": "2026-03-07T23:00"
+    "series": {},
+    "last_updated": null
   },
   "lomnica": {
     "meta": {
@@ -115,25 +71,8 @@
       "alt": 2634,
       "kraj": "SK"
     },
-    "series": {
-      "2026-03-05": {
-        "temperatura": -8.5,
-        "predkosc_wiatru": 31.0,
-        "kierunek_wiatru": 297,
-        "wilgotnosc": 63.2,
-        "suma_opadu": 0.6,
-        "cisnienie": 753.1
-      },
-      "2026-03-07": {
-        "temperatura": -9.0,
-        "predkosc_wiatru": 10.8,
-        "kierunek_wiatru": 289,
-        "wilgotnosc": 51.4,
-        "suma_opadu": 0.0,
-        "cisnienie": 753.0
-      }
-    },
-    "last_updated": "2026-03-07T23:00"
+    "series": {},
+    "last_updated": null
   },
   "strbske_pleso": {
     "meta": {
@@ -143,25 +82,8 @@
       "alt": 1346,
       "kraj": "SK"
     },
-    "series": {
-      "2026-03-05": {
-        "temperatura": 1.7,
-        "predkosc_wiatru": 16.6,
-        "kierunek_wiatru": 353,
-        "wilgotnosc": 51.0,
-        "suma_opadu": 0.0,
-        "cisnienie": 869.5
-      },
-      "2026-03-07": {
-        "temperatura": 3.8,
-        "predkosc_wiatru": 10.4,
-        "kierunek_wiatru": 18,
-        "wilgotnosc": 36.2,
-        "suma_opadu": 0.0,
-        "cisnienie": 871.3
-      }
-    },
-    "last_updated": "2026-03-07T23:00"
+    "series": {},
+    "last_updated": null
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -171,16 +93,7 @@
       "alt": 668,
       "kraj": "SK"
     },
-    "series": {
-      "2026-03-07": {
-        "temperatura": -8.6,
-        "predkosc_wiatru": 10.4,
-        "kierunek_wiatru": 345,
-        "wilgotnosc": 53.3,
-        "suma_opadu": 0.0,
-        "cisnienie": 781.3
-      }
-    },
-    "last_updated": "2026-03-07T23:00"
+    "series": {},
+    "last_updated": null
   }
 }
