@@ -76,6 +76,14 @@ def get_db():
     conn.execute("PRAGMA journal_mode=WAL")
     conn.executescript(SCHEMA)
     conn.commit()
+    # Migracja: dodaj kolumny których może nie być w starej bazie
+    # Sprawdzamy przez PRAGMA table_info zamiast polegać na wyjątku
+    existing = {row[1] for row in conn.execute("PRAGMA table_info(avalanche_bulletins)")}
+    for col, typedef in [("last_updated", "TEXT")]:
+        if col not in existing:
+            conn.execute(f"ALTER TABLE avalanche_bulletins ADD COLUMN {col} {typedef}")
+            conn.commit()
+            log.info(f"Migracja: dodano kolumnę {col} do avalanche_bulletins")
     return conn
 
 

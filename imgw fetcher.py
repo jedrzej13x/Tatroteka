@@ -105,16 +105,14 @@ def get_db():
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA journal_mode=WAL")
     conn.executescript(SCHEMA)
-    # Migracja: dodaj kolumny jesli nie istnieja (stara baza bez nich)
-    for col, typedef in [
-        ("godzina_pomiaru", "TEXT"),
-    ]:
-        try:
+    conn.commit()
+    # Migracja: dodaj kolumny których może nie być w starej bazie
+    existing = {row[1] for row in conn.execute("PRAGMA table_info(weather_snapshots)")}
+    for col, typedef in [("godzina_pomiaru", "TEXT")]:
+        if col not in existing:
             conn.execute(f"ALTER TABLE weather_snapshots ADD COLUMN {col} {typedef}")
             conn.commit()
-        except Exception:
-            pass  # kolumna juz istnieje
-    conn.commit()
+            log.info(f"Migracja: dodano kolumnę {col} do weather_snapshots")
     return conn
 
 
