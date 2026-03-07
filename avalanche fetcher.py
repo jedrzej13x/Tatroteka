@@ -174,16 +174,18 @@ def parse_topr(raw):
     if m:
         wazne_do = m.group(1).strip()
 
-    # -- Tendencja -- szukaj po zdaniach (tekst może być jedną linią po strip HTML)
+    # -- Tendencja -- wyciągaj konkretną frazę ze zdania
     tendencja = None
-    zdania = re.split(r'[.\n]', tekst)
-    for zdanie in zdania:
-        l = zdanie.strip()
-        if len(l) < 10: continue
-        if re.search(r"stopie[n\u0144].{0,60}(nie\s+powinien|mo[zg\u017c]e\s+male[c\u0107]"
-                     r"|ro[s\u015b]n[a\u0105][c\u0107]|bez\s+zmian|zmieni[a\u0105])", l, re.IGNORECASE):
-            tendencja = l[:200]
-            break
+    m = re.search(
+        r"(Stopie[n\u0144]\s+zagro[z\u017c]enia\s+"
+        r"(?:nie\s+powinien\s+ulec\s+zmianie"
+        r"|mo[z\u017c]e\s+rosn[a\u0105][c\u0107]"
+        r"|mo[z\u017c]e\s+male[c\u0107]"
+        r"|pozostanie\s+bez\s+zmian))",
+        tekst, re.IGNORECASE
+    )
+    if m:
+        tendencja = m.group(1).strip()[:120]
 
     # -- Opis --
     opis = None
