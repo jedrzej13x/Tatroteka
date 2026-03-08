@@ -89,4 +89,5 @@ jobs:
           git config user.email "bot@tatroteka.pl"
           git add -f tatry_segments.db traffic_data.json weather_data.json avalanche_data.json index.html
           git diff --cached --quiet || git commit -m "data: snapshot $(date +'%Y-%m-%d') [strava=${{ steps.strava.outcome }}]"
+          git pull --rebase origin master
           git push
