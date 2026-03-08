@@ -5,6 +5,22 @@
       "region": "PL"
     },
     "series": {
+      "2026-03-05": {
+        "stopien": null,
+        "stopien_nazwa": "",
+        "tendencja": "Stopień zagrożenia\" style=\"height:70px; border:1px solid #ddd; border-radius:4",
+        "wazne_do": "05.03.2026 20:00",
+        "opis": null,
+        "kolor": null
+      },
+      "2026-03-07": {
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "08.03.2026 20:00",
+        "opis": null,
+        "kolor": "#8BC34A"
+      },
       "2026-03-08": {
         "stopien": 1,
         "stopien_nazwa": "Niskie",
@@ -14,7 +30,7 @@
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-03-08T11:27"
+    "last_updated": "2026-03-08T11:43+00:00"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -22,6 +38,22 @@
       "region": "SK"
     },
     "series": {
+      "2026-03-05": {
+        "stopien": 3,
+        "stopien_nazwa": "Zvýšené",
+        "tendencja": null,
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#FF9800"
+      },
+      "2026-03-07": {
+        "stopien": 3,
+        "stopien_nazwa": "Zvýšené",
+        "tendencja": null,
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#FF9800"
+      },
       "2026-03-08": {
         "stopien": 3,
         "stopien_nazwa": "Zvýšené",
@@ -31,7 +63,7 @@
         "kolor": "#FF9800"
       }
     },
-    "last_updated": "2026-03-08T11:27"
+    "last_updated": "2026-03-08T11:43+00:00"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -39,6 +71,22 @@
       "region": "SK"
     },
     "series": {
+      "2026-03-05": {
+        "stopien": 3,
+        "stopien_nazwa": "Zvýšené",
+        "tendencja": null,
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#FF9800"
+      },
+      "2026-03-07": {
+        "stopien": 3,
+        "stopien_nazwa": "Zvýšené",
+        "tendencja": null,
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#FF9800"
+      },
       "2026-03-08": {
         "stopien": 3,
         "stopien_nazwa": "Zvýšené",
@@ -48,6 +96,6 @@
         "kolor": "#FF9800"
       }
     },
-    "last_updated": "2026-03-08T11:27"
+    "last_updated": "2026-03-08T11:43+00:00"
   }
 }
