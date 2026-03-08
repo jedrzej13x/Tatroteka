@@ -25,15 +25,15 @@
         "cisnienie": null
       },
       "2026-03-08": {
-        "temperatura": -0.5,
-        "predkosc_wiatru": 4.0,
+        "temperatura": -0.8,
+        "predkosc_wiatru": 5.0,
         "kierunek_wiatru": 220,
-        "wilgotnosc": 49.6,
+        "wilgotnosc": 53.6,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-03-08T14:00"
+    "last_updated": "2026-03-08T15:00"
   },
   "zakopane": {
     "meta": {
@@ -54,9 +54,9 @@
       },
       "2026-03-08": {
         "temperatura": 4.1,
-        "predkosc_wiatru": 12.2,
-        "kierunek_wiatru": 63,
-        "wilgotnosc": 44.5,
+        "predkosc_wiatru": 13.3,
+        "kierunek_wiatru": 72,
+        "wilgotnosc": 43.5,
         "suma_opadu": 0.0,
         "cisnienie": 926.0
       }
@@ -81,12 +81,12 @@
         "cisnienie": 865.5
       },
       "2026-03-08": {
-        "temperatura": 2.2,
-        "predkosc_wiatru": 13.3,
-        "kierunek_wiatru": 189,
-        "wilgotnosc": 35.8,
+        "temperatura": 2.1,
+        "predkosc_wiatru": 11.9,
+        "kierunek_wiatru": 199,
+        "wilgotnosc": 36.6,
         "suma_opadu": 0.0,
-        "cisnienie": 867.0
+        "cisnienie": 866.9
       }
     },
     "last_updated": "2026-03-08T23:00"
@@ -109,12 +109,12 @@
         "cisnienie": 841.3
       },
       "2026-03-08": {
-        "temperatura": 0.5,
-        "predkosc_wiatru": 21.2,
-        "kierunek_wiatru": 180,
-        "wilgotnosc": 36.6,
+        "temperatura": 0.4,
+        "predkosc_wiatru": 22.7,
+        "kierunek_wiatru": 186,
+        "wilgotnosc": 37.4,
         "suma_opadu": 0.0,
-        "cisnienie": 842.6
+        "cisnienie": 842.5
       }
     },
     "last_updated": "2026-03-08T23:00"
@@ -137,12 +137,12 @@
         "cisnienie": 916.4
       },
       "2026-03-08": {
-        "temperatura": 3.5,
-        "predkosc_wiatru": 8.6,
-        "kierunek_wiatru": 70,
-        "wilgotnosc": 49.8,
+        "temperatura": 3.4,
+        "predkosc_wiatru": 9.7,
+        "kierunek_wiatru": 69,
+        "wilgotnosc": 49.0,
         "suma_opadu": 0.0,
-        "cisnienie": 917.9
+        "cisnienie": 917.8
       }
     },
     "last_updated": "2026-03-08T23:00"
@@ -173,12 +173,12 @@
         "cisnienie": 753.0
       },
       "2026-03-08": {
-        "temperatura": -9.3,
-        "predkosc_wiatru": 22.7,
-        "kierunek_wiatru": 182,
-        "wilgotnosc": 50.2,
+        "temperatura": -9.4,
+        "predkosc_wiatru": 23.0,
+        "kierunek_wiatru": 184,
+        "wilgotnosc": 51.3,
         "suma_opadu": 0.0,
-        "cisnienie": 754.8
+        "cisnienie": 754.6
       }
     },
     "last_updated": "2026-03-08T23:00"
@@ -212,9 +212,9 @@
         "temperatura": 2.6,
         "predkosc_wiatru": 11.2,
         "kierunek_wiatru": 3,
-        "wilgotnosc": 35.2,
+        "wilgotnosc": 35.0,
         "suma_opadu": 0.0,
-        "cisnienie": 872.9
+        "cisnienie": 872.8
       }
     },
     "last_updated": "2026-03-08T23:00"
@@ -237,12 +237,12 @@
         "cisnienie": 781.3
       },
       "2026-03-08": {
-        "temperatura": -7.9,
-        "predkosc_wiatru": 29.2,
-        "kierunek_wiatru": 157,
-        "wilgotnosc": 52.0,
+        "temperatura": -8.1,
+        "predkosc_wiatru": 30.2,
+        "kierunek_wiatru": 156,
+        "wilgotnosc": 53.1,
         "suma_opadu": 0.0,
-        "cisnienie": 783.7
+        "cisnienie": 783.6
       }
     },
     "last_updated": "2026-03-08T23:00"
