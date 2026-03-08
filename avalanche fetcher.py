@@ -249,47 +249,41 @@ def parse_hzs(html):
 _laviny_sk_cache = {}  # cache: date -> html (żeby nie pobierać 2x dla 2 kluczy)
 
 def parse_laviny_sk(html, region_key="tatry"):
-    # Wymuś UTF-8 jeśli bytes, inaczej użyj jak jest
     if isinstance(html, bytes):
         html = html.decode("utf-8", errors="replace")
 
-    # Usuń bloki style/script wraz z zawartością
+    # Usuń style/script, potem tagi HTML
     tekst = re.sub(r"<style[^>]*>.*?</style>", " ", html, flags=re.DOTALL | re.IGNORECASE)
     tekst = re.sub(r"<script[^>]*>.*?</script>", " ", tekst, flags=re.DOTALL | re.IGNORECASE)
-    # Usuń tagi HTML, zostaw tekst
     tekst = re.sub(r"<[^>]+>", " ", tekst)
     tekst = re.sub(r"[ \t]+", " ", tekst)
+    tekst_ascii = _ascii(tekst)
 
-    log.debug("laviny.sk tekst (pierwsze 500): " + tekst[:500])
+    log.info(f"laviny.sk tekst_ascii (pierwsze 800): {tekst_ascii[:800]}")
 
     stopien = None
     stopien_nazwa = None
 
-    # Szukaj "t.j 2. stupe" - nie używaj ň żeby uniknąć problemów z kodowaniem
+    # Próba 1: "t.j 2. stupe" w tekście
     m = re.search(r"t\.j\.?\s*(\d)\.\s*stupe", tekst, re.IGNORECASE)
     if m:
         stopien = int(m.group(1))
-        log.debug(f"laviny.sk: znaleziono stopien={stopien} przez 't.j X. stupe'")
 
-    # Fallback: cyfra bezpośrednio po "stupen nebezpecenstva" lub alt obrazka
+    # Próba 2: cyfra po "stupe" w ascii
     if stopien is None:
         m = re.search(r"stupe[^\d]{0,30}(\d)", tekst_ascii, re.IGNORECASE)
         if m:
             stopien = int(m.group(1))
-            log.debug(f"laviny.sk: znaleziono stopien={stopien} przez 'stupe...N'")
 
-    # Fallback: alt="Lavínové nebezpečenstvo stupeň 2" albo podobne w oryginalnym HTML
+    # Próba 3: alt obrazka w oryginalnym HTML
     if stopien is None:
         m = re.search(r'alt="[^"]*stupe[^"]*(\d)[^"]*"', html, re.IGNORECASE)
         if not m:
             m = re.search(r'alt="[^"]*(\d)[^"]*stupe[^"]*"', html, re.IGNORECASE)
         if m:
             stopien = int(m.group(1))
-            log.debug(f"laviny.sk: znaleziono stopien={stopien} przez alt obrazka")
 
-    # Fallback: szukaj nazwy słownej przez ASCII (po przez _ascii który usuwa diakrytykę)
-    tekst_ascii = _ascii(tekst)
-    log.info(f"laviny.sk tekst_ascii (pierwsze 800): {tekst_ascii[:800]}")
+    # Próba 4: nazwa słowna w ascii
     NAZWY_ASCII = [
         (5, "velmi velke", "Veľmi veľké"),
         (4, "velke", "Veľké"),
@@ -298,16 +292,16 @@ def parse_laviny_sk(html, region_key="tatry"):
         (1, "male", "Malé"),
     ]
     for nr, slowo, nazwa in NAZWY_ASCII:
-        pattern = slowo + r".{0,30}lavinove nebezpecenstvo"
-        if re.search(pattern, tekst_ascii, re.IGNORECASE):
-            if stopien is None: stopien = nr
+        if re.search(slowo + r".{0,30}lavinove nebezpecenstvo", tekst_ascii, re.IGNORECASE):
+            if stopien is None:
+                stopien = nr
             stopien_nazwa = nazwa
             break
 
     if stopien and not stopien_nazwa:
         stopien_nazwa = {1:"Malé",2:"Mierne",3:"Zvýšené",4:"Veľké",5:"Veľmi veľké"}.get(stopien)
 
-    # Tendencja - przez ASCII
+    # Tendencja
     tendencja = None
     m3 = re.search(r"tendencia[^:]*:?\s*([^\n]{5,80})", tekst_ascii, re.IGNORECASE)
     if m3:
