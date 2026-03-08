@@ -271,9 +271,25 @@ def parse_laviny_sk(html, region_key="tatry"):
         stopien = int(m.group(1))
         log.debug(f"laviny.sk: znaleziono stopien={stopien} przez 't.j X. stupe'")
 
+    # Fallback: cyfra bezpośrednio po "stupen nebezpecenstva" lub alt obrazka
+    if stopien is None:
+        m = re.search(r"stupe[^\d]{0,30}(\d)", tekst_ascii, re.IGNORECASE)
+        if m:
+            stopien = int(m.group(1))
+            log.debug(f"laviny.sk: znaleziono stopien={stopien} przez 'stupe...N'")
+
+    # Fallback: alt="Lavínové nebezpečenstvo stupeň 2" albo podobne w oryginalnym HTML
+    if stopien is None:
+        m = re.search(r'alt="[^"]*stupe[^"]*(\d)[^"]*"', html, re.IGNORECASE)
+        if not m:
+            m = re.search(r'alt="[^"]*(\d)[^"]*stupe[^"]*"', html, re.IGNORECASE)
+        if m:
+            stopien = int(m.group(1))
+            log.debug(f"laviny.sk: znaleziono stopien={stopien} przez alt obrazka")
+
     # Fallback: szukaj nazwy słownej przez ASCII (po przez _ascii który usuwa diakrytykę)
     tekst_ascii = _ascii(tekst)
-    log.info(f"laviny.sk tekst_ascii (pierwsze 200): {tekst_ascii[:200]}")
+    log.info(f"laviny.sk tekst_ascii (pierwsze 800): {tekst_ascii[:800]}")
     NAZWY_ASCII = [
         (5, "velmi velke", "Veľmi veľké"),
         (4, "velke", "Veľké"),
