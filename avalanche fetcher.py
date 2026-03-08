@@ -253,8 +253,11 @@ def parse_laviny_sk(html, region_key="tatry"):
     if isinstance(html, bytes):
         html = html.decode("utf-8", errors="replace")
 
+    # Usuń bloki style/script wraz z zawartością
+    tekst = re.sub(r"<style[^>]*>.*?</style>", " ", html, flags=re.DOTALL | re.IGNORECASE)
+    tekst = re.sub(r"<script[^>]*>.*?</script>", " ", tekst, flags=re.DOTALL | re.IGNORECASE)
     # Usuń tagi HTML, zostaw tekst
-    tekst = re.sub(r"<[^>]+>", " ", html)
+    tekst = re.sub(r"<[^>]+>", " ", tekst)
     tekst = re.sub(r"[ \t]+", " ", tekst)
 
     log.debug("laviny.sk tekst (pierwsze 500): " + tekst[:500])
