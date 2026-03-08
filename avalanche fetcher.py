@@ -258,6 +258,7 @@ def parse_laviny_sk(html, region_key="tatry"):
     tekst = re.sub(r"[ \t]+", " ", tekst)
 
     log.debug("laviny.sk tekst (pierwsze 500): " + tekst[:500])
+    log.info(f"laviny.sk tekst_ascii (pierwsze 200): {tekst_ascii[:200]}")
 
     stopien = None
     stopien_nazwa = None
@@ -310,8 +311,8 @@ def pobierz_biuletyn(key, meta):
             try:
                 r = requests.get(url, headers=HEADERS, timeout=30)
                 r.raise_for_status()
-                r.encoding = "utf-8"
-                _laviny_sk_cache[url] = r.text
+                html_bytes = r.content
+                _laviny_sk_cache[url] = html_bytes.decode("utf-8", errors="replace")
                 log.info(f"laviny.sk: pobrano {len(r.text)} bajtów")
             except Exception as e:
                 log.error(f"{key}: blad pobierania laviny.sk: {e}"); return None
