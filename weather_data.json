@@ -8,16 +8,32 @@
       "kraj": "PL"
     },
     "series": {
+      "2026-03-05": {
+        "temperatura": -2.8,
+        "predkosc_wiatru": 3.0,
+        "kierunek_wiatru": 350,
+        "wilgotnosc": 97.8,
+        "suma_opadu": 0.0,
+        "cisnienie": null
+      },
+      "2026-03-07": {
+        "temperatura": -0.1,
+        "predkosc_wiatru": 5.0,
+        "kierunek_wiatru": 30,
+        "wilgotnosc": 39.7,
+        "suma_opadu": 0.0,
+        "cisnienie": null
+      },
       "2026-03-08": {
-        "temperatura": 1.7,
+        "temperatura": 1.1,
         "predkosc_wiatru": 1.0,
-        "kierunek_wiatru": 330,
-        "wilgotnosc": 35.7,
+        "kierunek_wiatru": 200,
+        "wilgotnosc": 44.8,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-03-08T10:00"
+    "last_updated": "2026-03-08T11:00"
   },
   "zakopane": {
     "meta": {
@@ -28,16 +44,24 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-03-08": {
-        "temperatura": 7.3,
-        "predkosc_wiatru": 7.6,
-        "kierunek_wiatru": 21,
-        "wilgotnosc": 39,
+      "2026-03-07": {
+        "temperatura": 4.9,
+        "predkosc_wiatru": 9.0,
+        "kierunek_wiatru": 10,
+        "wilgotnosc": 45.8,
         "suma_opadu": 0.0,
-        "cisnienie": 927.8
+        "cisnienie": 924.6
+      },
+      "2026-03-08": {
+        "temperatura": 3.9,
+        "predkosc_wiatru": 12.2,
+        "kierunek_wiatru": 63,
+        "wilgotnosc": 45.0,
+        "suma_opadu": 0.0,
+        "cisnienie": 926.1
       }
     },
-    "last_updated": "2026-03-08T10:00"
+    "last_updated": "2026-03-08T23:00"
   },
   "morskie_oko": {
     "meta": {
@@ -48,16 +72,24 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-03-08": {
-        "temperatura": 5.6,
-        "predkosc_wiatru": 2.2,
-        "kierunek_wiatru": 127,
-        "wilgotnosc": 24,
+      "2026-03-07": {
+        "temperatura": 2.8,
+        "predkosc_wiatru": 9.0,
+        "kierunek_wiatru": 197,
+        "wilgotnosc": 40.2,
         "suma_opadu": 0.0,
-        "cisnienie": 869.1
+        "cisnienie": 865.5
+      },
+      "2026-03-08": {
+        "temperatura": 2.1,
+        "predkosc_wiatru": 13.3,
+        "kierunek_wiatru": 189,
+        "wilgotnosc": 36.4,
+        "suma_opadu": 0.0,
+        "cisnienie": 866.9
       }
     },
-    "last_updated": "2026-03-08T10:00"
+    "last_updated": "2026-03-08T23:00"
   },
   "hala_gasienicowa": {
     "meta": {
@@ -68,16 +100,24 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-03-08": {
-        "temperatura": 2.6,
-        "predkosc_wiatru": 7.6,
-        "kierunek_wiatru": 94,
-        "wilgotnosc": 34,
+      "2026-03-07": {
+        "temperatura": 0.8,
+        "predkosc_wiatru": 7.9,
+        "kierunek_wiatru": 2,
+        "wilgotnosc": 41.0,
         "suma_opadu": 0.0,
-        "cisnienie": 844.4
+        "cisnienie": 841.3
+      },
+      "2026-03-08": {
+        "temperatura": 0.4,
+        "predkosc_wiatru": 22.7,
+        "kierunek_wiatru": 181,
+        "wilgotnosc": 37.4,
+        "suma_opadu": 0.0,
+        "cisnienie": 842.6
       }
     },
-    "last_updated": "2026-03-08T10:00"
+    "last_updated": "2026-03-08T23:00"
   },
   "dolina_chocholowska": {
     "meta": {
@@ -88,16 +128,24 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-03-08": {
-        "temperatura": 6.6,
-        "predkosc_wiatru": 5.8,
-        "kierunek_wiatru": 57,
-        "wilgotnosc": 37,
+      "2026-03-07": {
+        "temperatura": 4.1,
+        "predkosc_wiatru": 6.1,
+        "kierunek_wiatru": 11,
+        "wilgotnosc": 54.0,
         "suma_opadu": 0.0,
-        "cisnienie": 919.9
+        "cisnienie": 916.4
+      },
+      "2026-03-08": {
+        "temperatura": 3.3,
+        "predkosc_wiatru": 8.6,
+        "kierunek_wiatru": 70,
+        "wilgotnosc": 50.7,
+        "suma_opadu": 0.0,
+        "cisnienie": 917.9
       }
     },
-    "last_updated": "2026-03-08T10:00"
+    "last_updated": "2026-03-08T23:00"
   },
   "lomnica": {
     "meta": {
@@ -108,16 +156,32 @@
       "kraj": "SK"
     },
     "series": {
-      "2026-03-08": {
-        "temperatura": -7.4,
+      "2026-03-05": {
+        "temperatura": -8.5,
+        "predkosc_wiatru": 31.0,
+        "kierunek_wiatru": 297,
+        "wilgotnosc": 63.2,
+        "suma_opadu": 0.6,
+        "cisnienie": 753.1
+      },
+      "2026-03-07": {
+        "temperatura": -9.0,
         "predkosc_wiatru": 10.8,
-        "kierunek_wiatru": 119,
-        "wilgotnosc": 49,
+        "kierunek_wiatru": 289,
+        "wilgotnosc": 51.4,
         "suma_opadu": 0.0,
-        "cisnienie": 757.1
+        "cisnienie": 753.0
+      },
+      "2026-03-08": {
+        "temperatura": -9.4,
+        "predkosc_wiatru": 22.7,
+        "kierunek_wiatru": 182,
+        "wilgotnosc": 50.9,
+        "suma_opadu": 0.0,
+        "cisnienie": 754.7
       }
     },
-    "last_updated": "2026-03-08T10:00"
+    "last_updated": "2026-03-08T23:00"
   },
   "strbske_pleso": {
     "meta": {
@@ -127,8 +191,33 @@
       "alt": 1346,
       "kraj": "SK"
     },
-    "series": {},
-    "last_updated": null
+    "series": {
+      "2026-03-05": {
+        "temperatura": 1.7,
+        "predkosc_wiatru": 16.6,
+        "kierunek_wiatru": 353,
+        "wilgotnosc": 51.0,
+        "suma_opadu": 0.0,
+        "cisnienie": 869.5
+      },
+      "2026-03-07": {
+        "temperatura": 3.8,
+        "predkosc_wiatru": 10.4,
+        "kierunek_wiatru": 18,
+        "wilgotnosc": 36.2,
+        "suma_opadu": 0.0,
+        "cisnienie": 871.3
+      },
+      "2026-03-08": {
+        "temperatura": 2.6,
+        "predkosc_wiatru": 11.2,
+        "kierunek_wiatru": 3,
+        "wilgotnosc": 35.6,
+        "suma_opadu": 0.0,
+        "cisnienie": 872.9
+      }
+    },
+    "last_updated": "2026-03-08T23:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -138,7 +227,24 @@
       "alt": 668,
       "kraj": "SK"
     },
-    "series": {},
-    "last_updated": null
+    "series": {
+      "2026-03-07": {
+        "temperatura": -8.6,
+        "predkosc_wiatru": 10.4,
+        "kierunek_wiatru": 345,
+        "wilgotnosc": 53.3,
+        "suma_opadu": 0.0,
+        "cisnienie": 781.3
+      },
+      "2026-03-08": {
+        "temperatura": -8.0,
+        "predkosc_wiatru": 29.5,
+        "kierunek_wiatru": 158,
+        "wilgotnosc": 52.8,
+        "suma_opadu": 0.0,
+        "cisnienie": 783.7
+      }
+    },
+    "last_updated": "2026-03-08T23:00"
   }
 }
