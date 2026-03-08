@@ -30,7 +30,7 @@
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-03-08T11:43+00:00"
+    "last_updated": "2026-03-08T12:00+00:00"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -63,7 +63,7 @@
         "kolor": "#FF9800"
       }
     },
-    "last_updated": "2026-03-08T11:43+00:00"
+    "last_updated": "2026-03-08T12:00+00:00"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -96,6 +96,6 @@
         "kolor": "#FF9800"
       }
     },
-    "last_updated": "2026-03-08T11:43+00:00"
+    "last_updated": "2026-03-08T12:00+00:00"
   }
 }
