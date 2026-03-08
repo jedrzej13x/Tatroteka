@@ -35,13 +35,13 @@ ZRODLA = {
     },
     "hzs_wysokie_tatry": {
         "nazwa":  "Wysokie Tatry (HZS)",
-        "url":    "https://hzs.sk/vysoke-tatry/",
-        "region": "SK", "parser": "hzs",
+        "url":    "https://static.laviny.sk/simple/{date}/SK_sk.html",
+        "region": "SK", "parser": "laviny_sk", "region_key": "tatry",
     },
     "hzs_zachodnie_tatry": {
         "nazwa":  "Zachodnie Tatry (HZS)",
-        "url":    "https://hzs.sk/zapadne-tatry/",
-        "region": "SK", "parser": "hzs",
+        "url":    "https://static.laviny.sk/simple/{date}/SK_sk.html",
+        "region": "SK", "parser": "laviny_sk", "region_key": "tatry",
     },
 }
 
@@ -242,9 +242,84 @@ def parse_hzs(html):
             "opis": opis, "kolor": KOLORY.get(stopien)}
 
 
+# -- Parser laviny.sk (static.laviny.sk/simple/YYYY-MM-DD/SK_sk.html) ----------
+# Jedna strona zawiera dane dla wszystkich regionów SK.
+# Sekcja "Tatry" (Vysoké, Západné, Nízke Tatry) - pierwsza sekcja bulletinu.
+
+_laviny_sk_cache = {}  # cache: date -> html (żeby nie pobierać 2x dla 2 kluczy)
+
+def parse_laviny_sk(html, region_key="tatry"):
+    """
+    Parsuje statyczny HTML z laviny.sk.
+    Szuka stopnia zagrożenia dla sekcji Tatry (pierwsza sekcja = Tatry, druga = Fatry).
+    """
+    # Usuń tagi HTML, zostaw tekst
+    tekst = re.sub(r"<[^>]+>", " ", html)
+    tekst = re.sub(r"[ \t]+", " ", tekst)
+
+    # Szukaj wzorca "X. stupeň" lub "Xstupeň" lub "Xstupňa"
+    # Strona pisze: "MIERNE lavínové nebezpečenstvo (t.j 2. stupeň"
+    # lub "ZVÝŠENÉ lavínové nebezpečenstvo (t.j 3. stupeň"
+    stopien = None
+    stopien_nazwa = None
+
+    # Szukaj pierwszego wystąpienia "stupeň z 5-dielnej" z cyfrą przed lub po "t.j"
+    m = re.search(r"t\.j\.?\s*(\d)\.\s*stupe[ňn]", tekst, re.IGNORECASE)
+    if m:
+        stopien = int(m.group(1))
+
+    # Szukaj nazwy słownej
+    NAZWY = {
+        "male": (1, "Malé"),
+        "mierne": (2, "Mierne"),
+        "zvysene": (3, "Zvýšené"),
+        "velke": (4, "Veľké"),
+        "velmi velke": (5, "Veľmi veľké"),
+    }
+    m2 = re.search(
+        r"(MALÉ|MIERNE|ZVÝŠENÉ|VEĽKÉ|VEĽMI VEĽKÉ)\s+lavínové nebezpečenstvo",
+        tekst, re.IGNORECASE
+    )
+    if m2:
+        slowo = _ascii(m2.group(1))
+        for k, (nr, nazwa) in NAZWY.items():
+            if k in slowo:
+                if stopien is None: stopien = nr
+                stopien_nazwa = nazwa
+                break
+
+    if stopien and not stopien_nazwa:
+        stopien_nazwa = {1:"Malé",2:"Mierne",3:"Zvýšené",4:"Veľké",5:"Veľmi veľké"}.get(stopien)
+
+    # Tendencja
+    tendencja = None
+    m3 = re.search(r"Tendencia[^:]*:?\s*([^\n]{5,80})", tekst, re.IGNORECASE)
+    if m3:
+        tendencja = m3.group(1).strip()[:120]
+
+    log.info(f"laviny.sk: stopien={stopien} ({stopien_nazwa}), tendencja={tendencja}")
+    return {"stopien": stopien, "stopien_nazwa": stopien_nazwa,
+            "tendencja": tendencja, "wazne_do": None,
+            "opis": None, "kolor": KOLORY.get(stopien)}
+
+
 # -- Pobierz + parsuj -----------------------------------------------------------
 
 def pobierz_biuletyn(key, meta):
+    today_str = date.today().isoformat()
+
+    if meta["parser"] == "laviny_sk":
+        url = meta["url"].replace("{date}", today_str)
+        if url not in _laviny_sk_cache:
+            try:
+                r = requests.get(url, headers=HEADERS, timeout=30)
+                r.raise_for_status()
+                _laviny_sk_cache[url] = r.text
+                log.info(f"laviny.sk: pobrano {len(r.text)} bajtów")
+            except Exception as e:
+                log.error(f"{key}: blad pobierania laviny.sk: {e}"); return None
+        return parse_laviny_sk(_laviny_sk_cache[url], meta.get("region_key", "tatry"))
+
     try:
         r = requests.get(meta["url"], headers=HEADERS, timeout=30)
         r.raise_for_status()
