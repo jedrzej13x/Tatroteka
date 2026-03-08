@@ -933,15 +933,20 @@ document.addEventListener("DOMContentLoaded", function() {
         var serie = (avalancheData[key] || {}).series || {};
         var daty = Object.keys(serie).sort();
         if (!daty.length) return null;
-        if (idx === 0) return serie[daty[daty.length - 1]];
-        // Szukaj dokładnej daty, fallback na najbliższą wcześniejszą
-        var target = allDates[idx - 1];
-        if (serie[target]) return serie[target];
-        var best = null;
+        // Zawsze bierz ostatni rekord z niepustym stopniem
+        var lastValid = null;
         for (var i = 0; i < daty.length; i++) {
-            if (daty[i] <= target) best = daty[i];
+            if (serie[daty[i]] && serie[daty[i]].stopien) lastValid = serie[daty[i]];
         }
-        return best ? serie[best] : serie[daty[daty.length - 1]];
+        if (idx === 0) return lastValid;
+        // Dla konkretnej daty suwaka: szukaj dokładnej lub najbliższej wcześniejszej z danymi
+        var target = allDates[idx - 1];
+        if (serie[target] && serie[target].stopien) return serie[target];
+        var best = null;
+        for (var j = 0; j < daty.length; j++) {
+            if (daty[j] <= target && serie[daty[j]] && serie[daty[j]].stopien) best = serie[daty[j]];
+        }
+        return best || lastValid;
     }
 
     function renderLawinaPopup(idx) {
