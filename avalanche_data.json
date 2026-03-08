@@ -4,17 +4,8 @@
       "nazwa": "Tatry Polskie (TOPR)",
       "region": "PL"
     },
-    "series": {
-      "2026-03-07": {
-        "stopien": 1,
-        "stopien_nazwa": "Niskie",
-        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "08.03.2026 20:00",
-        "opis": null,
-        "kolor": "#8BC34A"
-      }
-    },
-    "last_updated": "2026-03-07T23:28"
+    "series": {},
+    "last_updated": "2026-03-08T02:39"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -22,7 +13,7 @@
       "region": "SK"
     },
     "series": {
-      "2026-03-07": {
+      "2026-03-08": {
         "stopien": 3,
         "stopien_nazwa": "Zvýšené",
         "tendencja": null,
@@ -31,7 +22,7 @@
         "kolor": "#FF9800"
       }
     },
-    "last_updated": "2026-03-07T23:28"
+    "last_updated": "2026-03-08T02:39"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -39,7 +30,7 @@
       "region": "SK"
     },
     "series": {
-      "2026-03-07": {
+      "2026-03-08": {
         "stopien": 3,
         "stopien_nazwa": "Zvýšené",
         "tendencja": null,
@@ -48,6 +39,6 @@
         "kolor": "#FF9800"
       }
     },
-    "last_updated": "2026-03-07T23:28"
+    "last_updated": "2026-03-08T02:39"
   }
 }
