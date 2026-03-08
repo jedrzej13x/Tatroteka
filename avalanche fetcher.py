@@ -249,51 +249,47 @@ def parse_hzs(html):
 _laviny_sk_cache = {}  # cache: date -> html (żeby nie pobierać 2x dla 2 kluczy)
 
 def parse_laviny_sk(html, region_key="tatry"):
-    """
-    Parsuje statyczny HTML z laviny.sk.
-    Szuka stopnia zagrożenia dla sekcji Tatry (pierwsza sekcja = Tatry, druga = Fatry).
-    """
+    # Wymuś UTF-8 jeśli bytes, inaczej użyj jak jest
+    if isinstance(html, bytes):
+        html = html.decode("utf-8", errors="replace")
+
     # Usuń tagi HTML, zostaw tekst
     tekst = re.sub(r"<[^>]+>", " ", html)
     tekst = re.sub(r"[ \t]+", " ", tekst)
 
-    # Szukaj wzorca "X. stupeň" lub "Xstupeň" lub "Xstupňa"
-    # Strona pisze: "MIERNE lavínové nebezpečenstvo (t.j 2. stupeň"
-    # lub "ZVÝŠENÉ lavínové nebezpečenstvo (t.j 3. stupeň"
+    log.debug("laviny.sk tekst (pierwsze 500): " + tekst[:500])
+
     stopien = None
     stopien_nazwa = None
 
-    # Szukaj pierwszego wystąpienia "stupeň z 5-dielnej" z cyfrą przed lub po "t.j"
-    m = re.search(r"t\.j\.?\s*(\d)\.\s*stupe[ňn]", tekst, re.IGNORECASE)
+    # Szukaj "t.j 2. stupe" - nie używaj ň żeby uniknąć problemów z kodowaniem
+    m = re.search(r"t\.j\.?\s*(\d)\.\s*stupe", tekst, re.IGNORECASE)
     if m:
         stopien = int(m.group(1))
+        log.debug(f"laviny.sk: znaleziono stopien={stopien} przez 't.j X. stupe'")
 
-    # Szukaj nazwy słownej
-    NAZWY = {
-        "male": (1, "Malé"),
-        "mierne": (2, "Mierne"),
-        "zvysene": (3, "Zvýšené"),
-        "velke": (4, "Veľké"),
-        "velmi velke": (5, "Veľmi veľké"),
-    }
-    m2 = re.search(
-        r"(MALÉ|MIERNE|ZVÝŠENÉ|VEĽKÉ|VEĽMI VEĽKÉ)\s+lavínové nebezpečenstvo",
-        tekst, re.IGNORECASE
-    )
-    if m2:
-        slowo = _ascii(m2.group(1))
-        for k, (nr, nazwa) in NAZWY.items():
-            if k in slowo:
-                if stopien is None: stopien = nr
-                stopien_nazwa = nazwa
-                break
+    # Fallback: szukaj nazwy słownej przez ASCII (po przez _ascii który usuwa diakrytykę)
+    tekst_ascii = _ascii(tekst)
+    NAZWY_ASCII = [
+        (5, "velmi velke", "Veľmi veľké"),
+        (4, "velke", "Veľké"),
+        (3, "zvysene", "Zvýšené"),
+        (2, "mierne", "Mierne"),
+        (1, "male", "Malé"),
+    ]
+    for nr, slowo, nazwa in NAZWY_ASCII:
+        pattern = slowo + r".{0,30}lavinove nebezpecenstvo"
+        if re.search(pattern, tekst_ascii, re.IGNORECASE):
+            if stopien is None: stopien = nr
+            stopien_nazwa = nazwa
+            break
 
     if stopien and not stopien_nazwa:
         stopien_nazwa = {1:"Malé",2:"Mierne",3:"Zvýšené",4:"Veľké",5:"Veľmi veľké"}.get(stopien)
 
-    # Tendencja
+    # Tendencja - przez ASCII
     tendencja = None
-    m3 = re.search(r"Tendencia[^:]*:?\s*([^\n]{5,80})", tekst, re.IGNORECASE)
+    m3 = re.search(r"tendencia[^:]*:?\s*([^\n]{5,80})", tekst_ascii, re.IGNORECASE)
     if m3:
         tendencja = m3.group(1).strip()[:120]
 
@@ -314,6 +310,7 @@ def pobierz_biuletyn(key, meta):
             try:
                 r = requests.get(url, headers=HEADERS, timeout=30)
                 r.raise_for_status()
+                r.encoding = "utf-8"
                 _laviny_sk_cache[url] = r.text
                 log.info(f"laviny.sk: pobrano {len(r.text)} bajtów")
             except Exception as e:
