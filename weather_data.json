@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-03-08": {
-        "temperatura": 0.6,
+        "temperatura": 0.5,
         "predkosc_wiatru": 1.0,
-        "kierunek_wiatru": 20,
-        "wilgotnosc": 28.8,
+        "kierunek_wiatru": 140,
+        "wilgotnosc": 27.8,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-03-08T08:00"
+    "last_updated": "2026-03-08T09:00"
   },
   "zakopane": {
     "meta": {
@@ -29,15 +29,15 @@
     },
     "series": {
       "2026-03-08": {
-        "temperatura": 2.3,
-        "predkosc_wiatru": 2.5,
-        "kierunek_wiatru": 245,
-        "wilgotnosc": 49,
+        "temperatura": 4.7,
+        "predkosc_wiatru": 3.2,
+        "kierunek_wiatru": 328,
+        "wilgotnosc": 32,
         "suma_opadu": 0.0,
-        "cisnienie": 926.0
+        "cisnienie": 926.7
       }
     },
-    "last_updated": "2026-03-08T08:00"
+    "last_updated": "2026-03-08T09:00"
   },
   "morskie_oko": {
     "meta": {
@@ -49,15 +49,15 @@
     },
     "series": {
       "2026-03-08": {
-        "temperatura": 1.7,
-        "predkosc_wiatru": 5.0,
-        "kierunek_wiatru": 206,
-        "wilgotnosc": 37,
+        "temperatura": 4.6,
+        "predkosc_wiatru": 1.4,
+        "kierunek_wiatru": 267,
+        "wilgotnosc": 27,
         "suma_opadu": 0.0,
-        "cisnienie": 867.0
+        "cisnienie": 868.2
       }
     },
-    "last_updated": "2026-03-08T08:00"
+    "last_updated": "2026-03-08T09:00"
   },
   "hala_gasienicowa": {
     "meta": {
@@ -69,15 +69,15 @@
     },
     "series": {
       "2026-03-08": {
-        "temperatura": -0.3,
-        "predkosc_wiatru": 7.2,
-        "kierunek_wiatru": 154,
-        "wilgotnosc": 33,
+        "temperatura": 1.6,
+        "predkosc_wiatru": 6.8,
+        "kierunek_wiatru": 105,
+        "wilgotnosc": 30,
         "suma_opadu": 0.0,
-        "cisnienie": 842.5
+        "cisnienie": 843.5
       }
     },
-    "last_updated": "2026-03-08T08:00"
+    "last_updated": "2026-03-08T09:00"
   },
   "dolina_chocholowska": {
     "meta": {
@@ -89,15 +89,15 @@
     },
     "series": {
       "2026-03-08": {
-        "temperatura": 1.5,
-        "predkosc_wiatru": 3.6,
-        "kierunek_wiatru": 32,
-        "wilgotnosc": 53,
+        "temperatura": 5.0,
+        "predkosc_wiatru": 5.0,
+        "kierunek_wiatru": 40,
+        "wilgotnosc": 48,
         "suma_opadu": 0.0,
-        "cisnienie": 917.5
+        "cisnienie": 918.7
       }
     },
-    "last_updated": "2026-03-08T08:00"
+    "last_updated": "2026-03-08T09:00"
   },
   "lomnica": {
     "meta": {
@@ -109,15 +109,15 @@
     },
     "series": {
       "2026-03-08": {
-        "temperatura": -12.1,
-        "predkosc_wiatru": 6.8,
-        "kierunek_wiatru": 38,
-        "wilgotnosc": 43,
+        "temperatura": -9.8,
+        "predkosc_wiatru": 8.6,
+        "kierunek_wiatru": 86,
+        "wilgotnosc": 46,
         "suma_opadu": 0.0,
-        "cisnienie": 752.1
+        "cisnienie": 754.4
       }
     },
-    "last_updated": "2026-03-08T08:00"
+    "last_updated": "2026-03-08T09:00"
   },
   "strbske_pleso": {
     "meta": {
@@ -129,15 +129,15 @@
     },
     "series": {
       "2026-03-08": {
-        "temperatura": 2.8,
-        "predkosc_wiatru": 4.3,
-        "kierunek_wiatru": 47,
-        "wilgotnosc": 28,
+        "temperatura": 4.5,
+        "predkosc_wiatru": 7.6,
+        "kierunek_wiatru": 112,
+        "wilgotnosc": 26,
         "suma_opadu": 0.0,
-        "cisnienie": 872.7
+        "cisnienie": 873.7
       }
     },
-    "last_updated": "2026-03-08T08:00"
+    "last_updated": "2026-03-08T09:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -149,14 +149,14 @@
     },
     "series": {
       "2026-03-08": {
-        "temperatura": -12.0,
-        "predkosc_wiatru": 10.4,
-        "kierunek_wiatru": 48,
-        "wilgotnosc": 46,
+        "temperatura": -8.8,
+        "predkosc_wiatru": 10.1,
+        "kierunek_wiatru": 80,
+        "wilgotnosc": 47,
         "suma_opadu": 0.0,
-        "cisnienie": 780.3
+        "cisnienie": 782.8
       }
     },
-    "last_updated": "2026-03-08T08:00"
+    "last_updated": "2026-03-08T09:00"
   }
 }
