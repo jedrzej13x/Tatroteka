@@ -30,7 +30,7 @@
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-03-08T15:35+00:00"
+    "last_updated": "2026-03-08T15:44+00:00"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -55,15 +55,15 @@
         "kolor": "#FF9800"
       },
       "2026-03-08": {
-        "stopien": null,
-        "stopien_nazwa": null,
+        "stopien": 2,
+        "stopien_nazwa": "Mierne",
         "tendencja": "rvalá",
         "wazne_do": null,
         "opis": null,
-        "kolor": null
+        "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-03-08T15:35+00:00"
+    "last_updated": "2026-03-08T15:44+00:00"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -88,14 +88,14 @@
         "kolor": "#FF9800"
       },
       "2026-03-08": {
-        "stopien": null,
-        "stopien_nazwa": null,
+        "stopien": 2,
+        "stopien_nazwa": "Mierne",
         "tendencja": "rvalá",
         "wazne_do": null,
         "opis": null,
-        "kolor": null
+        "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-03-08T15:35+00:00"
+    "last_updated": "2026-03-08T15:44+00:00"
   }
 }
