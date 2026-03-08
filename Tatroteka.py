@@ -871,11 +871,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function getDaneStacji(key, idx) {
         var serie = (weatherData[key] || {}).series || {};
-        if (idx === 0) {
-            var daty = Object.keys(serie).sort();
-            return daty.length ? serie[daty[daty.length - 1]] : null;
+        var daty = Object.keys(serie).sort();
+        if (!daty.length) return null;
+        if (idx === 0) return serie[daty[daty.length - 1]];
+        // Szukaj dokładnej daty, fallback na najbliższą wcześniejszą
+        var target = allDates[idx - 1];
+        if (serie[target]) return serie[target];
+        var best = null;
+        for (var i = 0; i < daty.length; i++) {
+            if (daty[i] <= target) best = daty[i];
         }
-        return serie[allDates[idx - 1]] || null;
+        return best ? serie[best] : serie[daty[daty.length - 1]];
     }
 
     // Renderuje sekcj\u0119 pogodow\u0105 w popupie szlaku
@@ -925,11 +931,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // \u2500\u2500 Helpers lawinowych \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     function getDaneLawiny(key, idx) {
         var serie = (avalancheData[key] || {}).series || {};
-        if (idx === 0) {
-            var daty = Object.keys(serie).sort();
-            return daty.length ? serie[daty[daty.length - 1]] : null;
+        var daty = Object.keys(serie).sort();
+        if (!daty.length) return null;
+        if (idx === 0) return serie[daty[daty.length - 1]];
+        // Szukaj dokładnej daty, fallback na najbliższą wcześniejszą
+        var target = allDates[idx - 1];
+        if (serie[target]) return serie[target];
+        var best = null;
+        for (var i = 0; i < daty.length; i++) {
+            if (daty[i] <= target) best = daty[i];
         }
-        return serie[allDates[idx - 1]] || null;
+        return best ? serie[best] : serie[daty[daty.length - 1]];
     }
 
     function renderLawinaPopup(idx) {
