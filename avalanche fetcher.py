@@ -258,7 +258,6 @@ def parse_laviny_sk(html, region_key="tatry"):
     tekst = re.sub(r"[ \t]+", " ", tekst)
 
     log.debug("laviny.sk tekst (pierwsze 500): " + tekst[:500])
-    log.info(f"laviny.sk tekst_ascii (pierwsze 200): {tekst_ascii[:200]}")
 
     stopien = None
     stopien_nazwa = None
@@ -271,6 +270,7 @@ def parse_laviny_sk(html, region_key="tatry"):
 
     # Fallback: szukaj nazwy słownej przez ASCII (po przez _ascii który usuwa diakrytykę)
     tekst_ascii = _ascii(tekst)
+    log.info(f"laviny.sk tekst_ascii (pierwsze 200): {tekst_ascii[:200]}")
     NAZWY_ASCII = [
         (5, "velmi velke", "Veľmi veľké"),
         (4, "velke", "Veľké"),
