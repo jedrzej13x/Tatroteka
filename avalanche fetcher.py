@@ -301,9 +301,9 @@ def parse_laviny_sk(html, region_key="tatry"):
     if stopien and not stopien_nazwa:
         stopien_nazwa = {1:"Malé",2:"Mierne",3:"Zvýšené",4:"Veľké",5:"Veľmi veľké"}.get(stopien)
 
-    # Tendencja
+    # Tendencja - szukaj "Tendencia" i bierz następne słowo/frazę do kropki lub końca
     tendencja = None
-    m3 = re.search(r"tendencia[^:]*:?\s*([^\n]{5,80})", tekst_ascii, re.IGNORECASE)
+    m3 = re.search(r"tendencia\s*[:\.]?\s*([a-z][a-záéíóúýäöüčďěľňřšťžů ]{3,60}?)(?:\s*\.|$|\s{2})", tekst_ascii, re.IGNORECASE)
     if m3:
         tendencja = m3.group(1).strip()[:120]
 
@@ -368,15 +368,22 @@ def fetch_live_json(output_path="avalanche_data.json"):
     """Pobiera biezace komunikaty i zapisuje JSON z last_updated."""
     today   = date.today().isoformat()
     now_iso = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M")
-    result  = {}
+
+    # Wczytaj poprzedni JSON jako baza (zachowaj historyczne serie)
+    try:
+        with open(output_path, encoding="utf-8") as f:
+            result = json.load(f)
+    except Exception:
+        result = {}
 
     for key, meta in ZRODLA.items():
+        if key not in result:
+            result[key] = {
+                "meta": {"nazwa": meta["nazwa"], "region": meta["region"]},
+                "series": {},
+                "last_updated": None,
+            }
         dane = pobierz_biuletyn(key, meta)
-        result[key] = {
-            "meta": {"nazwa": meta["nazwa"], "region": meta["region"]},
-            "series": {},
-            "last_updated": now_iso,
-        }
         if dane and dane.get("stopien"):
             result[key]["series"][today] = dane
             result[key]["last_updated"]  = now_iso
