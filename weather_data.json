@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-03-09": {
-        "temperatura": -1.6,
-        "predkosc_wiatru": 9.0,
-        "kierunek_wiatru": 150,
-        "wilgotnosc": 48.9,
+        "temperatura": -2.5,
+        "predkosc_wiatru": 7.0,
+        "kierunek_wiatru": 120,
+        "wilgotnosc": 61.7,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-03-09T02:00"
+    "last_updated": "2026-03-09T04:00"
   },
   "zakopane": {
     "meta": {
@@ -29,15 +29,15 @@
     },
     "series": {
       "2026-03-09": {
-        "temperatura": 0.0,
+        "temperatura": -0.2,
         "predkosc_wiatru": 4.0,
-        "kierunek_wiatru": 335,
-        "wilgotnosc": 56,
+        "kierunek_wiatru": 184,
+        "wilgotnosc": 51,
         "suma_opadu": 0.0,
-        "cisnienie": 925.4
+        "cisnienie": 924.9
       }
     },
-    "last_updated": "2026-03-09T02:00"
+    "last_updated": "2026-03-09T04:00"
   },
   "morskie_oko": {
     "meta": {
@@ -49,15 +49,15 @@
     },
     "series": {
       "2026-03-09": {
-        "temperatura": 2.0,
-        "predkosc_wiatru": 19.4,
-        "kierunek_wiatru": 179,
-        "wilgotnosc": 44,
+        "temperatura": 1.9,
+        "predkosc_wiatru": 17.6,
+        "kierunek_wiatru": 183,
+        "wilgotnosc": 45,
         "suma_opadu": 0.0,
-        "cisnienie": 867.6
+        "cisnienie": 867.4
       }
     },
-    "last_updated": "2026-03-09T02:00"
+    "last_updated": "2026-03-09T04:00"
   },
   "hala_gasienicowa": {
     "meta": {
@@ -69,15 +69,15 @@
     },
     "series": {
       "2026-03-09": {
-        "temperatura": -0.4,
-        "predkosc_wiatru": 22.7,
-        "kierunek_wiatru": 185,
+        "temperatura": 0.2,
+        "predkosc_wiatru": 26.6,
+        "kierunek_wiatru": 180,
         "wilgotnosc": 47,
         "suma_opadu": 0.0,
         "cisnienie": 842.8
       }
     },
-    "last_updated": "2026-03-09T02:00"
+    "last_updated": "2026-03-09T04:00"
   },
   "dolina_chocholowska": {
     "meta": {
@@ -89,15 +89,15 @@
     },
     "series": {
       "2026-03-09": {
-        "temperatura": 1.7,
-        "predkosc_wiatru": 4.3,
-        "kierunek_wiatru": 10,
-        "wilgotnosc": 48,
+        "temperatura": 1.9,
+        "predkosc_wiatru": 7.2,
+        "kierunek_wiatru": 9,
+        "wilgotnosc": 47,
         "suma_opadu": 0.0,
-        "cisnienie": 918.1
+        "cisnienie": 917.9
       }
     },
-    "last_updated": "2026-03-09T02:00"
+    "last_updated": "2026-03-09T04:00"
   },
   "lomnica": {
     "meta": {
@@ -109,15 +109,15 @@
     },
     "series": {
       "2026-03-09": {
-        "temperatura": -8.2,
-        "predkosc_wiatru": 23.8,
-        "kierunek_wiatru": 193,
+        "temperatura": -8.5,
+        "predkosc_wiatru": 23.0,
+        "kierunek_wiatru": 186,
         "wilgotnosc": 60,
         "suma_opadu": 0.0,
-        "cisnienie": 756.5
+        "cisnienie": 756.1
       }
     },
-    "last_updated": "2026-03-09T02:00"
+    "last_updated": "2026-03-09T04:00"
   },
   "strbske_pleso": {
     "meta": {
@@ -129,15 +129,15 @@
     },
     "series": {
       "2026-03-09": {
-        "temperatura": 0.6,
-        "predkosc_wiatru": 8.6,
-        "kierunek_wiatru": 21,
+        "temperatura": 0.7,
+        "predkosc_wiatru": 9.0,
+        "kierunek_wiatru": 31,
         "wilgotnosc": 47,
         "suma_opadu": 0.0,
-        "cisnienie": 873.4
+        "cisnienie": 873.1
       }
     },
-    "last_updated": "2026-03-09T02:00"
+    "last_updated": "2026-03-09T04:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -149,14 +149,14 @@
     },
     "series": {
       "2026-03-09": {
-        "temperatura": -6.0,
-        "predkosc_wiatru": 29.2,
-        "kierunek_wiatru": 165,
-        "wilgotnosc": 60,
+        "temperatura": -6.1,
+        "predkosc_wiatru": 30.2,
+        "kierunek_wiatru": 164,
+        "wilgotnosc": 61,
         "suma_opadu": 0.0,
-        "cisnienie": 786.4
+        "cisnienie": 786.0
       }
     },
-    "last_updated": "2026-03-09T02:00"
+    "last_updated": "2026-03-09T04:00"
   }
 }
