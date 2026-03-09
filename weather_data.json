@@ -33,15 +33,15 @@
         "cisnienie": null
       },
       "2026-03-09": {
-        "temperatura": 0.2,
-        "predkosc_wiatru": 6.0,
-        "kierunek_wiatru": 180,
-        "wilgotnosc": 56.9,
+        "temperatura": 0.1,
+        "predkosc_wiatru": 8.0,
+        "kierunek_wiatru": 190,
+        "wilgotnosc": 54.7,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-03-09T10:00"
+    "last_updated": "2026-03-09T11:00"
   },
   "zakopane": {
     "meta": {
