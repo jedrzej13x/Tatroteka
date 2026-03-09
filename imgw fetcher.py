@@ -299,6 +299,7 @@ def fetch_live_json(output_path="weather_data.json"):
                 "wilgotnosc":      hv("relative_humidity_2m"),
                 "suma_opadu":      hv("precipitation"),
                 "cisnienie":       hv("surface_pressure"),
+                "godzina_pomiaru": times[i],
             }
             result[key]["last_updated"] = times[i]
             log.info(f"Open-Meteo live {meta['nazwa']}: {hv('temperature_2m')}C @ {times[i]}")
