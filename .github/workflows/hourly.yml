@@ -35,5 +35,5 @@ jobs:
           git config user.email "bot@tatroteka.pl"
           git add -f weather_data.json avalanche_data.json
           git diff --cached --quiet || git commit -m "live: weather+avalanche $(date +'%Y-%m-%d %H:%M')"
-          git pull --rebase origin master
+          git pull origin master --no-rebase -X ours
           git push
