@@ -13,7 +13,7 @@ Uzycie:
   python "avalanche fetcher.py" --test     # debug parsera
 """
 
-import os, re, json, sqlite3, logging, argparse, requests
+import os, re, json, sqlite3, logging, argparse, requests, time
 from datetime import date, datetime, timezone
 from collections import defaultdict
 
@@ -332,9 +332,19 @@ def pobierz_biuletyn(key, meta):
         return parse_laviny_sk(_laviny_sk_cache[url], meta.get("region_key", "tatry"))
 
     try:
-        r = requests.get(meta["url"], headers=HEADERS, timeout=30)
-        r.raise_for_status()
-        html = r.text
+        html = None
+        for attempt in range(3):
+            try:
+                r = requests.get(meta["url"], headers=HEADERS, timeout=30)
+                r.raise_for_status()
+                html = r.text
+                break
+            except Exception as e:
+                log.warning(f"{key}: próba {attempt+1}/3 nieudana: {e}")
+                if attempt < 2:
+                    time.sleep(10)
+        if html is None:
+            log.error(f"{key}: wszystkie próby nieudane"); return None
     except Exception as e:
         log.error(f"{key}: blad pobierania: {e}"); return None
 
