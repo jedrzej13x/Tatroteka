@@ -5,6 +5,10 @@ on:
     - cron: '5 * * * *'   # co godzine, 5 minut po pelnej (np. 7:05, 8:05...)
   workflow_dispatch:
 
+concurrency:
+  group: tatry-flow
+  cancel-in-progress: false
+
 jobs:
   hourly:
     runs-on: ubuntu-latest

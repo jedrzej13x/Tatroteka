@@ -2,7 +2,7 @@ name: Tatry Flow — Daily Segment Collection
 
 on:
   schedule:
-    - cron: '0 5 * * *'   # codziennie o 5:00 UTC (7:00 PL)
+    - cron: '0 3 * * *'   # codziennie o 3:00 UTC (4:00 PL) — po resecie limitu Strava o północy
   workflow_dispatch:
     inputs:
       skip_strava:
@@ -11,10 +11,10 @@ on:
         default: 'false'
         type: choice
         options: ['false', 'true']
-  push:
-    branches: [master]
-    paths:
-      - '.github/workflows/collect.yml'
+
+concurrency:
+  group: tatry-flow
+  cancel-in-progress: false
 
 jobs:
   collect:
@@ -42,7 +42,7 @@ jobs:
             echo "Brak bazy — pierwsze uruchomienie"
           fi
 
-      # Strava: pomijana gdy skip_strava=true lub continue-on-error po rate limit
+      # Strava: pomijana gdy skip_strava=true
       - name: Run Strava collector
         id: strava
         if: ${{ github.event.inputs.skip_strava != 'true' }}
@@ -71,6 +71,7 @@ jobs:
 
       # Pogoda i lawiny zawsze się wykonują — niezależnie od Strava
       - name: Collect weather (daily + live JSON)
+        continue-on-error: true
         env:
           DB_PATH: tatry_segments.db
         run: python "imgw fetcher.py"
@@ -82,6 +83,7 @@ jobs:
         run: python "avalanche fetcher.py"
 
       - name: Regenerate map (index.html)
+        continue-on-error: true
         run: python Tatroteka.py
 
       - name: Commit all changes
