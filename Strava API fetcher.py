@@ -146,6 +146,22 @@ def build_tiles(bbox, rows, cols):
     return tiles
 
 
+def handle_rate_limit(resp):
+    """Śpi tylko tyle ile trzeba według nagłówka Strava."""
+    reset = resp.headers.get("X-RateLimit-Reset") or resp.headers.get("X-ReadRateLimit-Reset")
+    if reset:
+        try:
+            wait = max(0, int(reset) - int(time.time())) + 5
+            wait = min(wait, 920)
+            log.warning(f"Rate limit! Czekam {wait}s (reset o {reset})...")
+            time.sleep(wait)
+            return
+        except Exception:
+            pass
+    log.warning("Rate limit! Czekam 900s...")
+    time.sleep(900)
+
+
 def fetch_segments_for_tile(tile, activity_type, token):
     bounds = f"{tile['min_lat']},{tile['min_lng']},{tile['max_lat']},{tile['max_lng']}"
     params = {"bounds": bounds, "activity_type": activity_type}
@@ -153,8 +169,7 @@ def fetch_segments_for_tile(tile, activity_type, token):
     try:
         resp = requests.get(SEGMENTS_URL, params=params, headers=headers, timeout=30)
         if resp.status_code == 429:
-            log.warning("Rate limit! Czekam 15 minut...")
-            time.sleep(900)
+            handle_rate_limit(resp)
             return []
         if resp.status_code == 401:
             log.error("Token wygasl!")
@@ -195,9 +210,11 @@ def fetch_segment_detail(segment_id, token):
     try:
         resp = requests.get(url, headers=headers, timeout=30)
         if resp.status_code == 429:
-            log.warning("Rate limit! Czekam 15 minut...")
-            time.sleep(900)
-            return None
+            handle_rate_limit(resp)
+            # Jeden retry po rate limit
+            resp = requests.get(url, headers=headers, timeout=30)
+            if resp.status_code != 200:
+                return None
         if resp.status_code in (401, 404):
             return None
         resp.raise_for_status()
@@ -241,7 +258,15 @@ def collect(token):
     log.info(f"Znaleziono {len(seen_ids)} unikalnych segmentow")
 
     log.info("Etap 2: pobieranie effort_count...")
-    all_ids = [row[0] for row in conn.execute("SELECT id FROM segments").fetchall()]
+    # Pobierz tylko segmenty które NIE mają jeszcze snapshotu z dzisiaj
+    all_ids = [row[0] for row in conn.execute("""
+        SELECT id FROM segments
+        WHERE id NOT IN (
+            SELECT segment_id FROM snapshots WHERE captured_at = ?
+        )
+    """, (today,)).fetchall()]
+    log.info(f"Segmentow do pobrania: {len(all_ids)}")
+
     for i, seg_id in enumerate(all_ids, 1):
         if i % 50 == 0:
             log.info(f"  Postep: {i}/{len(all_ids)}...")
@@ -294,11 +319,6 @@ def report():
 
 
 def export_traffic_json(output_path="traffic_data.json"):
-    """
-    Eksportuje dane do JSON.
-    series = {data: effort_count_skumulowany} — wartosci skumulowane, nie delty.
-    Tatroteka.py oblicza delty samodzielnie.
-    """
     conn = get_db()
 
     segments_meta = {}
@@ -325,7 +345,6 @@ def export_traffic_json(output_path="traffic_data.json"):
             "last_snapshot":           row["captured_at"],
         }
 
-    # Skumulowane wartości per dzień (nie delta)
     rows = conn.execute("""
         SELECT segment_id, captured_at, effort_count
         FROM snapshots
