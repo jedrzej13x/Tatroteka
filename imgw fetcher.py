@@ -270,8 +270,10 @@ def fetch_live_json(output_path="weather_data.json"):
     except Exception as e:
         log.error(f"IMGW live blad: {e}")
 
-    # Open-Meteo - ostatnia pelna godzina
-    now_h = datetime.now().strftime("%Y-%m-%dT%H:00")
+    # Open-Meteo - ostatnia pelna godzina (times są w Europe/Warsaw)
+    from zoneinfo import ZoneInfo
+    now_warsaw = datetime.now(ZoneInfo("Europe/Warsaw"))
+    now_h = now_warsaw.strftime("%Y-%m-%dT%H:00")
     for key, meta in STACJE.items():
         if meta["zrodlo"] != "open-meteo": continue
         try:
