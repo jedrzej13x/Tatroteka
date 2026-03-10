@@ -8,38 +8,6 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-03-05": {
-        "temperatura": -2.8,
-        "predkosc_wiatru": 3.0,
-        "kierunek_wiatru": 350,
-        "wilgotnosc": 97.8,
-        "suma_opadu": 0.0,
-        "cisnienie": null
-      },
-      "2026-03-07": {
-        "temperatura": -0.1,
-        "predkosc_wiatru": 5.0,
-        "kierunek_wiatru": 30,
-        "wilgotnosc": 39.7,
-        "suma_opadu": 0.0,
-        "cisnienie": null
-      },
-      "2026-03-08": {
-        "temperatura": -0.8,
-        "predkosc_wiatru": 5.0,
-        "kierunek_wiatru": 220,
-        "wilgotnosc": 53.6,
-        "suma_opadu": 0.0,
-        "cisnienie": null
-      },
-      "2026-03-09": {
-        "temperatura": -3.6,
-        "predkosc_wiatru": 8.0,
-        "kierunek_wiatru": 140,
-        "wilgotnosc": 80.8,
-        "suma_opadu": 0.0,
-        "cisnienie": null
-      },
       "2026-03-10": {
         "temperatura": -4.5,
         "predkosc_wiatru": 12.0,
