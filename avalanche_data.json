@@ -49,12 +49,12 @@
         "stopien": 1,
         "stopien_nazwa": "Niskie",
         "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "11.03.2026 20:00",
+        "wazne_do": "12.03.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-03-11T15:55"
+    "last_updated": "2026-03-11T17:00"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -111,7 +111,7 @@
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-03-11T15:55"
+    "last_updated": "2026-03-11T17:00"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -168,6 +168,6 @@
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-03-11T15:55"
+    "last_updated": "2026-03-11T17:00"
   }
 }
