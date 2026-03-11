@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-03-11": {
-        "temperatura": -1.2,
-        "predkosc_wiatru": 10.0,
-        "kierunek_wiatru": 220,
+        "temperatura": -1.4,
+        "predkosc_wiatru": 9.0,
+        "kierunek_wiatru": 190,
         "wilgotnosc": 90.1,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-03-11T16:00"
+    "last_updated": "2026-03-11T17:00"
   },
   "zakopane": {
     "meta": {
@@ -27,8 +27,18 @@
       "alt": 857,
       "kraj": "PL"
     },
-    "series": {},
-    "last_updated": null
+    "series": {
+      "2026-03-11": {
+        "temperatura": 7.6,
+        "predkosc_wiatru": 15.1,
+        "kierunek_wiatru": 214,
+        "wilgotnosc": 66,
+        "suma_opadu": 0.0,
+        "cisnienie": 919.3,
+        "godzina_pomiaru": "2026-03-11T18:00"
+      }
+    },
+    "last_updated": "2026-03-11T18:00"
   },
   "morskie_oko": {
     "meta": {
@@ -59,8 +69,18 @@
       "alt": 1520,
       "kraj": "PL"
     },
-    "series": {},
-    "last_updated": null
+    "series": {
+      "2026-03-11": {
+        "temperatura": 1.2,
+        "predkosc_wiatru": 22.0,
+        "kierunek_wiatru": 210,
+        "wilgotnosc": 88,
+        "suma_opadu": 0.0,
+        "cisnienie": 836.8,
+        "godzina_pomiaru": "2026-03-11T18:00"
+      }
+    },
+    "last_updated": "2026-03-11T18:00"
   },
   "dolina_chocholowska": {
     "meta": {
@@ -112,8 +132,18 @@
       "alt": 1346,
       "kraj": "SK"
     },
-    "series": {},
-    "last_updated": null
+    "series": {
+      "2026-03-11": {
+        "temperatura": 3.0,
+        "predkosc_wiatru": 6.5,
+        "kierunek_wiatru": 300,
+        "wilgotnosc": 88,
+        "suma_opadu": 0.0,
+        "cisnienie": 866.9,
+        "godzina_pomiaru": "2026-03-11T18:00"
+      }
+    },
+    "last_updated": "2026-03-11T18:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
