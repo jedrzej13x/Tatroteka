@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-03-12": {
-        "temperatura": -1.2,
-        "predkosc_wiatru": 5.0,
-        "kierunek_wiatru": 200,
-        "wilgotnosc": 94.2,
+        "temperatura": -1.1,
+        "predkosc_wiatru": 4.0,
+        "kierunek_wiatru": 170,
+        "wilgotnosc": 92.2,
         "suma_opadu": 0.01,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-03-12T18:00"
+    "last_updated": "2026-03-12T19:00"
   },
   "zakopane": {
     "meta": {
