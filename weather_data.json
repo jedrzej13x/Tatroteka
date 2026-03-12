@@ -154,6 +154,38 @@
       "kraj": "SK"
     },
     "series": {
+      "2026-03-07": {
+        "temperatura": -8.6,
+        "predkosc_wiatru": 10.4,
+        "kierunek_wiatru": 345,
+        "wilgotnosc": 53.3,
+        "suma_opadu": 0.0,
+        "cisnienie": 781.3
+      },
+      "2026-03-08": {
+        "temperatura": -8.1,
+        "predkosc_wiatru": 30.2,
+        "kierunek_wiatru": 156,
+        "wilgotnosc": 53.1,
+        "suma_opadu": 0.0,
+        "cisnienie": 783.6
+      },
+      "2026-03-09": {
+        "temperatura": -4.7,
+        "predkosc_wiatru": 45.4,
+        "kierunek_wiatru": 187,
+        "wilgotnosc": 74.2,
+        "suma_opadu": 0.0,
+        "cisnienie": 786.5
+      },
+      "2026-03-11": {
+        "temperatura": -3.2,
+        "predkosc_wiatru": 36.4,
+        "kierunek_wiatru": 221,
+        "wilgotnosc": 98.3,
+        "suma_opadu": 0.1,
+        "cisnienie": 782.7
+      },
       "2026-03-12": {
         "temperatura": -7.1,
         "predkosc_wiatru": 13.0,
