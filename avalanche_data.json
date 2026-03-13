@@ -57,6 +57,14 @@
         "stopien": 1,
         "stopien_nazwa": "Niskie",
         "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "12.03.2026 20:00",
+        "opis": null,
+        "kolor": "#8BC34A"
+      },
+      "2026-03-13": {
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
         "wazne_do": "13.03.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
