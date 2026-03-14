@@ -60,9 +60,17 @@
         "wazne_do": "12.03.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-03-14": {
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "15.03.2026 20:00",
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-03-12T05:52+00:00"
+    "last_updated": "2026-03-14T17:32"
   },
   "hzs_wysokie_tatry": {
     "meta": {
