@@ -61,14 +61,6 @@
         "opis": null,
         "kolor": "#8BC34A"
       },
-      "2026-03-14": {
-        "stopien": 1,
-        "stopien_nazwa": "Niskie",
-        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "15.03.2026 20:00",
-        "opis": null,
-        "kolor": "#8BC34A"
-      },
       "2026-03-15": {
         "stopien": 1,
         "stopien_nazwa": "Niskie",
@@ -149,9 +141,17 @@
         "wazne_do": null,
         "opis": null,
         "kolor": null
+      },
+      "2026-03-15": {
+        "stopien": null,
+        "stopien_nazwa": null,
+        "tendencja": "s predpokladaným vývojom pocasia klesajúca",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": null
       }
     },
-    "last_updated": "2026-03-14T05:48+00:00"
+    "last_updated": "2026-03-15T06:29+00:00"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -222,8 +222,16 @@
         "wazne_do": null,
         "opis": null,
         "kolor": null
+      },
+      "2026-03-15": {
+        "stopien": null,
+        "stopien_nazwa": null,
+        "tendencja": "s predpokladaným vývojom pocasia klesajúca",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": null
       }
     },
-    "last_updated": "2026-03-14T05:48+00:00"
+    "last_updated": "2026-03-15T06:29+00:00"
   }
 }
