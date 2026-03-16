@@ -62,15 +62,15 @@
         "kolor": "#8BC34A"
       },
       "2026-03-16": {
-        "stopien": 1,
-        "stopien_nazwa": "Niskie",
-        "tendencja": null,
-        "wazne_do": "16.03.2026 20:00",
+        "stopien": 2,
+        "stopien_nazwa": "Umiarkowane",
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "17.03.2026 20:00",
         "opis": null,
-        "kolor": "#8BC34A"
+        "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-03-16T15:06"
+    "last_updated": "2026-03-16T17:08"
   },
   "hzs_wysokie_tatry": {
     "meta": {
