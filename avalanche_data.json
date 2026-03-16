@@ -68,9 +68,17 @@
         "wazne_do": "16.03.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-03-16": {
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": null,
+        "wazne_do": "16.03.2026 20:00",
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-03-15T23:35"
+    "last_updated": "2026-03-16T02:55"
   },
   "hzs_wysokie_tatry": {
     "meta": {
