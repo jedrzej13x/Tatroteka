@@ -68,9 +68,17 @@
         "wazne_do": "17.03.2026 20:00",
         "opis": null,
         "kolor": "#FFC107"
+      },
+      "2026-03-17": {
+        "stopien": 2,
+        "stopien_nazwa": "Umiarkowane",
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "17.03.2026 20:00",
+        "opis": null,
+        "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-03-16T23:36"
+    "last_updated": "2026-03-17T02:38"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -149,9 +157,17 @@
         "wazne_do": null,
         "opis": null,
         "kolor": null
+      },
+      "2026-03-17": {
+        "stopien": 1,
+        "stopien_nazwa": "Malé",
+        "tendencja": "stálym snezením pocas dna stúpajúca",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-03-16T06:29+00:00"
+    "last_updated": "2026-03-17T02:38"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -230,8 +246,16 @@
         "wazne_do": null,
         "opis": null,
         "kolor": null
+      },
+      "2026-03-17": {
+        "stopien": 1,
+        "stopien_nazwa": "Malé",
+        "tendencja": "stálym snezením pocas dna stúpajúca",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-03-16T06:29+00:00"
+    "last_updated": "2026-03-17T02:38"
   }
 }
