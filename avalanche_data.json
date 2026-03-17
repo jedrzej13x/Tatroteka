@@ -62,12 +62,12 @@
         "kolor": "#8BC34A"
       },
       "2026-03-16": {
-        "stopien": 2,
-        "stopien_nazwa": "Umiarkowane",
-        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "17.03.2026 20:00",
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": null,
+        "wazne_do": "16.03.2026 20:00",
         "opis": null,
-        "kolor": "#FFC107"
+        "kolor": "#8BC34A"
       },
       "2026-03-17": {
         "stopien": 2,
