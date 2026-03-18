@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-03-18": {
-        "temperatura": -3.6,
+        "temperatura": -3.1,
         "predkosc_wiatru": 3.0,
-        "kierunek_wiatru": 360,
-        "wilgotnosc": 92.0,
+        "kierunek_wiatru": 20,
+        "wilgotnosc": 96.3,
         "suma_opadu": 17.5,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-03-18T10:00"
+    "last_updated": "2026-03-18T11:00"
   },
   "zakopane": {
     "meta": {
@@ -48,8 +48,18 @@
       "alt": 1395,
       "kraj": "PL"
     },
-    "series": {},
-    "last_updated": null
+    "series": {
+      "2026-03-18": {
+        "temperatura": 3.4,
+        "predkosc_wiatru": 8.6,
+        "kierunek_wiatru": 39,
+        "wilgotnosc": 49,
+        "suma_opadu": 0.0,
+        "cisnienie": 866.8,
+        "godzina_pomiaru": "2026-03-18T12:00"
+      }
+    },
+    "last_updated": "2026-03-18T12:00"
   },
   "hala_gasienicowa": {
     "meta": {
@@ -101,8 +111,18 @@
       "alt": 2634,
       "kraj": "SK"
     },
-    "series": {},
-    "last_updated": null
+    "series": {
+      "2026-03-18": {
+        "temperatura": -6.7,
+        "predkosc_wiatru": 20.5,
+        "kierunek_wiatru": 69,
+        "wilgotnosc": 68,
+        "suma_opadu": 0.0,
+        "cisnienie": 756.2,
+        "godzina_pomiaru": "2026-03-18T12:00"
+      }
+    },
+    "last_updated": "2026-03-18T12:00"
   },
   "strbske_pleso": {
     "meta": {
@@ -112,8 +132,18 @@
       "alt": 1346,
       "kraj": "SK"
     },
-    "series": {},
-    "last_updated": null
+    "series": {
+      "2026-03-18": {
+        "temperatura": 3.4,
+        "predkosc_wiatru": 13.3,
+        "kierunek_wiatru": 88,
+        "wilgotnosc": 44,
+        "suma_opadu": 0.0,
+        "cisnienie": 871.5,
+        "godzina_pomiaru": "2026-03-18T12:00"
+      }
+    },
+    "last_updated": "2026-03-18T12:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
