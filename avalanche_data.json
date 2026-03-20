@@ -77,14 +77,6 @@
         "opis": null,
         "kolor": "#FFC107"
       },
-      "2026-03-19": {
-        "stopien": 2,
-        "stopien_nazwa": "Umiarkowane",
-        "tendencja": "Stopień zagrożenia może maleć",
-        "wazne_do": "20.03.2026 20:00",
-        "opis": null,
-        "kolor": "#FFC107"
-      },
       "2026-03-20": {
         "stopien": 2,
         "stopien_nazwa": "Umiarkowane",
@@ -182,14 +174,6 @@
         "opis": null,
         "kolor": "#8BC34A"
       },
-      "2026-03-19": {
-        "stopien": 1,
-        "stopien_nazwa": "Malé",
-        "tendencja": "postupným sadaním nového snehu klesajúca",
-        "wazne_do": null,
-        "opis": null,
-        "kolor": "#8BC34A"
-      },
       "2026-03-20": {
         "stopien": 1,
         "stopien_nazwa": "Malé",
@@ -283,14 +267,6 @@
         "stopien": 1,
         "stopien_nazwa": "Malé",
         "tendencja": "stálym snezením pocas dna stúpajúca",
-        "wazne_do": null,
-        "opis": null,
-        "kolor": "#8BC34A"
-      },
-      "2026-03-19": {
-        "stopien": 1,
-        "stopien_nazwa": "Malé",
-        "tendencja": "postupným sadaním nového snehu klesajúca",
         "wazne_do": null,
         "opis": null,
         "kolor": "#8BC34A"

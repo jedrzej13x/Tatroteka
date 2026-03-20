@@ -91,6 +91,78 @@
       "kraj": "PL"
     },
     "series": {
+      "2026-03-07": {
+        "temperatura": 4.1,
+        "predkosc_wiatru": 6.1,
+        "kierunek_wiatru": 11,
+        "wilgotnosc": 54.0,
+        "suma_opadu": 0.0,
+        "cisnienie": 916.4
+      },
+      "2026-03-08": {
+        "temperatura": 3.4,
+        "predkosc_wiatru": 9.7,
+        "kierunek_wiatru": 69,
+        "wilgotnosc": 49.0,
+        "suma_opadu": 0.0,
+        "cisnienie": 917.8
+      },
+      "2026-03-09": {
+        "temperatura": 4.9,
+        "predkosc_wiatru": 20.5,
+        "kierunek_wiatru": 187,
+        "wilgotnosc": 53.9,
+        "suma_opadu": 0.0,
+        "cisnienie": 918.1
+      },
+      "2026-03-10": {
+        "temperatura": 4.7,
+        "predkosc_wiatru": 25.6,
+        "kierunek_wiatru": 190,
+        "wilgotnosc": 66.2,
+        "suma_opadu": 0.0,
+        "cisnienie": 914.0
+      },
+      "2026-03-11": {
+        "temperatura": 5.6,
+        "predkosc_wiatru": 16.9,
+        "kierunek_wiatru": 192,
+        "wilgotnosc": 71.0,
+        "suma_opadu": 0.0,
+        "cisnienie": 912.2
+      },
+      "2026-03-12": {
+        "temperatura": 5.1,
+        "predkosc_wiatru": 9.0,
+        "kierunek_wiatru": 143,
+        "wilgotnosc": 79.4,
+        "suma_opadu": 6.1,
+        "cisnienie": 911.9
+      },
+      "2026-03-14": {
+        "temperatura": 6.0,
+        "predkosc_wiatru": 35.6,
+        "kierunek_wiatru": 181,
+        "wilgotnosc": 57.0,
+        "suma_opadu": 0.0,
+        "cisnienie": 900.5
+      },
+      "2026-03-16": {
+        "temperatura": 3.5,
+        "predkosc_wiatru": 13.3,
+        "kierunek_wiatru": 282,
+        "wilgotnosc": 76.0,
+        "suma_opadu": 1.7,
+        "cisnienie": 905.4
+      },
+      "2026-03-17": {
+        "temperatura": 0.2,
+        "predkosc_wiatru": 7.6,
+        "kierunek_wiatru": 29,
+        "wilgotnosc": 94.0,
+        "suma_opadu": 13.3,
+        "cisnienie": 911.0
+      },
       "2026-03-20": {
         "temperatura": 0.4,
         "predkosc_wiatru": 1.8,
