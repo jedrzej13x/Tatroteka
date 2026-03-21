@@ -86,15 +86,15 @@
         "kolor": "#FFC107"
       },
       "2026-03-21": {
-        "stopien": 2,
-        "stopien_nazwa": "Umiarkowane",
-        "tendencja": "Stopień zagrożenia może maleć",
-        "wazne_do": "21.03.2026 20:00",
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "22.03.2026 20:00",
         "opis": null,
-        "kolor": "#FFC107"
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-03-21T16:37"
+    "last_updated": "2026-03-21T17:30"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -199,7 +199,7 @@
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-03-21T16:37"
+    "last_updated": "2026-03-21T17:30"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -304,6 +304,6 @@
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-03-21T16:37"
+    "last_updated": "2026-03-21T17:30"
   }
 }
