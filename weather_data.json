@@ -11,13 +11,13 @@
       "2026-03-23": {
         "temperatura": -3.5,
         "predkosc_wiatru": 4.0,
-        "kierunek_wiatru": 360,
-        "wilgotnosc": 73.1,
+        "kierunek_wiatru": 10,
+        "wilgotnosc": 79.6,
         "suma_opadu": 0.01,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-03-23T18:00"
+    "last_updated": "2026-03-23T19:00"
   },
   "zakopane": {
     "meta": {
