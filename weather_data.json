@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-03-24": {
-        "temperatura": -3.2,
-        "predkosc_wiatru": 4.0,
-        "kierunek_wiatru": 360,
-        "wilgotnosc": 74.9,
+        "temperatura": -2.8,
+        "predkosc_wiatru": 3.0,
+        "kierunek_wiatru": 10,
+        "wilgotnosc": 71.0,
         "suma_opadu": 0.1,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-03-24T08:00"
+    "last_updated": "2026-03-24T09:00"
   },
   "zakopane": {
     "meta": {
@@ -29,16 +29,16 @@
     },
     "series": {
       "2026-03-24": {
-        "temperatura": 6.3,
-        "predkosc_wiatru": 5.0,
-        "kierunek_wiatru": 301,
-        "wilgotnosc": 60,
+        "temperatura": 7.9,
+        "predkosc_wiatru": 7.9,
+        "kierunek_wiatru": 348,
+        "wilgotnosc": 53,
         "suma_opadu": 0.0,
-        "cisnienie": 919.9,
-        "godzina_pomiaru": "2026-03-24T09:00"
+        "cisnienie": 920.0,
+        "godzina_pomiaru": "2026-03-24T11:00"
       }
     },
-    "last_updated": "2026-03-24T09:00"
+    "last_updated": "2026-03-24T11:00"
   },
   "morskie_oko": {
     "meta": {
@@ -50,16 +50,16 @@
     },
     "series": {
       "2026-03-24": {
-        "temperatura": 1.4,
-        "predkosc_wiatru": 5.4,
-        "kierunek_wiatru": 7,
-        "wilgotnosc": 70,
+        "temperatura": 2.1,
+        "predkosc_wiatru": 5.8,
+        "kierunek_wiatru": 3,
+        "wilgotnosc": 63,
         "suma_opadu": 0.0,
-        "cisnienie": 860.8,
-        "godzina_pomiaru": "2026-03-24T09:00"
+        "cisnienie": 860.9,
+        "godzina_pomiaru": "2026-03-24T11:00"
       }
     },
-    "last_updated": "2026-03-24T09:00"
+    "last_updated": "2026-03-24T11:00"
   },
   "hala_gasienicowa": {
     "meta": {
@@ -71,16 +71,16 @@
     },
     "series": {
       "2026-03-24": {
-        "temperatura": -0.7,
-        "predkosc_wiatru": 10.1,
-        "kierunek_wiatru": 350,
-        "wilgotnosc": 74,
+        "temperatura": 0.1,
+        "predkosc_wiatru": 11.5,
+        "kierunek_wiatru": 341,
+        "wilgotnosc": 73,
         "suma_opadu": 0.0,
-        "cisnienie": 836.4,
-        "godzina_pomiaru": "2026-03-24T09:00"
+        "cisnienie": 836.6,
+        "godzina_pomiaru": "2026-03-24T11:00"
       }
     },
-    "last_updated": "2026-03-24T09:00"
+    "last_updated": "2026-03-24T11:00"
   },
   "dolina_chocholowska": {
     "meta": {
@@ -92,16 +92,16 @@
     },
     "series": {
       "2026-03-24": {
-        "temperatura": 5.2,
-        "predkosc_wiatru": 2.2,
-        "kierunek_wiatru": 290,
-        "wilgotnosc": 62,
+        "temperatura": 7.2,
+        "predkosc_wiatru": 6.5,
+        "kierunek_wiatru": 337,
+        "wilgotnosc": 57,
         "suma_opadu": 0.0,
-        "cisnienie": 912.0,
-        "godzina_pomiaru": "2026-03-24T09:00"
+        "cisnienie": 912.2,
+        "godzina_pomiaru": "2026-03-24T11:00"
       }
     },
-    "last_updated": "2026-03-24T09:00"
+    "last_updated": "2026-03-24T11:00"
   },
   "lomnica": {
     "meta": {
@@ -113,16 +113,16 @@
     },
     "series": {
       "2026-03-24": {
-        "temperatura": -7.4,
-        "predkosc_wiatru": 19.8,
-        "kierunek_wiatru": 326,
-        "wilgotnosc": 86,
+        "temperatura": -6.7,
+        "predkosc_wiatru": 19.4,
+        "kierunek_wiatru": 325,
+        "wilgotnosc": 85,
         "suma_opadu": 0.0,
-        "cisnienie": 750.9,
-        "godzina_pomiaru": "2026-03-24T09:00"
+        "cisnienie": 751.3,
+        "godzina_pomiaru": "2026-03-24T11:00"
       }
     },
-    "last_updated": "2026-03-24T09:00"
+    "last_updated": "2026-03-24T11:00"
   },
   "strbske_pleso": {
     "meta": {
@@ -134,16 +134,16 @@
     },
     "series": {
       "2026-03-24": {
-        "temperatura": 2.5,
-        "predkosc_wiatru": 9.7,
-        "kierunek_wiatru": 10,
-        "wilgotnosc": 60,
+        "temperatura": 3.4,
+        "predkosc_wiatru": 6.8,
+        "kierunek_wiatru": 335,
+        "wilgotnosc": 54,
         "suma_opadu": 0.0,
         "cisnienie": 866.1,
-        "godzina_pomiaru": "2026-03-24T09:00"
+        "godzina_pomiaru": "2026-03-24T11:00"
       }
     },
-    "last_updated": "2026-03-24T09:00"
+    "last_updated": "2026-03-24T11:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -155,15 +155,15 @@
     },
     "series": {
       "2026-03-24": {
-        "temperatura": -5.9,
-        "predkosc_wiatru": 16.6,
-        "kierunek_wiatru": 344,
-        "wilgotnosc": 95,
+        "temperatura": -5.4,
+        "predkosc_wiatru": 20.2,
+        "kierunek_wiatru": 338,
+        "wilgotnosc": 89,
         "suma_opadu": 0.0,
-        "cisnienie": 780.1,
-        "godzina_pomiaru": "2026-03-24T09:00"
+        "cisnienie": 780.3,
+        "godzina_pomiaru": "2026-03-24T11:00"
       }
     },
-    "last_updated": "2026-03-24T09:00"
+    "last_updated": "2026-03-24T11:00"
   }
 }
