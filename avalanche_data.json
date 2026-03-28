@@ -109,14 +109,6 @@
         "opis": null,
         "kolor": "#8BC34A"
       },
-      "2026-03-27": {
-        "stopien": 3,
-        "stopien_nazwa": "Znaczne",
-        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "28.03.2026 20:00",
-        "opis": null,
-        "kolor": "#FF9800"
-      },
       "2026-03-28": {
         "stopien": 3,
         "stopien_nazwa": "Znaczne",
@@ -246,14 +238,6 @@
         "opis": null,
         "kolor": "#FFC107"
       },
-      "2026-03-27": {
-        "stopien": null,
-        "stopien_nazwa": null,
-        "tendencja": "pri silnejúcom vetre mierne stúpajúca",
-        "wazne_do": null,
-        "opis": null,
-        "kolor": null
-      },
       "2026-03-28": {
         "stopien": 1,
         "stopien_nazwa": "Malé",
@@ -382,14 +366,6 @@
         "wazne_do": null,
         "opis": null,
         "kolor": "#FFC107"
-      },
-      "2026-03-27": {
-        "stopien": null,
-        "stopien_nazwa": null,
-        "tendencja": "pri silnejúcom vetre mierne stúpajúca",
-        "wazne_do": null,
-        "opis": null,
-        "kolor": null
       },
       "2026-03-28": {
         "stopien": 1,
