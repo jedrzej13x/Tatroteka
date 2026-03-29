@@ -109,14 +109,6 @@
         "opis": null,
         "kolor": "#8BC34A"
       },
-      "2026-03-28": {
-        "stopien": 3,
-        "stopien_nazwa": "Znaczne",
-        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "29.03.2026 20:00",
-        "opis": null,
-        "kolor": "#FF9800"
-      },
       "2026-03-29": {
         "stopien": 3,
         "stopien_nazwa": "Znaczne",
@@ -126,7 +118,7 @@
         "kolor": "#FF9800"
       }
     },
-    "last_updated": "2026-03-29T02:56"
+    "last_updated": "2026-03-29T06:18+00:00"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -246,14 +238,6 @@
         "opis": null,
         "kolor": "#FFC107"
       },
-      "2026-03-28": {
-        "stopien": 1,
-        "stopien_nazwa": "Malé",
-        "tendencja": "zotrvalá",
-        "wazne_do": null,
-        "opis": null,
-        "kolor": "#8BC34A"
-      },
       "2026-03-29": {
         "stopien": 1,
         "stopien_nazwa": "Malé",
@@ -263,7 +247,7 @@
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-03-29T02:56"
+    "last_updated": "2026-03-29T06:18+00:00"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -383,14 +367,6 @@
         "opis": null,
         "kolor": "#FFC107"
       },
-      "2026-03-28": {
-        "stopien": 1,
-        "stopien_nazwa": "Malé",
-        "tendencja": "zotrvalá",
-        "wazne_do": null,
-        "opis": null,
-        "kolor": "#8BC34A"
-      },
       "2026-03-29": {
         "stopien": 1,
         "stopien_nazwa": "Malé",
@@ -400,6 +376,6 @@
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-03-29T02:56"
+    "last_updated": "2026-03-29T06:18+00:00"
   }
 }
