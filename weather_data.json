@@ -49,6 +49,126 @@
       "kraj": "PL"
     },
     "series": {
+      "2026-03-07": {
+        "temperatura": 2.8,
+        "predkosc_wiatru": 9.0,
+        "kierunek_wiatru": 197,
+        "wilgotnosc": 40.2,
+        "suma_opadu": 0.0,
+        "cisnienie": 865.5
+      },
+      "2026-03-08": {
+        "temperatura": 2.1,
+        "predkosc_wiatru": 11.9,
+        "kierunek_wiatru": 199,
+        "wilgotnosc": 36.6,
+        "suma_opadu": 0.0,
+        "cisnienie": 866.9
+      },
+      "2026-03-09": {
+        "temperatura": 2.6,
+        "predkosc_wiatru": 21.2,
+        "kierunek_wiatru": 187,
+        "wilgotnosc": 56.5,
+        "suma_opadu": 0.0,
+        "cisnienie": 867.0
+      },
+      "2026-03-10": {
+        "temperatura": 1.4,
+        "predkosc_wiatru": 28.1,
+        "kierunek_wiatru": 197,
+        "wilgotnosc": 74.8,
+        "suma_opadu": 0.0,
+        "cisnienie": 863.2
+      },
+      "2026-03-11": {
+        "temperatura": 3.2,
+        "predkosc_wiatru": 23.4,
+        "kierunek_wiatru": 211,
+        "wilgotnosc": 79.4,
+        "suma_opadu": 0.1,
+        "cisnienie": 862.1
+      },
+      "2026-03-12": {
+        "temperatura": 3.1,
+        "predkosc_wiatru": 13.3,
+        "kierunek_wiatru": 212,
+        "wilgotnosc": 80.7,
+        "suma_opadu": 0.4,
+        "cisnienie": 861.7
+      },
+      "2026-03-14": {
+        "temperatura": 2.1,
+        "predkosc_wiatru": 31.7,
+        "kierunek_wiatru": 183,
+        "wilgotnosc": 67.8,
+        "suma_opadu": 0.0,
+        "cisnienie": 851.2
+      },
+      "2026-03-16": {
+        "temperatura": 1.8,
+        "predkosc_wiatru": 10.8,
+        "kierunek_wiatru": 198,
+        "wilgotnosc": 61.1,
+        "suma_opadu": 1.9,
+        "cisnienie": 854.9
+      },
+      "2026-03-17": {
+        "temperatura": -2.1,
+        "predkosc_wiatru": 6.8,
+        "kierunek_wiatru": 49,
+        "wilgotnosc": 94.8,
+        "suma_opadu": 17.3,
+        "cisnienie": 858.9
+      },
+      "2026-03-20": {
+        "temperatura": -1.6,
+        "predkosc_wiatru": 7.9,
+        "kierunek_wiatru": 21,
+        "wilgotnosc": 89.8,
+        "suma_opadu": 5.1,
+        "cisnienie": 857.6
+      },
+      "2026-03-21": {
+        "temperatura": -0.9,
+        "predkosc_wiatru": 5.0,
+        "kierunek_wiatru": 343,
+        "wilgotnosc": 80.5,
+        "suma_opadu": 3.9,
+        "cisnienie": 856.9
+      },
+      "2026-03-23": {
+        "temperatura": 0.6,
+        "predkosc_wiatru": 10.8,
+        "kierunek_wiatru": 174,
+        "wilgotnosc": 78.9,
+        "suma_opadu": 2.1,
+        "cisnienie": 857.7
+      },
+      "2026-03-25": {
+        "temperatura": 1.4,
+        "predkosc_wiatru": 24.5,
+        "kierunek_wiatru": 206,
+        "wilgotnosc": 62.0,
+        "suma_opadu": 0.3,
+        "cisnienie": 848.8
+      },
+      "2026-03-29": {
+        "temperatura": -0.1,
+        "predkosc_wiatru": 5.8,
+        "kierunek_wiatru": 41,
+        "wilgotnosc": 97.9,
+        "suma_opadu": 19.5,
+        "cisnienie": 855.3
+      },
+      "2026-03-30": {
+        "temperatura": -1.8,
+        "predkosc_wiatru": 6.5,
+        "kierunek_wiatru": 2,
+        "wilgotnosc": 96.2,
+        "suma_opadu": 10.7,
+        "cisnienie": 852.9
+      },
       "2026-04-01": {
         "temperatura": -3.6,
         "predkosc_wiatru": 5.0,
@@ -112,6 +232,126 @@
       "kraj": "SK"
     },
     "series": {
+      "2026-03-05": {
+        "temperatura": -8.5,
+        "predkosc_wiatru": 31.0,
+        "kierunek_wiatru": 297,
+        "wilgotnosc": 63.2,
+        "suma_opadu": 0.6,
+        "cisnienie": 753.1
+      },
+      "2026-03-07": {
+        "temperatura": -9.0,
+        "predkosc_wiatru": 10.8,
+        "kierunek_wiatru": 289,
+        "wilgotnosc": 51.4,
+        "suma_opadu": 0.0,
+        "cisnienie": 753.0
+      },
+      "2026-03-08": {
+        "temperatura": -9.4,
+        "predkosc_wiatru": 23.0,
+        "kierunek_wiatru": 184,
+        "wilgotnosc": 51.3,
+        "suma_opadu": 0.0,
+        "cisnienie": 754.6
+      },
+      "2026-03-09": {
+        "temperatura": -6.6,
+        "predkosc_wiatru": 39.2,
+        "kierunek_wiatru": 196,
+        "wilgotnosc": 73.2,
+        "suma_opadu": 0.0,
+        "cisnienie": 757.0
+      },
+      "2026-03-11": {
+        "temperatura": -4.9,
+        "predkosc_wiatru": 39.6,
+        "kierunek_wiatru": 233,
+        "wilgotnosc": 92.4,
+        "suma_opadu": 0.1,
+        "cisnienie": 753.3
+      },
+      "2026-03-12": {
+        "temperatura": -5.3,
+        "predkosc_wiatru": 27.7,
+        "kierunek_wiatru": 224,
+        "wilgotnosc": 89.1,
+        "suma_opadu": 8.0,
+        "cisnienie": 752.7
+      },
+      "2026-03-14": {
+        "temperatura": -6.1,
+        "predkosc_wiatru": 47.5,
+        "kierunek_wiatru": 200,
+        "wilgotnosc": 84.5,
+        "suma_opadu": 0.0,
+        "cisnienie": 743.9
+      },
+      "2026-03-16": {
+        "temperatura": -8.2,
+        "predkosc_wiatru": 22.7,
+        "kierunek_wiatru": 222,
+        "wilgotnosc": 69.8,
+        "suma_opadu": 1.8,
+        "cisnienie": 744.9
+      },
+      "2026-03-17": {
+        "temperatura": -9.4,
+        "predkosc_wiatru": 24.8,
+        "kierunek_wiatru": 72,
+        "wilgotnosc": 98.3,
+        "suma_opadu": 20.3,
+        "cisnienie": 749.1
+      },
+      "2026-03-20": {
+        "temperatura": -9.3,
+        "predkosc_wiatru": 27.7,
+        "kierunek_wiatru": 318,
+        "wilgotnosc": 98.8,
+        "suma_opadu": 3.3,
+        "cisnienie": 747.6
+      },
+      "2026-03-21": {
+        "temperatura": -9.2,
+        "predkosc_wiatru": 22.0,
+        "kierunek_wiatru": 106,
+        "wilgotnosc": 93.4,
+        "suma_opadu": 3.8,
+        "cisnienie": 747.5
+      },
+      "2026-03-23": {
+        "temperatura": -8.2,
+        "predkosc_wiatru": 24.8,
+        "kierunek_wiatru": 311,
+        "wilgotnosc": 91.8,
+        "suma_opadu": 3.7,
+        "cisnienie": 748.0
+      },
+      "2026-03-25": {
+        "temperatura": -7.9,
+        "predkosc_wiatru": 41.0,
+        "kierunek_wiatru": 242,
+        "wilgotnosc": 71.7,
+        "suma_opadu": 0.3,
+        "cisnienie": 739.7
+      },
+      "2026-03-29": {
+        "temperatura": -6.3,
+        "predkosc_wiatru": 30.2,
+        "kierunek_wiatru": 11,
+        "wilgotnosc": 99.8,
+        "suma_opadu": 9.9,
+        "cisnienie": 746.9
+      },
+      "2026-03-30": {
+        "temperatura": -7.0,
+        "predkosc_wiatru": 21.2,
+        "kierunek_wiatru": 310,
+        "wilgotnosc": 98.7,
+        "suma_opadu": 14.6,
+        "cisnienie": 744.8
+      },
       "2026-04-01": {
         "temperatura": -11.0,
         "predkosc_wiatru": 37.4,
