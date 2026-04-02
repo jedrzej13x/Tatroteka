@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-04-02": {
-        "temperatura": -2.2,
+        "temperatura": -2.0,
         "predkosc_wiatru": 7.0,
-        "kierunek_wiatru": 30,
+        "kierunek_wiatru": 10,
         "wilgotnosc": 97.1,
         "suma_opadu": 23.9,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-04-02T18:00"
+    "last_updated": "2026-04-02T19:00"
   },
   "zakopane": {
     "meta": {
