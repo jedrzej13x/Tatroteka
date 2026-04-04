@@ -153,12 +153,12 @@
         "stopien": 3,
         "stopien_nazwa": "Znaczne",
         "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "04.04.2026 20:00",
+        "wazne_do": "05.04.2026 20:00",
         "opis": null,
         "kolor": "#FF9800"
       }
     },
-    "last_updated": "2026-04-04T15:37"
+    "last_updated": "2026-04-04T16:42"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -327,7 +327,7 @@
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-04-04T15:37"
+    "last_updated": "2026-04-04T16:42"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -496,6 +496,6 @@
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-04-04T15:37"
+    "last_updated": "2026-04-04T16:42"
   }
 }
