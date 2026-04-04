@@ -8,16 +8,16 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-04-03": {
-        "temperatura": -4.8,
+      "2026-04-04": {
+        "temperatura": -5.3,
         "predkosc_wiatru": 3.0,
-        "kierunek_wiatru": 350,
+        "kierunek_wiatru": 290,
         "wilgotnosc": 94.8,
         "suma_opadu": 4.2,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-04-03T23:00"
+    "last_updated": "2026-04-04T02:00"
   },
   "zakopane": {
     "meta": {
@@ -28,17 +28,17 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-04-03": {
-        "temperatura": 2.0,
-        "predkosc_wiatru": 5.0,
-        "kierunek_wiatru": 223,
-        "wilgotnosc": 94,
+      "2026-04-04": {
+        "temperatura": 1.0,
+        "predkosc_wiatru": 10.4,
+        "kierunek_wiatru": 216,
+        "wilgotnosc": 83,
         "suma_opadu": 0.0,
-        "cisnienie": 915.9,
-        "godzina_pomiaru": "2026-04-04T01:00"
+        "cisnienie": 914.2,
+        "godzina_pomiaru": "2026-04-04T04:00"
       }
     },
-    "last_updated": "2026-04-04T01:00"
+    "last_updated": "2026-04-04T04:00"
   },
   "morskie_oko": {
     "meta": {
@@ -49,17 +49,17 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-04-03": {
-        "temperatura": -0.0,
-        "predkosc_wiatru": 4.3,
-        "kierunek_wiatru": 344,
-        "wilgotnosc": 100,
-        "suma_opadu": 0.1,
-        "cisnienie": 857.2,
-        "godzina_pomiaru": "2026-04-04T01:00"
+      "2026-04-04": {
+        "temperatura": -2.2,
+        "predkosc_wiatru": 6.5,
+        "kierunek_wiatru": 188,
+        "wilgotnosc": 91,
+        "suma_opadu": 0.0,
+        "cisnienie": 855.7,
+        "godzina_pomiaru": "2026-04-04T04:00"
       }
     },
-    "last_updated": "2026-04-04T01:00"
+    "last_updated": "2026-04-04T04:00"
   },
   "hala_gasienicowa": {
     "meta": {
@@ -70,17 +70,17 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-04-03": {
-        "temperatura": -1.6,
-        "predkosc_wiatru": 9.4,
-        "kierunek_wiatru": 288,
-        "wilgotnosc": 100,
-        "suma_opadu": 0.5,
-        "cisnienie": 833.2,
-        "godzina_pomiaru": "2026-04-04T01:00"
+      "2026-04-04": {
+        "temperatura": -2.5,
+        "predkosc_wiatru": 11.2,
+        "kierunek_wiatru": 272,
+        "wilgotnosc": 95,
+        "suma_opadu": 0.0,
+        "cisnienie": 832.0,
+        "godzina_pomiaru": "2026-04-04T04:00"
       }
     },
-    "last_updated": "2026-04-04T01:00"
+    "last_updated": "2026-04-04T04:00"
   },
   "dolina_chocholowska": {
     "meta": {
@@ -91,17 +91,17 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-04-03": {
-        "temperatura": 1.1,
-        "predkosc_wiatru": 3.2,
-        "kierunek_wiatru": 246,
-        "wilgotnosc": 99,
+      "2026-04-04": {
+        "temperatura": -1.0,
+        "predkosc_wiatru": 6.8,
+        "kierunek_wiatru": 204,
+        "wilgotnosc": 90,
         "suma_opadu": 0.0,
-        "cisnienie": 907.9,
-        "godzina_pomiaru": "2026-04-04T01:00"
+        "cisnienie": 905.8,
+        "godzina_pomiaru": "2026-04-04T04:00"
       }
     },
-    "last_updated": "2026-04-04T01:00"
+    "last_updated": "2026-04-04T04:00"
   },
   "lomnica": {
     "meta": {
@@ -112,17 +112,17 @@
       "kraj": "SK"
     },
     "series": {
-      "2026-04-03": {
-        "temperatura": -7.2,
-        "predkosc_wiatru": 28.8,
-        "kierunek_wiatru": 293,
-        "wilgotnosc": 100,
-        "suma_opadu": 0.1,
-        "cisnienie": 748.3,
-        "godzina_pomiaru": "2026-04-04T01:00"
+      "2026-04-04": {
+        "temperatura": -8.5,
+        "predkosc_wiatru": 27.0,
+        "kierunek_wiatru": 283,
+        "wilgotnosc": 99,
+        "suma_opadu": 0.0,
+        "cisnienie": 746.8,
+        "godzina_pomiaru": "2026-04-04T04:00"
       }
     },
-    "last_updated": "2026-04-04T01:00"
+    "last_updated": "2026-04-04T04:00"
   },
   "strbske_pleso": {
     "meta": {
@@ -133,17 +133,17 @@
       "kraj": "SK"
     },
     "series": {
-      "2026-04-03": {
-        "temperatura": 0.1,
-        "predkosc_wiatru": 9.7,
-        "kierunek_wiatru": 1,
-        "wilgotnosc": 82,
+      "2026-04-04": {
+        "temperatura": -1.5,
+        "predkosc_wiatru": 7.9,
+        "kierunek_wiatru": 5,
+        "wilgotnosc": 83,
         "suma_opadu": 0.0,
-        "cisnienie": 861.5,
-        "godzina_pomiaru": "2026-04-04T01:00"
+        "cisnienie": 860.2,
+        "godzina_pomiaru": "2026-04-04T04:00"
       }
     },
-    "last_updated": "2026-04-04T01:00"
+    "last_updated": "2026-04-04T04:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -154,16 +154,16 @@
       "kraj": "SK"
     },
     "series": {
-      "2026-04-03": {
-        "temperatura": -5.7,
-        "predkosc_wiatru": 13.3,
-        "kierunek_wiatru": 335,
-        "wilgotnosc": 100,
-        "suma_opadu": 0.2,
-        "cisnienie": 777.2,
-        "godzina_pomiaru": "2026-04-04T01:00"
+      "2026-04-04": {
+        "temperatura": -6.7,
+        "predkosc_wiatru": 15.8,
+        "kierunek_wiatru": 329,
+        "wilgotnosc": 99,
+        "suma_opadu": 0.0,
+        "cisnienie": 776.0,
+        "godzina_pomiaru": "2026-04-04T04:00"
       }
     },
-    "last_updated": "2026-04-04T01:00"
+    "last_updated": "2026-04-04T04:00"
   }
 }
