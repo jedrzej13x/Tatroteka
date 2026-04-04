@@ -142,12 +142,12 @@
         "kolor": null
       },
       "2026-04-03": {
-        "stopien": 3,
-        "stopien_nazwa": "Znaczne",
+        "stopien": null,
+        "stopien_nazwa": "Wysokie",
         "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "04.04.2026 20:00",
+        "wazne_do": "03.04.2026 20:00",
         "opis": null,
-        "kolor": "#FF9800"
+        "kolor": null
       },
       "2026-04-04": {
         "stopien": 3,
