@@ -15,6 +15,14 @@
         "wilgotnosc": 87.8,
         "suma_opadu": 0.1,
         "cisnienie": null
+      },
+      "2026-04-10": {
+        "temperatura": -12.0,
+        "predkosc_wiatru": 3.0,
+        "kierunek_wiatru": 220,
+        "wilgotnosc": 87.8,
+        "suma_opadu": 0.1,
+        "cisnienie": null
       }
     },
     "last_updated": "2026-04-10T06:00"
