@@ -181,14 +181,6 @@
         "opis": null,
         "kolor": "#FFC107"
       },
-      "2026-04-10": {
-        "stopien": 2,
-        "stopien_nazwa": "Umiarkowane",
-        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "11.04.2026 20:00",
-        "opis": null,
-        "kolor": "#FFC107"
-      },
       "2026-04-11": {
         "stopien": 2,
         "stopien_nazwa": "Umiarkowane",
@@ -198,7 +190,7 @@
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-04-11T02:45"
+    "last_updated": "2026-04-11T06:10+00:00"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -390,14 +382,6 @@
         "opis": null,
         "kolor": "#FFC107"
       },
-      "2026-04-10": {
-        "stopien": 2,
-        "stopien_nazwa": "Mierne",
-        "tendencja": "s ochladením klesajúca",
-        "wazne_do": null,
-        "opis": null,
-        "kolor": "#FFC107"
-      },
       "2026-04-11": {
         "stopien": 2,
         "stopien_nazwa": "Mierne",
@@ -407,7 +391,7 @@
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-04-11T02:45"
+    "last_updated": "2026-04-11T06:10+00:00"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -599,14 +583,6 @@
         "opis": null,
         "kolor": "#FFC107"
       },
-      "2026-04-10": {
-        "stopien": 2,
-        "stopien_nazwa": "Mierne",
-        "tendencja": "s ochladením klesajúca",
-        "wazne_do": null,
-        "opis": null,
-        "kolor": "#FFC107"
-      },
       "2026-04-11": {
         "stopien": 2,
         "stopien_nazwa": "Mierne",
@@ -616,6 +592,6 @@
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-04-11T02:45"
+    "last_updated": "2026-04-11T06:10+00:00"
   }
 }
