@@ -181,14 +181,6 @@
         "opis": null,
         "kolor": "#FFC107"
       },
-      "2026-04-10": {
-        "stopien": 2,
-        "stopien_nazwa": "Umiarkowane",
-        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "11.04.2026 20:00",
-        "opis": null,
-        "kolor": "#FFC107"
-      },
       "2026-04-11": {
         "stopien": 2,
         "stopien_nazwa": "Umiarkowane",
@@ -390,14 +382,6 @@
         "opis": null,
         "kolor": "#FFC107"
       },
-      "2026-04-10": {
-        "stopien": 2,
-        "stopien_nazwa": "Mierne",
-        "tendencja": "s ochladením klesajúca",
-        "wazne_do": null,
-        "opis": null,
-        "kolor": "#FFC107"
-      },
       "2026-04-11": {
         "stopien": 2,
         "stopien_nazwa": "Mierne",
@@ -592,14 +576,6 @@
         "kolor": "#FFC107"
       },
       "2026-04-09": {
-        "stopien": 2,
-        "stopien_nazwa": "Mierne",
-        "tendencja": "s ochladením klesajúca",
-        "wazne_do": null,
-        "opis": null,
-        "kolor": "#FFC107"
-      },
-      "2026-04-10": {
         "stopien": 2,
         "stopien_nazwa": "Mierne",
         "tendencja": "s ochladením klesajúca",
