@@ -184,13 +184,13 @@
       "2026-04-11": {
         "stopien": 2,
         "stopien_nazwa": "Umiarkowane",
-        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "11.04.2026 20:00",
+        "tendencja": "Stopień zagrożenia może maleć",
+        "wazne_do": "12.04.2026 20:00",
         "opis": null,
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-04-11T14:40"
+    "last_updated": "2026-04-11T15:38"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -391,7 +391,7 @@
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-04-11T14:40"
+    "last_updated": "2026-04-11T15:38"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -592,6 +592,6 @@
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-04-11T14:40"
+    "last_updated": "2026-04-11T15:38"
   }
 }
