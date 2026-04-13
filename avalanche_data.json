@@ -190,12 +190,12 @@
         "kolor": "#FFC107"
       },
       "2026-04-12": {
-        "stopien": 1,
-        "stopien_nazwa": "Niskie",
-        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "13.04.2026 20:00",
+        "stopien": 2,
+        "stopien_nazwa": "Umiarkowane",
+        "tendencja": "Stopień zagrożenia może maleć",
+        "wazne_do": "12.04.2026 20:00",
         "opis": null,
-        "kolor": "#8BC34A"
+        "kolor": "#FFC107"
       },
       "2026-04-13": {
         "stopien": 1,
