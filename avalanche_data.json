@@ -197,14 +197,6 @@
         "opis": null,
         "kolor": "#FFC107"
       },
-      "2026-04-13": {
-        "stopien": 1,
-        "stopien_nazwa": "Niskie",
-        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "14.04.2026 20:00",
-        "opis": null,
-        "kolor": "#8BC34A"
-      },
       "2026-04-14": {
         "stopien": 1,
         "stopien_nazwa": "Niskie",
@@ -214,7 +206,7 @@
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-04-14T03:20"
+    "last_updated": "2026-04-14T06:35+00:00"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -422,14 +414,6 @@
         "opis": null,
         "kolor": "#FFC107"
       },
-      "2026-04-13": {
-        "stopien": 2,
-        "stopien_nazwa": "Mierne",
-        "tendencja": "pocas dna na slnkom nasvietených svahoch stúpajúca",
-        "wazne_do": null,
-        "opis": null,
-        "kolor": "#FFC107"
-      },
       "2026-04-14": {
         "stopien": 2,
         "stopien_nazwa": "Mierne",
@@ -439,7 +423,7 @@
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-04-14T03:20"
+    "last_updated": "2026-04-14T06:35+00:00"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -647,14 +631,6 @@
         "opis": null,
         "kolor": "#FFC107"
       },
-      "2026-04-13": {
-        "stopien": 2,
-        "stopien_nazwa": "Mierne",
-        "tendencja": "pocas dna na slnkom nasvietených svahoch stúpajúca",
-        "wazne_do": null,
-        "opis": null,
-        "kolor": "#FFC107"
-      },
       "2026-04-14": {
         "stopien": 2,
         "stopien_nazwa": "Mierne",
@@ -664,6 +640,6 @@
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-04-14T03:20"
+    "last_updated": "2026-04-14T06:35+00:00"
   }
 }
