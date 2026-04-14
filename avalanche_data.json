@@ -204,9 +204,17 @@
         "wazne_do": "14.04.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-04-14": {
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "14.04.2026 20:00",
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-04-13T23:51"
+    "last_updated": "2026-04-14T03:20"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -421,9 +429,17 @@
         "wazne_do": null,
         "opis": null,
         "kolor": "#FFC107"
+      },
+      "2026-04-14": {
+        "stopien": 2,
+        "stopien_nazwa": "Mierne",
+        "tendencja": null,
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-04-13T23:51"
+    "last_updated": "2026-04-14T03:20"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -638,8 +654,16 @@
         "wazne_do": null,
         "opis": null,
         "kolor": "#FFC107"
+      },
+      "2026-04-14": {
+        "stopien": 2,
+        "stopien_nazwa": "Mierne",
+        "tendencja": null,
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-04-13T23:51"
+    "last_updated": "2026-04-14T03:20"
   }
 }
