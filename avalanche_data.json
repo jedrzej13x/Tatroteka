@@ -224,8 +224,8 @@
       "2026-04-17": {
         "stopien": 2,
         "stopien_nazwa": "Umiarkowane",
-        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "18.04.2026 20:00",
+        "tendencja": "Stopień zagrożenia może maleć",
+        "wazne_do": "17.04.2026 20:00",
         "opis": null,
         "kolor": "#FFC107"
       },
