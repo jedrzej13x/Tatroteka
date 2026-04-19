@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-04-19": {
-        "temperatura": 1.1,
-        "predkosc_wiatru": 2.0,
-        "kierunek_wiatru": 270,
-        "wilgotnosc": 61.6,
+        "temperatura": 3.0,
+        "predkosc_wiatru": 1.0,
+        "kierunek_wiatru": 80,
+        "wilgotnosc": 64.9,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-04-19T08:00"
+    "last_updated": "2026-04-19T09:00"
   },
   "zakopane": {
     "meta": {
@@ -29,12 +29,12 @@
     },
     "series": {
       "2026-04-19": {
-        "temperatura": 12.1,
-        "predkosc_wiatru": 6.5,
-        "kierunek_wiatru": 344,
+        "temperatura": 12.2,
+        "predkosc_wiatru": 5.8,
+        "kierunek_wiatru": 350,
         "wilgotnosc": 55,
         "suma_opadu": 0.0,
-        "cisnienie": 917.1,
+        "cisnienie": 916.7,
         "godzina_pomiaru": "2026-04-19T11:00"
       }
     },
@@ -51,11 +51,11 @@
     "series": {
       "2026-04-19": {
         "temperatura": 7.7,
-        "predkosc_wiatru": 4.0,
-        "kierunek_wiatru": 4,
-        "wilgotnosc": 59,
+        "predkosc_wiatru": 3.6,
+        "kierunek_wiatru": 10,
+        "wilgotnosc": 57,
         "suma_opadu": 0.0,
-        "cisnienie": 859.5,
+        "cisnienie": 859.1,
         "godzina_pomiaru": "2026-04-19T11:00"
       }
     },
@@ -71,12 +71,12 @@
     },
     "series": {
       "2026-04-19": {
-        "temperatura": 5.0,
-        "predkosc_wiatru": 6.8,
-        "kierunek_wiatru": 326,
+        "temperatura": 5.1,
+        "predkosc_wiatru": 6.1,
+        "kierunek_wiatru": 331,
         "wilgotnosc": 68,
         "suma_opadu": 0.0,
-        "cisnienie": 835.5,
+        "cisnienie": 835.1,
         "godzina_pomiaru": "2026-04-19T11:00"
       }
     },
@@ -92,12 +92,12 @@
     },
     "series": {
       "2026-04-19": {
-        "temperatura": 11.4,
-        "predkosc_wiatru": 4.7,
-        "kierunek_wiatru": 317,
+        "temperatura": 11.5,
+        "predkosc_wiatru": 4.3,
+        "kierunek_wiatru": 321,
         "wilgotnosc": 55,
         "suma_opadu": 0.0,
-        "cisnienie": 909.5,
+        "cisnienie": 909.0,
         "godzina_pomiaru": "2026-04-19T11:00"
       }
     },
@@ -114,11 +114,11 @@
     "series": {
       "2026-04-19": {
         "temperatura": -1.8,
-        "predkosc_wiatru": 5.4,
-        "kierunek_wiatru": 308,
-        "wilgotnosc": 78,
+        "predkosc_wiatru": 6.1,
+        "kierunek_wiatru": 317,
+        "wilgotnosc": 77,
         "suma_opadu": 0.0,
-        "cisnienie": 751.9,
+        "cisnienie": 751.6,
         "godzina_pomiaru": "2026-04-19T11:00"
       }
     },
@@ -134,12 +134,12 @@
     },
     "series": {
       "2026-04-19": {
-        "temperatura": 8.6,
-        "predkosc_wiatru": 7.2,
-        "kierunek_wiatru": 228,
-        "wilgotnosc": 59,
+        "temperatura": 8.5,
+        "predkosc_wiatru": 6.8,
+        "kierunek_wiatru": 226,
+        "wilgotnosc": 60,
         "suma_opadu": 0.0,
-        "cisnienie": 864.8,
+        "cisnienie": 864.5,
         "godzina_pomiaru": "2026-04-19T11:00"
       }
     },
@@ -155,12 +155,12 @@
     },
     "series": {
       "2026-04-19": {
-        "temperatura": -0.3,
-        "predkosc_wiatru": 9.0,
-        "kierunek_wiatru": 343,
-        "wilgotnosc": 82,
+        "temperatura": -0.2,
+        "predkosc_wiatru": 8.3,
+        "kierunek_wiatru": 345,
+        "wilgotnosc": 80,
         "suma_opadu": 0.0,
-        "cisnienie": 780.3,
+        "cisnienie": 780.0,
         "godzina_pomiaru": "2026-04-19T11:00"
       }
     },
