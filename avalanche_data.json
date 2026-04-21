@@ -244,9 +244,17 @@
         "wazne_do": "21.04.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-04-21": {
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "21.04.2026 20:00",
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-04-20T23:50"
+    "last_updated": "2026-04-21T03:22"
   },
   "hzs_wysokie_tatry": {
     "meta": {
