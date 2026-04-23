@@ -249,7 +249,7 @@
         "stopien": 1,
         "stopien_nazwa": "Niskie",
         "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "23.04.2026 20:00",
+        "wazne_do": "22.04.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
       },
@@ -533,9 +533,17 @@
         "wazne_do": null,
         "opis": null,
         "kolor": null
+      },
+      "2026-04-23": {
+        "stopien": null,
+        "stopien_nazwa": null,
+        "tendencja": "bez výraznej zmeny",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": null
       }
     },
-    "last_updated": "2026-04-22T06:47+00:00"
+    "last_updated": "2026-04-23T06:52+00:00"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -806,8 +814,16 @@
         "wazne_do": null,
         "opis": null,
         "kolor": null
+      },
+      "2026-04-23": {
+        "stopien": null,
+        "stopien_nazwa": null,
+        "tendencja": "bez výraznej zmeny",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": null
       }
     },
-    "last_updated": "2026-04-22T06:47+00:00"
+    "last_updated": "2026-04-23T06:52+00:00"
   }
 }
