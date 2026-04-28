@@ -289,12 +289,12 @@
         "stopien": 1,
         "stopien_nazwa": "Niskie",
         "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "28.04.2026 20:00",
+        "wazne_do": "29.04.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-04-28T14:27"
+    "last_updated": "2026-04-28T16:56"
   },
   "hzs_wysokie_tatry": {
     "meta": {
