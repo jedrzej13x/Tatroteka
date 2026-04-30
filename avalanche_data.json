@@ -300,9 +300,17 @@
         "wazne_do": "30.04.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-04-30": {
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "30.04.2026 20:00",
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-04-29T23:05"
+    "last_updated": "2026-04-30T03:41"
   },
   "hzs_wysokie_tatry": {
     "meta": {
