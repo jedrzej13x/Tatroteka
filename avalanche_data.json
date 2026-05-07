@@ -349,14 +349,6 @@
         "opis": null,
         "kolor": "#8BC34A"
       },
-      "2026-05-06": {
-        "stopien": 1,
-        "stopien_nazwa": "Niskie",
-        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "07.05.2026 20:00",
-        "opis": null,
-        "kolor": "#8BC34A"
-      },
       "2026-05-07": {
         "stopien": 1,
         "stopien_nazwa": "Niskie",
