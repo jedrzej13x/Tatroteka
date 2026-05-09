@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-05-08": {
-        "temperatura": 2.0,
-        "predkosc_wiatru": 7.0,
-        "kierunek_wiatru": 210,
+        "temperatura": 1.8,
+        "predkosc_wiatru": 6.0,
+        "kierunek_wiatru": 200,
         "wilgotnosc": 100.0,
         "suma_opadu": 11.8,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-05-08T22:00"
+    "last_updated": "2026-05-08T23:00"
   },
   "zakopane": {
     "meta": {
@@ -111,8 +111,18 @@
       "alt": 2634,
       "kraj": "SK"
     },
-    "series": {},
-    "last_updated": null
+    "series": {
+      "2026-05-08": {
+        "temperatura": -5.3,
+        "predkosc_wiatru": 9.0,
+        "kierunek_wiatru": 244,
+        "wilgotnosc": 99,
+        "suma_opadu": 0.0,
+        "cisnienie": 750.0,
+        "godzina_pomiaru": "2026-05-09T01:00"
+      }
+    },
+    "last_updated": "2026-05-09T01:00"
   },
   "strbske_pleso": {
     "meta": {
@@ -122,8 +132,18 @@
       "alt": 1346,
       "kraj": "SK"
     },
-    "series": {},
-    "last_updated": null
+    "series": {
+      "2026-05-08": {
+        "temperatura": 3.5,
+        "predkosc_wiatru": 4.7,
+        "kierunek_wiatru": 5,
+        "wilgotnosc": 93,
+        "suma_opadu": 0.0,
+        "cisnienie": 864.3,
+        "godzina_pomiaru": "2026-05-09T01:00"
+      }
+    },
+    "last_updated": "2026-05-09T01:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -133,7 +153,17 @@
       "alt": 668,
       "kraj": "SK"
     },
-    "series": {},
-    "last_updated": null
+    "series": {
+      "2026-05-08": {
+        "temperatura": -2.5,
+        "predkosc_wiatru": 9.0,
+        "kierunek_wiatru": 209,
+        "wilgotnosc": 100,
+        "suma_opadu": 0.0,
+        "cisnienie": 779.6,
+        "godzina_pomiaru": "2026-05-09T01:00"
+      }
+    },
+    "last_updated": "2026-05-09T01:00"
   }
 }
