@@ -15,6 +15,14 @@
         "wilgotnosc": 94.1,
         "suma_opadu": 18.1,
         "cisnienie": null
+      },
+      "2026-05-13": {
+        "temperatura": -5.3,
+        "predkosc_wiatru": 2.0,
+        "kierunek_wiatru": 330,
+        "wilgotnosc": 94.1,
+        "suma_opadu": 18.1,
+        "cisnienie": null
       }
     },
     "last_updated": "2026-05-13T07:00"
