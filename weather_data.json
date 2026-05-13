@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-05-13": {
-        "temperatura": -2.9,
+        "temperatura": -2.1,
         "predkosc_wiatru": 5.0,
-        "kierunek_wiatru": 210,
-        "wilgotnosc": 94.2,
+        "kierunek_wiatru": 260,
+        "wilgotnosc": 73.9,
         "suma_opadu": 18.1,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-05-13T19:00"
+    "last_updated": "2026-05-13T22:00"
   },
   "zakopane": {
     "meta": {
@@ -31,14 +31,14 @@
       "2026-05-13": {
         "temperatura": 3.7,
         "predkosc_wiatru": 10.1,
-        "kierunek_wiatru": 201,
+        "kierunek_wiatru": 199,
         "wilgotnosc": 71,
         "suma_opadu": 0.0,
-        "cisnienie": 905.6,
-        "godzina_pomiaru": "2026-05-13T22:00"
+        "cisnienie": 905.5,
+        "godzina_pomiaru": "2026-05-14T00:00"
       }
     },
-    "last_updated": "2026-05-13T22:00"
+    "last_updated": "2026-05-14T00:00"
   },
   "morskie_oko": {
     "meta": {
@@ -51,15 +51,15 @@
     "series": {
       "2026-05-13": {
         "temperatura": 0.5,
-        "predkosc_wiatru": 8.6,
-        "kierunek_wiatru": 189,
-        "wilgotnosc": 82,
+        "predkosc_wiatru": 8.3,
+        "kierunek_wiatru": 185,
+        "wilgotnosc": 80,
         "suma_opadu": 0.0,
-        "cisnienie": 848.0,
-        "godzina_pomiaru": "2026-05-13T22:00"
+        "cisnienie": 847.8,
+        "godzina_pomiaru": "2026-05-14T00:00"
       }
     },
-    "last_updated": "2026-05-13T22:00"
+    "last_updated": "2026-05-14T00:00"
   },
   "hala_gasienicowa": {
     "meta": {
@@ -73,14 +73,14 @@
       "2026-05-13": {
         "temperatura": -0.6,
         "predkosc_wiatru": 13.3,
-        "kierunek_wiatru": 228,
-        "wilgotnosc": 82,
+        "kierunek_wiatru": 214,
+        "wilgotnosc": 83,
         "suma_opadu": 0.0,
-        "cisnienie": 824.3,
-        "godzina_pomiaru": "2026-05-13T22:00"
+        "cisnienie": 824.1,
+        "godzina_pomiaru": "2026-05-14T00:00"
       }
     },
-    "last_updated": "2026-05-13T22:00"
+    "last_updated": "2026-05-14T00:00"
   },
   "dolina_chocholowska": {
     "meta": {
@@ -93,15 +93,15 @@
     "series": {
       "2026-05-13": {
         "temperatura": 2.2,
-        "predkosc_wiatru": 5.8,
-        "kierunek_wiatru": 208,
+        "predkosc_wiatru": 7.6,
+        "kierunek_wiatru": 207,
         "wilgotnosc": 78,
         "suma_opadu": 0.0,
-        "cisnienie": 897.6,
-        "godzina_pomiaru": "2026-05-13T22:00"
+        "cisnienie": 897.5,
+        "godzina_pomiaru": "2026-05-14T00:00"
       }
     },
-    "last_updated": "2026-05-13T22:00"
+    "last_updated": "2026-05-14T00:00"
   },
   "lomnica": {
     "meta": {
@@ -113,16 +113,16 @@
     },
     "series": {
       "2026-05-13": {
-        "temperatura": -7.7,
-        "predkosc_wiatru": 21.2,
-        "kierunek_wiatru": 281,
+        "temperatura": -8.0,
+        "predkosc_wiatru": 15.5,
+        "kierunek_wiatru": 279,
         "wilgotnosc": 86,
         "suma_opadu": 0.0,
-        "cisnienie": 739.9,
-        "godzina_pomiaru": "2026-05-13T22:00"
+        "cisnienie": 739.4,
+        "godzina_pomiaru": "2026-05-14T00:00"
       }
     },
-    "last_updated": "2026-05-13T22:00"
+    "last_updated": "2026-05-14T00:00"
   },
   "strbske_pleso": {
     "meta": {
@@ -134,16 +134,16 @@
     },
     "series": {
       "2026-05-13": {
-        "temperatura": 1.1,
-        "predkosc_wiatru": 9.7,
-        "kierunek_wiatru": 316,
-        "wilgotnosc": 78,
+        "temperatura": 0.9,
+        "predkosc_wiatru": 8.3,
+        "kierunek_wiatru": 330,
+        "wilgotnosc": 76,
         "suma_opadu": 0.0,
-        "cisnienie": 853.4,
-        "godzina_pomiaru": "2026-05-13T22:00"
+        "cisnienie": 853.2,
+        "godzina_pomiaru": "2026-05-14T00:00"
       }
     },
-    "last_updated": "2026-05-13T22:00"
+    "last_updated": "2026-05-14T00:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -155,15 +155,15 @@
     },
     "series": {
       "2026-05-13": {
-        "temperatura": -8.3,
-        "predkosc_wiatru": 16.2,
-        "kierunek_wiatru": 296,
-        "wilgotnosc": 98,
+        "temperatura": -9.0,
+        "predkosc_wiatru": 11.2,
+        "kierunek_wiatru": 280,
+        "wilgotnosc": 97,
         "suma_opadu": 0.0,
-        "cisnienie": 766.9,
-        "godzina_pomiaru": "2026-05-13T22:00"
+        "cisnienie": 766.2,
+        "godzina_pomiaru": "2026-05-14T00:00"
       }
     },
-    "last_updated": "2026-05-13T22:00"
+    "last_updated": "2026-05-14T00:00"
   }
 }
