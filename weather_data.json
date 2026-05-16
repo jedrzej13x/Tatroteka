@@ -9,7 +9,7 @@
     },
     "series": {
       "2026-05-15": {
-        "temperatura": 0.3,
+        "temperatura": 0.2,
         "predkosc_wiatru": 4.0,
         "kierunek_wiatru": 150,
         "wilgotnosc": 99.3,
@@ -17,7 +17,7 @@
         "cisnienie": null
       }
     },
-    "last_updated": "2026-05-15T22:00"
+    "last_updated": "2026-05-15T23:00"
   },
   "zakopane": {
     "meta": {
@@ -27,8 +27,18 @@
       "alt": 857,
       "kraj": "PL"
     },
-    "series": {},
-    "last_updated": null
+    "series": {
+      "2026-05-15": {
+        "temperatura": 6.3,
+        "predkosc_wiatru": 3.6,
+        "kierunek_wiatru": 31,
+        "wilgotnosc": 97,
+        "suma_opadu": 0.5,
+        "cisnienie": 902.7,
+        "godzina_pomiaru": "2026-05-16T01:00"
+      }
+    },
+    "last_updated": "2026-05-16T01:00"
   },
   "morskie_oko": {
     "meta": {
