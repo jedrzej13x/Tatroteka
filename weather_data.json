@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-05-17": {
-        "temperatura": -1.5,
+        "temperatura": -1.4,
         "predkosc_wiatru": 5.0,
-        "kierunek_wiatru": 40,
+        "kierunek_wiatru": 60,
         "wilgotnosc": 97.8,
         "suma_opadu": 54.1,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-05-17T19:00"
+    "last_updated": "2026-05-17T20:00"
   },
   "zakopane": {
     "meta": {
@@ -27,18 +27,8 @@
       "alt": 857,
       "kraj": "PL"
     },
-    "series": {
-      "2026-05-17": {
-        "temperatura": 3.8,
-        "predkosc_wiatru": 7.6,
-        "kierunek_wiatru": 191,
-        "wilgotnosc": 97,
-        "suma_opadu": 0.1,
-        "cisnienie": 915.0,
-        "godzina_pomiaru": "2026-05-17T21:00"
-      }
-    },
-    "last_updated": "2026-05-17T21:00"
+    "series": {},
+    "last_updated": null
   },
   "morskie_oko": {
     "meta": {
@@ -50,16 +40,16 @@
     },
     "series": {
       "2026-05-17": {
-        "temperatura": 0.3,
-        "predkosc_wiatru": 1.1,
-        "kierunek_wiatru": 301,
-        "wilgotnosc": 100,
+        "temperatura": 0.1,
+        "predkosc_wiatru": 4.3,
+        "kierunek_wiatru": 335,
+        "wilgotnosc": 97,
         "suma_opadu": 0.0,
-        "cisnienie": 854.3,
-        "godzina_pomiaru": "2026-05-17T21:00"
+        "cisnienie": 853.3,
+        "godzina_pomiaru": "2026-05-17T23:00"
       }
     },
-    "last_updated": "2026-05-17T21:00"
+    "last_updated": "2026-05-17T23:00"
   },
   "hala_gasienicowa": {
     "meta": {
@@ -71,16 +61,16 @@
     },
     "series": {
       "2026-05-17": {
-        "temperatura": -0.5,
-        "predkosc_wiatru": 2.9,
-        "kierunek_wiatru": 248,
+        "temperatura": -0.7,
+        "predkosc_wiatru": 2.2,
+        "kierunek_wiatru": 170,
         "wilgotnosc": 100,
         "suma_opadu": 0.0,
-        "cisnienie": 831.6,
-        "godzina_pomiaru": "2026-05-17T21:00"
+        "cisnienie": 830.8,
+        "godzina_pomiaru": "2026-05-17T23:00"
       }
     },
-    "last_updated": "2026-05-17T21:00"
+    "last_updated": "2026-05-17T23:00"
   },
   "dolina_chocholowska": {
     "meta": {
@@ -92,16 +82,16 @@
     },
     "series": {
       "2026-05-17": {
-        "temperatura": 3.2,
+        "temperatura": 3.4,
         "predkosc_wiatru": 2.2,
-        "kierunek_wiatru": 217,
+        "kierunek_wiatru": 221,
         "wilgotnosc": 100,
         "suma_opadu": 0.1,
-        "cisnienie": 907.1,
-        "godzina_pomiaru": "2026-05-17T21:00"
+        "cisnienie": 906.8,
+        "godzina_pomiaru": "2026-05-17T23:00"
       }
     },
-    "last_updated": "2026-05-17T21:00"
+    "last_updated": "2026-05-17T23:00"
   },
   "lomnica": {
     "meta": {
@@ -111,18 +101,8 @@
       "alt": 2634,
       "kraj": "SK"
     },
-    "series": {
-      "2026-05-17": {
-        "temperatura": -3.0,
-        "predkosc_wiatru": 14.0,
-        "kierunek_wiatru": 124,
-        "wilgotnosc": 96,
-        "suma_opadu": 0.0,
-        "cisnienie": 747.5,
-        "godzina_pomiaru": "2026-05-17T21:00"
-      }
-    },
-    "last_updated": "2026-05-17T21:00"
+    "series": {},
+    "last_updated": null
   },
   "strbske_pleso": {
     "meta": {
@@ -132,18 +112,8 @@
       "alt": 1346,
       "kraj": "SK"
     },
-    "series": {
-      "2026-05-17": {
-        "temperatura": 4.2,
-        "predkosc_wiatru": 7.2,
-        "kierunek_wiatru": 57,
-        "wilgotnosc": 84,
-        "suma_opadu": 0.0,
-        "cisnienie": 859.5,
-        "godzina_pomiaru": "2026-05-17T21:00"
-      }
-    },
-    "last_updated": "2026-05-17T21:00"
+    "series": {},
+    "last_updated": null
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -153,17 +123,7 @@
       "alt": 668,
       "kraj": "SK"
     },
-    "series": {
-      "2026-05-17": {
-        "temperatura": -1.3,
-        "predkosc_wiatru": 14.4,
-        "kierunek_wiatru": 105,
-        "wilgotnosc": 90,
-        "suma_opadu": 0.0,
-        "cisnienie": 775.7,
-        "godzina_pomiaru": "2026-05-17T21:00"
-      }
-    },
-    "last_updated": "2026-05-17T21:00"
+    "series": {},
+    "last_updated": null
   }
 }
