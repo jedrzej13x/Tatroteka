@@ -417,20 +417,20 @@
         "stopien": 1,
         "stopien_nazwa": "Niskie",
         "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "18.05.2026 20:00",
+        "wazne_do": "17.05.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
       },
       "2026-05-18": {
-        "stopien": 1,
-        "stopien_nazwa": "Niskie",
+        "stopien": 2,
+        "stopien_nazwa": "Umiarkowane",
         "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
         "wazne_do": "18.05.2026 20:00",
         "opis": null,
-        "kolor": "#8BC34A"
+        "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-05-18T04:23"
+    "last_updated": "2026-05-18T08:04+00:00"
   },
   "hzs_wysokie_tatry": {
     "meta": {
