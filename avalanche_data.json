@@ -464,8 +464,8 @@
       "2026-05-23": {
         "stopien": 1,
         "stopien_nazwa": "Niskie",
-        "tendencja": "Stopień zagrożenia może maleć",
-        "wazne_do": "24.05.2026 20:00",
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "23.05.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
       },
@@ -478,7 +478,7 @@
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-05-24T04:22"
+    "last_updated": "2026-05-24T07:48+00:00"
   },
   "hzs_wysokie_tatry": {
     "meta": {
