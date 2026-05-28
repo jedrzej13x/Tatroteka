@@ -500,9 +500,17 @@
         "wazne_do": "25.05.2026 20:00",
         "opis": null,
         "kolor": null
+      },
+      "2026-05-28": {
+        "stopien": null,
+        "stopien_nazwa": null,
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "25.05.2026 20:00",
+        "opis": null,
+        "kolor": null
       }
     },
-    "last_updated": "2026-05-27T08:15+00:00"
+    "last_updated": "2026-05-28T08:03+00:00"
   },
   "hzs_wysokie_tatry": {
     "meta": {
