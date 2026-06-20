@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-06-20": {
-        "temperatura": 14.8,
-        "predkosc_wiatru": 1.0,
-        "kierunek_wiatru": 240,
-        "wilgotnosc": 79.7,
+        "temperatura": 13.2,
+        "predkosc_wiatru": 3.0,
+        "kierunek_wiatru": 100,
+        "wilgotnosc": 91.7,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-06-20T09:00"
+    "last_updated": "2026-06-20T11:00"
   },
   "zakopane": {
     "meta": {
@@ -29,16 +29,16 @@
     },
     "series": {
       "2026-06-20": {
-        "temperatura": 19.3,
+        "temperatura": 22.6,
         "predkosc_wiatru": 6.5,
-        "kierunek_wiatru": 32,
-        "wilgotnosc": 84,
+        "kierunek_wiatru": 39,
+        "wilgotnosc": 72,
         "suma_opadu": 0.0,
         "cisnienie": 927.4,
-        "godzina_pomiaru": "2026-06-20T11:00"
+        "godzina_pomiaru": "2026-06-20T14:00"
       }
     },
-    "last_updated": "2026-06-20T11:00"
+    "last_updated": "2026-06-20T14:00"
   },
   "morskie_oko": {
     "meta": {
@@ -50,16 +50,16 @@
     },
     "series": {
       "2026-06-20": {
-        "temperatura": 17.5,
-        "predkosc_wiatru": 2.9,
-        "kierunek_wiatru": 157,
-        "wilgotnosc": 77,
-        "suma_opadu": 0.0,
-        "cisnienie": 872.2,
-        "godzina_pomiaru": "2026-06-20T11:00"
+        "temperatura": 17.2,
+        "predkosc_wiatru": 1.8,
+        "kierunek_wiatru": 224,
+        "wilgotnosc": 83,
+        "suma_opadu": 0.1,
+        "cisnienie": 872.0,
+        "godzina_pomiaru": "2026-06-20T14:00"
       }
     },
-    "last_updated": "2026-06-20T11:00"
+    "last_updated": "2026-06-20T14:00"
   },
   "hala_gasienicowa": {
     "meta": {
@@ -71,16 +71,16 @@
     },
     "series": {
       "2026-06-20": {
-        "temperatura": 15.6,
-        "predkosc_wiatru": 4.0,
-        "kierunek_wiatru": 344,
-        "wilgotnosc": 75,
-        "suma_opadu": 0.0,
-        "cisnienie": 848.8,
-        "godzina_pomiaru": "2026-06-20T11:00"
+        "temperatura": 15.4,
+        "predkosc_wiatru": 7.6,
+        "kierunek_wiatru": 171,
+        "wilgotnosc": 91,
+        "suma_opadu": 0.1,
+        "cisnienie": 848.3,
+        "godzina_pomiaru": "2026-06-20T14:00"
       }
     },
-    "last_updated": "2026-06-20T11:00"
+    "last_updated": "2026-06-20T14:00"
   },
   "dolina_chocholowska": {
     "meta": {
@@ -92,16 +92,16 @@
     },
     "series": {
       "2026-06-20": {
-        "temperatura": 18.8,
-        "predkosc_wiatru": 6.8,
-        "kierunek_wiatru": 75,
-        "wilgotnosc": 87,
+        "temperatura": 21.3,
+        "predkosc_wiatru": 9.0,
+        "kierunek_wiatru": 63,
+        "wilgotnosc": 78,
         "suma_opadu": 0.0,
-        "cisnienie": 919.8,
-        "godzina_pomiaru": "2026-06-20T11:00"
+        "cisnienie": 919.7,
+        "godzina_pomiaru": "2026-06-20T14:00"
       }
     },
-    "last_updated": "2026-06-20T11:00"
+    "last_updated": "2026-06-20T14:00"
   },
   "lomnica": {
     "meta": {
@@ -113,16 +113,16 @@
     },
     "series": {
       "2026-06-20": {
-        "temperatura": 8.5,
-        "predkosc_wiatru": 5.8,
-        "kierunek_wiatru": 264,
-        "wilgotnosc": 94,
+        "temperatura": 9.8,
+        "predkosc_wiatru": 9.0,
+        "kierunek_wiatru": 201,
+        "wilgotnosc": 95,
         "suma_opadu": 0.0,
-        "cisnienie": 766.8,
-        "godzina_pomiaru": "2026-06-20T11:00"
+        "cisnienie": 767.9,
+        "godzina_pomiaru": "2026-06-20T14:00"
       }
     },
-    "last_updated": "2026-06-20T11:00"
+    "last_updated": "2026-06-20T14:00"
   },
   "strbske_pleso": {
     "meta": {
@@ -134,16 +134,16 @@
     },
     "series": {
       "2026-06-20": {
-        "temperatura": 18.0,
-        "predkosc_wiatru": 0.7,
-        "kierunek_wiatru": 113,
-        "wilgotnosc": 75,
-        "suma_opadu": 0.0,
+        "temperatura": 16.7,
+        "predkosc_wiatru": 6.1,
+        "kierunek_wiatru": 133,
+        "wilgotnosc": 96,
+        "suma_opadu": 0.6,
         "cisnienie": 876.8,
-        "godzina_pomiaru": "2026-06-20T11:00"
+        "godzina_pomiaru": "2026-06-20T14:00"
       }
     },
-    "last_updated": "2026-06-20T11:00"
+    "last_updated": "2026-06-20T14:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -155,15 +155,15 @@
     },
     "series": {
       "2026-06-20": {
-        "temperatura": 10.5,
-        "predkosc_wiatru": 2.9,
-        "kierunek_wiatru": 344,
-        "wilgotnosc": 95,
-        "suma_opadu": 0.0,
-        "cisnienie": 795.2,
-        "godzina_pomiaru": "2026-06-20T11:00"
+        "temperatura": 11.6,
+        "predkosc_wiatru": 10.1,
+        "kierunek_wiatru": 201,
+        "wilgotnosc": 92,
+        "suma_opadu": 0.2,
+        "cisnienie": 796.1,
+        "godzina_pomiaru": "2026-06-20T14:00"
       }
     },
-    "last_updated": "2026-06-20T11:00"
+    "last_updated": "2026-06-20T14:00"
   }
 }
