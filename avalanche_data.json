@@ -725,7 +725,7 @@
         "opis": null,
         "kolor": null
       },
-      "2026-06-29": {
+      "2026-06-30": {
         "stopien": null,
         "stopien_nazwa": null,
         "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
@@ -734,7 +734,7 @@
         "kolor": null
       }
     },
-    "last_updated": "2026-06-29T08:51+00:00"
+    "last_updated": "2026-06-30T08:06+00:00"
   },
   "hzs_wysokie_tatry": {
     "meta": {
