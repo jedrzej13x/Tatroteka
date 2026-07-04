@@ -29,16 +29,16 @@
     },
     "series": {
       "2026-07-04": {
-        "temperatura": 16.6,
-        "predkosc_wiatru": 15.1,
-        "kierunek_wiatru": 311,
-        "wilgotnosc": 51,
+        "temperatura": 16.9,
+        "predkosc_wiatru": 13.3,
+        "kierunek_wiatru": 307,
+        "wilgotnosc": 52,
         "suma_opadu": 0.0,
-        "cisnienie": 922.5,
-        "godzina_pomiaru": "2026-07-04T14:00"
+        "cisnienie": 922.6,
+        "godzina_pomiaru": "2026-07-04T16:00"
       }
     },
-    "last_updated": "2026-07-04T14:00"
+    "last_updated": "2026-07-04T16:00"
   },
   "morskie_oko": {
     "meta": {
@@ -50,16 +50,16 @@
     },
     "series": {
       "2026-07-04": {
-        "temperatura": 12.0,
-        "predkosc_wiatru": 10.8,
-        "kierunek_wiatru": 337,
-        "wilgotnosc": 59,
+        "temperatura": 12.1,
+        "predkosc_wiatru": 9.0,
+        "kierunek_wiatru": 333,
+        "wilgotnosc": 60,
         "suma_opadu": 0.0,
-        "cisnienie": 865.4,
-        "godzina_pomiaru": "2026-07-04T14:00"
+        "cisnienie": 865.5,
+        "godzina_pomiaru": "2026-07-04T16:00"
       }
     },
-    "last_updated": "2026-07-04T14:00"
+    "last_updated": "2026-07-04T16:00"
   },
   "hala_gasienicowa": {
     "meta": {
@@ -72,15 +72,15 @@
     "series": {
       "2026-07-04": {
         "temperatura": 9.3,
-        "predkosc_wiatru": 19.1,
-        "kierunek_wiatru": 318,
-        "wilgotnosc": 65,
+        "predkosc_wiatru": 18.0,
+        "kierunek_wiatru": 314,
+        "wilgotnosc": 67,
         "suma_opadu": 0.0,
-        "cisnienie": 841.5,
-        "godzina_pomiaru": "2026-07-04T14:00"
+        "cisnienie": 841.6,
+        "godzina_pomiaru": "2026-07-04T16:00"
       }
     },
-    "last_updated": "2026-07-04T14:00"
+    "last_updated": "2026-07-04T16:00"
   },
   "dolina_chocholowska": {
     "meta": {
@@ -92,16 +92,16 @@
     },
     "series": {
       "2026-07-04": {
-        "temperatura": 15.8,
+        "temperatura": 16.0,
         "predkosc_wiatru": 11.5,
-        "kierunek_wiatru": 313,
+        "kierunek_wiatru": 308,
         "wilgotnosc": 54,
         "suma_opadu": 0.0,
-        "cisnienie": 914.9,
-        "godzina_pomiaru": "2026-07-04T14:00"
+        "cisnienie": 915.0,
+        "godzina_pomiaru": "2026-07-04T16:00"
       }
     },
-    "last_updated": "2026-07-04T14:00"
+    "last_updated": "2026-07-04T16:00"
   },
   "lomnica": {
     "meta": {
@@ -113,16 +113,16 @@
     },
     "series": {
       "2026-07-04": {
-        "temperatura": 2.9,
-        "predkosc_wiatru": 38.5,
-        "kierunek_wiatru": 309,
-        "wilgotnosc": 82,
+        "temperatura": 3.4,
+        "predkosc_wiatru": 31.3,
+        "kierunek_wiatru": 302,
+        "wilgotnosc": 81,
         "suma_opadu": 0.0,
-        "cisnienie": 758.2,
-        "godzina_pomiaru": "2026-07-04T14:00"
+        "cisnienie": 758.8,
+        "godzina_pomiaru": "2026-07-04T16:00"
       }
     },
-    "last_updated": "2026-07-04T14:00"
+    "last_updated": "2026-07-04T16:00"
   },
   "strbske_pleso": {
     "meta": {
@@ -134,16 +134,16 @@
     },
     "series": {
       "2026-07-04": {
-        "temperatura": 13.5,
-        "predkosc_wiatru": 11.5,
-        "kierunek_wiatru": 285,
-        "wilgotnosc": 50,
+        "temperatura": 13.1,
+        "predkosc_wiatru": 14.0,
+        "kierunek_wiatru": 306,
+        "wilgotnosc": 51,
         "suma_opadu": 0.0,
-        "cisnienie": 870.2,
-        "godzina_pomiaru": "2026-07-04T14:00"
+        "cisnienie": 870.1,
+        "godzina_pomiaru": "2026-07-04T16:00"
       }
     },
-    "last_updated": "2026-07-04T14:00"
+    "last_updated": "2026-07-04T16:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -155,15 +155,15 @@
     },
     "series": {
       "2026-07-04": {
-        "temperatura": 4.7,
-        "predkosc_wiatru": 33.1,
-        "kierunek_wiatru": 333,
-        "wilgotnosc": 83,
+        "temperatura": 5.0,
+        "predkosc_wiatru": 29.9,
+        "kierunek_wiatru": 334,
+        "wilgotnosc": 82,
         "suma_opadu": 0.0,
-        "cisnienie": 786.7,
-        "godzina_pomiaru": "2026-07-04T14:00"
+        "cisnienie": 787.3,
+        "godzina_pomiaru": "2026-07-04T16:00"
       }
     },
-    "last_updated": "2026-07-04T14:00"
+    "last_updated": "2026-07-04T16:00"
   }
 }
