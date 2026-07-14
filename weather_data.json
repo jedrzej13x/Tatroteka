@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-07-13": {
-        "temperatura": 8.7,
-        "predkosc_wiatru": 7.0,
+        "temperatura": 8.6,
+        "predkosc_wiatru": 6.0,
         "kierunek_wiatru": 20,
         "wilgotnosc": 100.0,
         "suma_opadu": 9.9,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-07-13T22:00"
+    "last_updated": "2026-07-13T23:00"
   },
   "zakopane": {
     "meta": {
@@ -29,12 +29,12 @@
     },
     "series": {
       "2026-07-13": {
-        "temperatura": 14.2,
-        "predkosc_wiatru": 4.7,
-        "kierunek_wiatru": 205,
+        "temperatura": 12.9,
+        "predkosc_wiatru": 5.8,
+        "kierunek_wiatru": 191,
         "wilgotnosc": 90,
         "suma_opadu": 0.0,
-        "cisnienie": 921.8,
+        "cisnienie": 921.2,
         "godzina_pomiaru": "2026-07-14T01:00"
       }
     },
@@ -50,12 +50,12 @@
     },
     "series": {
       "2026-07-13": {
-        "temperatura": 11.5,
-        "predkosc_wiatru": 2.5,
-        "kierunek_wiatru": 203,
-        "wilgotnosc": 99,
+        "temperatura": 10.5,
+        "predkosc_wiatru": 6.1,
+        "kierunek_wiatru": 196,
+        "wilgotnosc": 95,
         "suma_opadu": 0.0,
-        "cisnienie": 865.7,
+        "cisnienie": 864.8,
         "godzina_pomiaru": "2026-07-14T01:00"
       }
     },
@@ -71,12 +71,12 @@
     },
     "series": {
       "2026-07-13": {
-        "temperatura": 10.6,
-        "predkosc_wiatru": 4.3,
-        "kierunek_wiatru": 132,
-        "wilgotnosc": 99,
+        "temperatura": 9.6,
+        "predkosc_wiatru": 3.2,
+        "kierunek_wiatru": 175,
+        "wilgotnosc": 97,
         "suma_opadu": 0.0,
-        "cisnienie": 842.6,
+        "cisnienie": 841.8,
         "godzina_pomiaru": "2026-07-14T01:00"
       }
     },
@@ -92,12 +92,12 @@
     },
     "series": {
       "2026-07-13": {
-        "temperatura": 12.8,
-        "predkosc_wiatru": 3.2,
-        "kierunek_wiatru": 186,
+        "temperatura": 11.5,
+        "predkosc_wiatru": 2.2,
+        "kierunek_wiatru": 86,
         "wilgotnosc": 93,
         "suma_opadu": 0.0,
-        "cisnienie": 914.0,
+        "cisnienie": 913.3,
         "godzina_pomiaru": "2026-07-14T01:00"
       }
     },
@@ -113,12 +113,12 @@
     },
     "series": {
       "2026-07-13": {
-        "temperatura": 5.5,
-        "predkosc_wiatru": 18.0,
-        "kierunek_wiatru": 302,
-        "wilgotnosc": 100,
+        "temperatura": 5.1,
+        "predkosc_wiatru": 16.2,
+        "kierunek_wiatru": 298,
+        "wilgotnosc": 95,
         "suma_opadu": 0.0,
-        "cisnienie": 760.9,
+        "cisnienie": 760.3,
         "godzina_pomiaru": "2026-07-14T01:00"
       }
     },
@@ -134,12 +134,12 @@
     },
     "series": {
       "2026-07-13": {
-        "temperatura": 13.2,
-        "predkosc_wiatru": 9.4,
-        "kierunek_wiatru": 12,
-        "wilgotnosc": 80,
+        "temperatura": 12.7,
+        "predkosc_wiatru": 8.3,
+        "kierunek_wiatru": 15,
+        "wilgotnosc": 82,
         "suma_opadu": 0.0,
-        "cisnienie": 870.6,
+        "cisnienie": 870.2,
         "godzina_pomiaru": "2026-07-14T01:00"
       }
     },
@@ -155,12 +155,12 @@
     },
     "series": {
       "2026-07-13": {
-        "temperatura": 6.7,
-        "predkosc_wiatru": 7.9,
-        "kierunek_wiatru": 349,
+        "temperatura": 5.4,
+        "predkosc_wiatru": 9.0,
+        "kierunek_wiatru": 342,
         "wilgotnosc": 100,
-        "suma_opadu": 0.1,
-        "cisnienie": 788.8,
+        "suma_opadu": 0.0,
+        "cisnienie": 787.6,
         "godzina_pomiaru": "2026-07-14T01:00"
       }
     },
