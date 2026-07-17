@@ -10,14 +10,14 @@
     "series": {
       "2026-07-17": {
         "temperatura": 13.8,
-        "predkosc_wiatru": 8.0,
+        "predkosc_wiatru": 7.0,
         "kierunek_wiatru": 170,
         "wilgotnosc": 77.5,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-07-17T20:00"
+    "last_updated": "2026-07-17T21:00"
   },
   "zakopane": {
     "meta": {
