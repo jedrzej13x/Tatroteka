@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-08-09": {
-        "temperatura": 9.1,
+        "temperatura": 9.8,
         "predkosc_wiatru": 3.0,
-        "kierunek_wiatru": 170,
-        "wilgotnosc": 37.6,
+        "kierunek_wiatru": 160,
+        "wilgotnosc": 37.5,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-08-09T06:00"
+    "last_updated": "2026-08-09T07:00"
   },
   "zakopane": {
     "meta": {
