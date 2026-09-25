@@ -1372,9 +1372,17 @@
         "wazne_do": "25.09.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-09-25": {
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "25.09.2026 20:00",
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-09-24T22:09"
+    "last_updated": "2026-09-25T01:17"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -1725,9 +1733,17 @@
         "wazne_do": null,
         "opis": null,
         "kolor": "#FFC107"
+      },
+      "2026-09-25": {
+        "stopien": 2,
+        "stopien_nazwa": "Mierne",
+        "tendencja": "v ďalsích dnoch klesajúca",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-09-24T22:09"
+    "last_updated": "2026-09-25T01:17"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -2078,8 +2094,16 @@
         "wazne_do": null,
         "opis": null,
         "kolor": "#FFC107"
+      },
+      "2026-09-25": {
+        "stopien": 2,
+        "stopien_nazwa": "Mierne",
+        "tendencja": "v ďalsích dnoch klesajúca",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-09-24T22:09"
+    "last_updated": "2026-09-25T01:17"
   }
 }
