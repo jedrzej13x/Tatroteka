@@ -1385,7 +1385,7 @@
         "stopien": 1,
         "stopien_nazwa": "Niskie",
         "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
-        "wazne_do": "27.09.2026 20:00",
+        "wazne_do": "26.09.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
       },
@@ -1398,7 +1398,7 @@
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-09-27T07:52"
+    "last_updated": "2026-09-27T08:44+00:00"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -1775,7 +1775,7 @@
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-09-27T07:52"
+    "last_updated": "2026-09-27T08:44+00:00"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -2152,6 +2152,6 @@
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-09-27T07:52"
+    "last_updated": "2026-09-27T08:44+00:00"
   }
 }
