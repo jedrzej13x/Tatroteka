@@ -1412,9 +1412,17 @@
         "wazne_do": "29.09.2026 20:00",
         "opis": null,
         "kolor": null
+      },
+      "2026-09-30": {
+        "stopien": null,
+        "stopien_nazwa": null,
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "29.09.2026 20:00",
+        "opis": null,
+        "kolor": null
       }
     },
-    "last_updated": "2026-09-29T09:18+00:00"
+    "last_updated": "2026-09-30T09:11+00:00"
   },
   "hzs_wysokie_tatry": {
     "meta": {
