@@ -8,16 +8,16 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-10-16": {
-        "temperatura": 5.0,
-        "predkosc_wiatru": 3.0,
+      "2026-10-17": {
+        "temperatura": 4.7,
+        "predkosc_wiatru": 4.0,
         "kierunek_wiatru": 40,
-        "wilgotnosc": 6.9,
+        "wilgotnosc": 11.8,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-10-16T22:00"
+    "last_updated": "2026-10-17T00:00"
   },
   "zakopane": {
     "meta": {
@@ -28,17 +28,17 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-10-16": {
-        "temperatura": 2.8,
-        "predkosc_wiatru": 5.4,
-        "kierunek_wiatru": 190,
-        "wilgotnosc": 35,
+      "2026-10-17": {
+        "temperatura": 2.2,
+        "predkosc_wiatru": 5.8,
+        "kierunek_wiatru": 193,
+        "wilgotnosc": 28,
         "suma_opadu": 0.0,
-        "cisnienie": 919.0,
-        "godzina_pomiaru": "2026-10-17T00:00"
+        "cisnienie": 917.8,
+        "godzina_pomiaru": "2026-10-17T03:00"
       }
     },
-    "last_updated": "2026-10-17T00:00"
+    "last_updated": "2026-10-17T03:00"
   },
   "morskie_oko": {
     "meta": {
@@ -49,17 +49,17 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-10-16": {
-        "temperatura": 3.0,
-        "predkosc_wiatru": 8.3,
-        "kierunek_wiatru": 200,
-        "wilgotnosc": 25,
+      "2026-10-17": {
+        "temperatura": 3.2,
+        "predkosc_wiatru": 7.6,
+        "kierunek_wiatru": 197,
+        "wilgotnosc": 18,
         "suma_opadu": 0.0,
-        "cisnienie": 859.9,
-        "godzina_pomiaru": "2026-10-17T00:00"
+        "cisnienie": 858.7,
+        "godzina_pomiaru": "2026-10-17T03:00"
       }
     },
-    "last_updated": "2026-10-17T00:00"
+    "last_updated": "2026-10-17T03:00"
   },
   "hala_gasienicowa": {
     "meta": {
@@ -70,17 +70,17 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-10-16": {
-        "temperatura": 2.4,
-        "predkosc_wiatru": 5.8,
-        "kierunek_wiatru": 155,
-        "wilgotnosc": 23,
+      "2026-10-17": {
+        "temperatura": 2.3,
+        "predkosc_wiatru": 4.3,
+        "kierunek_wiatru": 166,
+        "wilgotnosc": 18,
         "suma_opadu": 0.0,
-        "cisnienie": 836.9,
-        "godzina_pomiaru": "2026-10-17T00:00"
+        "cisnienie": 835.7,
+        "godzina_pomiaru": "2026-10-17T03:00"
       }
     },
-    "last_updated": "2026-10-17T00:00"
+    "last_updated": "2026-10-17T03:00"
   },
   "dolina_chocholowska": {
     "meta": {
@@ -91,17 +91,17 @@
       "kraj": "PL"
     },
     "series": {
-      "2026-10-16": {
-        "temperatura": 1.7,
-        "predkosc_wiatru": 0.7,
-        "kierunek_wiatru": 4,
-        "wilgotnosc": 70,
+      "2026-10-17": {
+        "temperatura": 1.1,
+        "predkosc_wiatru": 0.4,
+        "kierunek_wiatru": 9,
+        "wilgotnosc": 61,
         "suma_opadu": 0.0,
-        "cisnienie": 910.5,
-        "godzina_pomiaru": "2026-10-17T00:00"
+        "cisnienie": 909.3,
+        "godzina_pomiaru": "2026-10-17T03:00"
       }
     },
-    "last_updated": "2026-10-17T00:00"
+    "last_updated": "2026-10-17T03:00"
   },
   "lomnica": {
     "meta": {
@@ -112,17 +112,17 @@
       "kraj": "SK"
     },
     "series": {
-      "2026-10-16": {
-        "temperatura": -3.4,
-        "predkosc_wiatru": 9.7,
-        "kierunek_wiatru": 325,
-        "wilgotnosc": 38,
+      "2026-10-17": {
+        "temperatura": -3.2,
+        "predkosc_wiatru": 11.9,
+        "kierunek_wiatru": 307,
+        "wilgotnosc": 31,
         "suma_opadu": 0.0,
-        "cisnienie": 752.6,
-        "godzina_pomiaru": "2026-10-17T00:00"
+        "cisnienie": 751.6,
+        "godzina_pomiaru": "2026-10-17T03:00"
       }
     },
-    "last_updated": "2026-10-17T00:00"
+    "last_updated": "2026-10-17T03:00"
   },
   "strbske_pleso": {
     "meta": {
@@ -133,17 +133,17 @@
       "kraj": "SK"
     },
     "series": {
-      "2026-10-16": {
-        "temperatura": 3.2,
-        "predkosc_wiatru": 7.9,
-        "kierunek_wiatru": 6,
-        "wilgotnosc": 27,
+      "2026-10-17": {
+        "temperatura": 3.4,
+        "predkosc_wiatru": 5.8,
+        "kierunek_wiatru": 359,
+        "wilgotnosc": 19,
         "suma_opadu": 0.0,
-        "cisnienie": 865.3,
-        "godzina_pomiaru": "2026-10-17T00:00"
+        "cisnienie": 864.3,
+        "godzina_pomiaru": "2026-10-17T03:00"
       }
     },
-    "last_updated": "2026-10-17T00:00"
+    "last_updated": "2026-10-17T03:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -154,16 +154,16 @@
       "kraj": "SK"
     },
     "series": {
-      "2026-10-16": {
-        "temperatura": -2.2,
-        "predkosc_wiatru": 8.6,
-        "kierunek_wiatru": 33,
-        "wilgotnosc": 41,
+      "2026-10-17": {
+        "temperatura": -2.4,
+        "predkosc_wiatru": 7.9,
+        "kierunek_wiatru": 2,
+        "wilgotnosc": 33,
         "suma_opadu": 0.0,
-        "cisnienie": 780.7,
-        "godzina_pomiaru": "2026-10-17T00:00"
+        "cisnienie": 779.4,
+        "godzina_pomiaru": "2026-10-17T03:00"
       }
     },
-    "last_updated": "2026-10-17T00:00"
+    "last_updated": "2026-10-17T03:00"
   }
 }
