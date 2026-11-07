@@ -9,15 +9,15 @@
     },
     "series": {
       "2026-11-07": {
-        "temperatura": 1.2,
-        "predkosc_wiatru": 3.0,
-        "kierunek_wiatru": 190,
-        "wilgotnosc": 22.7,
+        "temperatura": 0.4,
+        "predkosc_wiatru": 0.0,
+        "kierunek_wiatru": 0,
+        "wilgotnosc": 24.7,
         "suma_opadu": 0.0,
         "cisnienie": null
       }
     },
-    "last_updated": "2026-11-07T19:00"
+    "last_updated": "2026-11-07T23:00"
   },
   "zakopane": {
     "meta": {
@@ -29,16 +29,16 @@
     },
     "series": {
       "2026-11-07": {
-        "temperatura": 0.6,
-        "predkosc_wiatru": 4.3,
-        "kierunek_wiatru": 194,
-        "wilgotnosc": 46,
+        "temperatura": 0.3,
+        "predkosc_wiatru": 4.7,
+        "kierunek_wiatru": 195,
+        "wilgotnosc": 44,
         "suma_opadu": 0.0,
         "cisnienie": 924.1,
-        "godzina_pomiaru": "2026-11-07T21:00"
+        "godzina_pomiaru": "2026-11-08T00:00"
       }
     },
-    "last_updated": "2026-11-07T21:00"
+    "last_updated": "2026-11-08T00:00"
   },
   "morskie_oko": {
     "meta": {
@@ -50,16 +50,16 @@
     },
     "series": {
       "2026-11-07": {
-        "temperatura": 0.3,
+        "temperatura": 0.2,
         "predkosc_wiatru": 6.8,
-        "kierunek_wiatru": 191,
-        "wilgotnosc": 33,
+        "kierunek_wiatru": 187,
+        "wilgotnosc": 31,
         "suma_opadu": 0.0,
-        "cisnienie": 863.8,
-        "godzina_pomiaru": "2026-11-07T21:00"
+        "cisnienie": 864.0,
+        "godzina_pomiaru": "2026-11-08T00:00"
       }
     },
-    "last_updated": "2026-11-07T21:00"
+    "last_updated": "2026-11-08T00:00"
   },
   "hala_gasienicowa": {
     "meta": {
@@ -71,16 +71,16 @@
     },
     "series": {
       "2026-11-07": {
-        "temperatura": -1.2,
-        "predkosc_wiatru": 4.7,
-        "kierunek_wiatru": 194,
-        "wilgotnosc": 33,
+        "temperatura": -1.5,
+        "predkosc_wiatru": 3.6,
+        "kierunek_wiatru": 196,
+        "wilgotnosc": 32,
         "suma_opadu": 0.0,
-        "cisnienie": 840.0,
-        "godzina_pomiaru": "2026-11-07T21:00"
+        "cisnienie": 840.1,
+        "godzina_pomiaru": "2026-11-08T00:00"
       }
     },
-    "last_updated": "2026-11-07T21:00"
+    "last_updated": "2026-11-08T00:00"
   },
   "dolina_chocholowska": {
     "meta": {
@@ -92,16 +92,16 @@
     },
     "series": {
       "2026-11-07": {
-        "temperatura": 0.1,
+        "temperatura": -0.2,
         "predkosc_wiatru": 1.4,
-        "kierunek_wiatru": 28,
-        "wilgotnosc": 69,
+        "kierunek_wiatru": 37,
+        "wilgotnosc": 56,
         "suma_opadu": 0.0,
         "cisnienie": 915.7,
-        "godzina_pomiaru": "2026-11-07T21:00"
+        "godzina_pomiaru": "2026-11-08T00:00"
       }
     },
-    "last_updated": "2026-11-07T21:00"
+    "last_updated": "2026-11-08T00:00"
   },
   "lomnica": {
     "meta": {
@@ -113,16 +113,16 @@
     },
     "series": {
       "2026-11-07": {
-        "temperatura": -7.9,
-        "predkosc_wiatru": 6.8,
-        "kierunek_wiatru": 218,
-        "wilgotnosc": 41,
+        "temperatura": -8.4,
+        "predkosc_wiatru": 4.0,
+        "kierunek_wiatru": 284,
+        "wilgotnosc": 40,
         "suma_opadu": 0.0,
-        "cisnienie": 753.6,
-        "godzina_pomiaru": "2026-11-07T21:00"
+        "cisnienie": 753.4,
+        "godzina_pomiaru": "2026-11-08T00:00"
       }
     },
-    "last_updated": "2026-11-07T21:00"
+    "last_updated": "2026-11-08T00:00"
   },
   "strbske_pleso": {
     "meta": {
@@ -134,16 +134,16 @@
     },
     "series": {
       "2026-11-07": {
-        "temperatura": 0.8,
+        "temperatura": 1.0,
         "predkosc_wiatru": 5.4,
-        "kierunek_wiatru": 2,
-        "wilgotnosc": 31,
+        "kierunek_wiatru": 3,
+        "wilgotnosc": 30,
         "suma_opadu": 0.0,
-        "cisnienie": 870.2,
-        "godzina_pomiaru": "2026-11-07T21:00"
+        "cisnienie": 870.0,
+        "godzina_pomiaru": "2026-11-08T00:00"
       }
     },
-    "last_updated": "2026-11-07T21:00"
+    "last_updated": "2026-11-08T00:00"
   },
   "tatrzanska_kotlina": {
     "meta": {
@@ -155,15 +155,15 @@
     },
     "series": {
       "2026-11-07": {
-        "temperatura": -7.1,
-        "predkosc_wiatru": 7.9,
-        "kierunek_wiatru": 170,
-        "wilgotnosc": 41,
+        "temperatura": -8.0,
+        "predkosc_wiatru": 2.5,
+        "kierunek_wiatru": 52,
+        "wilgotnosc": 40,
         "suma_opadu": 0.0,
-        "cisnienie": 781.9,
-        "godzina_pomiaru": "2026-11-07T21:00"
+        "cisnienie": 781.4,
+        "godzina_pomiaru": "2026-11-08T00:00"
       }
     },
-    "last_updated": "2026-11-07T21:00"
+    "last_updated": "2026-11-08T00:00"
   }
 }
