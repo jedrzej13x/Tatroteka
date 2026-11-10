@@ -1724,9 +1724,17 @@
         "wazne_do": "10.11.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-11-10": {
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "10.11.2026 20:00",
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-11-09T22:08"
+    "last_updated": "2026-11-10T04:31"
   },
   "hzs_wysokie_tatry": {
     "meta": {
