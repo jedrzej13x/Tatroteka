@@ -1748,9 +1748,17 @@
         "wazne_do": "12.11.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-11-13": {
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": null,
+        "wazne_do": "13.11.2026 20:00",
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-11-12T15:52"
+    "last_updated": "2026-11-13T03:19"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -2141,9 +2149,17 @@
         "wazne_do": null,
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-11-13": {
+        "stopien": 1,
+        "stopien_nazwa": "Malé",
+        "tendencja": "zotrvalá",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-10-28T09:09+00:00"
+    "last_updated": "2026-11-13T03:19"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -2534,8 +2550,16 @@
         "wazne_do": null,
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-11-13": {
+        "stopien": 1,
+        "stopien_nazwa": "Malé",
+        "tendencja": "zotrvalá",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-10-28T09:09+00:00"
+    "last_updated": "2026-11-13T03:19"
   }
 }
