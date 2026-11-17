@@ -1785,12 +1785,12 @@
         "stopien": 1,
         "stopien_nazwa": "Niskie",
         "tendencja": null,
-        "wazne_do": "17.11.2026 20:00",
+        "wazne_do": "18.11.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-11-17T11:21+00:00"
+    "last_updated": "2026-11-17T17:29"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -2199,7 +2199,7 @@
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-11-17T11:21+00:00"
+    "last_updated": "2026-11-17T17:29"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -2608,6 +2608,6 @@
         "kolor": "#FFC107"
       }
     },
-    "last_updated": "2026-11-17T11:21+00:00"
+    "last_updated": "2026-11-17T17:29"
   }
 }
