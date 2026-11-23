@@ -1828,9 +1828,17 @@
         "wazne_do": "23.11.2026 20:00",
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-11-23": {
+        "stopien": 1,
+        "stopien_nazwa": "Niskie",
+        "tendencja": "Stopień zagrożenia nie powinien ulec zmianie",
+        "wazne_do": "23.11.2026 20:00",
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-11-22T23:27"
+    "last_updated": "2026-11-23T06:51"
   },
   "hzs_wysokie_tatry": {
     "meta": {
@@ -2277,9 +2285,17 @@
         "wazne_do": null,
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-11-23": {
+        "stopien": 1,
+        "stopien_nazwa": "Malé",
+        "tendencja": "s predpokladanými zrázkami a nízkymi teplotami stúpajúca",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-11-22T23:27"
+    "last_updated": "2026-11-23T06:51"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -2726,8 +2742,16 @@
         "wazne_do": null,
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-11-23": {
+        "stopien": 1,
+        "stopien_nazwa": "Malé",
+        "tendencja": "s predpokladanými zrázkami a nízkymi teplotami stúpajúca",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-11-22T23:27"
+    "last_updated": "2026-11-23T06:51"
   }
 }
