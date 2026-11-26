@@ -2309,9 +2309,17 @@
         "wazne_do": null,
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-11-26": {
+        "stopien": 1,
+        "stopien_nazwa": "Malé",
+        "tendencja": "zotrvalá",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-11-25T19:50"
+    "last_updated": "2026-11-26T02:42"
   },
   "hzs_zachodnie_tatry": {
     "meta": {
@@ -2782,8 +2790,16 @@
         "wazne_do": null,
         "opis": null,
         "kolor": "#8BC34A"
+      },
+      "2026-11-26": {
+        "stopien": 1,
+        "stopien_nazwa": "Malé",
+        "tendencja": "zotrvalá",
+        "wazne_do": null,
+        "opis": null,
+        "kolor": "#8BC34A"
       }
     },
-    "last_updated": "2026-11-25T19:50"
+    "last_updated": "2026-11-26T02:42"
   }
 }
